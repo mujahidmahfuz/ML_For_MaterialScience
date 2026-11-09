@@ -1,0 +1,131 @@
+{
+  "version": "v1.4",
+  "parent": "v1.3",
+  "rules_file": "EDA/00_config/v1_4_curation_rules.yaml",
+  "ms": {
+    "ms_mass": {
+      "v1_3_n": 4318,
+      "v1_4_n": 4317,
+      "removed": 1,
+      "per_rule": {
+        "M1_above_ceiling_no_heavy_RE": {
+          "rows": 1,
+          "only_this_rule": 1
+        },
+        "M2_above_ceiling_heavy_RE": {
+          "rows": 0,
+          "only_this_rule": 0
+        },
+        "M3_zero_value": {
+          "rows": 0,
+          "only_this_rule": 0
+        }
+      }
+    },
+    "ms_volume": {
+      "v1_3_n": 788,
+      "v1_4_n": 779,
+      "removed": 9,
+      "per_rule": {
+        "V1_above_ceiling_no_heavy_RE": {
+          "rows": 5,
+          "only_this_rule": 5
+        },
+        "V2_above_ceiling_heavy_RE": {
+          "rows": 0,
+          "only_this_rule": 0
+        },
+        "V3_zero_value": {
+          "rows": 2,
+          "only_this_rule": 2
+        },
+        "V4_mass_unit_misparsed": {
+          "rows": 2,
+          "only_this_rule": 2
+        }
+      },
+      "recoverable_ms_mass_candidates": 2
+    },
+    "ms_moment_unchanged_n": 87513
+  },
+  "k1": {
+    "v1_3_n": 1862,
+    "v1_4_n": 1847,
+    "removed": 15,
+    "per_rule": {
+      "K1_above_ceiling": {
+        "rows": 15,
+        "only_this_rule": 15
+      }
+    },
+    "kept_zero_k1_rows": 26,
+    "kept_between_2e7_and_5e7": 8
+  },
+  "split_derivation": [
+    {
+      "file": "matched_split_curie.csv",
+      "n_previous": 4602,
+      "n_dropped": 0,
+      "n_kept": 4602
+    },
+    {
+      "file": "matched_split_ms.csv",
+      "n_previous": 10852,
+      "n_dropped": 0,
+      "n_kept": 10852
+    },
+    {
+      "file": "matched_split_ordering.csv",
+      "n_previous": 6061,
+      "n_dropped": 0,
+      "n_kept": 6061
+    },
+    {
+      "file": "split_curie.csv",
+      "n_previous": 29740,
+      "n_dropped": 0,
+      "n_kept": 29740
+    },
+    {
+      "file": "split_k1.csv",
+      "n_previous": 1862,
+      "n_dropped": 15,
+      "n_kept": 1847
+    },
+    {
+      "file": "split_ms.csv",
+      "n_previous": 87513,
+      "n_dropped": 0,
+      "n_kept": 87513
+    },
+    {
+      "file": "split_ms_mass.csv",
+      "n_previous": 4318,
+      "n_dropped": 1,
+      "n_kept": 4317
+    },
+    {
+      "file": "split_ms_volume.csv",
+      "n_previous": 788,
+      "n_dropped": 9,
+      "n_kept": 779
+    },
+    {
+      "file": "split_ordering.csv",
+      "n_previous": 79125,
+      "n_dropped": 0,
+      "n_kept": 79125
+    }
+  ],
+  "sha256": {
+    "excluded\\R10_k1_quarantine.csv": "cc386f668ff07e79d3ddb23ee2ffda32b73d9927e292aaa708339bd0ea3cc3b8",
+    "excluded\\R10_ms_mass_quarantine.csv": "4171b97f9e1763c6ed77211138762299083d00e2439f9f9c8cd71d28a557c674",
+    "excluded\\R10_ms_volume_quarantine.csv": "30ab09b7f7cb33ab02c82d0da64be2668cfcd8cfee4f3b88973d81f14a9bc5b0",
+    "targets\\curie\\target_curie_clean.csv": "46f6770bca0cb6e7b96654b9704908a2ecc7ad2b00ee65275425bde30f90aa0f",
+    "targets\\k1\\target_k1_clean.csv": "51fefea25669057bbc4ba153b9e8b295ca1934ce646641c3385b022e1b2a40c6",
+    "targets\\ms\\target_ms_clean.csv": "a5597ffdf9e04b057948255609195d3640b40db3f878db8700a474947b4ce793",
+    "targets\\ordering\\target_ordering_clean.csv": "ba662e6dda81b321eee73f9c50ae2612f9a8fcbb42f321000e9f537cefc96156"
+  },
+  "ms_moment_official_name": "DFT total magnetic moment per unit cell (0 K)",
+  "unchanged": "feature repository, tiers, groups (v1.2 files), Curie and ordering targets (copied from v1.3), Ms-per-cell moment target"
+}
