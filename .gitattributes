@@ -1,0 +1,11 @@
+# Keep data and result files byte-identical (CHECKSUMS.sha256 must verify after a clone on any OS)
+data/**            -text
+results/**         -text
+CHECKSUMS.sha256   -text
+*.pdf              binary
+*.png              binary
+*.eps              binary
+
+# Large data files go through Git LFS (GitHub warns above 50 MB per file)
+*.parquet                       filter=lfs diff=lfs merge=lfs -text
+data/**/target_k1_clean.csv     filter=lfs diff=lfs merge=lfs -text
