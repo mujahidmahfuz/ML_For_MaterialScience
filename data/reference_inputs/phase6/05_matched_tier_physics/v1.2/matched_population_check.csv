@@ -1,0 +1,10 @@
+target,split,n
+ordering,train,9723
+ordering,validation,2102
+ordering,test,2089
+curie,train,3794
+curie,validation,880
+curie,test,816
+ms_moment,train,7592
+ms_moment,validation,1631
+ms_moment,test,1629

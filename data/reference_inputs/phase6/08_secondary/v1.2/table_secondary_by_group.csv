@@ -1,0 +1,19 @@
+target,group,n,median,p25,p75
+k1,Transition Metal,1832,166500.0,1799.712,1620000.0
+k1,Rare Earth,545,1230000.0,12051.7,4500000.0
+k1,Oxide,625,5400.0,248.0,130000.0
+k1,Intermetallic,888,612500.0,18300.0,2725000.0
+k1,Experimental,1694,114500.0,1459.446375,1500000.0
+k1,Computational,168,1000000.0,148390.0,2725000.0
+ms_mass,Transition Metal,4229,52.307,26.4,73.94
+ms_mass,Rare Earth,1306,49.38,19.78875,77.4805
+ms_mass,Oxide,3023,47.0,24.964,63.9
+ms_mass,Intermetallic,869,72.03,25.6,120.0
+ms_mass,Experimental,4281,52.2,26.28,73.49
+ms_mass,Computational,37,59.83,23.86,96.0
+ms_volume,Transition Metal,784,540000.0,230500.0,972250.0
+ms_volume,Rare Earth,147,400000.0,128000.0,695000.0
+ms_volume,Oxide,176,260500.0,73750.0,419107.5
+ms_volume,Intermetallic,513,674000.0,300000.0,1010000.0
+ms_volume,Experimental,700,545000.0,249500.0,1000000.0
+ms_volume,Computational,88,482500.0,129500.0,833655.0

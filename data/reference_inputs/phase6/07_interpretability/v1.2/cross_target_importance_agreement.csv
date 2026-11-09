@@ -1,0 +1,10 @@
+tier,target_a,target_b,n_features,spearman_importance,top10_overlap,shared_top10
+tier1,ordering,curie,65,0.8132314893608227,6,atomic_mass_variance; average_atomic_mass; average_unpaired_electron_proxy; electronegativity_variance; group_variance; valence_electron_concentration
+tier1,ordering,ms_moment,65,0.8587943487657415,6,average_atomic_mass; average_unpaired_electron_proxy; electronegativity_variance; magnetic_element_fraction; melting_temperature_variance; total_atoms_formula
+tier1,curie,ms_moment,65,0.7988198058842297,4,average_atomic_mass; average_unpaired_electron_proxy; electronegativity_variance; fraction_Fe
+tier2,ordering,curie,73,0.7893632761943895,3,average_unpaired_electron_proxy; group_variance; valence_electron_concentration
+tier2,ordering,ms_moment,73,0.8851315915477709,5,average_atomic_radius; average_unpaired_electron_proxy; magnetic_element_fraction; melting_temperature_variance; total_atoms_formula
+tier2,curie,ms_moment,73,0.7697080785317986,4,average_atomic_mass; average_unpaired_electron_proxy; electronegativity_variance; fraction_Fe
+tier3,ordering,curie,97,0.7667986381201451,4,average_unpaired_electron_proxy; p3_point_group; p3_volume; total_atoms_formula
+tier3,ordering,ms_moment,97,0.7704734259235207,6,average_unpaired_electron_proxy; magnetic_element_fraction; p3_dielectric_static; p3_formation_energy_per_atom; p3_point_group; p3_volume
+tier3,curie,ms_moment,97,0.7224291962211763,5,average_unpaired_electron_proxy; fraction_Fe; p3_point_group; p3_volume; valence_electron_concentration

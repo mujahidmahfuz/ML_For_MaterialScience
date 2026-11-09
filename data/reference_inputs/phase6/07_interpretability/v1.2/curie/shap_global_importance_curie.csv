@@ -1,0 +1,98 @@
+feature,family,mean_abs_shap_tier1,mean_abs_shap_tier2,mean_abs_shap_tier3,rank_tier1,rank_tier2,rank_tier3
+p3_point_group,Symmetry,,,91.26899719238281,,,1.0
+p3_volume,Structural packing,,,63.60569381713867,,,2.0
+valence_electron_concentration,d/f-electron & valence proxies,89.16935729980469,93.3287353515625,51.317012786865234,1.0,1.0,3.0
+basic_comp__fraction_Fe,Magnetic-element content,23.861675262451172,20.783666610717773,16.762157440185547,4.0,5.0,4.0
+basic_comp__fraction_Co,Magnetic-element content,16.86884117126465,18.721960067749023,16.412601470947266,8.0,8.0,5.0
+average_unpaired_electron_proxy,d/f-electron & valence proxies,31.174036026000977,28.272443771362305,15.874383926391602,3.0,3.0,6.0
+p3_band_gap,Electronic structure,,,14.973751068115234,,,7.0
+basic_comp__transition_metal_fraction,Magnetic-element content,33.047080993652344,34.30421447753906,14.69050407409668,2.0,2.0,8.0
+basic_comp__total_atoms_formula,Composition & stoichiometry,12.023545265197754,12.752023696899414,11.603630065917969,13.0,14.0,9.0
+average_melting_temperature,Atomic size & periodic statistics,11.862403869628906,13.128499031066895,10.567152976989746,14.0,13.0,10.0
+p3_efermi,Electronic structure,,,10.543519020080566,,,11.0
+p3_piezo_max,Dielectric & optical,,,10.415507316589355,,,12.0
+basic_comp__fraction_Mn,Magnetic-element content,8.61087703704834,5.985456943511963,10.41373348236084,16.0,21.0,13.0
+group_variance,Atomic size & periodic statistics,13.841937065124512,20.74105453491211,10.297355651855469,10.0,6.0,14.0
+magnetic_prior__f_block_fraction,d/f-electron & valence proxies,12.062247276306152,11.261079788208008,10.0841064453125,11.0,15.0,15.0
+p3_volume_per_atom,Structural packing,,,9.571741104125977,,,16.0
+p3_cbm,Electronic structure,,,9.199893951416016,,,17.0
+p3_poisson_ratio,Elastic response,,,9.194482803344727,,,18.0
+p3_dielectric_optical,Dielectric & optical,,,9.121465682983398,,,19.0
+basic_comp__contains_Fe,Magnetic-element content,9.463109016418457,18.13048553466797,9.034002304077148,15.0,10.0,20.0
+basic_comp__magnetic_element_fraction,Magnetic-element content,5.952800750732422,4.260608673095703,8.922082901000977,24.0,28.0,21.0
+oxidation_state_variance,Oxidation chemistry,,10.826862335205078,8.107561111450195,,17.0,22.0
+p3_dielectric_static,Dielectric & optical,,,8.044916152954102,,,23.0
+p3_bulk_modulus,Elastic response,,,7.412882328033447,,,24.0
+p3_vbm,Electronic structure,,,7.112724781036377,,,25.0
+melting_temperature_variance,Atomic size & periodic statistics,7.252713203430176,4.442175388336182,6.485435962677002,19.0,27.0,26.0
+magnetic_prior__d_block_fraction,d/f-electron & valence proxies,8.494364738464355,6.128990650177002,6.278191566467285,17.0,20.0,27.0
+electronegativity_variance,Atomic size & periodic statistics,15.493313789367676,25.825008392333984,6.248531341552734,9.0,4.0,28.0
+basic_comp__n_elements,Composition & stoichiometry,2.655405044555664,4.106560707092285,5.97921895980835,31.0,30.0,29.0
+atomic_size_mismatch,Atomic size & periodic statistics,5.134009838104248,5.215427875518799,5.965217590332031,25.0,24.0,30.0
+p3_formation_energy_per_atom,Thermodynamic stability,,,5.946784496307373,,,31.0
+average_atomic_mass,Atomic size & periodic statistics,20.619312286376953,20.693359375,5.928643703460693,5.0,7.0,32.0
+average_d_electron_count,d/f-electron & valence proxies,12.03525447845459,18.431148529052734,5.833348274230957,12.0,9.0,33.0
+electronegativity_difference,Atomic size & periodic statistics,7.471884727478027,6.660778999328613,5.451442241668701,18.0,19.0,34.0
+atomic_radius_variance,Atomic size & periodic statistics,19.415189743041992,15.224631309509277,5.42868185043335,7.0,12.0,35.0
+basic_comp__fraction_Ni,Magnetic-element content,4.81779670715332,5.433628559112549,5.191336631774902,26.0,23.0,36.0
+p3_elastic_anisotropy,Elastic response,,,4.8901543617248535,,,37.0
+p3_shear_modulus,Elastic response,,,4.596463203430176,,,38.0
+magnetic_prior__p_block_fraction,d/f-electron & valence proxies,6.893233776092529,3.581374168395996,4.127493381500244,21.0,34.0,39.0
+p3_dielectric_ionic,Dielectric & optical,,,3.9780683517456055,,,40.0
+oxidation_state_range,Oxidation chemistry,,4.131147384643555,3.8195433616638184,,29.0,41.0
+p3_density,Structural packing,,,3.611712694168091,,,42.0
+atomic_mass_variance,Atomic size & periodic statistics,20.24212074279785,10.623287200927734,3.5688111782073975,6.0,18.0,43.0
+basic_comp__contains_O,Light-element (B/C/N/O) content,1.1333916187286377,0.8080342411994934,3.4433252811431885,34.0,46.0,44.0
+p3_refractive_index,Dielectric & optical,,,3.1025259494781494,,,45.0
+avg_oxidation_state,Oxidation chemistry,,10.958500862121582,3.0606470108032227,,16.0,46.0
+p3_spacegroup_number,Symmetry,,,2.991001844406128,,,47.0
+average_atomic_radius,Atomic size & periodic statistics,7.01977014541626,17.423240661621094,2.7601847648620605,20.0,11.0,48.0
+basic_comp__contains_Co,Magnetic-element content,6.04654598236084,5.027674198150635,2.527097463607788,23.0,25.0,49.0
+period_variance,Atomic size & periodic statistics,3.5172767639160156,4.6338791847229,2.366485118865967,28.0,26.0,50.0
+p3_energy_above_hull,Thermodynamic stability,,,2.362173318862915,,,51.0
+p3_crystal_system,Symmetry,,,2.1138014793395996,,,52.0
+maximum_oxidation_state,Oxidation chemistry,,3.6121976375579834,1.9978084564208984,,33.0,53.0
+stoichiometric_variance,Composition & stoichiometry,4.052793502807617,3.4814372062683105,1.8544409275054932,27.0,35.0,54.0
+normalized_formula_entropy,Composition & stoichiometry,6.561279296875,5.64928674697876,1.7626876831054688,22.0,22.0,55.0
+average_f_electron_count,d/f-electron & valence proxies,0.8005351424217224,3.262227773666382,1.5894815921783447,37.0,36.0,56.0
+mixing_entropy,Composition & stoichiometry,2.671124219894409,1.8520712852478027,1.4301565885543823,30.0,42.0,57.0
+total_atoms,Composition & stoichiometry,3.0986335277557373,2.44616436958313,1.4080462455749512,29.0,37.0,58.0
+basic_comp__contains_Mn,Magnetic-element content,1.3470261096954346,1.928659439086914,1.3832871913909912,33.0,41.0,59.0
+p3_is_stable,Thermodynamic stability,,,1.375973105430603,,,60.0
+minimum_oxidation_state,Oxidation chemistry,,3.630303144454956,1.3296334743499756,,32.0,61.0
+basic_comp__fraction_O,Light-element (B/C/N/O) content,0.7769826054573059,1.9581379890441895,1.2226457595825195,38.0,40.0,62.0
+oxidation_state_std,Oxidation chemistry,,2.1237313747406006,1.0916577577590942,,38.0,63.0
+formula_entropy,Composition & stoichiometry,0.34481772780418396,1.4101065397262573,1.0720793008804321,45.0,43.0,64.0
+basic_comp__fraction_Cr,Magnetic-element content,1.7247648239135742,1.110741138458252,0.8314188718795776,32.0,44.0,65.0
+basic_comp__contains_transition_metal,Magnetic-element content,0.45401525497436523,0.2466139942407608,0.7382038235664368,42.0,56.0,66.0
+basic_comp__contains_Ni,Magnetic-element content,0.9705601930618286,0.7689356803894043,0.7335735559463501,35.0,48.0,67.0
+number_of_possible_oxidation_states,Oxidation chemistry,,3.8396899700164795,0.6253105998039246,,31.0,68.0
+basic_comp__fraction_N,Light-element (B/C/N/O) content,0.1469891220331192,0.43303382396698,0.5283715724945068,50.0,52.0,69.0
+basic_comp__contains_B,Light-element (B/C/N/O) content,0.47040775418281555,0.3979107737541199,0.4540795385837555,41.0,54.0,70.0
+basic_comp__fraction_B,Light-element (B/C/N/O) content,0.3065805733203888,0.6890910267829895,0.39350950717926025,46.0,49.0,71.0
+p3_is_gap_direct,Electronic structure,,,0.3696114122867584,,,72.0
+maximum_stoichiometric_coefficient,Composition & stoichiometry,0.7692697048187256,2.0795950889587402,0.3543556034564972,39.0,39.0,73.0
+magnetic_prior__s_block_fraction,d/f-electron & valence proxies,0.9475942850112915,0.6377140879631042,0.34624046087265015,36.0,51.0,74.0
+basic_comp__contains_N,Light-element (B/C/N/O) content,0.541680634021759,0.7741500735282898,0.3219176232814789,40.0,47.0,75.0
+formula_complexity,Composition & stoichiometry,0.2737717032432556,0.0,0.3142487704753876,47.0,67.0,76.0
+basic_comp__contains_rare_earth,Magnetic-element content,0.24214494228363037,0.41924622654914856,0.24569568037986755,48.0,53.0,77.0
+basic_comp__contains_Cr,Magnetic-element content,0.447431743144989,0.8917714357376099,0.21779777109622955,43.0,45.0,78.0
+basic_comp__fraction_Dy,Magnetic-element content,0.12963679432868958,0.07269034534692764,0.20651735365390778,51.0,61.0,79.0
+basic_comp__rare_earth_fraction,Magnetic-element content,0.4437836706638336,0.6636093258857727,0.2058197259902954,44.0,50.0,80.0
+basic_comp__contains_Dy,Magnetic-element content,0.19896376132965088,0.322968989610672,0.1530044823884964,49.0,55.0,81.0
+basic_comp__contains_Nd,Magnetic-element content,0.031240982934832573,0.03357992321252823,0.08822020143270493,58.0,65.0,82.0
+basic_comp__fraction_C,Light-element (B/C/N/O) content,0.033151786774396896,0.04683688282966614,0.08772990852594376,57.0,63.0,83.0
+basic_comp__contains_actinide,Magnetic-element content,0.12438254058361053,0.0944579690694809,0.04603514075279236,52.0,60.0,84.0
+basic_comp__contains_Sm,Magnetic-element content,0.10205051302909851,0.2261013686656952,0.02908017858862877,54.0,57.0,85.0
+basic_comp__fraction_Nd,Magnetic-element content,0.09326330572366714,0.09734448045492172,0.02900341898202896,55.0,59.0,86.0
+basic_comp__contains_Tb,Magnetic-element content,0.11548390984535217,0.05265321955084801,0.01656465418636799,53.0,62.0,87.0
+basic_comp__actinide_fraction,Magnetic-element content,0.015874041244387627,0.03451532870531082,0.01564551517367363,60.0,64.0,88.0
+basic_comp__contains_C,Light-element (B/C/N/O) content,0.08174334466457367,0.11525684595108032,0.010174310766160488,56.0,58.0,89.0
+basic_comp__fraction_Sm,Magnetic-element content,0.031017838045954704,0.0013528397539630532,0.009064293466508389,59.0,66.0,90.0
+basic_comp__contains_Gd,Magnetic-element content,0.0,0.0,0.0,62.0,67.0,91.0
+basic_comp__fraction_Gd,Magnetic-element content,0.0,0.0,0.0,62.0,67.0,91.0
+basic_comp__fraction_Tb,Magnetic-element content,0.015044504776597023,0.0,0.0,61.0,67.0,91.0
+number_of_unique_elements,Composition & stoichiometry,0.0,0.0,0.0,62.0,67.0,91.0
+formula_complexity_index,Composition & stoichiometry,0.0,0.0,0.0,62.0,67.0,91.0
+oxidation_solution_found,Oxidation chemistry,,0.0,0.0,,67.0,91.0
+p3_is_metal,Electronic structure,,,0.0,,,91.0

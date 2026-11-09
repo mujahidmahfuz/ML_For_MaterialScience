@@ -1,0 +1,63 @@
+doi,class,note
+10.1007/s10853-012-6424-0,computational,review of first-principles materials design
+10.1007/s10948-013-2368-0,computational,first-principles YbNi2
+10.1007/s10948-015-2996-7,computational,electronic-structure study of La0.7Ca0.3MnO3; the record also has 22 other DOIs
+10.1007/s10948-016-3388-3,computational,first-principles Fe2NiSb
+10.1007/s10948-016-3453-y,computational,first-principles Al-doped Ni3Mn
+10.1007/s10948-016-3609-9,computational,first-principles F-doped Sn0.98Mn0.02O2
+10.1007/s10948-017-4135-0,computational,ab initio V-doped CdTe
+10.1007/s11669-014-0342-6,computational,ab initio Pt in Ni-Mn-Ga
+10.1007/s12648-016-0896-8,computational,DFT EuRu4As12
+10.1007/s13538-013-0134-1,computational,cluster-method calculation of Tc for MnFeAsxP1-x and MnFeAs
+10.1016/j.applthermaleng.2021.117375,computational,ANN model of an active magnetic regenerator
+10.1016/j.cap.2021.07.019,computational,theoretical ZnFe3N antiperovskite
+10.1016/j.chempr.2021.11.009,computational,machine-learning discovery of 2D ferromagnets; listed Tc are predictions
+10.1016/j.cjph.2020.01.003,computational,theoretical CoTcCrZ Heuslers
+10.1016/j.cocom.2015.10.001,computational,first-principles GdFe2
+10.1016/j.cocom.2019.e00432,computational,ab initio Ca1-xEuxLiF3
+10.1016/j.cocom.2020.e00467,computational,DFT CrSbX3
+10.1016/j.jallcom.2005.06.037,computational,CALPHAD/first-principles Co-Y
+10.1016/j.jallcom.2006.12.003,computational,theoretical La(TM)5 hydrides
+10.1016/j.jallcom.2015.01.255,computational,ab initio Ni-Mn Heuslers
+10.1016/j.jmmm.2003.12.693,computational,band structure LaRh3B2
+10.1016/j.jmmm.2004.11.527,computational,DFT Kerr effect Co2TiSn/Co2ZrSn
+10.1016/j.jmmm.2013.04.012,computational,first-principles Ti2FeGe/Ti2FeSn
+10.1016/j.jmmm.2013.08.042,computational,first-principles Pb2CrMO6
+10.1016/j.jmmm.2014.07.048,computational,ab initio Rh2MnZ under pressure
+10.1016/j.jmmm.2017.06.093,computational,ab initio Ti-doped ZnSe/CdSe
+10.1016/j.jmmm.2018.04.064,computational,spin-wave theory of few-layer vdW magnets
+10.1016/j.physb.2010.12.011,computational,first-principles exchange in GdGa
+10.1016/j.physb.2018.10.018,computational,first-principles Zr2RhAl
+10.1016/s0304-8853(01)01281-1,computational,micromagnetic simulation
+10.1016/s0921-4534(01)00410-5,computational,theory of superconductivity
+10.1039/c6ta04109d,computational,ab initio La1-xSrxFeO3-d defects
+10.1039/c7cp02158e,computational,DFT CoBr2 monolayer
+10.1016/j.jallcom.2015.03.050,computational,first-principles RE2Ti3Si4
+10.1016/j.commatsci.2014.05.030,computational,DFT Ba2CrMoO6/Ba2CrWO6 (Comput. Mater. Sci.)
+10.1016/j.jmmm.2015.04.028,computational,hybrid-functional TlTF3
+10.1016/j.jmmm.2016.02.064,computational,ground-state/thermoelectric calculation of Ru2VZ
+10.1016/j.jmmm.2021.168041,computational,predicted high-T ferromagnetism in MnGaX3 monolayers
+10.1016/j.jpcs.2012.09.017,computational,defects in Co2CrAl (electronic-structure calculation)
+10.1016/s0375-9601(01)00321-8,computational,Kondo-lattice model theory
+10.1016/j.jallcom.2003.11.023,mixed,experimental and theoretical
+10.1016/j.jallcom.2012.04.055,mixed,neutron diffraction + ab initio (nanostructured ZnO)
+10.1016/j.jssc.2014.04.027,mixed,measured magnetic properties + electronic structure
+10.1016/j.ssc.2016.02.005,mixed,characterization + theoretical MCE
+10.1016/s0304-8853(01)01344-0,mixed,XMCD measurements and calculations
+10.1039/c6ra03328h,mixed,synthesised nanopowders + Bean-Rodbell simulation
+10.1016/j.jmmm.2009.11.032,mixed,not determinable from title; kept (rule: exclude only if no measurement)
+10.1016/j.physb.2014.07.044,mixed,crystallographic study (measured)
+10.1007/s10948-014-2542-z,phenomenological,phenomenological MCE model of measured data
+10.1007/s10948-015-3029-2,phenomenological,phenomenological MCE model of measured data
+10.1016/j.jallcom.2016.05.047,phenomenological,phenomenological MCE prediction from measured magnetization
+10.1016/j.jallcom.2016.12.235,phenomenological,Landau analysis of measured data
+10.1039/c5dt04490a,phenomenological,abstract: investigation of measured magnetic/MCE behaviour
+10.1016/j.jpcs.2017.04.013,phenomenological,Landau theory/critical behaviour of measured samples
+10.1016/j.jmmm.2017.05.078,phenomenological,microscopic model of measured TmZn
+10.1007/s10853-015-9389-y,review,review of phase equilibria (experimental literature)
+10.1016/j.ijrefrig.2007.11.013,review,review of Mn-based refrigerants
+10.1016/j.jallcom.2014.08.079,review,review of RTX compounds
+10.1016/j.jmmm.2006.07.025,review,review of MCE in manganites
+10.1103/physrevmaterials.6.063803,review,statistics over a database of reported Co compounds
+10.1007/s10832-007-9042-5,review,review of magnetoelectric composites
+10.1016/j.nantod.2020.100902,review,review of 2D vdW magnets

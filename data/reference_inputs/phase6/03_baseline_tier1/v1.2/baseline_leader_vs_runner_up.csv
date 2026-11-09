@@ -1,0 +1,4 @@
+target,metric,leader,runner_up,test_difference,ci_low,ci_high,p_leader_better
+ordering,macro_f1,gradient_boosting,xgboost,-0.005497907412846344,-0.014098605596230671,0.003867071803321105,0.094
+curie,rmse,random_forest,xgboost,1.4601120333968347,-2.553009472033495,5.521593913045322,0.262
+ms_moment,rmse,gradient_boosting,xgboost,-0.0681206735063004,-0.22664930250107101,0.08130738238027514,0.802

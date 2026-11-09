@@ -1,0 +1,16 @@
+Target,Family,Test N,Metric,General model on family,General model on rest,Family vs rest,Family-specific model,Specific vs general
+Magnetic ordering,All (whole test set),"14,207",macro-F1,"0.7003 [0.6832, 0.715]",,,,
+Magnetic ordering,Transition Metal,"11,448",macro-F1,"0.7018 [0.6841, 0.717]","0.6178 [0.5744, 0.6635]",better on family,"0.6926 [0.6768, 0.7087]",-0.009186 (stable degradation)
+Magnetic ordering,Rare Earth,"3,735",macro-F1,"0.7405 [0.7176, 0.7617]","0.679 [0.6518, 0.699]",better on family,"0.7415 [0.7168, 0.7642]",+0.001016 (no stable change)
+Magnetic ordering,Oxide,"6,923",macro-F1,"0.6659 [0.6482, 0.6834]","0.7387 [0.7092, 0.7631]",worse on family,"0.662 [0.6441, 0.68]",-0.003897 (no stable change)
+Magnetic ordering,Intermetallic,"5,821",macro-F1,"0.7421 [0.7117, 0.7662]","0.6726 [0.6539, 0.6903]",better on family,"0.7469 [0.7154, 0.7697]",+0.004876 (no stable change)
+Curie temperature,All (whole test set),"5,165",MAE,"95.75 [85.03, 106.6]",,,,
+Curie temperature,Transition Metal,"4,719",MAE,"87 [78.57, 95.99]","188.3 [138, 230.3]",better on family,"89 [79.55, 98.86]",-2.001 (no stable change)
+Curie temperature,Rare Earth,"2,336",MAE,"51.32 [45.48, 57.37]","132.4 [115.5, 149.7]",better on family,"49.86 [42.63, 58.38]",+1.463 (no stable change)
+Curie temperature,Oxide,"1,875",MAE,"83.05 [67.9, 100.8]","103 [90.07, 116.7]",no stable difference,"86.86 [71.2, 105.7]",-3.813 (no stable change)
+Curie temperature,Intermetallic,"2,234",MAE,"86.87 [78.11, 95]","102.5 [84.27, 120.2]",no stable difference,"80.68 [70.73, 91.93]",+6.195 (stable improvement)
+Ms (moment per unit cell),All (whole test set),"13,129",MAE,"2.534 [2.428, 2.637]",,,,
+Ms (moment per unit cell),Transition Metal,"10,018",MAE,"2.714 [2.599, 2.839]","1.954 [1.781, 2.141]",worse on family,"2.698 [2.581, 2.824]",+0.01622 (no stable change)
+Ms (moment per unit cell),Rare Earth,"3,361",MAE,"2.474 [2.248, 2.713]","2.555 [2.443, 2.666]",no stable difference,"2.65 [2.432, 2.915]",-0.1764 (stable degradation)
+Ms (moment per unit cell),Oxide,"6,056",MAE,"3.48 [3.303, 3.652]","1.725 [1.623, 1.835]",worse on family,"3.515 [3.341, 3.686]",-0.0357 (no stable change)
+Ms (moment per unit cell),Intermetallic,"5,913",MAE,"1.566 [1.471, 1.673]","3.328 [3.157, 3.478]",better on family,"1.476 [1.387, 1.58]",+0.09069 (stable improvement)

@@ -1,0 +1,28 @@
+Target,Matched N,Tier,Model,Primary metric,Primary (95% CI),Secondary metric,Secondary (95% CI),"Δ vs Tier 1 (improvement, 95% CI)",Verdict
+Magnetic ordering,"13,914",Tier 1,Linear / logistic,macro-F1,"0.267 [0.2228, 0.3097]",balanced accuracy,"0.5364 [0.4626, 0.6037]",,
+Magnetic ordering,"13,914",Tier 2,Linear / logistic,macro-F1,"0.2679 [0.2217, 0.3125]",balanced accuracy,"0.5272 [0.4511, 0.5978]","0.0009297 [-0.01667, 0.01672]",no stable change
+Magnetic ordering,"13,914",Tier 3,Linear / logistic,macro-F1,"0.2923 [0.251, 0.3348]",balanced accuracy,"0.5676 [0.4838, 0.6265]","0.02529 [-0.0003596, 0.05127]",no stable change
+Magnetic ordering,"13,914",Tier 1,Gradient Boosting (hist),macro-F1,"0.3144 [0.266, 0.3691]",balanced accuracy,"0.2985 [0.2714, 0.3384]",,
+Magnetic ordering,"13,914",Tier 2,Gradient Boosting (hist),macro-F1,"0.3506 [0.3035, 0.4012]",balanced accuracy,"0.3395 [0.3009, 0.3888]","0.03618 [0.007457, 0.07069]",stable improvement
+Magnetic ordering,"13,914",Tier 3,Gradient Boosting (hist),macro-F1,"0.3076 [0.2546, 0.3535]",balanced accuracy,"0.2939 [0.263, 0.327]","-0.006828 [-0.04769, 0.03439]",no stable change
+Magnetic ordering,"13,914",Tier 1,XGBoost,macro-F1,"0.3945 [0.3421, 0.4493]",balanced accuracy,"0.4076 [0.3568, 0.468]",,
+Magnetic ordering,"13,914",Tier 2,XGBoost,macro-F1,"0.3888 [0.3317, 0.4399]",balanced accuracy,"0.3956 [0.3428, 0.4553]","-0.005692 [-0.04037, 0.02659]",no stable change
+Magnetic ordering,"13,914",Tier 3,XGBoost,macro-F1,"0.3802 [0.3269, 0.4265]",balanced accuracy,"0.3668 [0.3203, 0.4229]","-0.01433 [-0.05791, 0.02258]",no stable change
+Curie temperature,"5,490",Tier 1,Linear / logistic,MAE,"255.6 [167.8, 351.7]",R²,"0.2521 [-0.7203, 0.3287]",,
+Curie temperature,"5,490",Tier 2,Linear / logistic,MAE,"254.3 [162.5, 353]",R²,"0.2562 [-0.5518, 0.3232]","1.297 [-10.3, 12.68]",no stable change
+Curie temperature,"5,490",Tier 3,Linear / logistic,MAE,"7.647e+08 [174.1, 2.853e+09]",R²,"-8.755e+14 [-7.672e+15, 0.4597]","-7.647e+08 [-2.853e+09, 47.69]",no stable change
+Curie temperature,"5,490",Tier 1,Gradient Boosting (hist),MAE,"288 [127.4, 476.9]",R²,"-0.1738 [-0.9446, 0.3272]",,
+Curie temperature,"5,490",Tier 2,Gradient Boosting (hist),MAE,"288.4 [118.6, 479.7]",R²,"-0.2184 [-0.9626, 0.2543]","-0.3871 [-36.02, 32.14]",no stable change
+Curie temperature,"5,490",Tier 3,Gradient Boosting (hist),MAE,"326.5 [171, 510.5]",R²,"-0.3674 [-1.268, 0.181]","-38.52 [-110.2, 24.13]",no stable change
+Curie temperature,"5,490",Tier 1,XGBoost,MAE,"273.9 [112.5, 480.2]",R²,"-0.1831 [-1.089, 0.4991]",,
+Curie temperature,"5,490",Tier 2,XGBoost,MAE,"268.4 [119.9, 452.1]",R²,"-0.05577 [-0.7543, 0.394]","5.528 [-36.93, 39.09]",no stable change
+Curie temperature,"5,490",Tier 3,XGBoost,MAE,"207.4 [141.3, 276.4]",R²,"0.5034 [-0.06315, 0.5763]","66.47 [-48.11, 206.6]",no stable change
+Ms (moment per unit cell),"10,852",Tier 1,Linear / logistic,MAE,"2.163 [1.995, 2.317]",R²,"0.184 [0.1374, 0.2559]",,
+Ms (moment per unit cell),"10,852",Tier 2,Linear / logistic,MAE,"2.164 [1.995, 2.306]",R²,"0.1871 [0.1394, 0.2596]","-0.001344 [-0.02427, 0.02279]",no stable change
+Ms (moment per unit cell),"10,852",Tier 3,Linear / logistic,MAE,"2.072 [1.902, 2.215]",R²,"0.2145 [0.1591, 0.3004]","0.09047 [0.0414, 0.1478]",stable improvement
+Ms (moment per unit cell),"10,852",Tier 1,Gradient Boosting (hist),MAE,"1.874 [1.715, 2.015]",R²,"0.2663 [0.198, 0.3797]",,
+Ms (moment per unit cell),"10,852",Tier 2,Gradient Boosting (hist),MAE,"1.88 [1.722, 2.03]",R²,"0.2658 [0.197, 0.3799]","-0.006445 [-0.04287, 0.02781]",no stable change
+Ms (moment per unit cell),"10,852",Tier 3,Gradient Boosting (hist),MAE,"1.791 [1.618, 1.935]",R²,"0.282 [0.2, 0.4011]","0.08291 [0.006417, 0.1576]",stable improvement
+Ms (moment per unit cell),"10,852",Tier 1,XGBoost,MAE,"1.913 [1.745, 2.059]",R²,"0.2323 [0.1698, 0.3387]",,
+Ms (moment per unit cell),"10,852",Tier 2,XGBoost,MAE,"1.899 [1.737, 2.051]",R²,"0.2399 [0.1729, 0.3495]","0.0137 [-0.04223, 0.08051]",no stable change
+Ms (moment per unit cell),"10,852",Tier 3,XGBoost,MAE,"1.816 [1.645, 1.97]",R²,"0.2817 [0.2141, 0.3958]","0.0969 [0.01826, 0.1767]",stable improvement

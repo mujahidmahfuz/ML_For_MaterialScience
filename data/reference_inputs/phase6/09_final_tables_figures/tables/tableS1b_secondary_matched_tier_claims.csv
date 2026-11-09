@@ -1,0 +1,13 @@
+target,from_tier,to_tier,n_algorithms_stable_improve,n_algorithms_stable_degrade,claim,claim_tree_models_only
+K1,tier1,tier2,0,1,no claim,no claim
+K1,tier2,tier3,0,0,no claim,no claim
+K1,tier1,tier3,0,1,no claim,no claim
+K1 (signed log10),tier1,tier2,0,0,no claim,no claim
+K1 (signed log10),tier2,tier3,0,1,no claim,no claim
+K1 (signed log10),tier1,tier3,0,1,no claim,no claim
+Ms (mass magnetization),tier1,tier2,0,0,no claim,no claim
+Ms (mass magnetization),tier2,tier3,0,0,no claim,no claim
+Ms (mass magnetization),tier1,tier3,0,0,no claim,no claim
+Ms (volume magnetization),tier1,tier2,0,1,no claim,no claim
+Ms (volume magnetization),tier2,tier3,0,1,no claim,no claim
+Ms (volume magnetization),tier1,tier3,1,0,no claim,no claim

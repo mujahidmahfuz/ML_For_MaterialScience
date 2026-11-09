@@ -1,0 +1,4 @@
+target,algorithm,oxidation_importance_share,top_oxidation_feature,top_oxidation_feature_rank,n_features
+ordering,xgboost,0.0920084825950406,avg_oxidation_state,11,73
+curie,xgboost,0.10091940317649897,maximum_oxidation_state,5,73
+ms_moment,xgboost,0.03182502964688498,number_of_possible_oxidation_states,28,73

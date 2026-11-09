@@ -1,0 +1,145 @@
+target,scope,group,algorithm,n_test,test_macro_f1,test_balanced_accuracy,test_accuracy,test_macro_f1_ci_low,test_macro_f1_ci_high,test_balanced_accuracy_ci_low,test_balanced_accuracy_ci_high,test_mae,test_rmse,test_r2,test_median_ae,test_mae_ci_low,test_mae_ci_high,test_rmse_ci_low,test_rmse_ci_high,test_r2_ci_low,test_r2_ci_high
+ordering,general_overall,ALL,linear,14207,0.43506,0.55723,0.50074,0.419,0.451,0.5369,0.57638,,,,,,,,,,
+ordering,general_overall,ALL,gradient_boosting,14207,0.69478,0.71159,0.79419,0.67958,0.70945,0.69246,0.72751,,,,,,,,,,
+ordering,general_overall,ALL,xgboost,14207,0.70029,0.70558,0.80383,0.68319,0.715,0.68666,0.72191,,,,,,,,,,
+ordering,general_on_family,Transition Metal,linear,11448,0.43118,0.55555,0.46488,0.41369,0.44785,0.53381,0.5756,,,,,,,,,,
+ordering,general_on_family,Transition Metal,gradient_boosting,11448,0.69638,0.7174,0.78258,0.68001,0.71182,0.69825,0.7338,,,,,,,,,,
+ordering,general_on_family,Transition Metal,xgboost,11448,0.7018,0.70978,0.79368,0.68406,0.71702,0.68995,0.72688,,,,,,,,,,
+ordering,specific_on_family,Transition Metal,linear,11448,0.44985,0.57492,0.49188,0.4309,0.46713,0.55258,0.596,,,,,,,,,,
+ordering,specific_on_family,Transition Metal,gradient_boosting,11448,0.69348,0.70173,0.78538,0.67619,0.70888,0.68157,0.719,,,,,,,,,,
+ordering,specific_on_family,Transition Metal,xgboost,11448,0.69261,0.72157,0.77551,0.67684,0.70867,0.70166,0.73787,,,,,,,,,,
+ordering,general_on_rest,Transition Metal,linear,2759,0.35753,0.38968,0.64951,0.32618,0.38643,0.34849,0.43513,,,,,,,,,,
+ordering,general_on_rest,Transition Metal,gradient_boosting,2759,0.60194,0.57177,0.84233,0.55252,0.64533,0.52383,0.62574,,,,,,,,,,
+ordering,general_on_rest,Transition Metal,xgboost,2759,0.61782,0.59058,0.84596,0.57442,0.66346,0.54712,0.64428,,,,,,,,,,
+ordering,general_on_family,Rare Earth,linear,3735,0.39997,0.53039,0.42276,0.35528,0.44842,0.4922,0.56969,,,,,,,,,,
+ordering,general_on_family,Rare Earth,gradient_boosting,3735,0.72397,0.7456,0.79009,0.70071,0.74585,0.71795,0.77519,,,,,,,,,,
+ordering,general_on_family,Rare Earth,xgboost,3735,0.74049,0.75694,0.80428,0.71762,0.76166,0.72985,0.7835,,,,,,,,,,
+ordering,specific_on_family,Rare Earth,linear,3735,0.47444,0.57799,0.51111,0.42867,0.5144,0.53922,0.61473,,,,,,,,,,
+ordering,specific_on_family,Rare Earth,gradient_boosting,3735,0.7301,0.74611,0.79598,0.70569,0.75562,0.71895,0.77381,,,,,,,,,,
+ordering,specific_on_family,Rare Earth,xgboost,3735,0.74151,0.73682,0.81124,0.7168,0.76424,0.7081,0.76593,,,,,,,,,,
+ordering,general_on_rest,Rare Earth,linear,10472,0.44402,0.56155,0.52855,0.42676,0.46236,0.53536,0.58412,,,,,,,,,,
+ordering,general_on_rest,Rare Earth,gradient_boosting,10472,0.67894,0.69401,0.79565,0.65688,0.69627,0.6702,0.71388,,,,,,,,,,
+ordering,general_on_rest,Rare Earth,xgboost,10472,0.67896,0.67978,0.80367,0.65182,0.69901,0.65117,0.70274,,,,,,,,,,
+ordering,general_on_family,Oxide,linear,6923,0.39133,0.51862,0.43117,0.37696,0.40573,0.49648,0.54003,,,,,,,,,,
+ordering,general_on_family,Oxide,gradient_boosting,6923,0.6601,0.6732,0.76181,0.64144,0.67718,0.65274,0.69166,,,,,,,,,,
+ordering,general_on_family,Oxide,xgboost,6923,0.66587,0.67131,0.77134,0.64818,0.68342,0.64967,0.69081,,,,,,,,,,
+ordering,specific_on_family,Oxide,linear,6923,0.42702,0.54939,0.47812,0.4111,0.44281,0.52553,0.57327,,,,,,,,,,
+ordering,specific_on_family,Oxide,gradient_boosting,6923,0.63266,0.68487,0.71645,0.61284,0.64948,0.66185,0.70315,,,,,,,,,,
+ordering,specific_on_family,Oxide,xgboost,6923,0.66197,0.66677,0.76889,0.64414,0.68002,0.64646,0.68703,,,,,,,,,,
+ordering,general_on_rest,Oxide,linear,7284,0.47763,0.59336,0.56686,0.44506,0.50662,0.55631,0.62503,,,,,,,,,,
+ordering,general_on_rest,Oxide,gradient_boosting,7284,0.73174,0.75485,0.82496,0.70017,0.75839,0.72096,0.78223,,,,,,,,,,
+ordering,general_on_rest,Oxide,xgboost,7284,0.73873,0.74396,0.83471,0.70919,0.76307,0.70997,0.77211,,,,,,,,,,
+ordering,general_on_family,Intermetallic,linear,5821,0.46944,0.58818,0.54235,0.43662,0.50188,0.54996,0.62034,,,,,,,,,,
+ordering,general_on_family,Intermetallic,gradient_boosting,5821,0.73547,0.75876,0.82134,0.70181,0.76348,0.72331,0.78768,,,,,,,,,,
+ordering,general_on_family,Intermetallic,xgboost,5821,0.74206,0.74854,0.83027,0.71172,0.7662,0.713,0.77974,,,,,,,,,,
+ordering,specific_on_family,Intermetallic,linear,5821,0.49583,0.62743,0.56056,0.4665,0.5223,0.59173,0.65386,,,,,,,,,,
+ordering,specific_on_family,Intermetallic,gradient_boosting,5821,0.72715,0.76731,0.80862,0.69539,0.75091,0.73645,0.79233,,,,,,,,,,
+ordering,specific_on_family,Intermetallic,xgboost,5821,0.74694,0.75806,0.82855,0.7154,0.76974,0.72285,0.78474,,,,,,,,,,
+ordering,general_on_rest,Intermetallic,linear,8386,0.41441,0.53686,0.47186,0.39597,0.43551,0.51344,0.56301,,,,,,,,,,
+ordering,general_on_rest,Intermetallic,gradient_boosting,8386,0.66715,0.6813,0.77534,0.64953,0.6841,0.66114,0.69935,,,,,,,,,,
+ordering,general_on_rest,Intermetallic,xgboost,8386,0.67265,0.67795,0.78548,0.65392,0.69032,0.65706,0.69758,,,,,,,,,,
+ordering,general_on_slice,Experimental,linear,2599,0.48102,0.58501,0.48326,0.41559,0.53809,0.52725,0.64359,,,,,,,,,,
+ordering,general_on_slice,Experimental,gradient_boosting,2599,0.7316,0.74382,0.78569,0.69295,0.76731,0.6981,0.77834,,,,,,,,,,
+ordering,general_on_slice,Experimental,xgboost,2599,0.73804,0.73187,0.79531,0.69826,0.77306,0.68652,0.76654,,,,,,,,,,
+ordering,general_on_rest,Experimental,linear,11608,0.37911,0.50486,0.50465,0.37016,0.38898,0.4851,0.52806,,,,,,,,,,
+ordering,general_on_rest,Experimental,gradient_boosting,11608,0.58036,0.60908,0.79609,0.5662,0.59603,0.58853,0.63054,,,,,,,,,,
+ordering,general_on_rest,Experimental,xgboost,11608,0.58748,0.61001,0.80574,0.57348,0.60188,0.59072,0.63,,,,,,,,,,
+ordering,general_on_slice,Computational,linear,11608,0.37911,0.50486,0.50465,0.37016,0.38898,0.4851,0.52806,,,,,,,,,,
+ordering,general_on_slice,Computational,gradient_boosting,11608,0.58036,0.60908,0.79609,0.5662,0.59603,0.58853,0.63054,,,,,,,,,,
+ordering,general_on_slice,Computational,xgboost,11608,0.58748,0.61001,0.80574,0.57348,0.60188,0.59072,0.63,,,,,,,,,,
+ordering,general_on_rest,Computational,linear,2599,0.48102,0.58501,0.48326,0.41559,0.53809,0.52725,0.64359,,,,,,,,,,
+ordering,general_on_rest,Computational,gradient_boosting,2599,0.7316,0.74382,0.78569,0.69295,0.76731,0.6981,0.77834,,,,,,,,,,
+ordering,general_on_rest,Computational,xgboost,2599,0.73804,0.73187,0.79531,0.69826,0.77306,0.68652,0.76654,,,,,,,,,,
+curie,general_overall,ALL,linear,5165,,,,,,,,165.21825,223.75025,0.36217,129.85809,153.05447,177.85532,208.01102,239.04609,0.27792,0.43371
+curie,general_overall,ALL,gradient_boosting,5165,,,,,,,,94.5293,169.15963,0.63544,44.05878,84.43592,105.24591,151.58203,186.43003,0.55939,0.69819
+curie,general_overall,ALL,xgboost,5165,,,,,,,,95.74577,168.49158,0.63831,45.78867,85.03274,106.59648,151.59857,186.59669,0.56615,0.69766
+curie,general_on_family,Transition Metal,linear,4719,,,,,,,,161.08315,216.26846,0.38143,126.59369,147.98811,173.76545,200.95218,232.11835,0.289,0.456
+curie,general_on_family,Transition Metal,gradient_boosting,4719,,,,,,,,84.73689,153.54147,0.68822,40.73099,76.4607,93.3878,137.73478,170.70082,0.61587,0.74884
+curie,general_on_family,Transition Metal,xgboost,4719,,,,,,,,87.00195,154.53572,0.68417,42.25311,78.57052,95.98687,138.02001,171.4104,0.61647,0.74263
+curie,specific_on_family,Transition Metal,linear,4719,,,,,,,,161.16048,216.2089,0.38177,125.81637,148.38444,174.47106,200.88133,232.17334,0.28446,0.45545
+curie,specific_on_family,Transition Metal,gradient_boosting,4719,,,,,,,,91.73145,155.0136,0.68221,47.76267,83.14487,101.18984,139.55853,171.65829,0.61326,0.73961
+curie,specific_on_family,Transition Metal,xgboost,4719,,,,,,,,89.00332,158.88705,0.66613,38.90509,79.5549,98.85637,142.38092,175.79901,0.59923,0.7276
+curie,general_on_rest,Transition Metal,linear,446,,,,,,,,208.97065,291.3713,0.20886,144.58666,171.73091,249.0997,238.12869,341.0578,0.08505,0.33869
+curie,general_on_rest,Transition Metal,gradient_boosting,446,,,,,,,,198.14002,286.25471,0.2364,136.6975,146.84834,236.65853,225.96054,328.46971,0.10965,0.37819
+curie,general_on_rest,Transition Metal,xgboost,446,,,,,,,,188.26164,275.84157,0.29094,122.2772,137.96219,230.29423,214.48841,319.8436,0.16953,0.43725
+curie,general_on_family,Rare Earth,linear,2336,,,,,,,,124.59435,165.96286,0.54779,96.01218,111.26078,136.25123,152.89244,178.83673,0.45952,0.5985
+curie,general_on_family,Rare Earth,gradient_boosting,2336,,,,,,,,49.47754,95.88378,0.84906,23.27931,43.90135,55.07976,79.49096,109.75338,0.80637,0.8883
+curie,general_on_family,Rare Earth,xgboost,2336,,,,,,,,51.31943,96.98258,0.84558,24.51091,45.47804,57.36666,81.98327,110.62835,0.80569,0.88274
+curie,specific_on_family,Rare Earth,linear,2336,,,,,,,,112.63961,157.33688,0.59358,77.04218,99.44354,124.47756,143.70827,172.29265,0.50336,0.65346
+curie,specific_on_family,Rare Earth,gradient_boosting,2336,,,,,,,,52.51037,97.54663,0.84378,24.78562,47.11705,58.12751,82.89492,111.0114,0.80499,0.88057
+curie,specific_on_family,Rare Earth,xgboost,2336,,,,,,,,49.85654,96.94075,0.84571,23.4393,42.63163,58.3835,80.26683,111.65827,0.80523,0.88378
+curie,general_on_rest,Rare Earth,linear,2829,,,,,,,,198.76277,262.03074,0.22637,158.53482,181.41294,216.71526,239.23762,284.65006,0.10379,0.33208
+curie,general_on_rest,Rare Earth,gradient_boosting,2829,,,,,,,,131.73005,211.30968,0.49688,82.05497,114.82739,148.98572,187.11424,237.34501,0.39003,0.59101
+curie,general_on_rest,Rare Earth,xgboost,2829,,,,,,,,132.43009,209.91656,0.50349,88.36096,115.52977,149.65243,186.29663,233.47404,0.40144,0.59599
+curie,general_on_family,Oxide,linear,1875,,,,,,,,157.89965,222.40181,0.28851,114.98158,132.75098,185.92058,192.06615,255.22343,0.02377,0.44313
+curie,general_on_family,Oxide,gradient_boosting,1875,,,,,,,,82.97528,163.03331,0.61766,36.87324,68.62981,100.2775,132.07239,201.61111,0.43989,0.74034
+curie,general_on_family,Oxide,xgboost,1875,,,,,,,,83.04907,163.23425,0.61672,38.34675,67.90451,100.82671,130.76485,199.95086,0.44085,0.74369
+curie,specific_on_family,Oxide,linear,1875,,,,,,,,143.95299,218.59086,0.31268,98.10379,113.63387,177.67145,175.31489,260.60465,0.04221,0.48444
+curie,specific_on_family,Oxide,gradient_boosting,1875,,,,,,,,89.18688,173.56755,0.56666,33.72797,70.00759,109.54802,142.07069,208.56427,0.39208,0.69618
+curie,specific_on_family,Oxide,xgboost,1875,,,,,,,,86.86212,167.0842,0.59843,38.62384,71.19841,105.73445,136.43444,200.14968,0.42594,0.71778
+curie,general_on_rest,Oxide,linear,3290,,,,,,,,169.38919,224.51512,0.39656,136.21556,159.49842,179.15013,209.34716,240.41879,0.3271,0.45859
+curie,general_on_rest,Oxide,gradient_boosting,3290,,,,,,,,101.11404,172.5538,0.64356,49.27693,88.47869,114.24934,152.01758,193.08017,0.56442,0.71386
+curie,general_on_rest,Oxide,xgboost,3290,,,,,,,,102.98174,171.41566,0.64824,51.30914,90.07304,116.67842,151.22162,191.31212,0.57536,0.71668
+curie,general_on_family,Intermetallic,linear,2234,,,,,,,,160.62705,209.73681,0.41893,133.05849,149.92556,171.67854,194.13364,225.06303,0.34595,0.48402
+curie,general_on_family,Intermetallic,gradient_boosting,2234,,,,,,,,82.33258,139.95594,0.74126,43.01835,74.69161,90.76923,124.26174,157.38655,0.67998,0.79356
+curie,general_on_family,Intermetallic,xgboost,2234,,,,,,,,86.87181,142.33826,0.73238,45.50235,78.11294,95.00457,126.89669,158.19421,0.67166,0.78516
+curie,specific_on_family,Intermetallic,linear,2234,,,,,,,,152.4207,202.8687,0.45636,124.79255,142.1737,164.44152,188.63546,219.27776,0.3831,0.51702
+curie,specific_on_family,Intermetallic,gradient_boosting,2234,,,,,,,,78.85666,135.41206,0.75779,38.08589,70.96364,86.60131,120.25047,151.24086,0.70475,0.80258
+curie,specific_on_family,Intermetallic,xgboost,2234,,,,,,,,80.67646,139.62374,0.74249,34.97516,70.73256,91.92604,123.72908,155.60035,0.68472,0.7955
+curie,general_on_rest,Intermetallic,linear,2931,,,,,,,,168.71766,233.86802,0.2805,125.993,149.43412,188.95916,209.76018,259.1048,0.13736,0.37529
+curie,general_on_rest,Intermetallic,gradient_boosting,2931,,,,,,,,103.82561,188.40269,0.53305,44.65136,86.13988,122.14907,160.93911,213.73141,0.41431,0.63598
+curie,general_on_rest,Intermetallic,xgboost,2931,,,,,,,,102.50948,185.97175,0.54503,46.09042,84.26824,120.21373,158.23932,209.60564,0.42924,0.63946
+curie,general_on_slice,Experimental,linear,4882,,,,,,,,166.22317,224.64333,0.36164,131.37712,153.27116,179.4628,208.65752,241.27438,0.27382,0.43729
+curie,general_on_slice,Experimental,gradient_boosting,4882,,,,,,,,94.23431,169.01438,0.63865,43.45229,83.40477,104.96227,150.72476,186.4474,0.562,0.70452
+curie,general_on_slice,Experimental,xgboost,4882,,,,,,,,95.51088,168.11497,0.64249,45.78867,83.98811,106.75014,150.81337,186.58896,0.56981,0.70277
+curie,general_on_rest,Experimental,linear,283,,,,,,,,147.88251,207.74031,0.34185,105.70019,127.93738,170.33874,178.94378,240.99221,0.21162,0.45068
+curie,general_on_rest,Experimental,gradient_boosting,283,,,,,,,,99.61824,171.646,0.55069,47.9588,82.23116,119.10387,136.47236,211.50573,0.37345,0.69585
+curie,general_on_rest,Experimental,xgboost,283,,,,,,,,99.79783,174.86069,0.5337,43.38192,82.25034,119.52675,137.20144,215.22697,0.32476,0.68258
+curie,general_on_slice,Computational,linear,283,,,,,,,,147.88251,207.74031,0.34185,105.70019,127.93738,170.33874,178.94378,240.99221,0.21162,0.45068
+curie,general_on_slice,Computational,gradient_boosting,283,,,,,,,,99.61824,171.646,0.55069,47.9588,82.23116,119.10387,136.47236,211.50573,0.37345,0.69585
+curie,general_on_slice,Computational,xgboost,283,,,,,,,,99.79783,174.86069,0.5337,43.38192,82.25034,119.52675,137.20144,215.22697,0.32476,0.68258
+curie,general_on_rest,Computational,linear,4882,,,,,,,,166.22317,224.64333,0.36164,131.37712,153.27116,179.4628,208.65752,241.27438,0.27382,0.43729
+curie,general_on_rest,Computational,gradient_boosting,4882,,,,,,,,94.23431,169.01438,0.63865,43.45229,83.40477,104.96227,150.72476,186.4474,0.562,0.70452
+curie,general_on_rest,Computational,xgboost,4882,,,,,,,,95.51088,168.11497,0.64249,45.78867,83.98811,106.75014,150.81337,186.58896,0.56981,0.70277
+ms_moment,general_overall,ALL,linear,13129,,,,,,,,4.58007,9.24213,0.26968,2.69231,4.44382,4.72166,8.5577,9.89103,0.24717,0.29365
+ms_moment,general_overall,ALL,gradient_boosting,13129,,,,,,,,2.57683,5.93429,0.6989,1.00204,2.47104,2.673,5.40774,6.43327,0.65682,0.74138
+ms_moment,general_overall,ALL,xgboost,13129,,,,,,,,2.53431,6.00699,0.69148,0.95106,2.42805,2.63677,5.43008,6.58251,0.64396,0.74164
+ms_moment,general_on_family,Transition Metal,linear,10018,,,,,,,,4.90797,9.73395,0.27793,2.86062,4.75112,5.07337,9.03207,10.50851,0.25662,0.29946
+ms_moment,general_on_family,Transition Metal,gradient_boosting,10018,,,,,,,,2.76081,6.01332,0.72443,1.12918,2.64415,2.885,5.53136,6.52883,0.6832,0.76431
+ms_moment,general_on_family,Transition Metal,xgboost,10018,,,,,,,,2.71447,6.10338,0.71611,1.06634,2.59873,2.83859,5.56359,6.68596,0.67311,0.76018
+ms_moment,specific_on_family,Transition Metal,linear,10018,,,,,,,,4.96205,9.70213,0.28264,2.9395,4.796,5.13098,9.013,10.45492,0.25982,0.30466
+ms_moment,specific_on_family,Transition Metal,gradient_boosting,10018,,,,,,,,2.75198,6.04681,0.72135,1.10309,2.63817,2.87689,5.51405,6.61262,0.67565,0.76338
+ms_moment,specific_on_family,Transition Metal,xgboost,10018,,,,,,,,2.69825,6.17425,0.70948,1.03982,2.58093,2.82447,5.61605,6.80225,0.66359,0.75623
+ms_moment,general_on_rest,Transition Metal,linear,3111,,,,,,,,3.52418,7.44063,0.14922,2.23573,3.3117,3.75908,5.77498,9.23856,0.09822,0.21816
+ms_moment,general_on_rest,Transition Metal,gradient_boosting,3111,,,,,,,,1.9844,5.67229,0.50556,0.70414,1.80841,2.15768,4.26163,7.26705,0.41739,0.61958
+ms_moment,general_on_rest,Transition Metal,xgboost,3111,,,,,,,,1.95414,5.68551,0.50325,0.66269,1.78141,2.14096,4.15065,7.41661,0.39647,0.63109
+ms_moment,general_on_family,Rare Earth,linear,3361,,,,,,,,4.98697,11.05398,0.29279,2.61675,4.6549,5.33153,9.39523,12.63174,0.24495,0.34675
+ms_moment,general_on_family,Rare Earth,gradient_boosting,3361,,,,,,,,2.52509,7.26321,0.69467,0.82889,2.30569,2.77359,5.70353,8.66731,0.61524,0.78144
+ms_moment,general_on_family,Rare Earth,xgboost,3361,,,,,,,,2.47353,7.29999,0.69157,0.79705,2.24829,2.71307,5.65889,8.80363,0.6048,0.78283
+ms_moment,specific_on_family,Rare Earth,linear,3361,,,,,,,,5.21421,10.7214,0.33471,2.9969,4.91253,5.53312,9.12508,12.24717,0.27535,0.40016
+ms_moment,specific_on_family,Rare Earth,gradient_boosting,3361,,,,,,,,2.70278,7.41948,0.68139,0.95341,2.49155,2.95141,5.94601,8.74956,0.60728,0.7697
+ms_moment,specific_on_family,Rare Earth,xgboost,3361,,,,,,,,2.64989,7.5785,0.66759,0.89669,2.43231,2.91471,6.00907,9.1945,0.57455,0.75644
+ms_moment,general_on_rest,Rare Earth,linear,9768,,,,,,,,4.44007,8.53017,0.25543,2.71795,4.29328,4.57898,7.85191,9.22858,0.23267,0.27558
+ms_moment,general_on_rest,Rare Earth,gradient_boosting,9768,,,,,,,,2.59464,5.40195,0.7014,1.0706,2.48556,2.69272,5.06446,5.76513,0.65377,0.74288
+ms_moment,general_on_rest,Rare Earth,xgboost,9768,,,,,,,,2.55522,5.49215,0.69134,1.01736,2.4431,2.66645,5.09824,5.94681,0.64158,0.73789
+ms_moment,general_on_family,Oxide,linear,6056,,,,,,,,5.62682,10.68635,0.25617,3.55713,5.39739,5.85031,9.75435,11.58364,0.2329,0.27881
+ms_moment,general_on_family,Oxide,gradient_boosting,6056,,,,,,,,3.54057,6.88481,0.69126,1.59093,3.37868,3.69941,6.45679,7.36552,0.63965,0.73501
+ms_moment,general_on_family,Oxide,xgboost,6056,,,,,,,,3.47954,6.9876,0.68197,1.55463,3.30322,3.65241,6.46616,7.58022,0.62744,0.7315
+ms_moment,specific_on_family,Oxide,linear,6056,,,,,,,,5.61163,10.29395,0.30979,3.37148,5.38021,5.8303,9.44518,11.11089,0.27704,0.33691
+ms_moment,specific_on_family,Oxide,gradient_boosting,6056,,,,,,,,3.52654,6.91556,0.68849,1.58145,3.36081,3.68393,6.45173,7.4318,0.63683,0.7351
+ms_moment,specific_on_family,Oxide,xgboost,6056,,,,,,,,3.51524,7.09202,0.67239,1.54153,3.34052,3.6863,6.5469,7.67243,0.6147,0.72625
+ms_moment,general_on_rest,Oxide,linear,7073,,,,,,,,3.68383,7.79578,0.24771,2.06099,3.52331,3.8535,6.79783,8.84918,0.20095,0.29823
+ms_moment,general_on_rest,Oxide,gradient_boosting,7073,,,,,,,,1.75166,4.97825,0.69322,0.70878,1.65101,1.86031,3.91213,5.9103,0.61699,0.77108
+ms_moment,general_on_rest,Oxide,xgboost,7073,,,,,,,,1.72498,5.01732,0.68839,0.66188,1.6232,1.8347,3.90872,5.99672,0.60423,0.7732
+ms_moment,general_on_family,Intermetallic,linear,5913,,,,,,,,3.48172,6.70004,0.20762,2.0561,3.33954,3.64252,5.82359,7.60523,0.16002,0.2563
+ms_moment,general_on_family,Intermetallic,gradient_boosting,5913,,,,,,,,1.59853,4.27503,0.6774,0.67905,1.50112,1.71175,3.42072,5.16617,0.61682,0.74829
+ms_moment,general_on_family,Intermetallic,xgboost,5913,,,,,,,,1.56621,4.26894,0.67832,0.63995,1.47126,1.67271,3.38196,5.19036,0.61094,0.75483
+ms_moment,specific_on_family,Intermetallic,linear,5913,,,,,,,,2.93805,6.32061,0.29482,1.72629,2.80002,3.09479,5.31603,7.33732,0.25044,0.349
+ms_moment,specific_on_family,Intermetallic,gradient_boosting,5913,,,,,,,,1.54871,4.1515,0.69578,0.62003,1.45441,1.65887,3.36753,4.9561,0.64315,0.75019
+ms_moment,specific_on_family,Intermetallic,xgboost,5913,,,,,,,,1.47552,4.05855,0.70925,0.55316,1.38694,1.57961,3.3288,4.80075,0.66395,0.76099
+ms_moment,general_on_rest,Intermetallic,linear,7216,,,,,,,,5.4801,10.89153,0.26729,3.30435,5.26908,5.69319,9.96204,11.8455,0.23903,0.29332
+ms_moment,general_on_rest,Intermetallic,gradient_boosting,7216,,,,,,,,3.37848,7.00691,0.69674,1.44451,3.22131,3.52069,6.37086,7.74109,0.64716,0.74693
+ms_moment,general_on_rest,Intermetallic,xgboost,7216,,,,,,,,3.32759,7.12173,0.68672,1.39392,3.15665,3.47798,6.43114,7.95566,0.63353,0.74461
+ms_moment,general_on_slice,Computational,linear,13129,,,,,,,,4.58007,9.24213,0.26968,2.69231,4.44382,4.72166,8.5577,9.89103,0.24717,0.29365
+ms_moment,general_on_slice,Computational,gradient_boosting,13129,,,,,,,,2.57683,5.93429,0.6989,1.00204,2.47104,2.673,5.40774,6.43327,0.65682,0.74138
+ms_moment,general_on_slice,Computational,xgboost,13129,,,,,,,,2.53431,6.00699,0.69148,0.95106,2.42805,2.63677,5.43008,6.58251,0.64396,0.74164

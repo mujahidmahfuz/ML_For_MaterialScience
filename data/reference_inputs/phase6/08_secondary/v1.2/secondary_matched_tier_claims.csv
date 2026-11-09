@@ -1,0 +1,13 @@
+target,from_tier,to_tier,n_algorithms_stable_improve,n_algorithms_stable_degrade,claim,claim_tree_models_only
+k1,tier1,tier2,0,1,no claim,no claim
+k1,tier2,tier3,0,0,no claim,no claim
+k1,tier1,tier3,0,1,no claim,no claim
+k1_log,tier1,tier2,0,0,no claim,no claim
+k1_log,tier2,tier3,0,1,no claim,no claim
+k1_log,tier1,tier3,0,1,no claim,no claim
+ms_mass,tier1,tier2,0,0,no claim,no claim
+ms_mass,tier2,tier3,0,0,no claim,no claim
+ms_mass,tier1,tier3,0,0,no claim,no claim
+ms_volume,tier1,tier2,0,1,no claim,no claim
+ms_volume,tier2,tier3,0,1,no claim,no claim
+ms_volume,tier1,tier3,1,0,no claim,no claim

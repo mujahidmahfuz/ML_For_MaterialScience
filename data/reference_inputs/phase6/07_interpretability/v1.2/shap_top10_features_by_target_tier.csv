@@ -1,0 +1,91 @@
+target,tier,rank,feature,family,mean_abs_shap,share_of_total
+curie,tier1,1,valence_electron_concentration,d/f-electron & valence proxies,89.16936,0.20058633
+curie,tier1,2,basic_comp__transition_metal_fraction,Magnetic-element content,33.04708,0.07433936
+curie,tier1,3,average_unpaired_electron_proxy,d/f-electron & valence proxies,31.174036,0.07012595
+curie,tier1,4,basic_comp__fraction_Fe,Magnetic-element content,23.861675,0.053676803
+curie,tier1,5,average_atomic_mass,Atomic size & periodic statistics,20.619312,0.046383113
+curie,tier1,6,atomic_mass_variance,Atomic size & periodic statistics,20.24212,0.045534622
+curie,tier1,7,atomic_radius_variance,Atomic size & periodic statistics,19.41519,0.043674443
+curie,tier1,8,basic_comp__fraction_Co,Magnetic-element content,16.868841,0.037946433
+curie,tier1,9,electronegativity_variance,Atomic size & periodic statistics,15.493314,0.034852188
+curie,tier1,10,group_variance,Atomic size & periodic statistics,13.841937,0.031137418
+curie,tier2,1,valence_electron_concentration,d/f-electron & valence proxies,93.328735,0.18398957
+curie,tier2,2,basic_comp__transition_metal_fraction,Magnetic-element content,34.304214,0.06762781
+curie,tier2,3,average_unpaired_electron_proxy,d/f-electron & valence proxies,28.272444,0.05573669
+curie,tier2,4,electronegativity_variance,Atomic size & periodic statistics,25.825008,0.050911784
+curie,tier2,5,basic_comp__fraction_Fe,Magnetic-element content,20.783667,0.040973213
+curie,tier2,6,group_variance,Atomic size & periodic statistics,20.741055,0.040889207
+curie,tier2,7,average_atomic_mass,Atomic size & periodic statistics,20.69336,0.040795177
+curie,tier2,8,basic_comp__fraction_Co,Magnetic-element content,18.72196,0.036908735
+curie,tier2,9,average_d_electron_count,d/f-electron & valence proxies,18.431149,0.036335424
+curie,tier2,10,basic_comp__contains_Fe,Magnetic-element content,18.130486,0.035742693
+curie,tier3,1,p3_point_group,Symmetry,91.269,0.15535219
+curie,tier3,2,p3_volume,Structural packing,63.605694,0.108265504
+curie,tier3,3,valence_electron_concentration,d/f-electron & valence proxies,51.317013,0.087348506
+curie,tier3,4,basic_comp__fraction_Fe,Magnetic-element content,16.762157,0.028531462
+curie,tier3,5,basic_comp__fraction_Co,Magnetic-element content,16.412601,0.02793647
+curie,tier3,6,average_unpaired_electron_proxy,d/f-electron & valence proxies,15.874384,0.027020352
+curie,tier3,7,p3_band_gap,Electronic structure,14.973751,0.025487352
+curie,tier3,8,basic_comp__transition_metal_fraction,Magnetic-element content,14.690504,0.025005227
+curie,tier3,9,basic_comp__total_atoms_formula,Composition & stoichiometry,11.60363,0.01975095
+curie,tier3,10,average_melting_temperature,Atomic size & periodic statistics,10.567153,0.017986726
+ms_moment,tier1,1,basic_comp__magnetic_element_fraction,Magnetic-element content,0.6913996,0.12758692
+ms_moment,tier1,2,basic_comp__fraction_Mn,Magnetic-element content,0.40257436,0.07428876
+ms_moment,tier1,3,electronegativity_variance,Atomic size & periodic statistics,0.37156194,0.06856591
+ms_moment,tier1,4,average_unpaired_electron_proxy,d/f-electron & valence proxies,0.32929105,0.06076548
+ms_moment,tier1,5,electronegativity_difference,Atomic size & periodic statistics,0.25188354,0.046481144
+ms_moment,tier1,6,average_atomic_radius,Atomic size & periodic statistics,0.21633705,0.0399216
+ms_moment,tier1,7,basic_comp__total_atoms_formula,Composition & stoichiometry,0.21120267,0.03897413
+ms_moment,tier1,8,basic_comp__fraction_Fe,Magnetic-element content,0.19702835,0.036358483
+ms_moment,tier1,9,average_atomic_mass,Atomic size & periodic statistics,0.169692,0.031313986
+ms_moment,tier1,10,melting_temperature_variance,Atomic size & periodic statistics,0.16965473,0.03130711
+ms_moment,tier2,1,basic_comp__magnetic_element_fraction,Magnetic-element content,0.73931557,0.13565677
+ms_moment,tier2,2,electronegativity_variance,Atomic size & periodic statistics,0.39729384,0.07289932
+ms_moment,tier2,3,basic_comp__fraction_Mn,Magnetic-element content,0.33618516,0.06168651
+ms_moment,tier2,4,average_unpaired_electron_proxy,d/f-electron & valence proxies,0.3340992,0.061303757
+ms_moment,tier2,5,average_atomic_radius,Atomic size & periodic statistics,0.23167329,0.042509656
+ms_moment,tier2,6,basic_comp__fraction_Fe,Magnetic-element content,0.22613832,0.04149405
+ms_moment,tier2,7,electronegativity_difference,Atomic size & periodic statistics,0.19182496,0.0351979
+ms_moment,tier2,8,basic_comp__total_atoms_formula,Composition & stoichiometry,0.17659056,0.032402545
+ms_moment,tier2,9,average_atomic_mass,Atomic size & periodic statistics,0.15315218,0.028101845
+ms_moment,tier2,10,melting_temperature_variance,Atomic size & periodic statistics,0.149578,0.02744602
+ms_moment,tier3,1,basic_comp__magnetic_element_fraction,Magnetic-element content,0.6212985,0.10127847
+ms_moment,tier3,2,p3_volume,Structural packing,0.4984917,0.081259616
+ms_moment,tier3,3,basic_comp__fraction_Mn,Magnetic-element content,0.38728347,0.06313146
+ms_moment,tier3,4,basic_comp__fraction_Fe,Magnetic-element content,0.30802757,0.050211873
+ms_moment,tier3,5,average_unpaired_electron_proxy,d/f-electron & valence proxies,0.2997158,0.048856962
+ms_moment,tier3,6,p3_point_group,Symmetry,0.28758708,0.04687985
+ms_moment,tier3,7,p3_formation_energy_per_atom,Thermodynamic stability,0.2772233,0.04519044
+ms_moment,tier3,8,p3_dielectric_static,Dielectric & optical,0.1673198,0.027274964
+ms_moment,tier3,9,p3_cbm,Electronic structure,0.14041568,0.022889297
+ms_moment,tier3,10,valence_electron_concentration,d/f-electron & valence proxies,0.13998547,0.022819169
+ordering,tier1,1,basic_comp__magnetic_element_fraction,Magnetic-element content,0.36413407,0.083432294
+ordering,tier1,2,average_unpaired_electron_proxy,d/f-electron & valence proxies,0.2582119,0.059162855
+ordering,tier1,3,group_variance,Atomic size & periodic statistics,0.20587257,0.04717059
+ordering,tier1,4,valence_electron_concentration,d/f-electron & valence proxies,0.1945487,0.044576008
+ordering,tier1,5,magnetic_prior__p_block_fraction,d/f-electron & valence proxies,0.17562962,0.04024117
+ordering,tier1,6,atomic_mass_variance,Atomic size & periodic statistics,0.1720435,0.039419502
+ordering,tier1,7,electronegativity_variance,Atomic size & periodic statistics,0.16745368,0.038367856
+ordering,tier1,8,melting_temperature_variance,Atomic size & periodic statistics,0.1640805,0.037594978
+ordering,tier1,9,average_atomic_mass,Atomic size & periodic statistics,0.16324405,0.037403326
+ordering,tier1,10,basic_comp__total_atoms_formula,Composition & stoichiometry,0.1619108,0.037097845
+ordering,tier2,1,basic_comp__magnetic_element_fraction,Magnetic-element content,0.3642845,0.082928166
+ordering,tier2,2,average_unpaired_electron_proxy,d/f-electron & valence proxies,0.2432684,0.05537925
+ordering,tier2,3,group_variance,Atomic size & periodic statistics,0.1994041,0.045393687
+ordering,tier2,4,valence_electron_concentration,d/f-electron & valence proxies,0.17661317,0.040205404
+ordering,tier2,5,average_melting_temperature,Atomic size & periodic statistics,0.16788805,0.03821916
+ordering,tier2,6,melting_temperature_variance,Atomic size & periodic statistics,0.16778553,0.038195822
+ordering,tier2,7,atomic_mass_variance,Atomic size & periodic statistics,0.16356921,0.03723599
+ordering,tier2,8,magnetic_prior__p_block_fraction,d/f-electron & valence proxies,0.1609099,0.03663061
+ordering,tier2,9,basic_comp__total_atoms_formula,Composition & stoichiometry,0.15563565,0.035429943
+ordering,tier2,10,average_atomic_radius,Atomic size & periodic statistics,0.15446433,0.0351633
+ordering,tier3,1,p3_point_group,Symmetry,0.4354043,0.08756624
+ordering,tier3,2,basic_comp__magnetic_element_fraction,Magnetic-element content,0.3503071,0.07045194
+ordering,tier3,3,p3_energy_above_hull,Thermodynamic stability,0.21770358,0.043783408
+ordering,tier3,4,p3_formation_energy_per_atom,Thermodynamic stability,0.19427116,0.039070804
+ordering,tier3,5,p3_dielectric_static,Dielectric & optical,0.18212464,0.03662796
+ordering,tier3,6,average_unpaired_electron_proxy,d/f-electron & valence proxies,0.17739743,0.035677247
+ordering,tier3,7,basic_comp__total_atoms_formula,Composition & stoichiometry,0.12642188,0.025425311
+ordering,tier3,8,p3_volume,Structural packing,0.11880852,0.023894152
+ordering,tier3,9,average_d_electron_count,d/f-electron & valence proxies,0.11705897,0.02354229
+ordering,tier3,10,group_variance,Atomic size & periodic statistics,0.114370175,0.023001533

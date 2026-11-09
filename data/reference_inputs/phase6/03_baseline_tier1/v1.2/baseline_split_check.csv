@@ -1,0 +1,10 @@
+target,split,N,pct,n_formula_groups,n_experimental,missing_feature_cells
+ordering,train,66193,69.96,53061,11303,0
+ordering,validation,14218,15.03,11361,2532,0
+ordering,test,14207,15.02,11357,2599,0
+curie,train,23987,69.89,10841,22742,6
+curie,validation,5170,15.06,2267,4872,0
+curie,test,5165,15.05,2296,4882,0
+ms_moment,train,61254,69.99,54187,8,3
+ms_moment,validation,13130,15.0,11605,1,3
+ms_moment,test,13129,15.0,11610,0,0

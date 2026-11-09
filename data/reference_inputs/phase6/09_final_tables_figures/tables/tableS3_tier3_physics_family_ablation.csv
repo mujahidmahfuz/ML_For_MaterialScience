@@ -1,0 +1,37 @@
+target,analysis,physics_family,n_family_features,metric,reference_value,variant_value,value_gained_by_family,ci_low,ci_high,verdict
+ordering,add_one_to_tier2,Thermodynamic stability,3,macro_f1,0.38881,0.3737,-0.01512,-0.04662,0.02849,no stable contribution
+ordering,drop_one_from_tier3,Thermodynamic stability,3,macro_f1,0.38018,0.3645,0.01568,-0.00401,0.03787,no stable contribution
+ordering,add_one_to_tier2,Electronic structure,6,macro_f1,0.38881,0.41412,0.02531,-0.00387,0.0545,no stable contribution
+ordering,drop_one_from_tier3,Electronic structure,6,macro_f1,0.38018,0.38575,-0.00558,-0.03147,0.01531,no stable contribution
+ordering,add_one_to_tier2,Symmetry,3,macro_f1,0.38881,0.38462,-0.0042,-0.04383,0.03321,no stable contribution
+ordering,drop_one_from_tier3,Symmetry,3,macro_f1,0.38018,0.39185,-0.01167,-0.03116,0.00815,no stable contribution
+ordering,add_one_to_tier2,Structural packing,3,macro_f1,0.38881,0.39632,0.00751,-0.01466,0.03293,no stable contribution
+ordering,drop_one_from_tier3,Structural packing,3,macro_f1,0.38018,0.3909,-0.01072,-0.02702,0.00736,no stable contribution
+ordering,add_one_to_tier2,Elastic response,4,macro_f1,0.38881,0.40059,0.01177,-0.01741,0.04086,no stable contribution
+ordering,drop_one_from_tier3,Elastic response,4,macro_f1,0.38018,0.40835,-0.02817,-0.07649,0.01376,no stable contribution
+ordering,add_one_to_tier2,Dielectric & optical,5,macro_f1,0.38881,0.37878,-0.01003,-0.03451,0.01739,no stable contribution
+ordering,drop_one_from_tier3,Dielectric & optical,5,macro_f1,0.38018,0.4025,-0.02233,-0.05384,0.00499,no stable contribution
+curie,add_one_to_tier2,Thermodynamic stability,3,mae,268.38391,288.70185,-20.31793,-41.85431,9.48764,no stable contribution
+curie,drop_one_from_tier3,Thermodynamic stability,3,mae,207.44482,238.02069,30.57586,-40.08798,110.48729,no stable contribution
+curie,add_one_to_tier2,Electronic structure,6,mae,268.38391,250.8365,17.54742,2.96156,28.56854,stable contribution
+curie,drop_one_from_tier3,Electronic structure,6,mae,207.44482,220.40132,12.9565,-38.23758,65.18207,no stable contribution
+curie,add_one_to_tier2,Symmetry,3,mae,268.38391,210.60636,57.77755,0.26269,108.11492,stable contribution
+curie,drop_one_from_tier3,Symmetry,3,mae,207.44482,248.33395,40.88912,-34.59774,139.09838,no stable contribution
+curie,add_one_to_tier2,Structural packing,3,mae,268.38391,279.84001,-11.4561,-62.31678,40.32093,no stable contribution
+curie,drop_one_from_tier3,Structural packing,3,mae,207.44482,261.65196,54.20713,-24.18961,146.5656,no stable contribution
+curie,add_one_to_tier2,Elastic response,4,mae,268.38391,308.99857,-40.61466,-91.40337,9.05057,no stable contribution
+curie,drop_one_from_tier3,Elastic response,4,mae,207.44482,252.03286,44.58803,-29.63558,128.20525,no stable contribution
+curie,add_one_to_tier2,Dielectric & optical,5,mae,268.38391,286.07703,-17.69312,-47.49093,21.01453,no stable contribution
+curie,drop_one_from_tier3,Dielectric & optical,5,mae,207.44482,200.26461,-7.18021,-33.74836,16.26687,no stable contribution
+ms_moment,add_one_to_tier2,Thermodynamic stability,3,mae,1.89912,1.88417,0.01495,-0.04097,0.07449,no stable contribution
+ms_moment,drop_one_from_tier3,Thermodynamic stability,3,mae,1.81592,1.83669,0.02077,-0.01908,0.06723,no stable contribution
+ms_moment,add_one_to_tier2,Electronic structure,6,mae,1.89912,1.88223,0.01689,-0.05126,0.08381,no stable contribution
+ms_moment,drop_one_from_tier3,Electronic structure,6,mae,1.81592,1.79758,-0.01834,-0.07069,0.0337,no stable contribution
+ms_moment,add_one_to_tier2,Symmetry,3,mae,1.89912,1.90185,-0.00273,-0.06707,0.06577,no stable contribution
+ms_moment,drop_one_from_tier3,Symmetry,3,mae,1.81592,1.82345,0.00753,-0.05285,0.06838,no stable contribution
+ms_moment,add_one_to_tier2,Structural packing,3,mae,1.89912,1.85448,0.04464,-0.01564,0.10644,no stable contribution
+ms_moment,drop_one_from_tier3,Structural packing,3,mae,1.81592,1.87423,0.05831,0.00845,0.10969,stable contribution
+ms_moment,add_one_to_tier2,Elastic response,4,mae,1.89912,1.88881,0.01031,-0.04872,0.07061,no stable contribution
+ms_moment,drop_one_from_tier3,Elastic response,4,mae,1.81592,1.80828,-0.00764,-0.04236,0.03066,no stable contribution
+ms_moment,add_one_to_tier2,Dielectric & optical,5,mae,1.89912,1.86233,0.03678,-0.02766,0.09755,no stable contribution
+ms_moment,drop_one_from_tier3,Dielectric & optical,5,mae,1.81592,1.80865,-0.00727,-0.06431,0.04462,no stable contribution

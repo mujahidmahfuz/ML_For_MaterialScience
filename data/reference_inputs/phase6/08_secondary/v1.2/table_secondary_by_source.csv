@@ -1,0 +1,7 @@
+target,source,n,median
+k1,magnetic_anisotropy_materials.csv,1852,150500.0
+k1,magnetic_materials_reformatted.csv | magnetic_anisotropy_materials.csv | magnetic_materials.csv,10,644000.0
+ms_mass,magnetic_anisotropy_materials.csv,4048,54.0
+ms_mass,magnetic_materials_reformatted.csv | magnetic_materials.csv,270,9.6
+ms_volume,magnetic_anisotropy_materials.csv,785,540000.0
+ms_volume,magnetic_materials_reformatted.csv | magnetic_anisotropy_materials.csv | magnetic_materials.csv,3,100000.0

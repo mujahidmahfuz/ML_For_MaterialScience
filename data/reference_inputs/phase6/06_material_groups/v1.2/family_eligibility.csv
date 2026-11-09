@@ -1,0 +1,19 @@
+target,group,kind,n_total,n_train,n_validation,n_test,n_FM,n_AFM,n_FiM,n_NM,test_n_FM,test_n_AFM,test_n_FiM,test_n_NM,smallest_class_n,smallest_test_class_n,separate_model_supported
+ordering,Transition Metal,family,76059,53152,11459,11448,43300.0,5741.0,6760.0,20258.0,6532.0,888.0,980.0,3048.0,5741.0,888.0,True
+ordering,Rare Earth,family,23467,16212,3520,3735,11285.0,2119.0,2285.0,7778.0,1912.0,311.0,351.0,1161.0,2119.0,311.0,True
+ordering,Oxide,family,47202,33040,7239,6923,25244.0,3750.0,3819.0,14389.0,3660.0,556.0,559.0,2148.0,3750.0,556.0,True
+ordering,Intermetallic,family,38000,26542,5637,5821,19623.0,2169.0,2682.0,13526.0,2995.0,377.0,403.0,2046.0,2169.0,377.0,True
+ordering,Experimental,provenance_slice,16434,11303,2532,2599,9937.0,4900.0,1592.0,5.0,1570.0,783.0,246.0,0.0,5.0,0.0,False
+ordering,Computational,provenance_slice,78184,54890,11686,11608,39654.0,1293.0,5569.0,31668.0,5883.0,174.0,798.0,4753.0,1293.0,174.0,False
+curie,Transition Metal,family,30616,21474,4423,4719,,,,,,,,,,,True
+curie,Rare Earth,family,15327,10529,2462,2336,,,,,,,,,,,True
+curie,Oxide,family,11138,7581,1682,1875,,,,,,,,,,,True
+curie,Intermetallic,family,15979,11547,2198,2234,,,,,,,,,,,True
+curie,Experimental,provenance_slice,32496,22742,4872,4882,,,,,,,,,,,False
+curie,Computational,provenance_slice,1826,1245,298,283,,,,,,,,,,,False
+ms_moment,Transition Metal,family,66920,46847,10055,10018,,,,,,,,,,,True
+ms_moment,Rare Earth,family,22288,15676,3251,3361,,,,,,,,,,,True
+ms_moment,Oxide,family,40117,27929,6132,6056,,,,,,,,,,,True
+ms_moment,Intermetallic,family,39896,28087,5896,5913,,,,,,,,,,,True
+ms_moment,Experimental,provenance_slice,9,8,1,0,,,,,,,,,,,False
+ms_moment,Computational,provenance_slice,87504,61246,13129,13129,,,,,,,,,,,False

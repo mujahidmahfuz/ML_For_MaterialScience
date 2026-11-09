@@ -1,0 +1,65 @@
+name,code,reason,doi
+YbNi2,A1,computational paper; record is its subject,10.1007/s10948-013-2368-0
+Fe2NiSb,A1,computational paper; record is its subject,10.1007/s10948-016-3388-3
+Mn2Sn98(O39F)5,A1,computational paper; record is its subject,10.1007/s10948-016-3609-9
+V11Cd89Te100,A1,computational paper; record is its subject,10.1007/s10948-017-4135-0
+V7Cd93Te100,A1,computational paper; record is its subject,10.1007/s10948-017-4135-0
+V9Cd91Te100,A1,computational paper; record is its subject,10.1007/s10948-017-4135-0
+VCd19Te20,A1,computational paper; record is its subject,10.1007/s10948-017-4135-0
+Mn4Ga4Ni7Pt,A1,computational paper; record is its subject,10.1007/s11669-014-0342-6
+MnFeAs,A1,computational paper; record is its subject,10.1007/s13538-013-0134-1
+ZnFe3N,A1,computational paper; record is its subject,10.1016/j.cap.2021.07.019
+Cr2GaTe4,A1,ML-predicted Tc,10.1016/j.chempr.2021.11.009
+MnInTe3,A1,ML-predicted Tc,10.1016/j.chempr.2021.11.009
+CrTe2Au,A1,ML-predicted Tc,10.1016/j.chempr.2021.11.009
+ScV(PSe3)2,A1,ML-predicted Tc,10.1016/j.chempr.2021.11.009
+Na3VAs2,A1,ML-predicted Tc,10.1016/j.chempr.2021.11.009
+CrInTe3,A1,ML-predicted Tc,10.1016/j.chempr.2021.11.009
+CrAsS3,A1,ML-predicted Tc,10.1016/j.chempr.2021.11.009
+Al2CrTe4,A1,ML-predicted Tc,10.1016/j.chempr.2021.11.009
+VGeTe2,A1,ML-predicted Tc,10.1016/j.chempr.2021.11.009
+VTe2Au,A1,ML-predicted Tc,10.1016/j.chempr.2021.11.009
+Cr2Bi2Te5,A1,ML-predicted Tc,10.1016/j.chempr.2021.11.009
+Cr(PSe3)2,A1,ML-predicted Tc,10.1016/j.chempr.2021.11.009
+V2In2Te5,A1,ML-predicted Tc,10.1016/j.chempr.2021.11.009
+Na3VBr6,A1,ML-predicted Tc,10.1016/j.chempr.2021.11.009
+V2CrN4,A1,ML-predicted Tc,10.1016/j.chempr.2021.11.009
+V(CuS2)2,A1,ML-predicted Tc,10.1016/j.chempr.2021.11.009
+MnPtSe2,A1,ML-predicted Tc,10.1016/j.chempr.2021.11.009
+Cr2SiTe4,A1,ML-predicted Tc,10.1016/j.chempr.2021.11.009
+CrInSe3,A1,ML-predicted Tc,10.1016/j.chempr.2021.11.009
+GdFe2,A1,computational paper; record is its subject,10.1016/j.cocom.2015.10.001
+LiEuF3,A1,computational paper; record is its subject,10.1016/j.cocom.2019.e00432
+CrSbS3,A1,computational paper; record is its subject,10.1016/j.cocom.2020.e00467
+CrSbSe3,A1,computational paper; record is its subject,10.1016/j.cocom.2020.e00467
+LaCo5,A1,computational paper; record is its subject,10.1016/j.jallcom.2006.12.003
+LaCo5H4,A1,computational paper; record is its subject,10.1016/j.jallcom.2006.12.003
+ZrCo2Sn,A1,computational paper; record is its subject,10.1016/j.jmmm.2004.11.527
+Ti2FeGe,A1,computational paper; record is its subject,10.1016/j.jmmm.2013.04.012
+Ti2FeSn,A1,computational paper; record is its subject,10.1016/j.jmmm.2013.04.012
+Ti3CdSe4,A1,computational paper; record is its subject,10.1016/j.jmmm.2017.06.093
+Ti3ZnSe4,A1,computational paper; record is its subject,10.1016/j.jmmm.2017.06.093
+TiCd3Se4,A1,computational paper; record is its subject,10.1016/j.jmmm.2017.06.093
+TiCdSe2,A1,computational paper; record is its subject,10.1016/j.jmmm.2017.06.093
+TiSe,A1,computational paper; record is its subject,10.1016/j.jmmm.2017.06.093
+TiZn3Se4,A1,computational paper; record is its subject,10.1016/j.jmmm.2017.06.093
+TiZnSe2,A1,computational paper; record is its subject,10.1016/j.jmmm.2017.06.093
+CrGeTe3,A1,computational paper; record is its subject,10.1016/j.jmmm.2018.04.064
+Zr2AlRh,A1,computational paper; record is its subject,10.1016/j.physb.2018.10.018
+SrLa9(FeO3)10,A1,computational paper; record is its subject,10.1039/c6ta04109d
+CoBr2,A1,computational paper; record is its subject,10.1039/c7cp02158e
+Tb2Ti3Si4,A1,computational paper; record is its subject,10.1016/j.jallcom.2015.03.050
+Ba2CrWO6,A1,computational paper; record is its subject,10.1016/j.commatsci.2014.05.030
+TlFeF3,A1,computational paper; record is its subject,10.1016/j.jmmm.2015.04.028
+TlNiF3,A1,computational paper; record is its subject,10.1016/j.jmmm.2015.04.028
+VGeRu2,A1,computational paper; record is its subject,10.1016/j.jmmm.2016.02.064
+VSnRu2,A1,computational paper; record is its subject,10.1016/j.jmmm.2016.02.064
+VSiRu2,A1,computational paper; record is its subject,10.1016/j.jmmm.2016.02.064
+MnGaSe3,A1,predicted monolayer Tc,10.1016/j.jmmm.2021.168041
+MnGaTe3,A1,predicted monolayer Tc,10.1016/j.jmmm.2021.168041
+CrGaTe3,A1,predicted monolayer Tc,10.1016/j.jmmm.2021.168041
+CrGaSe3,A1,predicted monolayer Tc,10.1016/j.jmmm.2021.168041
+LaFeCoSi,A2f,alloy-family shorthand for La(Fe;Co;Si)13 in an ANN regenerator-model paper,10.1016/j.applthermaleng.2021.117375
+NdFeB,A2f,shorthand for Nd2Fe14B magnets; the same paper also gives Nd63Fe135B2 = 585 K,10.1007/s12598-017-0918-5
+CeFeCoGe,A2s,Ce compound at 866 K cited in a CoTcCrZ Heusler theory paper; probably CoFeCrGe mis-extracted (not provable),10.1016/j.cjph.2020.01.003
+MnGa2Ni,A2s,NiMnGa2 at 780 K in a Ni-Mn-In spectroscopy paper; no such compound known; probably mis-extracted (not provable),10.1016/j.elspec.2015.10.003

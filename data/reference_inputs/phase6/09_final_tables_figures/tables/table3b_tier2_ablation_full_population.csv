@@ -1,0 +1,10 @@
+Target,Model,Metric,Tier 1,Tier 2,Improvement (95% CI),Verdict
+Magnetic ordering,Linear / logistic,macro-F1,0.4351,0.4355,"0.0004035 [-0.00531, 0.006896]",no stable change
+Magnetic ordering,Gradient Boosting (hist),macro-F1,0.6948,0.6976,"0.002837 [-0.007481, 0.01183]",no stable change
+Magnetic ordering,XGBoost,macro-F1,0.7003,0.6913,"-0.008974 [-0.01667, -0.001502]",stable degradation
+Curie temperature,Linear / logistic,MAE,165.2,165.7,"-0.4346 [-2.414, 1.475]",no stable change
+Curie temperature,Gradient Boosting (hist),MAE,94.53,101.3,"-6.811 [-11.04, -3.021]",stable degradation
+Curie temperature,XGBoost,MAE,95.75,100.8,"-5.023 [-8.059, -1.655]",stable degradation
+Ms (moment per unit cell),Linear / logistic,MAE,4.58,4.586,"-0.005644 [-0.01511, 0.004941]",no stable change
+Ms (moment per unit cell),Gradient Boosting (hist),MAE,2.577,2.568,"0.008981 [-0.00821, 0.02684]",no stable change
+Ms (moment per unit cell),XGBoost,MAE,2.534,2.533,"0.0014 [-0.02318, 0.02524]",no stable change

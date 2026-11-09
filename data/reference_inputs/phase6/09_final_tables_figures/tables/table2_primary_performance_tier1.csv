@@ -1,0 +1,16 @@
+Target,Model,Test N,Primary metric,Primary (95% CI),Secondary metric,Secondary (95% CI),Best by validation
+Magnetic ordering,Dummy reference,"14,207",macro-F1,"0.172 [0.1684, 0.1759]",balanced accuracy,"0.25 [0.25, 0.25]",False
+Magnetic ordering,Linear / logistic,"14,207",macro-F1,"0.4351 [0.419, 0.451]",balanced accuracy,"0.5572 [0.5369, 0.5764]",False
+Magnetic ordering,Random Forest,"14,207",macro-F1,"0.6742 [0.6568, 0.6905]",balanced accuracy,"0.6889 [0.6692, 0.7059]",False
+Magnetic ordering,Gradient Boosting (hist),"14,207",macro-F1,"0.6948 [0.6796, 0.7095]",balanced accuracy,"0.7116 [0.6925, 0.7275]",True
+Magnetic ordering,XGBoost,"14,207",macro-F1,"0.7003 [0.6832, 0.715]",balanced accuracy,"0.7056 [0.6867, 0.7219]",False
+Curie temperature,Dummy reference,"5,165",MAE,"226 [211.4, 241.5]",R²,"-0.0003808 [-0.01876, -5.791e-06]",False
+Curie temperature,Linear / logistic,"5,165",MAE,"165.2 [153.1, 177.9]",R²,"0.3622 [0.2779, 0.4337]",False
+Curie temperature,Random Forest,"5,165",MAE,"100.7 [90.36, 110.9]",R²,"0.633 [0.5625, 0.6893]",True
+Curie temperature,Gradient Boosting (hist),"5,165",MAE,"94.53 [84.44, 105.2]",R²,"0.6354 [0.5594, 0.6982]",False
+Curie temperature,XGBoost,"5,165",MAE,"95.75 [85.03, 106.6]",R²,"0.6383 [0.5662, 0.6977]",False
+Ms (moment per unit cell),Dummy reference,"13,129",MAE,"5.625 [5.468, 5.78]",R²,"-2.252e-05 [-0.0005018, -1.429e-07]",False
+Ms (moment per unit cell),Linear / logistic,"13,129",MAE,"4.58 [4.444, 4.722]",R²,"0.2697 [0.2472, 0.2936]",False
+Ms (moment per unit cell),Random Forest,"13,129",MAE,"2.565 [2.459, 2.665]",R²,"0.676 [0.6299, 0.7239]",False
+Ms (moment per unit cell),Gradient Boosting (hist),"13,129",MAE,"2.577 [2.471, 2.673]",R²,"0.6989 [0.6568, 0.7414]",True
+Ms (moment per unit cell),XGBoost,"13,129",MAE,"2.534 [2.428, 2.637]",R²,"0.6915 [0.644, 0.7416]",False

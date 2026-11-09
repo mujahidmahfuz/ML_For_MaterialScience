@@ -1,0 +1,13 @@
+algorithm,param_alpha,val_rmse,fit_seconds,selected,param_max_iter,param_learning_rate,param_max_leaf_nodes,param_n_estimators,param_max_depth,param_subsample,param_colsample_bytree
+linear,0.1,269.65011328675064,0.3,True,,,,,,,
+linear,1.0,269.6521745555709,0.3,False,,,,,,,
+linear,10.0,269.672461275447,0.3,False,,,,,,,
+linear,100.0,269.7846926604443,0.3,False,,,,,,,
+gradient_boosting,,255.19865350803016,4.3,True,500.0,0.05,31.0,,,,
+gradient_boosting,,264.0132353432287,12.9,False,500.0,0.05,127.0,,,,
+gradient_boosting,,258.14567293738963,89.0,False,500.0,0.1,31.0,,,,
+gradient_boosting,,255.81618491375679,75.7,False,500.0,0.1,127.0,,,,
+xgboost,,254.16001399910687,1.6,False,,0.05,,500.0,6.0,0.8,0.8
+xgboost,,253.75521053173787,1.5,False,,0.1,,500.0,6.0,0.8,0.8
+xgboost,,250.65202867155702,3.8,False,,0.05,,500.0,10.0,0.8,0.8
+xgboost,,247.97340633111136,3.4,True,,0.1,,500.0,10.0,0.8,0.8

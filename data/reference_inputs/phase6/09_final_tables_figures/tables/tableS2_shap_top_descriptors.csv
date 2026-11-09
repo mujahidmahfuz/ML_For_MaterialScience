@@ -1,0 +1,10 @@
+Target,Tier,#1,#2,#3,#4,#5
+Magnetic ordering,Tier 1,magnetic_element_fraction (0.364),average_unpaired_electron_proxy (0.258),group_variance (0.206),valence_electron_concentration (0.195),p_block_fraction (0.176)
+Magnetic ordering,Tier 2,magnetic_element_fraction (0.364),average_unpaired_electron_proxy (0.243),group_variance (0.199),valence_electron_concentration (0.177),average_melting_temperature (0.168)
+Magnetic ordering,Tier 3,p3_point_group (0.435),magnetic_element_fraction (0.35),p3_energy_above_hull (0.218),p3_formation_energy_per_atom (0.194),p3_dielectric_static (0.182)
+Curie temperature,Tier 1,valence_electron_concentration (89.2),transition_metal_fraction (33),average_unpaired_electron_proxy (31.2),fraction_Fe (23.9),average_atomic_mass (20.6)
+Curie temperature,Tier 2,valence_electron_concentration (93.3),transition_metal_fraction (34.3),average_unpaired_electron_proxy (28.3),electronegativity_variance (25.8),fraction_Fe (20.8)
+Curie temperature,Tier 3,p3_point_group (91.3),p3_volume (63.6),valence_electron_concentration (51.3),fraction_Fe (16.8),fraction_Co (16.4)
+Ms (moment per unit cell),Tier 1,magnetic_element_fraction (0.691),fraction_Mn (0.403),electronegativity_variance (0.372),average_unpaired_electron_proxy (0.329),electronegativity_difference (0.252)
+Ms (moment per unit cell),Tier 2,magnetic_element_fraction (0.739),electronegativity_variance (0.397),fraction_Mn (0.336),average_unpaired_electron_proxy (0.334),average_atomic_radius (0.232)
+Ms (moment per unit cell),Tier 3,magnetic_element_fraction (0.621),p3_volume (0.498),fraction_Mn (0.387),fraction_Fe (0.308),average_unpaired_electron_proxy (0.3)

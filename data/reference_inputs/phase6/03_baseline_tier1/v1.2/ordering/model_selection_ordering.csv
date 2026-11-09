@@ -1,0 +1,17 @@
+algorithm,val_macro_f1,fit_seconds,selected,param_C,param_n_estimators,param_min_samples_leaf,param_max_features,param_max_iter,param_learning_rate,param_max_leaf_nodes,param_max_depth,param_subsample,param_colsample_bytree
+dummy,0.1702843096331339,0.1,True,,,,,,,,,,
+linear,0.4216368014364829,11.8,False,0.1,,,,,,,,,
+linear,0.42329150645994706,21.0,False,1.0,,,,,,,,,
+linear,0.42348893288380374,30.2,True,10.0,,,,,,,,,
+random_forest,0.6117082976709157,51.4,False,,300.0,1.0,sqrt,,,,,,
+random_forest,0.614727924360407,211.6,False,,300.0,1.0,0.5,,,,,,
+random_forest,0.6435507102565009,67.5,True,,300.0,5.0,sqrt,,,,,,
+random_forest,0.6416990083349889,226.2,False,,300.0,5.0,0.5,,,,,,
+gradient_boosting,0.6114537480483747,121.6,False,,,,,500.0,0.05,31.0,,,
+gradient_boosting,0.6523045076298248,348.2,True,,,,,500.0,0.05,127.0,,,
+gradient_boosting,0.6393002068965962,102.4,False,,,,,500.0,0.1,31.0,,,
+gradient_boosting,0.6387010333646452,396.4,False,,,,,500.0,0.1,127.0,,,
+xgboost,0.592589741617118,37.0,False,,500.0,,,,0.05,,6.0,0.8,0.8
+xgboost,0.6229080816106195,34.2,False,,500.0,,,,0.1,,6.0,0.8,0.8
+xgboost,0.647737112578211,74.5,False,,500.0,,,,0.05,,10.0,0.8,0.8
+xgboost,0.6485374455482737,59.4,True,,500.0,,,,0.1,,10.0,0.8,0.8

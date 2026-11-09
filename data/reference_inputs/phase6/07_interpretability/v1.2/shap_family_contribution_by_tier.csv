@@ -1,0 +1,70 @@
+target,tier,family,share,sum_mean_abs_shap,n_features
+ordering,tier1,Composition & stoichiometry,0.14933772,0.6517734,11
+ordering,tier1,Magnetic-element content,0.2136027,0.9322531,27
+ordering,tier1,Light-element (B/C/N/O) content,0.027789902,0.12128696,8
+ordering,tier1,d/f-electron & valence proxies,0.22307608,0.97359896,8
+ordering,tier1,Atomic size & periodic statistics,0.38619366,1.6855135,11
+ordering,tier2,Composition & stoichiometry,0.1352793,0.5942511,11
+ordering,tier2,Magnetic-element content,0.21021493,0.9234262,27
+ordering,tier2,Light-element (B/C/N/O) content,0.02554435,0.1122105,8
+ordering,tier2,d/f-electron & valence proxies,0.20402652,0.8962419,8
+ordering,tier2,Atomic size & periodic statistics,0.36513036,1.6039343,11
+ordering,tier2,Oxidation chemistry,0.059804503,0.26270753,8
+ordering,tier3,Composition & stoichiometry,0.082867816,0.41204235,11
+ordering,tier3,Magnetic-element content,0.15005323,0.74610734,27
+ordering,tier3,Light-element (B/C/N/O) content,0.01378254,0.06853071,8
+ordering,tier3,d/f-electron & valence proxies,0.11889526,0.59118104,8
+ordering,tier3,Atomic size & periodic statistics,0.1843385,0.9165834,11
+ordering,tier3,Oxidation chemistry,0.039555777,0.19668257,8
+ordering,tier3,Thermodynamic stability,0.08854287,0.44026032,3
+ordering,tier3,Electronic structure,0.053516805,0.26610076,6
+ordering,tier3,Symmetry,0.097610734,0.4853483,3
+ordering,tier3,Structural packing,0.0536382,0.26670438,3
+ordering,tier3,Elastic response,0.057386678,0.28534287,4
+ordering,tier3,Dielectric & optical,0.059811722,0.2974009,5
+curie,tier1,Composition & stoichiometry,0.07299767,32.45064,11
+curie,tier1,Magnetic-element content,0.2590419,115.15541,27
+curie,tier1,Light-element (B/C/N/O) content,0.007852836,3.4909275,8
+curie,tier1,d/f-electron & valence proxies,0.36346638,161.57663,8
+curie,tier1,Atomic size & periodic statistics,0.2966412,131.86993,11
+curie,tier2,Composition & stoichiometry,0.06658893,33.777245,11
+curie,tier2,Magnetic-element content,0.23580663,119.61294,27
+curie,tier2,Light-element (B/C/N/O) content,0.010295615,5.2224517,8
+curie,tier2,d/f-electron & valence proxies,0.3250935,164.90372,8
+curie,tier2,Atomic size & periodic statistics,0.28508884,144.61134,11
+curie,tier2,Oxidation chemistry,0.07712651,39.122433,8
+curie,tier3,Composition & stoichiometry,0.043879118,25.778864,11
+curie,tier3,Magnetic-element content,0.15132402,88.90245,27
+curie,tier3,Light-element (B/C/N/O) content,0.01099878,6.461754,8
+curie,tier3,d/f-electron & valence proxies,0.16246927,95.45026,8
+curie,tier3,Atomic size & periodic statistics,0.110754445,65.06794,11
+curie,tier3,Oxidation chemistry,0.03409745,20.032162,8
+curie,tier3,Thermodynamic stability,0.016485063,9.684931,3
+curie,tier3,Electronic structure,0.07182927,42.1995,6
+curie,tier3,Symmetry,0.16404127,96.3738,3
+curie,tier3,Structural packing,0.13070552,76.78915,3
+curie,tier3,Elastic response,0.044415493,26.093983,4
+curie,tier3,Dielectric & optical,0.059000243,34.662483,5
+ms_moment,tier1,Composition & stoichiometry,0.13281456,0.71972847,11
+ms_moment,tier1,Magnetic-element content,0.3746001,2.0299761,27
+ms_moment,tier1,Light-element (B/C/N/O) content,0.02755295,0.14931077,8
+ms_moment,tier1,d/f-electron & valence proxies,0.13115959,0.7107602,8
+ms_moment,tier1,Atomic size & periodic statistics,0.3338728,1.8092728,11
+ms_moment,tier2,Composition & stoichiometry,0.115952395,0.6319287,11
+ms_moment,tier2,Magnetic-element content,0.3684304,2.007908,27
+ms_moment,tier2,Light-element (B/C/N/O) content,0.024687799,0.13454598,8
+ms_moment,tier2,d/f-electron & valence proxies,0.12554424,0.6842032,8
+ms_moment,tier2,Atomic size & periodic statistics,0.3169807,1.7275124,11
+ms_moment,tier2,Oxidation chemistry,0.0484045,0.26379958,8
+ms_moment,tier3,Composition & stoichiometry,0.04711038,0.28900126,11
+ms_moment,tier3,Magnetic-element content,0.31917205,1.9579787,27
+ms_moment,tier3,Light-element (B/C/N/O) content,0.012946799,0.07942286,8
+ms_moment,tier3,d/f-electron & valence proxies,0.09278613,0.5692017,8
+ms_moment,tier3,Atomic size & periodic statistics,0.14182557,0.87003684,11
+ms_moment,tier3,Oxidation chemistry,0.01909198,0.117120825,8
+ms_moment,tier3,Thermodynamic stability,0.052133963,0.3198187,3
+ms_moment,tier3,Electronic structure,0.07080559,0.4343608,6
+ms_moment,tier3,Symmetry,0.060172748,0.36913309,3
+ms_moment,tier3,Structural packing,0.11673364,0.71610904,3
+ms_moment,tier3,Elastic response,0.018294774,0.112230316,4
+ms_moment,tier3,Dielectric & optical,0.048926458,0.30014208,5

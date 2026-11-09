@@ -1,0 +1,254 @@
+target,tier,group,family,share
+ordering,tier1,Transition Metal,Composition & stoichiometry,0.1522622
+ordering,tier1,Transition Metal,Magnetic-element content,0.2218485
+ordering,tier1,Transition Metal,Light-element (B/C/N/O) content,0.026565135
+ordering,tier1,Transition Metal,d/f-electron & valence proxies,0.22091523
+ordering,tier1,Transition Metal,Atomic size & periodic statistics,0.37840897
+ordering,tier1,Rare Earth,Composition & stoichiometry,0.14136472
+ordering,tier1,Rare Earth,Magnetic-element content,0.25139448
+ordering,tier1,Rare Earth,Light-element (B/C/N/O) content,0.021103397
+ordering,tier1,Rare Earth,d/f-electron & valence proxies,0.23539889
+ordering,tier1,Rare Earth,Atomic size & periodic statistics,0.35073853
+ordering,tier1,Oxide,Composition & stoichiometry,0.1601193
+ordering,tier1,Oxide,Magnetic-element content,0.19072747
+ordering,tier1,Oxide,Light-element (B/C/N/O) content,0.031652156
+ordering,tier1,Oxide,d/f-electron & valence proxies,0.19262673
+ordering,tier1,Oxide,Atomic size & periodic statistics,0.4248744
+ordering,tier1,Intermetallic,Composition & stoichiometry,0.13866681
+ordering,tier1,Intermetallic,Magnetic-element content,0.23310459
+ordering,tier1,Intermetallic,Light-element (B/C/N/O) content,0.015810788
+ordering,tier1,Intermetallic,d/f-electron & valence proxies,0.25104737
+ordering,tier1,Intermetallic,Atomic size & periodic statistics,0.36137047
+ordering,tier2,Transition Metal,Composition & stoichiometry,0.13827984
+ordering,tier2,Transition Metal,Magnetic-element content,0.21834782
+ordering,tier2,Transition Metal,Light-element (B/C/N/O) content,0.024483686
+ordering,tier2,Transition Metal,d/f-electron & valence proxies,0.2019857
+ordering,tier2,Transition Metal,Atomic size & periodic statistics,0.35627043
+ordering,tier2,Transition Metal,Oxidation chemistry,0.06063242
+ordering,tier2,Rare Earth,Composition & stoichiometry,0.124700904
+ordering,tier2,Rare Earth,Magnetic-element content,0.25265986
+ordering,tier2,Rare Earth,Light-element (B/C/N/O) content,0.019491639
+ordering,tier2,Rare Earth,d/f-electron & valence proxies,0.21683902
+ordering,tier2,Rare Earth,Atomic size & periodic statistics,0.336587
+ordering,tier2,Rare Earth,Oxidation chemistry,0.049721554
+ordering,tier2,Oxide,Composition & stoichiometry,0.14663261
+ordering,tier2,Oxide,Magnetic-element content,0.1839872
+ordering,tier2,Oxide,Light-element (B/C/N/O) content,0.02923583
+ordering,tier2,Oxide,d/f-electron & valence proxies,0.17675157
+ordering,tier2,Oxide,Atomic size & periodic statistics,0.3946563
+ordering,tier2,Oxide,Oxidation chemistry,0.06873643
+ordering,tier2,Intermetallic,Composition & stoichiometry,0.12496015
+ordering,tier2,Intermetallic,Magnetic-element content,0.23239718
+ordering,tier2,Intermetallic,Light-element (B/C/N/O) content,0.015140319
+ordering,tier2,Intermetallic,d/f-electron & valence proxies,0.22890913
+ordering,tier2,Intermetallic,Atomic size & periodic statistics,0.34644905
+ordering,tier2,Intermetallic,Oxidation chemistry,0.052144207
+ordering,tier3,Transition Metal,Composition & stoichiometry,0.08421744
+ordering,tier3,Transition Metal,Magnetic-element content,0.15530789
+ordering,tier3,Transition Metal,Light-element (B/C/N/O) content,0.01347668
+ordering,tier3,Transition Metal,d/f-electron & valence proxies,0.11706732
+ordering,tier3,Transition Metal,Atomic size & periodic statistics,0.17743775
+ordering,tier3,Transition Metal,Oxidation chemistry,0.04013242
+ordering,tier3,Transition Metal,Thermodynamic stability,0.08667794
+ordering,tier3,Transition Metal,Electronic structure,0.05390138
+ordering,tier3,Transition Metal,Symmetry,0.09988122
+ordering,tier3,Transition Metal,Structural packing,0.053286593
+ordering,tier3,Transition Metal,Elastic response,0.05789199
+ordering,tier3,Transition Metal,Dielectric & optical,0.060721356
+ordering,tier3,Rare Earth,Composition & stoichiometry,0.08254864
+ordering,tier3,Rare Earth,Magnetic-element content,0.18452485
+ordering,tier3,Rare Earth,Light-element (B/C/N/O) content,0.012308937
+ordering,tier3,Rare Earth,d/f-electron & valence proxies,0.12625559
+ordering,tier3,Rare Earth,Atomic size & periodic statistics,0.18197727
+ordering,tier3,Rare Earth,Oxidation chemistry,0.034050006
+ordering,tier3,Rare Earth,Thermodynamic stability,0.08966618
+ordering,tier3,Rare Earth,Electronic structure,0.04058569
+ordering,tier3,Rare Earth,Symmetry,0.08240281
+ordering,tier3,Rare Earth,Structural packing,0.049249526
+ordering,tier3,Rare Earth,Elastic response,0.07557022
+ordering,tier3,Rare Earth,Dielectric & optical,0.0408603
+ordering,tier3,Oxide,Composition & stoichiometry,0.08677904
+ordering,tier3,Oxide,Magnetic-element content,0.1295982
+ordering,tier3,Oxide,Light-element (B/C/N/O) content,0.015787354
+ordering,tier3,Oxide,d/f-electron & valence proxies,0.09670343
+ordering,tier3,Oxide,Atomic size & periodic statistics,0.19148892
+ordering,tier3,Oxide,Oxidation chemistry,0.04498971
+ordering,tier3,Oxide,Thermodynamic stability,0.09817889
+ordering,tier3,Oxide,Electronic structure,0.071477905
+ordering,tier3,Oxide,Symmetry,0.11713474
+ordering,tier3,Oxide,Structural packing,0.055119056
+ordering,tier3,Oxide,Elastic response,0.031308684
+ordering,tier3,Oxide,Dielectric & optical,0.06143411
+ordering,tier3,Intermetallic,Composition & stoichiometry,0.07814663
+ordering,tier3,Intermetallic,Magnetic-element content,0.16741554
+ordering,tier3,Intermetallic,Light-element (B/C/N/O) content,0.009622376
+ordering,tier3,Intermetallic,d/f-electron & valence proxies,0.1387177
+ordering,tier3,Intermetallic,Atomic size & periodic statistics,0.1797527
+ordering,tier3,Intermetallic,Oxidation chemistry,0.03431547
+ordering,tier3,Intermetallic,Thermodynamic stability,0.08162955
+ordering,tier3,Intermetallic,Electronic structure,0.040167596
+ordering,tier3,Intermetallic,Symmetry,0.083751105
+ordering,tier3,Intermetallic,Structural packing,0.052527707
+ordering,tier3,Intermetallic,Elastic response,0.07572873
+ordering,tier3,Intermetallic,Dielectric & optical,0.0582249
+curie,tier1,Transition Metal,Composition & stoichiometry,0.072738685
+curie,tier1,Transition Metal,Magnetic-element content,0.2594131
+curie,tier1,Transition Metal,Light-element (B/C/N/O) content,0.0074810404
+curie,tier1,Transition Metal,d/f-electron & valence proxies,0.36349776
+curie,tier1,Transition Metal,Atomic size & periodic statistics,0.29686937
+curie,tier1,Oxide,Composition & stoichiometry,0.08651453
+curie,tier1,Oxide,Magnetic-element content,0.24677217
+curie,tier1,Oxide,Light-element (B/C/N/O) content,0.009257986
+curie,tier1,Oxide,d/f-electron & valence proxies,0.3422349
+curie,tier1,Oxide,Atomic size & periodic statistics,0.31522045
+curie,tier1,Intermetallic,Composition & stoichiometry,0.06519159
+curie,tier1,Intermetallic,Magnetic-element content,0.2595607
+curie,tier1,Intermetallic,Light-element (B/C/N/O) content,0.004669269
+curie,tier1,Intermetallic,d/f-electron & valence proxies,0.38453048
+curie,tier1,Intermetallic,Atomic size & periodic statistics,0.2860479
+curie,tier2,Transition Metal,Composition & stoichiometry,0.06663949
+curie,tier2,Transition Metal,Magnetic-element content,0.23627226
+curie,tier2,Transition Metal,Light-element (B/C/N/O) content,0.00976746
+curie,tier2,Transition Metal,d/f-electron & valence proxies,0.3250345
+curie,tier2,Transition Metal,Atomic size & periodic statistics,0.28450882
+curie,tier2,Transition Metal,Oxidation chemistry,0.07777747
+curie,tier2,Oxide,Composition & stoichiometry,0.07458334
+curie,tier2,Oxide,Magnetic-element content,0.24052562
+curie,tier2,Oxide,Light-element (B/C/N/O) content,0.01359431
+curie,tier2,Oxide,d/f-electron & valence proxies,0.3065264
+curie,tier2,Oxide,Atomic size & periodic statistics,0.27317938
+curie,tier2,Oxide,Oxidation chemistry,0.09159092
+curie,tier2,Intermetallic,Composition & stoichiometry,0.05896199
+curie,tier2,Intermetallic,Magnetic-element content,0.22491223
+curie,tier2,Intermetallic,Light-element (B/C/N/O) content,0.0051927967
+curie,tier2,Intermetallic,d/f-electron & valence proxies,0.3532159
+curie,tier2,Intermetallic,Atomic size & periodic statistics,0.2852067
+curie,tier2,Intermetallic,Oxidation chemistry,0.07251037
+curie,tier3,Transition Metal,Composition & stoichiometry,0.043756448
+curie,tier3,Transition Metal,Magnetic-element content,0.15188746
+curie,tier3,Transition Metal,Light-element (B/C/N/O) content,0.010559658
+curie,tier3,Transition Metal,d/f-electron & valence proxies,0.16279857
+curie,tier3,Transition Metal,Atomic size & periodic statistics,0.11014449
+curie,tier3,Transition Metal,Oxidation chemistry,0.034064893
+curie,tier3,Transition Metal,Thermodynamic stability,0.016436405
+curie,tier3,Transition Metal,Electronic structure,0.07094932
+curie,tier3,Transition Metal,Symmetry,0.16642185
+curie,tier3,Transition Metal,Structural packing,0.1306832
+curie,tier3,Transition Metal,Elastic response,0.043913823
+curie,tier3,Transition Metal,Dielectric & optical,0.05838381
+curie,tier3,Oxide,Composition & stoichiometry,0.050888207
+curie,tier3,Oxide,Magnetic-element content,0.11317217
+curie,tier3,Oxide,Light-element (B/C/N/O) content,0.014869311
+curie,tier3,Oxide,d/f-electron & valence proxies,0.11017002
+curie,tier3,Oxide,Atomic size & periodic statistics,0.076845236
+curie,tier3,Oxide,Oxidation chemistry,0.036373757
+curie,tier3,Oxide,Thermodynamic stability,0.01343406
+curie,tier3,Oxide,Electronic structure,0.123239785
+curie,tier3,Oxide,Symmetry,0.28853807
+curie,tier3,Oxide,Structural packing,0.07826407
+curie,tier3,Oxide,Elastic response,0.013661087
+curie,tier3,Oxide,Dielectric & optical,0.08054418
+curie,tier3,Intermetallic,Composition & stoichiometry,0.03624021
+curie,tier3,Intermetallic,Magnetic-element content,0.17394564
+curie,tier3,Intermetallic,Light-element (B/C/N/O) content,0.005315088
+curie,tier3,Intermetallic,d/f-electron & valence proxies,0.21135475
+curie,tier3,Intermetallic,Atomic size & periodic statistics,0.13436575
+curie,tier3,Intermetallic,Oxidation chemistry,0.0333866
+curie,tier3,Intermetallic,Thermodynamic stability,0.019181732
+curie,tier3,Intermetallic,Electronic structure,0.033630647
+curie,tier3,Intermetallic,Symmetry,0.07594338
+curie,tier3,Intermetallic,Structural packing,0.16640632
+curie,tier3,Intermetallic,Elastic response,0.06769142
+curie,tier3,Intermetallic,Dielectric & optical,0.04253849
+ms_moment,tier1,Transition Metal,Composition & stoichiometry,0.13558938
+ms_moment,tier1,Transition Metal,Magnetic-element content,0.3736024
+ms_moment,tier1,Transition Metal,Light-element (B/C/N/O) content,0.027444934
+ms_moment,tier1,Transition Metal,d/f-electron & valence proxies,0.124855876
+ms_moment,tier1,Transition Metal,Atomic size & periodic statistics,0.33850747
+ms_moment,tier1,Rare Earth,Composition & stoichiometry,0.115692206
+ms_moment,tier1,Rare Earth,Magnetic-element content,0.44714788
+ms_moment,tier1,Rare Earth,Light-element (B/C/N/O) content,0.020367684
+ms_moment,tier1,Rare Earth,d/f-electron & valence proxies,0.120978795
+ms_moment,tier1,Rare Earth,Atomic size & periodic statistics,0.2958135
+ms_moment,tier1,Oxide,Composition & stoichiometry,0.14338833
+ms_moment,tier1,Oxide,Magnetic-element content,0.35669062
+ms_moment,tier1,Oxide,Light-element (B/C/N/O) content,0.039042756
+ms_moment,tier1,Oxide,d/f-electron & valence proxies,0.118498564
+ms_moment,tier1,Oxide,Atomic size & periodic statistics,0.34237972
+ms_moment,tier1,Intermetallic,Composition & stoichiometry,0.122833505
+ms_moment,tier1,Intermetallic,Magnetic-element content,0.39483944
+ms_moment,tier1,Intermetallic,Light-element (B/C/N/O) content,0.01618443
+ms_moment,tier1,Intermetallic,d/f-electron & valence proxies,0.14151414
+ms_moment,tier1,Intermetallic,Atomic size & periodic statistics,0.32462847
+ms_moment,tier2,Transition Metal,Composition & stoichiometry,0.11884098
+ms_moment,tier2,Transition Metal,Magnetic-element content,0.36365646
+ms_moment,tier2,Transition Metal,Light-element (B/C/N/O) content,0.024769995
+ms_moment,tier2,Transition Metal,d/f-electron & valence proxies,0.12079937
+ms_moment,tier2,Transition Metal,Atomic size & periodic statistics,0.32294348
+ms_moment,tier2,Transition Metal,Oxidation chemistry,0.04898963
+ms_moment,tier2,Rare Earth,Composition & stoichiometry,0.10080504
+ms_moment,tier2,Rare Earth,Magnetic-element content,0.44287372
+ms_moment,tier2,Rare Earth,Light-element (B/C/N/O) content,0.022689868
+ms_moment,tier2,Rare Earth,d/f-electron & valence proxies,0.11637883
+ms_moment,tier2,Rare Earth,Atomic size & periodic statistics,0.2871433
+ms_moment,tier2,Rare Earth,Oxidation chemistry,0.030109242
+ms_moment,tier2,Oxide,Composition & stoichiometry,0.12671155
+ms_moment,tier2,Oxide,Magnetic-element content,0.35906547
+ms_moment,tier2,Oxide,Light-element (B/C/N/O) content,0.027429545
+ms_moment,tier2,Oxide,d/f-electron & valence proxies,0.10927794
+ms_moment,tier2,Oxide,Atomic size & periodic statistics,0.3272001
+ms_moment,tier2,Oxide,Oxidation chemistry,0.05031526
+ms_moment,tier2,Intermetallic,Composition & stoichiometry,0.107007846
+ms_moment,tier2,Intermetallic,Magnetic-element content,0.38004652
+ms_moment,tier2,Intermetallic,Light-element (B/C/N/O) content,0.020572215
+ms_moment,tier2,Intermetallic,d/f-electron & valence proxies,0.13964313
+ms_moment,tier2,Intermetallic,Atomic size & periodic statistics,0.30606446
+ms_moment,tier2,Intermetallic,Oxidation chemistry,0.04666588
+ms_moment,tier3,Transition Metal,Composition & stoichiometry,0.047985688
+ms_moment,tier3,Transition Metal,Magnetic-element content,0.3162272
+ms_moment,tier3,Transition Metal,Light-element (B/C/N/O) content,0.013067913
+ms_moment,tier3,Transition Metal,d/f-electron & valence proxies,0.08931312
+ms_moment,tier3,Transition Metal,Atomic size & periodic statistics,0.1412656
+ms_moment,tier3,Transition Metal,Oxidation chemistry,0.018869542
+ms_moment,tier3,Transition Metal,Thermodynamic stability,0.054637045
+ms_moment,tier3,Transition Metal,Electronic structure,0.07385389
+ms_moment,tier3,Transition Metal,Symmetry,0.06114668
+ms_moment,tier3,Transition Metal,Structural packing,0.1161855
+ms_moment,tier3,Transition Metal,Elastic response,0.018514775
+ms_moment,tier3,Transition Metal,Dielectric & optical,0.04893301
+ms_moment,tier3,Rare Earth,Composition & stoichiometry,0.041945376
+ms_moment,tier3,Rare Earth,Magnetic-element content,0.38029307
+ms_moment,tier3,Rare Earth,Light-element (B/C/N/O) content,0.012043217
+ms_moment,tier3,Rare Earth,d/f-electron & valence proxies,0.102449104
+ms_moment,tier3,Rare Earth,Atomic size & periodic statistics,0.13730049
+ms_moment,tier3,Rare Earth,Oxidation chemistry,0.015953261
+ms_moment,tier3,Rare Earth,Thermodynamic stability,0.050376575
+ms_moment,tier3,Rare Earth,Electronic structure,0.052393045
+ms_moment,tier3,Rare Earth,Symmetry,0.052103404
+ms_moment,tier3,Rare Earth,Structural packing,0.10352562
+ms_moment,tier3,Rare Earth,Elastic response,0.0152020855
+ms_moment,tier3,Rare Earth,Dielectric & optical,0.036414735
+ms_moment,tier3,Oxide,Composition & stoichiometry,0.052918743
+ms_moment,tier3,Oxide,Magnetic-element content,0.31021273
+ms_moment,tier3,Oxide,Light-element (B/C/N/O) content,0.016906343
+ms_moment,tier3,Oxide,d/f-electron & valence proxies,0.07166173
+ms_moment,tier3,Oxide,Atomic size & periodic statistics,0.15195622
+ms_moment,tier3,Oxide,Oxidation chemistry,0.01820747
+ms_moment,tier3,Oxide,Thermodynamic stability,0.04833535
+ms_moment,tier3,Oxide,Electronic structure,0.08119614
+ms_moment,tier3,Oxide,Symmetry,0.061389428
+ms_moment,tier3,Oxide,Structural packing,0.12332091
+ms_moment,tier3,Oxide,Elastic response,0.014964172
+ms_moment,tier3,Oxide,Dielectric & optical,0.048930798
+ms_moment,tier3,Intermetallic,Composition & stoichiometry,0.041823667
+ms_moment,tier3,Intermetallic,Magnetic-element content,0.3300735
+ms_moment,tier3,Intermetallic,Light-element (B/C/N/O) content,0.009129135
+ms_moment,tier3,Intermetallic,d/f-electron & valence proxies,0.10942276
+ms_moment,tier3,Intermetallic,Atomic size & periodic statistics,0.1343051
+ms_moment,tier3,Intermetallic,Oxidation chemistry,0.019045461
+ms_moment,tier3,Intermetallic,Thermodynamic stability,0.05474583
+ms_moment,tier3,Intermetallic,Electronic structure,0.06274885
+ms_moment,tier3,Intermetallic,Symmetry,0.060461756
+ms_moment,tier3,Intermetallic,Structural packing,0.107798055
+ms_moment,tier3,Intermetallic,Elastic response,0.020765308
+ms_moment,tier3,Intermetallic,Dielectric & optical,0.049680542

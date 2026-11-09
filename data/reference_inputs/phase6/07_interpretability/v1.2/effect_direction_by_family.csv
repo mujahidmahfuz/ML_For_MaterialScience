@@ -1,0 +1,331 @@
+target,tier,group,feature,n_test,spearman_value_vs_shap_group,spearman_value_vs_shap_all
+ordering,tier1,Transition Metal,basic_comp__magnetic_element_fraction,1862,0.5422058599026486,0.5906061052378909
+ordering,tier1,Transition Metal,average_unpaired_electron_proxy,1862,-0.4145871060826774,-0.32706164120172837
+ordering,tier1,Transition Metal,group_variance,1862,0.5957935474338066,0.6328353790642037
+ordering,tier1,Transition Metal,valence_electron_concentration,1862,0.5046960711643318,0.39650264252389233
+ordering,tier1,Transition Metal,magnetic_prior__p_block_fraction,1862,0.8413857176938802,0.8385267063461116
+ordering,tier1,Transition Metal,atomic_mass_variance,1862,-0.025857588150039308,0.00459268490753471
+ordering,tier1,Transition Metal,electronegativity_variance,1862,0.08992390095585835,0.06272262070570825
+ordering,tier1,Transition Metal,melting_temperature_variance,1862,0.47470124048164736,0.41574739166674873
+ordering,tier1,Transition Metal,average_atomic_mass,1862,-0.17463887529156014,-0.13645280266576262
+ordering,tier1,Transition Metal,basic_comp__total_atoms_formula,1862,0.8593085226379045,0.81225411490276
+ordering,tier1,Rare Earth,basic_comp__magnetic_element_fraction,363,-0.13507865689187848,0.5906061052378909
+ordering,tier1,Rare Earth,average_unpaired_electron_proxy,363,-0.3753580226988154,-0.32706164120172837
+ordering,tier1,Rare Earth,group_variance,363,0.8070204858413893,0.6328353790642037
+ordering,tier1,Rare Earth,valence_electron_concentration,363,-0.4154766958400983,0.39650264252389233
+ordering,tier1,Rare Earth,magnetic_prior__p_block_fraction,363,0.8301107389546415,0.8385267063461116
+ordering,tier1,Rare Earth,atomic_mass_variance,363,0.29612032210358497,0.00459268490753471
+ordering,tier1,Rare Earth,electronegativity_variance,363,0.11667349719874753,0.06272262070570825
+ordering,tier1,Rare Earth,melting_temperature_variance,363,0.4180547996096363,0.41574739166674873
+ordering,tier1,Rare Earth,average_atomic_mass,363,-0.02551610370704698,-0.13645280266576262
+ordering,tier1,Rare Earth,basic_comp__total_atoms_formula,363,0.7613495367234311,0.81225411490276
+ordering,tier1,Oxide,basic_comp__magnetic_element_fraction,921,0.8558574715648485,0.5906061052378909
+ordering,tier1,Oxide,average_unpaired_electron_proxy,921,-0.11282341974999731,-0.32706164120172837
+ordering,tier1,Oxide,group_variance,921,0.8139950119937476,0.6328353790642037
+ordering,tier1,Oxide,valence_electron_concentration,921,0.7247017979287815,0.39650264252389233
+ordering,tier1,Oxide,magnetic_prior__p_block_fraction,921,0.833575947631107,0.8385267063461116
+ordering,tier1,Oxide,atomic_mass_variance,921,0.1076925799781169,0.00459268490753471
+ordering,tier1,Oxide,electronegativity_variance,921,0.2365215556653335,0.06272262070570825
+ordering,tier1,Oxide,melting_temperature_variance,921,0.7138576014081061,0.41574739166674873
+ordering,tier1,Oxide,average_atomic_mass,921,-0.41313709031681706,-0.13645280266576262
+ordering,tier1,Oxide,basic_comp__total_atoms_formula,921,0.8623723342670724,0.81225411490276
+ordering,tier1,Intermetallic,basic_comp__magnetic_element_fraction,1041,0.34157996181462524,0.5906061052378909
+ordering,tier1,Intermetallic,average_unpaired_electron_proxy,1041,-0.3930666434052924,-0.32706164120172837
+ordering,tier1,Intermetallic,group_variance,1041,0.48675095803076796,0.6328353790642037
+ordering,tier1,Intermetallic,valence_electron_concentration,1041,0.1907543352481438,0.39650264252389233
+ordering,tier1,Intermetallic,magnetic_prior__p_block_fraction,1041,0.7488942809050398,0.8385267063461116
+ordering,tier1,Intermetallic,atomic_mass_variance,1041,-0.14419195231006837,0.00459268490753471
+ordering,tier1,Intermetallic,electronegativity_variance,1041,-0.1090652595337713,0.06272262070570825
+ordering,tier1,Intermetallic,melting_temperature_variance,1041,0.27299552137780464,0.41574739166674873
+ordering,tier1,Intermetallic,average_atomic_mass,1041,0.13655302371460432,-0.13645280266576262
+ordering,tier1,Intermetallic,basic_comp__total_atoms_formula,1041,0.8229438525008259,0.81225411490276
+ordering,tier2,Transition Metal,basic_comp__magnetic_element_fraction,1862,0.4052711103467457,0.4815344702552657
+ordering,tier2,Transition Metal,average_unpaired_electron_proxy,1862,-0.18857302116989547,-0.1536028369255345
+ordering,tier2,Transition Metal,group_variance,1862,0.6258867452217468,0.6564098283473889
+ordering,tier2,Transition Metal,valence_electron_concentration,1862,0.607287380900722,0.4932368901662581
+ordering,tier2,Transition Metal,average_melting_temperature,1862,0.13329495877373063,-0.0006818731377030118
+ordering,tier2,Transition Metal,melting_temperature_variance,1862,0.5374088320865111,0.47463626339924947
+ordering,tier2,Transition Metal,atomic_mass_variance,1862,-0.14641564516845196,-0.0974926573240001
+ordering,tier2,Transition Metal,magnetic_prior__p_block_fraction,1862,0.8264911214672335,0.8182640763527893
+ordering,tier2,Transition Metal,basic_comp__total_atoms_formula,1862,0.795805540602988,0.7626752366951539
+ordering,tier2,Transition Metal,average_atomic_radius,1862,0.17400277074410647,0.19139036536573018
+ordering,tier2,Rare Earth,basic_comp__magnetic_element_fraction,363,-0.25619066975522536,0.4815344702552657
+ordering,tier2,Rare Earth,average_unpaired_electron_proxy,363,-0.117535173411078,-0.1536028369255345
+ordering,tier2,Rare Earth,group_variance,363,0.7722684921248547,0.6564098283473889
+ordering,tier2,Rare Earth,valence_electron_concentration,363,0.06889159825551674,0.4932368901662581
+ordering,tier2,Rare Earth,average_melting_temperature,363,0.17890361932126997,-0.0006818731377030118
+ordering,tier2,Rare Earth,melting_temperature_variance,363,0.446984465294414,0.47463626339924947
+ordering,tier2,Rare Earth,atomic_mass_variance,363,0.3884563839622056,-0.0974926573240001
+ordering,tier2,Rare Earth,magnetic_prior__p_block_fraction,363,0.80327376706702,0.8182640763527893
+ordering,tier2,Rare Earth,basic_comp__total_atoms_formula,363,0.8119001458337709,0.7626752366951539
+ordering,tier2,Rare Earth,average_atomic_radius,363,0.4826399168773209,0.19139036536573018
+ordering,tier2,Oxide,basic_comp__magnetic_element_fraction,921,0.7429181513419558,0.4815344702552657
+ordering,tier2,Oxide,average_unpaired_electron_proxy,921,0.17893404546088965,-0.1536028369255345
+ordering,tier2,Oxide,group_variance,921,0.8410432799475016,0.6564098283473889
+ordering,tier2,Oxide,valence_electron_concentration,921,0.7058341596591644,0.4932368901662581
+ordering,tier2,Oxide,average_melting_temperature,921,-0.40629958592779636,-0.0006818731377030118
+ordering,tier2,Oxide,melting_temperature_variance,921,0.6923234255584652,0.47463626339924947
+ordering,tier2,Oxide,atomic_mass_variance,921,-0.11493532341342909,-0.0974926573240001
+ordering,tier2,Oxide,magnetic_prior__p_block_fraction,921,0.8224002765623138,0.8182640763527893
+ordering,tier2,Oxide,basic_comp__total_atoms_formula,921,0.8042861587336924,0.7626752366951539
+ordering,tier2,Oxide,average_atomic_radius,921,-0.6078183266382637,0.19139036536573018
+ordering,tier2,Intermetallic,basic_comp__magnetic_element_fraction,1041,0.2193665839761482,0.4815344702552657
+ordering,tier2,Intermetallic,average_unpaired_electron_proxy,1041,-0.2718725657224528,-0.1536028369255345
+ordering,tier2,Intermetallic,group_variance,1041,0.5239094213970911,0.6564098283473889
+ordering,tier2,Intermetallic,valence_electron_concentration,1041,0.34768646187350377,0.4932368901662581
+ordering,tier2,Intermetallic,average_melting_temperature,1041,0.28007024685328646,-0.0006818731377030118
+ordering,tier2,Intermetallic,melting_temperature_variance,1041,0.37263380564817644,0.47463626339924947
+ordering,tier2,Intermetallic,atomic_mass_variance,1041,-0.15845472033128186,-0.0974926573240001
+ordering,tier2,Intermetallic,magnetic_prior__p_block_fraction,1041,0.7385768666771838,0.8182640763527893
+ordering,tier2,Intermetallic,basic_comp__total_atoms_formula,1041,0.7675124225775583,0.7626752366951539
+ordering,tier2,Intermetallic,average_atomic_radius,1041,-0.006426604888594987,0.19139036536573018
+ordering,tier3,Transition Metal,basic_comp__magnetic_element_fraction,1862,0.7034071147517473,0.7181829431538523
+ordering,tier3,Transition Metal,p3_energy_above_hull,1862,-0.2780048430304243,-0.2539176190725115
+ordering,tier3,Transition Metal,p3_formation_energy_per_atom,1862,-0.6586060588756966,-0.6591874311014418
+ordering,tier3,Transition Metal,p3_dielectric_static,1862,0.27186077898821803,0.22487011898400572
+ordering,tier3,Transition Metal,average_unpaired_electron_proxy,1862,-0.011382145801551372,-0.033050403048854184
+ordering,tier3,Transition Metal,basic_comp__total_atoms_formula,1862,0.7396810186550633,0.7168048077257198
+ordering,tier3,Transition Metal,p3_volume,1862,-0.41751331716166473,-0.38318064950114095
+ordering,tier3,Transition Metal,average_d_electron_count,1862,0.6214835091626911,0.5202698235645554
+ordering,tier3,Transition Metal,group_variance,1862,0.5734032733945209,0.5959866861659754
+ordering,tier3,Transition Metal,valence_electron_concentration,1862,0.7502237401198871,0.6197021179902321
+ordering,tier3,Rare Earth,basic_comp__magnetic_element_fraction,363,0.737894320305038,0.7181829431538523
+ordering,tier3,Rare Earth,p3_energy_above_hull,363,-0.45092123814259755,-0.2539176190725115
+ordering,tier3,Rare Earth,p3_formation_energy_per_atom,363,-0.8906495198924406,-0.6591874311014418
+ordering,tier3,Rare Earth,p3_dielectric_static,363,0.04175996755502055,0.22487011898400572
+ordering,tier3,Rare Earth,average_unpaired_electron_proxy,363,-0.11021757982566475,-0.033050403048854184
+ordering,tier3,Rare Earth,basic_comp__total_atoms_formula,363,0.6865002218219727,0.7168048077257198
+ordering,tier3,Rare Earth,p3_volume,363,0.0015341828318240908,-0.38318064950114095
+ordering,tier3,Rare Earth,average_d_electron_count,363,0.614865998694671,0.5202698235645554
+ordering,tier3,Rare Earth,group_variance,363,0.7493850810388561,0.5959866861659754
+ordering,tier3,Rare Earth,valence_electron_concentration,363,0.28418399850917536,0.6197021179902321
+ordering,tier3,Oxide,basic_comp__magnetic_element_fraction,921,0.5656645936318581,0.7181829431538523
+ordering,tier3,Oxide,p3_energy_above_hull,921,0.03855516005544119,-0.2539176190725115
+ordering,tier3,Oxide,p3_formation_energy_per_atom,921,-0.6016491725112236,-0.6591874311014418
+ordering,tier3,Oxide,p3_dielectric_static,921,-0.05640963990137157,0.22487011898400572
+ordering,tier3,Oxide,average_unpaired_electron_proxy,921,0.5327351629506092,-0.033050403048854184
+ordering,tier3,Oxide,basic_comp__total_atoms_formula,921,0.7917745259971719,0.7168048077257198
+ordering,tier3,Oxide,p3_volume,921,-0.5434244625975552,-0.38318064950114095
+ordering,tier3,Oxide,average_d_electron_count,921,-0.13743190855719237,0.5202698235645554
+ordering,tier3,Oxide,group_variance,921,0.7242853345171023,0.5959866861659754
+ordering,tier3,Oxide,valence_electron_concentration,921,0.8114940618965512,0.6197021179902321
+ordering,tier3,Intermetallic,basic_comp__magnetic_element_fraction,1041,0.7409208848645844,0.7181829431538523
+ordering,tier3,Intermetallic,p3_energy_above_hull,1041,-0.4809089467136999,-0.2539176190725115
+ordering,tier3,Intermetallic,p3_formation_energy_per_atom,1041,-0.6431191354449054,-0.6591874311014418
+ordering,tier3,Intermetallic,p3_dielectric_static,1041,0.30700248819637377,0.22487011898400572
+ordering,tier3,Intermetallic,average_unpaired_electron_proxy,1041,-0.39568725879779076,-0.033050403048854184
+ordering,tier3,Intermetallic,basic_comp__total_atoms_formula,1041,0.766778228303181,0.7168048077257198
+ordering,tier3,Intermetallic,p3_volume,1041,-0.24584046878461072,-0.38318064950114095
+ordering,tier3,Intermetallic,average_d_electron_count,1041,0.7813839814386746,0.5202698235645554
+ordering,tier3,Intermetallic,group_variance,1041,0.4695129707327065,0.5959866861659754
+ordering,tier3,Intermetallic,valence_electron_concentration,1041,0.5127224422369935,0.6197021179902321
+curie,tier1,Transition Metal,valence_electron_concentration,805,0.2972076304585781,0.2788406959456769
+curie,tier1,Transition Metal,basic_comp__transition_metal_fraction,805,0.9120557136163127,0.9066628011612355
+curie,tier1,Transition Metal,average_unpaired_electron_proxy,805,0.9007637579754638,0.8993245564501025
+curie,tier1,Transition Metal,basic_comp__fraction_Fe,805,0.8226852940171078,0.8201100339375054
+curie,tier1,Transition Metal,average_atomic_mass,805,-0.8726321496587296,-0.8767890839367601
+curie,tier1,Transition Metal,atomic_mass_variance,805,0.7478347923271639,0.7401088313340438
+curie,tier1,Transition Metal,atomic_radius_variance,805,-0.6483614932519886,-0.6434556224121059
+curie,tier1,Transition Metal,basic_comp__fraction_Co,805,0.291930644301795,0.2887318913950419
+curie,tier1,Transition Metal,electronegativity_variance,805,0.045773802111897195,0.013208639640987736
+curie,tier1,Transition Metal,group_variance,805,-0.643818187605027,-0.6466096348873188
+curie,tier1,Oxide,valence_electron_concentration,250,0.6036470807383559,0.2788406959456769
+curie,tier1,Oxide,basic_comp__transition_metal_fraction,250,-0.24749605462007657,0.9066628011612355
+curie,tier1,Oxide,average_unpaired_electron_proxy,250,0.903431589807407,0.8993245564501025
+curie,tier1,Oxide,basic_comp__fraction_Fe,250,0.9746614711798838,0.8201100339375054
+curie,tier1,Oxide,average_atomic_mass,250,-0.9802891893050557,-0.8767890839367601
+curie,tier1,Oxide,atomic_mass_variance,250,0.9576136659366591,0.7401088313340438
+curie,tier1,Oxide,atomic_radius_variance,250,-0.4618086437979238,-0.6434556224121059
+curie,tier1,Oxide,basic_comp__fraction_Co,250,-0.3704632540314708,0.2887318913950419
+curie,tier1,Oxide,electronegativity_variance,250,0.403056612728218,0.013208639640987736
+curie,tier1,Oxide,group_variance,250,-0.8663617620784546,-0.6466096348873188
+curie,tier1,Intermetallic,valence_electron_concentration,498,0.42990357136103813,0.2788406959456769
+curie,tier1,Intermetallic,basic_comp__transition_metal_fraction,498,0.8626788383975871,0.9066628011612355
+curie,tier1,Intermetallic,average_unpaired_electron_proxy,498,0.9438894092803124,0.8993245564501025
+curie,tier1,Intermetallic,basic_comp__fraction_Fe,498,0.6584277484647096,0.8201100339375054
+curie,tier1,Intermetallic,average_atomic_mass,498,-0.8970046064532865,-0.8767890839367601
+curie,tier1,Intermetallic,atomic_mass_variance,498,0.564191480590294,0.7401088313340438
+curie,tier1,Intermetallic,atomic_radius_variance,498,-0.46386933199196373,-0.6434556224121059
+curie,tier1,Intermetallic,basic_comp__fraction_Co,498,0.39109323612786495,0.2887318913950419
+curie,tier1,Intermetallic,electronegativity_variance,498,-0.5648020947312973,0.013208639640987736
+curie,tier1,Intermetallic,group_variance,498,-0.7072429634924106,-0.6466096348873188
+curie,tier2,Transition Metal,valence_electron_concentration,805,0.5561019918158182,0.5279206877917597
+curie,tier2,Transition Metal,basic_comp__transition_metal_fraction,805,0.8254826518291557,0.8238198332541471
+curie,tier2,Transition Metal,average_unpaired_electron_proxy,805,0.8389292358436864,0.8380491186419967
+curie,tier2,Transition Metal,electronegativity_variance,805,-0.5334865424554099,-0.5462478751498454
+curie,tier2,Transition Metal,basic_comp__fraction_Fe,805,0.7133550324467757,0.7131425682577558
+curie,tier2,Transition Metal,group_variance,805,-0.5655405913463405,-0.5749886115182881
+curie,tier2,Transition Metal,average_atomic_mass,805,-0.9238405076985104,-0.9263897633000563
+curie,tier2,Transition Metal,basic_comp__fraction_Co,805,0.5391839341698513,0.5366623257057377
+curie,tier2,Transition Metal,average_d_electron_count,805,-0.7025343805630688,-0.7055711287489721
+curie,tier2,Transition Metal,basic_comp__contains_Fe,805,0.8410360139843982,0.8384951649027089
+curie,tier2,Oxide,valence_electron_concentration,250,0.475533414465469,0.5279206877917597
+curie,tier2,Oxide,basic_comp__transition_metal_fraction,250,-0.22218423274634655,0.8238198332541471
+curie,tier2,Oxide,average_unpaired_electron_proxy,250,0.8819503400110962,0.8380491186419967
+curie,tier2,Oxide,electronegativity_variance,250,0.9534063099471244,-0.5462478751498454
+curie,tier2,Oxide,basic_comp__fraction_Fe,250,-0.02814523112039584,0.7131425682577558
+curie,tier2,Oxide,group_variance,250,-0.8667174069444131,-0.5749886115182881
+curie,tier2,Oxide,average_atomic_mass,250,-0.9392360702280655,-0.9263897633000563
+curie,tier2,Oxide,basic_comp__fraction_Co,250,0.583319296603675,0.5366623257057377
+curie,tier2,Oxide,average_d_electron_count,250,0.8830273533525586,-0.7055711287489721
+curie,tier2,Oxide,basic_comp__contains_Fe,250,0.9664863299782188,0.8384951649027089
+curie,tier2,Intermetallic,valence_electron_concentration,498,0.6328527887713672,0.5279206877917597
+curie,tier2,Intermetallic,basic_comp__transition_metal_fraction,498,0.4920770122501349,0.8238198332541471
+curie,tier2,Intermetallic,average_unpaired_electron_proxy,498,0.8378422201251552,0.8380491186419967
+curie,tier2,Intermetallic,electronegativity_variance,498,-0.6293904765004593,-0.5462478751498454
+curie,tier2,Intermetallic,basic_comp__fraction_Fe,498,0.6588676329271724,0.7131425682577558
+curie,tier2,Intermetallic,group_variance,498,-0.5984665161025402,-0.5749886115182881
+curie,tier2,Intermetallic,average_atomic_mass,498,-0.9139140691429305,-0.9263897633000563
+curie,tier2,Intermetallic,basic_comp__fraction_Co,498,0.552572377500984,0.5366623257057377
+curie,tier2,Intermetallic,average_d_electron_count,498,-0.8824398956757584,-0.7055711287489721
+curie,tier2,Intermetallic,basic_comp__contains_Fe,498,0.6541101739871981,0.8384951649027089
+curie,tier3,Transition Metal,p3_volume,805,-0.6715471608203634,-0.6787484027305398
+curie,tier3,Transition Metal,valence_electron_concentration,805,0.6442471492616989,0.631485644628172
+curie,tier3,Transition Metal,basic_comp__fraction_Fe,805,0.5952849202694948,0.5942074647974629
+curie,tier3,Transition Metal,basic_comp__fraction_Co,805,0.5374002404136884,0.5347908187587759
+curie,tier3,Transition Metal,average_unpaired_electron_proxy,805,0.8747660104609201,0.8736560229887675
+curie,tier3,Transition Metal,p3_band_gap,805,0.715787447320617,0.7216606497273765
+curie,tier3,Transition Metal,basic_comp__transition_metal_fraction,805,0.8971056995354054,0.8924098506382835
+curie,tier3,Transition Metal,basic_comp__total_atoms_formula,805,0.2584616992247673,0.2595791032414573
+curie,tier3,Transition Metal,average_melting_temperature,805,-0.7183125899638878,-0.7184621976478066
+curie,tier3,Transition Metal,p3_efermi,805,-0.784753900433486,-0.7899588910489325
+curie,tier3,Oxide,p3_volume,250,-0.9372157181699451,-0.6787484027305398
+curie,tier3,Oxide,valence_electron_concentration,250,0.4876410390023086,0.631485644628172
+curie,tier3,Oxide,basic_comp__fraction_Fe,250,0.9745761544990575,0.5942074647974629
+curie,tier3,Oxide,basic_comp__fraction_Co,250,0.00838192462237086,0.5347908187587759
+curie,tier3,Oxide,average_unpaired_electron_proxy,250,0.9461247888207297,0.8736560229887675
+curie,tier3,Oxide,p3_band_gap,250,0.7691892598673976,0.7216606497273765
+curie,tier3,Oxide,basic_comp__transition_metal_fraction,250,-0.5457043641932523,0.8924098506382835
+curie,tier3,Oxide,basic_comp__total_atoms_formula,250,-0.6439183478820796,0.2595791032414573
+curie,tier3,Oxide,average_melting_temperature,250,-0.94270315376594,-0.7184621976478066
+curie,tier3,Oxide,p3_efermi,250,0.4415568183259096,-0.7899588910489325
+curie,tier3,Intermetallic,p3_volume,498,-0.8591775143329824,-0.6787484027305398
+curie,tier3,Intermetallic,valence_electron_concentration,498,0.6737415729513566,0.631485644628172
+curie,tier3,Intermetallic,basic_comp__fraction_Fe,498,0.6599362942872089,0.5942074647974629
+curie,tier3,Intermetallic,basic_comp__fraction_Co,498,0.6033042187788539,0.5347908187587759
+curie,tier3,Intermetallic,average_unpaired_electron_proxy,498,0.8885831846901848,0.8736560229887675
+curie,tier3,Intermetallic,p3_band_gap,498,-0.12063030442083716,0.7216606497273765
+curie,tier3,Intermetallic,basic_comp__transition_metal_fraction,498,0.8466015406602297,0.8924098506382835
+curie,tier3,Intermetallic,basic_comp__total_atoms_formula,498,-0.3507160655489743,0.2595791032414573
+curie,tier3,Intermetallic,average_melting_temperature,498,-0.16941138051515625,-0.7184621976478066
+curie,tier3,Intermetallic,p3_efermi,498,-0.7833243476399935,-0.7899588910489325
+ms_moment,tier1,Transition Metal,basic_comp__magnetic_element_fraction,1435,0.6704975691212938,0.7326475881971026
+ms_moment,tier1,Transition Metal,basic_comp__fraction_Mn,1435,0.6562495877265655,0.623428024157437
+ms_moment,tier1,Transition Metal,electronegativity_variance,1435,0.8114022418593272,0.8079602179938176
+ms_moment,tier1,Transition Metal,average_unpaired_electron_proxy,1435,0.8605200202115105,0.8735452606128598
+ms_moment,tier1,Transition Metal,electronegativity_difference,1435,0.8581939940408562,0.8553112945439552
+ms_moment,tier1,Transition Metal,average_atomic_radius,1435,-0.40310914460351077,-0.35108155243491235
+ms_moment,tier1,Transition Metal,basic_comp__total_atoms_formula,1435,0.8662183030893291,0.8554524912987104
+ms_moment,tier1,Transition Metal,basic_comp__fraction_Fe,1435,0.4742061203752078,0.4481607607574431
+ms_moment,tier1,Transition Metal,average_atomic_mass,1435,-0.3881610242889749,-0.3351182838602445
+ms_moment,tier1,Transition Metal,melting_temperature_variance,1435,0.47641866638063235,0.4247317237313342
+ms_moment,tier1,Rare Earth,basic_comp__magnetic_element_fraction,255,0.8250407328607113,0.7326475881971026
+ms_moment,tier1,Rare Earth,basic_comp__fraction_Mn,255,0.6244631628880413,0.623428024157437
+ms_moment,tier1,Rare Earth,electronegativity_variance,255,0.7078057739495252,0.8079602179938176
+ms_moment,tier1,Rare Earth,average_unpaired_electron_proxy,255,0.8534839656832152,0.8735452606128598
+ms_moment,tier1,Rare Earth,electronegativity_difference,255,0.6865638766751908,0.8553112945439552
+ms_moment,tier1,Rare Earth,average_atomic_radius,255,0.49160535608509087,-0.35108155243491235
+ms_moment,tier1,Rare Earth,basic_comp__total_atoms_formula,255,0.7125854309818382,0.8554524912987104
+ms_moment,tier1,Rare Earth,basic_comp__fraction_Fe,255,0.43591800799675784,0.4481607607574431
+ms_moment,tier1,Rare Earth,average_atomic_mass,255,0.09098160015401963,-0.3351182838602445
+ms_moment,tier1,Rare Earth,melting_temperature_variance,255,0.28698099797197824,0.4247317237313342
+ms_moment,tier1,Oxide,basic_comp__magnetic_element_fraction,697,0.7816080294056572,0.7326475881971026
+ms_moment,tier1,Oxide,basic_comp__fraction_Mn,697,0.5600588259813533,0.623428024157437
+ms_moment,tier1,Oxide,electronegativity_variance,697,0.5414855361234284,0.8079602179938176
+ms_moment,tier1,Oxide,average_unpaired_electron_proxy,697,0.8205196391242063,0.8735452606128598
+ms_moment,tier1,Oxide,electronegativity_difference,697,0.39032025483711275,0.8553112945439552
+ms_moment,tier1,Oxide,average_atomic_radius,697,-0.7497023642394983,-0.35108155243491235
+ms_moment,tier1,Oxide,basic_comp__total_atoms_formula,697,0.8905456017388822,0.8554524912987104
+ms_moment,tier1,Oxide,basic_comp__fraction_Fe,697,0.45698910748681293,0.4481607607574431
+ms_moment,tier1,Oxide,average_atomic_mass,697,-0.42092831898197713,-0.3351182838602445
+ms_moment,tier1,Oxide,melting_temperature_variance,697,0.7211074265869434,0.4247317237313342
+ms_moment,tier1,Intermetallic,basic_comp__magnetic_element_fraction,849,0.7536315807951018,0.7326475881971026
+ms_moment,tier1,Intermetallic,basic_comp__fraction_Mn,849,0.6731463467496366,0.623428024157437
+ms_moment,tier1,Intermetallic,electronegativity_variance,849,0.6852582435469138,0.8079602179938176
+ms_moment,tier1,Intermetallic,average_unpaired_electron_proxy,849,0.9092392687838797,0.8735452606128598
+ms_moment,tier1,Intermetallic,electronegativity_difference,849,0.7904369394964876,0.8553112945439552
+ms_moment,tier1,Intermetallic,average_atomic_radius,849,-0.10892736444386897,-0.35108155243491235
+ms_moment,tier1,Intermetallic,basic_comp__total_atoms_formula,849,0.735643624940362,0.8554524912987104
+ms_moment,tier1,Intermetallic,basic_comp__fraction_Fe,849,0.44273578342263237,0.4481607607574431
+ms_moment,tier1,Intermetallic,average_atomic_mass,849,-0.11025214729379187,-0.3351182838602445
+ms_moment,tier1,Intermetallic,melting_temperature_variance,849,0.0127284788100784,0.4247317237313342
+ms_moment,tier2,Transition Metal,basic_comp__magnetic_element_fraction,1435,0.6548952695372305,0.7213018974284123
+ms_moment,tier2,Transition Metal,electronegativity_variance,1435,0.8063642608458329,0.7996638206787796
+ms_moment,tier2,Transition Metal,basic_comp__fraction_Mn,1435,0.6563349352732967,0.623586949472312
+ms_moment,tier2,Transition Metal,average_unpaired_electron_proxy,1435,0.8883351579610451,0.8977947677124549
+ms_moment,tier2,Transition Metal,average_atomic_radius,1435,-0.5723347092532022,-0.5236772353816775
+ms_moment,tier2,Transition Metal,basic_comp__fraction_Fe,1435,0.5494998946633822,0.5239795280877355
+ms_moment,tier2,Transition Metal,electronegativity_difference,1435,0.7892745056252256,0.7910834222770178
+ms_moment,tier2,Transition Metal,basic_comp__total_atoms_formula,1435,0.8587801556058813,0.8460332805479738
+ms_moment,tier2,Transition Metal,average_atomic_mass,1435,-0.3629113942540978,-0.3137769058758987
+ms_moment,tier2,Transition Metal,melting_temperature_variance,1435,0.34126888381139975,0.2922525799195153
+ms_moment,tier2,Rare Earth,basic_comp__magnetic_element_fraction,255,0.8450790661509074,0.7213018974284123
+ms_moment,tier2,Rare Earth,electronegativity_variance,255,0.6748658747355551,0.7996638206787796
+ms_moment,tier2,Rare Earth,basic_comp__fraction_Mn,255,0.6232738171216121,0.623586949472312
+ms_moment,tier2,Rare Earth,average_unpaired_electron_proxy,255,0.8737220816191235,0.8977947677124549
+ms_moment,tier2,Rare Earth,average_atomic_radius,255,0.07352710665064799,-0.5236772353816775
+ms_moment,tier2,Rare Earth,basic_comp__fraction_Fe,255,0.43258942772328707,0.5239795280877355
+ms_moment,tier2,Rare Earth,electronegativity_difference,255,0.702645073409925,0.7910834222770178
+ms_moment,tier2,Rare Earth,basic_comp__total_atoms_formula,255,0.6476684487966679,0.8460332805479738
+ms_moment,tier2,Rare Earth,average_atomic_mass,255,-0.05666373778446226,-0.3137769058758987
+ms_moment,tier2,Rare Earth,melting_temperature_variance,255,0.12805849851119175,0.2922525799195153
+ms_moment,tier2,Oxide,basic_comp__magnetic_element_fraction,697,0.7171233922716072,0.7213018974284123
+ms_moment,tier2,Oxide,electronegativity_variance,697,0.3738209622400405,0.7996638206787796
+ms_moment,tier2,Oxide,basic_comp__fraction_Mn,697,0.5606334445951541,0.623586949472312
+ms_moment,tier2,Oxide,average_unpaired_electron_proxy,697,0.8199921875758269,0.8977947677124549
+ms_moment,tier2,Oxide,average_atomic_radius,697,-0.6503567586351748,-0.5236772353816775
+ms_moment,tier2,Oxide,basic_comp__fraction_Fe,697,0.4436923641248707,0.5239795280877355
+ms_moment,tier2,Oxide,electronegativity_difference,697,0.27613224257501245,0.7910834222770178
+ms_moment,tier2,Oxide,basic_comp__total_atoms_formula,697,0.8736456273470646,0.8460332805479738
+ms_moment,tier2,Oxide,average_atomic_mass,697,-0.3147252408957503,-0.3137769058758987
+ms_moment,tier2,Oxide,melting_temperature_variance,697,0.6586309456353813,0.2922525799195153
+ms_moment,tier2,Intermetallic,basic_comp__magnetic_element_fraction,849,0.7611942869139077,0.7213018974284123
+ms_moment,tier2,Intermetallic,electronegativity_variance,849,0.7124910528438972,0.7996638206787796
+ms_moment,tier2,Intermetallic,basic_comp__fraction_Mn,849,0.6732324764165705,0.623586949472312
+ms_moment,tier2,Intermetallic,average_unpaired_electron_proxy,849,0.9170673886694624,0.8977947677124549
+ms_moment,tier2,Intermetallic,average_atomic_radius,849,-0.1524305955245814,-0.5236772353816775
+ms_moment,tier2,Intermetallic,basic_comp__fraction_Fe,849,0.5937701883958686,0.5239795280877355
+ms_moment,tier2,Intermetallic,electronegativity_difference,849,0.7597930193653392,0.7910834222770178
+ms_moment,tier2,Intermetallic,basic_comp__total_atoms_formula,849,0.7224727383567653,0.8460332805479738
+ms_moment,tier2,Intermetallic,average_atomic_mass,849,-0.08274307868711606,-0.3137769058758987
+ms_moment,tier2,Intermetallic,melting_temperature_variance,849,-0.11900138625540779,0.2922525799195153
+ms_moment,tier3,Transition Metal,basic_comp__magnetic_element_fraction,1435,0.7424122348101009,0.7873867571749485
+ms_moment,tier3,Transition Metal,p3_volume,1435,0.9347264237822099,0.9401404301337982
+ms_moment,tier3,Transition Metal,basic_comp__fraction_Mn,1435,0.6568755332271379,0.6242356398094062
+ms_moment,tier3,Transition Metal,basic_comp__fraction_Fe,1435,0.6702312621861787,0.6378211157604892
+ms_moment,tier3,Transition Metal,average_unpaired_electron_proxy,1435,0.9549595681655119,0.9586534156249447
+ms_moment,tier3,Transition Metal,p3_formation_energy_per_atom,1435,-0.7742328206278069,-0.7839230464470875
+ms_moment,tier3,Transition Metal,p3_dielectric_static,1435,0.8474004820019292,0.8580758392241045
+ms_moment,tier3,Transition Metal,p3_cbm,1435,0.8371451132519597,0.846282284132218
+ms_moment,tier3,Transition Metal,valence_electron_concentration,1435,0.8820931278499848,0.8860378401314342
+ms_moment,tier3,Transition Metal,electronegativity_variance,1435,0.8923812098805044,0.8924659897295776
+ms_moment,tier3,Rare Earth,basic_comp__magnetic_element_fraction,255,0.8368229545997743,0.7873867571749485
+ms_moment,tier3,Rare Earth,p3_volume,255,0.9414450342418659,0.9401404301337982
+ms_moment,tier3,Rare Earth,basic_comp__fraction_Mn,255,0.6250064014791216,0.6242356398094062
+ms_moment,tier3,Rare Earth,basic_comp__fraction_Fe,255,0.47622457217943154,0.6378211157604892
+ms_moment,tier3,Rare Earth,average_unpaired_electron_proxy,255,0.9447668860566342,0.9586534156249447
+ms_moment,tier3,Rare Earth,p3_formation_energy_per_atom,255,-0.6520118815148931,-0.7839230464470875
+ms_moment,tier3,Rare Earth,p3_dielectric_static,255,0.8878628779073651,0.8580758392241045
+ms_moment,tier3,Rare Earth,p3_cbm,255,0.7190234914785814,0.846282284132218
+ms_moment,tier3,Rare Earth,valence_electron_concentration,255,0.8397424393876143,0.8860378401314342
+ms_moment,tier3,Rare Earth,electronegativity_variance,255,0.6793837023133628,0.8924659897295776
+ms_moment,tier3,Oxide,basic_comp__magnetic_element_fraction,697,0.84584458515489,0.7873867571749485
+ms_moment,tier3,Oxide,p3_volume,697,0.9130457927735058,0.9401404301337982
+ms_moment,tier3,Oxide,basic_comp__fraction_Mn,697,0.5617961659373839,0.6242356398094062
+ms_moment,tier3,Oxide,basic_comp__fraction_Fe,697,0.6233066736369884,0.6378211157604892
+ms_moment,tier3,Oxide,average_unpaired_electron_proxy,697,0.923132711421552,0.9586534156249447
+ms_moment,tier3,Oxide,p3_formation_energy_per_atom,697,-0.407401123683095,-0.7839230464470875
+ms_moment,tier3,Oxide,p3_dielectric_static,697,0.7356613593898854,0.8580758392241045
+ms_moment,tier3,Oxide,p3_cbm,697,0.7559656978148563,0.846282284132218
+ms_moment,tier3,Oxide,valence_electron_concentration,697,0.8168561407010164,0.8860378401314342
+ms_moment,tier3,Oxide,electronegativity_variance,697,0.8040610964235319,0.8924659897295776
+ms_moment,tier3,Intermetallic,basic_comp__magnetic_element_fraction,849,0.7825455425320967,0.7873867571749485
+ms_moment,tier3,Intermetallic,p3_volume,849,0.9442019868794752,0.9401404301337982
+ms_moment,tier3,Intermetallic,basic_comp__fraction_Mn,849,0.6719532039295553,0.6242356398094062
+ms_moment,tier3,Intermetallic,basic_comp__fraction_Fe,849,0.6381264259111039,0.6378211157604892
+ms_moment,tier3,Intermetallic,average_unpaired_electron_proxy,849,0.9600519796968886,0.9586534156249447
+ms_moment,tier3,Intermetallic,p3_formation_energy_per_atom,849,-0.5777356507956102,-0.7839230464470875
+ms_moment,tier3,Intermetallic,p3_dielectric_static,849,0.9195822281811981,0.8580758392241045
+ms_moment,tier3,Intermetallic,p3_cbm,849,0.9207463678289556,0.846282284132218
+ms_moment,tier3,Intermetallic,valence_electron_concentration,849,0.9174872104271213,0.8860378401314342
+ms_moment,tier3,Intermetallic,electronegativity_variance,849,0.7404924336783139,0.8924659897295776

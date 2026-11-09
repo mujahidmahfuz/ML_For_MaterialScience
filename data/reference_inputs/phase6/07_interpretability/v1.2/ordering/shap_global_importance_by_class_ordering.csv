@@ -1,0 +1,941 @@
+tier,class,feature,family,mean_abs_shap
+tier1,FM,basic_comp__n_elements,Composition & stoichiometry,0.0080125835
+tier1,FM,basic_comp__total_atoms_formula,Composition & stoichiometry,0.04243353
+tier1,FM,basic_comp__contains_transition_metal,Magnetic-element content,0.0011433436
+tier1,FM,basic_comp__transition_metal_fraction,Magnetic-element content,0.03215323
+tier1,FM,basic_comp__contains_rare_earth,Magnetic-element content,0.003388115
+tier1,FM,basic_comp__rare_earth_fraction,Magnetic-element content,0.014828246
+tier1,FM,basic_comp__contains_actinide,Magnetic-element content,0.0012706252
+tier1,FM,basic_comp__actinide_fraction,Magnetic-element content,0.016669247
+tier1,FM,basic_comp__magnetic_element_fraction,Magnetic-element content,0.056709785
+tier1,FM,basic_comp__contains_Fe,Magnetic-element content,0.005271941
+tier1,FM,basic_comp__fraction_Fe,Magnetic-element content,0.050763395
+tier1,FM,basic_comp__contains_Co,Magnetic-element content,0.016148629
+tier1,FM,basic_comp__fraction_Co,Magnetic-element content,0.12624992
+tier1,FM,basic_comp__contains_Ni,Magnetic-element content,0.0022291015
+tier1,FM,basic_comp__fraction_Ni,Magnetic-element content,0.020093886
+tier1,FM,basic_comp__contains_Mn,Magnetic-element content,0.005930749
+tier1,FM,basic_comp__fraction_Mn,Magnetic-element content,0.028354632
+tier1,FM,basic_comp__contains_Cr,Magnetic-element content,0.006040887
+tier1,FM,basic_comp__fraction_Cr,Magnetic-element content,0.011996199
+tier1,FM,basic_comp__contains_Gd,Magnetic-element content,0.0
+tier1,FM,basic_comp__fraction_Gd,Magnetic-element content,0.0
+tier1,FM,basic_comp__contains_Nd,Magnetic-element content,0.0011090661
+tier1,FM,basic_comp__fraction_Nd,Magnetic-element content,0.0019952387
+tier1,FM,basic_comp__contains_Sm,Magnetic-element content,0.0056856535
+tier1,FM,basic_comp__fraction_Sm,Magnetic-element content,0.0010942038
+tier1,FM,basic_comp__contains_Dy,Magnetic-element content,0.0023956806
+tier1,FM,basic_comp__fraction_Dy,Magnetic-element content,0.0011282604
+tier1,FM,basic_comp__contains_Tb,Magnetic-element content,0.0010624144
+tier1,FM,basic_comp__fraction_Tb,Magnetic-element content,0.0015937188
+tier1,FM,basic_comp__contains_B,Light-element (B/C/N/O) content,0.0012225808
+tier1,FM,basic_comp__fraction_B,Light-element (B/C/N/O) content,0.003211212
+tier1,FM,basic_comp__contains_C,Light-element (B/C/N/O) content,0.0011288669
+tier1,FM,basic_comp__fraction_C,Light-element (B/C/N/O) content,0.0028528015
+tier1,FM,basic_comp__contains_N,Light-element (B/C/N/O) content,0.0007578353
+tier1,FM,basic_comp__fraction_N,Light-element (B/C/N/O) content,0.0063734823
+tier1,FM,basic_comp__contains_O,Light-element (B/C/N/O) content,0.0145578515
+tier1,FM,basic_comp__fraction_O,Light-element (B/C/N/O) content,0.0218113
+tier1,FM,magnetic_prior__d_block_fraction,d/f-electron & valence proxies,0.03776651
+tier1,FM,magnetic_prior__f_block_fraction,d/f-electron & valence proxies,0.021418402
+tier1,FM,magnetic_prior__s_block_fraction,d/f-electron & valence proxies,0.021739114
+tier1,FM,magnetic_prior__p_block_fraction,d/f-electron & valence proxies,0.055649336
+tier1,FM,average_unpaired_electron_proxy,d/f-electron & valence proxies,0.07433677
+tier1,FM,average_d_electron_count,d/f-electron & valence proxies,0.1427381
+tier1,FM,average_f_electron_count,d/f-electron & valence proxies,0.03731985
+tier1,FM,valence_electron_concentration,d/f-electron & valence proxies,0.10766549
+tier1,FM,average_atomic_radius,Atomic size & periodic statistics,0.1420001
+tier1,FM,atomic_radius_variance,Atomic size & periodic statistics,0.1038113
+tier1,FM,atomic_size_mismatch,Atomic size & periodic statistics,0.081218004
+tier1,FM,electronegativity_difference,Atomic size & periodic statistics,0.10834888
+tier1,FM,electronegativity_variance,Atomic size & periodic statistics,0.06475584
+tier1,FM,average_atomic_mass,Atomic size & periodic statistics,0.100896105
+tier1,FM,atomic_mass_variance,Atomic size & periodic statistics,0.09508569
+tier1,FM,average_melting_temperature,Atomic size & periodic statistics,0.11042129
+tier1,FM,melting_temperature_variance,Atomic size & periodic statistics,0.07625434
+tier1,FM,period_variance,Atomic size & periodic statistics,0.058472358
+tier1,FM,group_variance,Atomic size & periodic statistics,0.17984997
+tier1,FM,mixing_entropy,Composition & stoichiometry,0.03575521
+tier1,FM,formula_entropy,Composition & stoichiometry,0.011217513
+tier1,FM,normalized_formula_entropy,Composition & stoichiometry,0.05289657
+tier1,FM,formula_complexity,Composition & stoichiometry,0.02542871
+tier1,FM,formula_complexity_index,Composition & stoichiometry,0.023844937
+tier1,FM,stoichiometric_variance,Composition & stoichiometry,0.042907856
+tier1,FM,maximum_stoichiometric_coefficient,Composition & stoichiometry,0.06400036
+tier1,FM,number_of_unique_elements,Composition & stoichiometry,0.00010518203
+tier1,FM,total_atoms,Composition & stoichiometry,0.016884329
+tier1,AFM,basic_comp__n_elements,Composition & stoichiometry,0.028290043
+tier1,AFM,basic_comp__total_atoms_formula,Composition & stoichiometry,0.11764181
+tier1,AFM,basic_comp__contains_transition_metal,Magnetic-element content,0.00015640058
+tier1,AFM,basic_comp__transition_metal_fraction,Magnetic-element content,0.036412764
+tier1,AFM,basic_comp__contains_rare_earth,Magnetic-element content,0.0012714621
+tier1,AFM,basic_comp__rare_earth_fraction,Magnetic-element content,0.017377067
+tier1,AFM,basic_comp__contains_actinide,Magnetic-element content,0.0014789675
+tier1,AFM,basic_comp__actinide_fraction,Magnetic-element content,0.008208387
+tier1,AFM,basic_comp__magnetic_element_fraction,Magnetic-element content,0.14542137
+tier1,AFM,basic_comp__contains_Fe,Magnetic-element content,0.00997263
+tier1,AFM,basic_comp__fraction_Fe,Magnetic-element content,0.019487478
+tier1,AFM,basic_comp__contains_Co,Magnetic-element content,0.017907491
+tier1,AFM,basic_comp__fraction_Co,Magnetic-element content,0.06570283
+tier1,AFM,basic_comp__contains_Ni,Magnetic-element content,0.0042950325
+tier1,AFM,basic_comp__fraction_Ni,Magnetic-element content,0.025383351
+tier1,AFM,basic_comp__contains_Mn,Magnetic-element content,0.008862562
+tier1,AFM,basic_comp__fraction_Mn,Magnetic-element content,0.08380405
+tier1,AFM,basic_comp__contains_Cr,Magnetic-element content,0.0021371155
+tier1,AFM,basic_comp__fraction_Cr,Magnetic-element content,0.02385814
+tier1,AFM,basic_comp__contains_Gd,Magnetic-element content,0.0
+tier1,AFM,basic_comp__fraction_Gd,Magnetic-element content,0.0
+tier1,AFM,basic_comp__contains_Nd,Magnetic-element content,0.0018957354
+tier1,AFM,basic_comp__fraction_Nd,Magnetic-element content,0.0006149662
+tier1,AFM,basic_comp__contains_Sm,Magnetic-element content,0.00986907
+tier1,AFM,basic_comp__fraction_Sm,Magnetic-element content,0.0029244507
+tier1,AFM,basic_comp__contains_Dy,Magnetic-element content,0.00085883786
+tier1,AFM,basic_comp__fraction_Dy,Magnetic-element content,0.0009131359
+tier1,AFM,basic_comp__contains_Tb,Magnetic-element content,0.0015609388
+tier1,AFM,basic_comp__fraction_Tb,Magnetic-element content,0.0017953648
+tier1,AFM,basic_comp__contains_B,Light-element (B/C/N/O) content,0.0012346914
+tier1,AFM,basic_comp__fraction_B,Light-element (B/C/N/O) content,0.0047463416
+tier1,AFM,basic_comp__contains_C,Light-element (B/C/N/O) content,0.00086251076
+tier1,AFM,basic_comp__fraction_C,Light-element (B/C/N/O) content,0.0061567496
+tier1,AFM,basic_comp__contains_N,Light-element (B/C/N/O) content,0.0057736235
+tier1,AFM,basic_comp__fraction_N,Light-element (B/C/N/O) content,0.07641972
+tier1,AFM,basic_comp__contains_O,Light-element (B/C/N/O) content,0.007899872
+tier1,AFM,basic_comp__fraction_O,Light-element (B/C/N/O) content,0.061175432
+tier1,AFM,magnetic_prior__d_block_fraction,d/f-electron & valence proxies,0.068174794
+tier1,AFM,magnetic_prior__f_block_fraction,d/f-electron & valence proxies,0.008806856
+tier1,AFM,magnetic_prior__s_block_fraction,d/f-electron & valence proxies,0.03914526
+tier1,AFM,magnetic_prior__p_block_fraction,d/f-electron & valence proxies,0.38512427
+tier1,AFM,average_unpaired_electron_proxy,d/f-electron & valence proxies,0.13710539
+tier1,AFM,average_d_electron_count,d/f-electron & valence proxies,0.10216259
+tier1,AFM,average_f_electron_count,d/f-electron & valence proxies,0.08837576
+tier1,AFM,valence_electron_concentration,d/f-electron & valence proxies,0.1480163
+tier1,AFM,average_atomic_radius,Atomic size & periodic statistics,0.1173803
+tier1,AFM,atomic_radius_variance,Atomic size & periodic statistics,0.089261845
+tier1,AFM,atomic_size_mismatch,Atomic size & periodic statistics,0.07008584
+tier1,AFM,electronegativity_difference,Atomic size & periodic statistics,0.15499096
+tier1,AFM,electronegativity_variance,Atomic size & periodic statistics,0.13451013
+tier1,AFM,average_atomic_mass,Atomic size & periodic statistics,0.113006614
+tier1,AFM,atomic_mass_variance,Atomic size & periodic statistics,0.09227828
+tier1,AFM,average_melting_temperature,Atomic size & periodic statistics,0.11345912
+tier1,AFM,melting_temperature_variance,Atomic size & periodic statistics,0.118413866
+tier1,AFM,period_variance,Atomic size & periodic statistics,0.06255378
+tier1,AFM,group_variance,Atomic size & periodic statistics,0.14074846
+tier1,AFM,mixing_entropy,Composition & stoichiometry,0.041888066
+tier1,AFM,formula_entropy,Composition & stoichiometry,0.00828758
+tier1,AFM,normalized_formula_entropy,Composition & stoichiometry,0.064804964
+tier1,AFM,formula_complexity,Composition & stoichiometry,0.044536434
+tier1,AFM,formula_complexity_index,Composition & stoichiometry,0.015723752
+tier1,AFM,stoichiometric_variance,Composition & stoichiometry,0.05659596
+tier1,AFM,maximum_stoichiometric_coefficient,Composition & stoichiometry,0.02360003
+tier1,AFM,number_of_unique_elements,Composition & stoichiometry,0.0014344968
+tier1,AFM,total_atoms,Composition & stoichiometry,0.15310766
+tier1,FiM,basic_comp__n_elements,Composition & stoichiometry,0.08805673
+tier1,FiM,basic_comp__total_atoms_formula,Composition & stoichiometry,0.17685017
+tier1,FiM,basic_comp__contains_transition_metal,Magnetic-element content,0.0011055376
+tier1,FiM,basic_comp__transition_metal_fraction,Magnetic-element content,0.17369051
+tier1,FiM,basic_comp__contains_rare_earth,Magnetic-element content,0.014979691
+tier1,FiM,basic_comp__rare_earth_fraction,Magnetic-element content,0.033198133
+tier1,FiM,basic_comp__contains_actinide,Magnetic-element content,0.0033214234
+tier1,FiM,basic_comp__actinide_fraction,Magnetic-element content,0.0056457976
+tier1,FiM,basic_comp__magnetic_element_fraction,Magnetic-element content,0.3545531
+tier1,FiM,basic_comp__contains_Fe,Magnetic-element content,0.027005218
+tier1,FiM,basic_comp__fraction_Fe,Magnetic-element content,0.050140712
+tier1,FiM,basic_comp__contains_Co,Magnetic-element content,0.016406909
+tier1,FiM,basic_comp__fraction_Co,Magnetic-element content,0.062178303
+tier1,FiM,basic_comp__contains_Ni,Magnetic-element content,0.004438561
+tier1,FiM,basic_comp__fraction_Ni,Magnetic-element content,0.029581673
+tier1,FiM,basic_comp__contains_Mn,Magnetic-element content,0.014262713
+tier1,FiM,basic_comp__fraction_Mn,Magnetic-element content,0.030671729
+tier1,FiM,basic_comp__contains_Cr,Magnetic-element content,0.006514188
+tier1,FiM,basic_comp__fraction_Cr,Magnetic-element content,0.019394781
+tier1,FiM,basic_comp__contains_Gd,Magnetic-element content,0.0
+tier1,FiM,basic_comp__fraction_Gd,Magnetic-element content,0.0
+tier1,FiM,basic_comp__contains_Nd,Magnetic-element content,0.0015196388
+tier1,FiM,basic_comp__fraction_Nd,Magnetic-element content,0.0005125943
+tier1,FiM,basic_comp__contains_Sm,Magnetic-element content,0.0052461354
+tier1,FiM,basic_comp__fraction_Sm,Magnetic-element content,0.004063926
+tier1,FiM,basic_comp__contains_Dy,Magnetic-element content,0.0026242638
+tier1,FiM,basic_comp__fraction_Dy,Magnetic-element content,0.004060797
+tier1,FiM,basic_comp__contains_Tb,Magnetic-element content,0.000748662
+tier1,FiM,basic_comp__fraction_Tb,Magnetic-element content,6.902864e-05
+tier1,FiM,basic_comp__contains_B,Light-element (B/C/N/O) content,0.009242524
+tier1,FiM,basic_comp__fraction_B,Light-element (B/C/N/O) content,0.0054677287
+tier1,FiM,basic_comp__contains_C,Light-element (B/C/N/O) content,0.010805263
+tier1,FiM,basic_comp__fraction_C,Light-element (B/C/N/O) content,0.0021171223
+tier1,FiM,basic_comp__contains_N,Light-element (B/C/N/O) content,0.005484424
+tier1,FiM,basic_comp__fraction_N,Light-element (B/C/N/O) content,0.034801308
+tier1,FiM,basic_comp__contains_O,Light-element (B/C/N/O) content,0.0009627504
+tier1,FiM,basic_comp__fraction_O,Light-element (B/C/N/O) content,0.06135164
+tier1,FiM,magnetic_prior__d_block_fraction,d/f-electron & valence proxies,0.0563091
+tier1,FiM,magnetic_prior__f_block_fraction,d/f-electron & valence proxies,0.014091665
+tier1,FiM,magnetic_prior__s_block_fraction,d/f-electron & valence proxies,0.09794984
+tier1,FiM,magnetic_prior__p_block_fraction,d/f-electron & valence proxies,0.18120205
+tier1,FiM,average_unpaired_electron_proxy,d/f-electron & valence proxies,0.3832258
+tier1,FiM,average_d_electron_count,d/f-electron & valence proxies,0.1826645
+tier1,FiM,average_f_electron_count,d/f-electron & valence proxies,0.03707471
+tier1,FiM,valence_electron_concentration,d/f-electron & valence proxies,0.14555891
+tier1,FiM,average_atomic_radius,Atomic size & periodic statistics,0.14634094
+tier1,FiM,atomic_radius_variance,Atomic size & periodic statistics,0.10382664
+tier1,FiM,atomic_size_mismatch,Atomic size & periodic statistics,0.11361434
+tier1,FiM,electronegativity_difference,Atomic size & periodic statistics,0.051722653
+tier1,FiM,electronegativity_variance,Atomic size & periodic statistics,0.18744306
+tier1,FiM,average_atomic_mass,Atomic size & periodic statistics,0.16468246
+tier1,FiM,atomic_mass_variance,Atomic size & periodic statistics,0.15279116
+tier1,FiM,average_melting_temperature,Atomic size & periodic statistics,0.1328761
+tier1,FiM,melting_temperature_variance,Atomic size & periodic statistics,0.16185054
+tier1,FiM,period_variance,Atomic size & periodic statistics,0.08066802
+tier1,FiM,group_variance,Atomic size & periodic statistics,0.2289291
+tier1,FiM,mixing_entropy,Composition & stoichiometry,0.12724476
+tier1,FiM,formula_entropy,Composition & stoichiometry,0.02710437
+tier1,FiM,normalized_formula_entropy,Composition & stoichiometry,0.09821142
+tier1,FiM,formula_complexity,Composition & stoichiometry,0.033808466
+tier1,FiM,formula_complexity_index,Composition & stoichiometry,0.013829122
+tier1,FiM,stoichiometric_variance,Composition & stoichiometry,0.07744218
+tier1,FiM,maximum_stoichiometric_coefficient,Composition & stoichiometry,0.024001688
+tier1,FiM,number_of_unique_elements,Composition & stoichiometry,0.006808345
+tier1,FiM,total_atoms,Composition & stoichiometry,0.14971709
+tier1,NM,basic_comp__n_elements,Composition & stoichiometry,0.03362009
+tier1,NM,basic_comp__total_atoms_formula,Composition & stoichiometry,0.31071767
+tier1,NM,basic_comp__contains_transition_metal,Magnetic-element content,0.0070803505
+tier1,NM,basic_comp__transition_metal_fraction,Magnetic-element content,0.06077516
+tier1,NM,basic_comp__contains_rare_earth,Magnetic-element content,0.06466696
+tier1,NM,basic_comp__rare_earth_fraction,Magnetic-element content,0.06557635
+tier1,NM,basic_comp__contains_actinide,Magnetic-element content,0.0056698704
+tier1,NM,basic_comp__actinide_fraction,Magnetic-element content,0.01740156
+tier1,NM,basic_comp__magnetic_element_fraction,Magnetic-element content,0.899852
+tier1,NM,basic_comp__contains_Fe,Magnetic-element content,0.04876704
+tier1,NM,basic_comp__fraction_Fe,Magnetic-element content,0.05329335
+tier1,NM,basic_comp__contains_Co,Magnetic-element content,0.01615023
+tier1,NM,basic_comp__fraction_Co,Magnetic-element content,0.04849395
+tier1,NM,basic_comp__contains_Ni,Magnetic-element content,0.038402073
+tier1,NM,basic_comp__fraction_Ni,Magnetic-element content,0.027086023
+tier1,NM,basic_comp__contains_Mn,Magnetic-element content,0.45880836
+tier1,NM,basic_comp__fraction_Mn,Magnetic-element content,0.086476564
+tier1,NM,basic_comp__contains_Cr,Magnetic-element content,0.008393438
+tier1,NM,basic_comp__fraction_Cr,Magnetic-element content,0.018936785
+tier1,NM,basic_comp__contains_Gd,Magnetic-element content,0.0
+tier1,NM,basic_comp__fraction_Gd,Magnetic-element content,0.0
+tier1,NM,basic_comp__contains_Nd,Magnetic-element content,0.0041459883
+tier1,NM,basic_comp__fraction_Nd,Magnetic-element content,0.012328624
+tier1,NM,basic_comp__contains_Sm,Magnetic-element content,0.0
+tier1,NM,basic_comp__fraction_Sm,Magnetic-element content,0.0
+tier1,NM,basic_comp__contains_Dy,Magnetic-element content,0.0006028713
+tier1,NM,basic_comp__fraction_Dy,Magnetic-element content,0.012695161
+tier1,NM,basic_comp__contains_Tb,Magnetic-element content,0.0
+tier1,NM,basic_comp__fraction_Tb,Magnetic-element content,0.0
+tier1,NM,basic_comp__contains_B,Light-element (B/C/N/O) content,0.005571111
+tier1,NM,basic_comp__fraction_B,Light-element (B/C/N/O) content,0.011303492
+tier1,NM,basic_comp__contains_C,Light-element (B/C/N/O) content,0.003731048
+tier1,NM,basic_comp__fraction_C,Light-element (B/C/N/O) content,0.026964778
+tier1,NM,basic_comp__contains_N,Light-element (B/C/N/O) content,0.011737437
+tier1,NM,basic_comp__fraction_N,Light-element (B/C/N/O) content,0.0156191345
+tier1,NM,basic_comp__contains_O,Light-element (B/C/N/O) content,0.0031081582
+tier1,NM,basic_comp__fraction_O,Light-element (B/C/N/O) content,0.060695045
+tier1,NM,magnetic_prior__d_block_fraction,d/f-electron & valence proxies,0.047822572
+tier1,NM,magnetic_prior__f_block_fraction,d/f-electron & valence proxies,0.04058617
+tier1,NM,magnetic_prior__s_block_fraction,d/f-electron & valence proxies,0.043152474
+tier1,NM,magnetic_prior__p_block_fraction,d/f-electron & valence proxies,0.0805428
+tier1,NM,average_unpaired_electron_proxy,d/f-electron & valence proxies,0.43817967
+tier1,NM,average_d_electron_count,d/f-electron & valence proxies,0.21071056
+tier1,NM,average_f_electron_count,d/f-electron & valence proxies,0.08282601
+tier1,NM,valence_electron_concentration,d/f-electron & valence proxies,0.37695408
+tier1,NM,average_atomic_radius,Atomic size & periodic statistics,0.23624007
+tier1,NM,atomic_radius_variance,Atomic size & periodic statistics,0.16813926
+tier1,NM,atomic_size_mismatch,Atomic size & periodic statistics,0.2848533
+tier1,NM,electronegativity_difference,Atomic size & periodic statistics,0.22994985
+tier1,NM,electronegativity_variance,Atomic size & periodic statistics,0.28310564
+tier1,NM,average_atomic_mass,Atomic size & periodic statistics,0.27439106
+tier1,NM,atomic_mass_variance,Atomic size & periodic statistics,0.34801888
+tier1,NM,average_melting_temperature,Atomic size & periodic statistics,0.2820659
+tier1,NM,melting_temperature_variance,Atomic size & periodic statistics,0.2998033
+tier1,NM,period_variance,Atomic size & periodic statistics,0.20897615
+tier1,NM,group_variance,Atomic size & periodic statistics,0.27396277
+tier1,NM,mixing_entropy,Composition & stoichiometry,0.110951714
+tier1,NM,formula_entropy,Composition & stoichiometry,0.024593197
+tier1,NM,normalized_formula_entropy,Composition & stoichiometry,0.1048
+tier1,NM,formula_complexity,Composition & stoichiometry,0.13179153
+tier1,NM,formula_complexity_index,Composition & stoichiometry,0.035797674
+tier1,NM,stoichiometric_variance,Composition & stoichiometry,0.08907945
+tier1,NM,maximum_stoichiometric_coefficient,Composition & stoichiometry,0.030322902
+tier1,NM,number_of_unique_elements,Composition & stoichiometry,0.0006096547
+tier1,NM,total_atoms,Composition & stoichiometry,0.03233776
+tier2,FM,basic_comp__n_elements,Composition & stoichiometry,0.0043498063
+tier2,FM,basic_comp__total_atoms_formula,Composition & stoichiometry,0.044911593
+tier2,FM,basic_comp__contains_transition_metal,Magnetic-element content,0.0011568725
+tier2,FM,basic_comp__transition_metal_fraction,Magnetic-element content,0.030077795
+tier2,FM,basic_comp__contains_rare_earth,Magnetic-element content,0.0036519493
+tier2,FM,basic_comp__rare_earth_fraction,Magnetic-element content,0.01601951
+tier2,FM,basic_comp__contains_actinide,Magnetic-element content,0.0017144807
+tier2,FM,basic_comp__actinide_fraction,Magnetic-element content,0.010745132
+tier2,FM,basic_comp__magnetic_element_fraction,Magnetic-element content,0.038318586
+tier2,FM,basic_comp__contains_Fe,Magnetic-element content,0.0061340355
+tier2,FM,basic_comp__fraction_Fe,Magnetic-element content,0.04532586
+tier2,FM,basic_comp__contains_Co,Magnetic-element content,0.023418624
+tier2,FM,basic_comp__fraction_Co,Magnetic-element content,0.120904535
+tier2,FM,basic_comp__contains_Ni,Magnetic-element content,0.002221682
+tier2,FM,basic_comp__fraction_Ni,Magnetic-element content,0.018441813
+tier2,FM,basic_comp__contains_Mn,Magnetic-element content,0.0064463527
+tier2,FM,basic_comp__fraction_Mn,Magnetic-element content,0.026880791
+tier2,FM,basic_comp__contains_Cr,Magnetic-element content,0.0075000618
+tier2,FM,basic_comp__fraction_Cr,Magnetic-element content,0.008329394
+tier2,FM,basic_comp__contains_Gd,Magnetic-element content,0.0
+tier2,FM,basic_comp__fraction_Gd,Magnetic-element content,0.0
+tier2,FM,basic_comp__contains_Nd,Magnetic-element content,0.00017755284
+tier2,FM,basic_comp__fraction_Nd,Magnetic-element content,0.0013963879
+tier2,FM,basic_comp__contains_Sm,Magnetic-element content,0.005774009
+tier2,FM,basic_comp__fraction_Sm,Magnetic-element content,0.0016334002
+tier2,FM,basic_comp__contains_Dy,Magnetic-element content,0.0019686308
+tier2,FM,basic_comp__fraction_Dy,Magnetic-element content,0.0028964912
+tier2,FM,basic_comp__contains_Tb,Magnetic-element content,0.0016282628
+tier2,FM,basic_comp__fraction_Tb,Magnetic-element content,0.0036700785
+tier2,FM,basic_comp__contains_B,Light-element (B/C/N/O) content,0.00064063806
+tier2,FM,basic_comp__fraction_B,Light-element (B/C/N/O) content,0.002817639
+tier2,FM,basic_comp__contains_C,Light-element (B/C/N/O) content,0.00030784032
+tier2,FM,basic_comp__fraction_C,Light-element (B/C/N/O) content,0.003768624
+tier2,FM,basic_comp__contains_N,Light-element (B/C/N/O) content,0.0015767455
+tier2,FM,basic_comp__fraction_N,Light-element (B/C/N/O) content,0.005714511
+tier2,FM,basic_comp__contains_O,Light-element (B/C/N/O) content,0.017260626
+tier2,FM,basic_comp__fraction_O,Light-element (B/C/N/O) content,0.024698313
+tier2,FM,magnetic_prior__d_block_fraction,d/f-electron & valence proxies,0.028568242
+tier2,FM,magnetic_prior__f_block_fraction,d/f-electron & valence proxies,0.018861435
+tier2,FM,magnetic_prior__s_block_fraction,d/f-electron & valence proxies,0.019011352
+tier2,FM,magnetic_prior__p_block_fraction,d/f-electron & valence proxies,0.055305094
+tier2,FM,average_unpaired_electron_proxy,d/f-electron & valence proxies,0.06352278
+tier2,FM,average_d_electron_count,d/f-electron & valence proxies,0.13628896
+tier2,FM,average_f_electron_count,d/f-electron & valence proxies,0.037766095
+tier2,FM,valence_electron_concentration,d/f-electron & valence proxies,0.10280811
+tier2,FM,average_atomic_radius,Atomic size & periodic statistics,0.124347724
+tier2,FM,atomic_radius_variance,Atomic size & periodic statistics,0.10062713
+tier2,FM,atomic_size_mismatch,Atomic size & periodic statistics,0.07926326
+tier2,FM,electronegativity_difference,Atomic size & periodic statistics,0.0996653
+tier2,FM,electronegativity_variance,Atomic size & periodic statistics,0.060620718
+tier2,FM,average_atomic_mass,Atomic size & periodic statistics,0.09245835
+tier2,FM,atomic_mass_variance,Atomic size & periodic statistics,0.08967235
+tier2,FM,average_melting_temperature,Atomic size & periodic statistics,0.096206054
+tier2,FM,melting_temperature_variance,Atomic size & periodic statistics,0.076778576
+tier2,FM,period_variance,Atomic size & periodic statistics,0.053481102
+tier2,FM,group_variance,Atomic size & periodic statistics,0.1747189
+tier2,FM,mixing_entropy,Composition & stoichiometry,0.03661877
+tier2,FM,formula_entropy,Composition & stoichiometry,0.009589835
+tier2,FM,normalized_formula_entropy,Composition & stoichiometry,0.050284192
+tier2,FM,formula_complexity,Composition & stoichiometry,0.032838225
+tier2,FM,formula_complexity_index,Composition & stoichiometry,0.016545001
+tier2,FM,stoichiometric_variance,Composition & stoichiometry,0.055670023
+tier2,FM,maximum_stoichiometric_coefficient,Composition & stoichiometry,0.044713594
+tier2,FM,number_of_unique_elements,Composition & stoichiometry,0.0014186926
+tier2,FM,total_atoms,Composition & stoichiometry,0.020837512
+tier2,FM,avg_oxidation_state,Oxidation chemistry,0.022677671
+tier2,FM,minimum_oxidation_state,Oxidation chemistry,0.010959183
+tier2,FM,maximum_oxidation_state,Oxidation chemistry,0.02648337
+tier2,FM,oxidation_state_range,Oxidation chemistry,0.016683672
+tier2,FM,oxidation_state_variance,Oxidation chemistry,0.04394392
+tier2,FM,oxidation_state_std,Oxidation chemistry,0.008864743
+tier2,FM,number_of_possible_oxidation_states,Oxidation chemistry,0.02000811
+tier2,FM,oxidation_solution_found,Oxidation chemistry,0.0
+tier2,AFM,basic_comp__n_elements,Composition & stoichiometry,0.02785714
+tier2,AFM,basic_comp__total_atoms_formula,Composition & stoichiometry,0.11572752
+tier2,AFM,basic_comp__contains_transition_metal,Magnetic-element content,0.00041257907
+tier2,AFM,basic_comp__transition_metal_fraction,Magnetic-element content,0.035687186
+tier2,AFM,basic_comp__contains_rare_earth,Magnetic-element content,0.0018562766
+tier2,AFM,basic_comp__rare_earth_fraction,Magnetic-element content,0.008077701
+tier2,AFM,basic_comp__contains_actinide,Magnetic-element content,0.0034358182
+tier2,AFM,basic_comp__actinide_fraction,Magnetic-element content,0.0073976214
+tier2,AFM,basic_comp__magnetic_element_fraction,Magnetic-element content,0.122021765
+tier2,AFM,basic_comp__contains_Fe,Magnetic-element content,0.011118202
+tier2,AFM,basic_comp__fraction_Fe,Magnetic-element content,0.025994558
+tier2,AFM,basic_comp__contains_Co,Magnetic-element content,0.017254222
+tier2,AFM,basic_comp__fraction_Co,Magnetic-element content,0.08690514
+tier2,AFM,basic_comp__contains_Ni,Magnetic-element content,0.0043824627
+tier2,AFM,basic_comp__fraction_Ni,Magnetic-element content,0.020674335
+tier2,AFM,basic_comp__contains_Mn,Magnetic-element content,0.00964596
+tier2,AFM,basic_comp__fraction_Mn,Magnetic-element content,0.09347984
+tier2,AFM,basic_comp__contains_Cr,Magnetic-element content,0.0021563543
+tier2,AFM,basic_comp__fraction_Cr,Magnetic-element content,0.02264108
+tier2,AFM,basic_comp__contains_Gd,Magnetic-element content,0.0
+tier2,AFM,basic_comp__fraction_Gd,Magnetic-element content,0.0
+tier2,AFM,basic_comp__contains_Nd,Magnetic-element content,0.0014348984
+tier2,AFM,basic_comp__fraction_Nd,Magnetic-element content,0.0009094655
+tier2,AFM,basic_comp__contains_Sm,Magnetic-element content,0.009332912
+tier2,AFM,basic_comp__fraction_Sm,Magnetic-element content,0.0038688087
+tier2,AFM,basic_comp__contains_Dy,Magnetic-element content,0.00089025724
+tier2,AFM,basic_comp__fraction_Dy,Magnetic-element content,0.00014682187
+tier2,AFM,basic_comp__contains_Tb,Magnetic-element content,0.0006583691
+tier2,AFM,basic_comp__fraction_Tb,Magnetic-element content,0.0029082836
+tier2,AFM,basic_comp__contains_B,Light-element (B/C/N/O) content,0.0010811377
+tier2,AFM,basic_comp__fraction_B,Light-element (B/C/N/O) content,0.0052680788
+tier2,AFM,basic_comp__contains_C,Light-element (B/C/N/O) content,0.0008180413
+tier2,AFM,basic_comp__fraction_C,Light-element (B/C/N/O) content,0.0042539216
+tier2,AFM,basic_comp__contains_N,Light-element (B/C/N/O) content,0.010158549
+tier2,AFM,basic_comp__fraction_N,Light-element (B/C/N/O) content,0.054300923
+tier2,AFM,basic_comp__contains_O,Light-element (B/C/N/O) content,0.014099904
+tier2,AFM,basic_comp__fraction_O,Light-element (B/C/N/O) content,0.049829915
+tier2,AFM,magnetic_prior__d_block_fraction,d/f-electron & valence proxies,0.055806894
+tier2,AFM,magnetic_prior__f_block_fraction,d/f-electron & valence proxies,0.0060496423
+tier2,AFM,magnetic_prior__s_block_fraction,d/f-electron & valence proxies,0.04868539
+tier2,AFM,magnetic_prior__p_block_fraction,d/f-electron & valence proxies,0.3424092
+tier2,AFM,average_unpaired_electron_proxy,d/f-electron & valence proxies,0.15804201
+tier2,AFM,average_d_electron_count,d/f-electron & valence proxies,0.09913411
+tier2,AFM,average_f_electron_count,d/f-electron & valence proxies,0.06501151
+tier2,AFM,valence_electron_concentration,d/f-electron & valence proxies,0.14288825
+tier2,AFM,average_atomic_radius,Atomic size & periodic statistics,0.113843754
+tier2,AFM,atomic_radius_variance,Atomic size & periodic statistics,0.09858387
+tier2,AFM,atomic_size_mismatch,Atomic size & periodic statistics,0.07382703
+tier2,AFM,electronegativity_difference,Atomic size & periodic statistics,0.1615027
+tier2,AFM,electronegativity_variance,Atomic size & periodic statistics,0.09211064
+tier2,AFM,average_atomic_mass,Atomic size & periodic statistics,0.09575574
+tier2,AFM,atomic_mass_variance,Atomic size & periodic statistics,0.0832845
+tier2,AFM,average_melting_temperature,Atomic size & periodic statistics,0.12196141
+tier2,AFM,melting_temperature_variance,Atomic size & periodic statistics,0.11247269
+tier2,AFM,period_variance,Atomic size & periodic statistics,0.064594135
+tier2,AFM,group_variance,Atomic size & periodic statistics,0.16405879
+tier2,AFM,mixing_entropy,Composition & stoichiometry,0.048964884
+tier2,AFM,formula_entropy,Composition & stoichiometry,0.009991426
+tier2,AFM,normalized_formula_entropy,Composition & stoichiometry,0.034362912
+tier2,AFM,formula_complexity,Composition & stoichiometry,0.030806597
+tier2,AFM,formula_complexity_index,Composition & stoichiometry,0.015216651
+tier2,AFM,stoichiometric_variance,Composition & stoichiometry,0.06365986
+tier2,AFM,maximum_stoichiometric_coefficient,Composition & stoichiometry,0.023442255
+tier2,AFM,number_of_unique_elements,Composition & stoichiometry,0.00043384262
+tier2,AFM,total_atoms,Composition & stoichiometry,0.1256108
+tier2,AFM,avg_oxidation_state,Oxidation chemistry,0.028953344
+tier2,AFM,minimum_oxidation_state,Oxidation chemistry,0.009858417
+tier2,AFM,maximum_oxidation_state,Oxidation chemistry,0.039055277
+tier2,AFM,oxidation_state_range,Oxidation chemistry,0.020166159
+tier2,AFM,oxidation_state_variance,Oxidation chemistry,0.12075919
+tier2,AFM,oxidation_state_std,Oxidation chemistry,0.016015485
+tier2,AFM,number_of_possible_oxidation_states,Oxidation chemistry,0.009177627
+tier2,AFM,oxidation_solution_found,Oxidation chemistry,0.0
+tier2,FiM,basic_comp__n_elements,Composition & stoichiometry,0.074171245
+tier2,FiM,basic_comp__total_atoms_formula,Composition & stoichiometry,0.17457049
+tier2,FiM,basic_comp__contains_transition_metal,Magnetic-element content,0.00037502305
+tier2,FiM,basic_comp__transition_metal_fraction,Magnetic-element content,0.14976336
+tier2,FiM,basic_comp__contains_rare_earth,Magnetic-element content,0.007828716
+tier2,FiM,basic_comp__rare_earth_fraction,Magnetic-element content,0.026294552
+tier2,FiM,basic_comp__contains_actinide,Magnetic-element content,0.0023186523
+tier2,FiM,basic_comp__actinide_fraction,Magnetic-element content,0.0054415846
+tier2,FiM,basic_comp__magnetic_element_fraction,Magnetic-element content,0.380768
+tier2,FiM,basic_comp__contains_Fe,Magnetic-element content,0.021901226
+tier2,FiM,basic_comp__fraction_Fe,Magnetic-element content,0.04397634
+tier2,FiM,basic_comp__contains_Co,Magnetic-element content,0.0074094753
+tier2,FiM,basic_comp__fraction_Co,Magnetic-element content,0.062489517
+tier2,FiM,basic_comp__contains_Ni,Magnetic-element content,0.0054782717
+tier2,FiM,basic_comp__fraction_Ni,Magnetic-element content,0.026254246
+tier2,FiM,basic_comp__contains_Mn,Magnetic-element content,0.014276561
+tier2,FiM,basic_comp__fraction_Mn,Magnetic-element content,0.031753283
+tier2,FiM,basic_comp__contains_Cr,Magnetic-element content,0.0057794396
+tier2,FiM,basic_comp__fraction_Cr,Magnetic-element content,0.023606697
+tier2,FiM,basic_comp__contains_Gd,Magnetic-element content,0.0
+tier2,FiM,basic_comp__fraction_Gd,Magnetic-element content,0.0
+tier2,FiM,basic_comp__contains_Nd,Magnetic-element content,0.001697145
+tier2,FiM,basic_comp__fraction_Nd,Magnetic-element content,0.0005896767
+tier2,FiM,basic_comp__contains_Sm,Magnetic-element content,0.0013664768
+tier2,FiM,basic_comp__fraction_Sm,Magnetic-element content,0.0052857236
+tier2,FiM,basic_comp__contains_Dy,Magnetic-element content,0.0035185327
+tier2,FiM,basic_comp__fraction_Dy,Magnetic-element content,0.002505348
+tier2,FiM,basic_comp__contains_Tb,Magnetic-element content,0.00016321662
+tier2,FiM,basic_comp__fraction_Tb,Magnetic-element content,0.000621865
+tier2,FiM,basic_comp__contains_B,Light-element (B/C/N/O) content,0.008807414
+tier2,FiM,basic_comp__fraction_B,Light-element (B/C/N/O) content,0.007673217
+tier2,FiM,basic_comp__contains_C,Light-element (B/C/N/O) content,0.010548208
+tier2,FiM,basic_comp__fraction_C,Light-element (B/C/N/O) content,0.0010962235
+tier2,FiM,basic_comp__contains_N,Light-element (B/C/N/O) content,0.0062631136
+tier2,FiM,basic_comp__fraction_N,Light-element (B/C/N/O) content,0.0325275
+tier2,FiM,basic_comp__contains_O,Light-element (B/C/N/O) content,0.0028111474
+tier2,FiM,basic_comp__fraction_O,Light-element (B/C/N/O) content,0.050455153
+tier2,FiM,magnetic_prior__d_block_fraction,d/f-electron & valence proxies,0.049151834
+tier2,FiM,magnetic_prior__f_block_fraction,d/f-electron & valence proxies,0.017683085
+tier2,FiM,magnetic_prior__s_block_fraction,d/f-electron & valence proxies,0.084987216
+tier2,FiM,magnetic_prior__p_block_fraction,d/f-electron & valence proxies,0.16696753
+tier2,FiM,average_unpaired_electron_proxy,d/f-electron & valence proxies,0.3503971
+tier2,FiM,average_d_electron_count,d/f-electron & valence proxies,0.17007206
+tier2,FiM,average_f_electron_count,d/f-electron & valence proxies,0.045510452
+tier2,FiM,valence_electron_concentration,d/f-electron & valence proxies,0.13819759
+tier2,FiM,average_atomic_radius,Atomic size & periodic statistics,0.14742199
+tier2,FiM,atomic_radius_variance,Atomic size & periodic statistics,0.087325856
+tier2,FiM,atomic_size_mismatch,Atomic size & periodic statistics,0.1012995
+tier2,FiM,electronegativity_difference,Atomic size & periodic statistics,0.056338616
+tier2,FiM,electronegativity_variance,Atomic size & periodic statistics,0.16937532
+tier2,FiM,average_atomic_mass,Atomic size & periodic statistics,0.13766083
+tier2,FiM,atomic_mass_variance,Atomic size & periodic statistics,0.14518687
+tier2,FiM,average_melting_temperature,Atomic size & periodic statistics,0.12692657
+tier2,FiM,melting_temperature_variance,Atomic size & periodic statistics,0.15922813
+tier2,FiM,period_variance,Atomic size & periodic statistics,0.063792355
+tier2,FiM,group_variance,Atomic size & periodic statistics,0.2035926
+tier2,FiM,mixing_entropy,Composition & stoichiometry,0.12079899
+tier2,FiM,formula_entropy,Composition & stoichiometry,0.025018716
+tier2,FiM,normalized_formula_entropy,Composition & stoichiometry,0.06903272
+tier2,FiM,formula_complexity,Composition & stoichiometry,0.021461284
+tier2,FiM,formula_complexity_index,Composition & stoichiometry,0.022718519
+tier2,FiM,stoichiometric_variance,Composition & stoichiometry,0.051031157
+tier2,FiM,maximum_stoichiometric_coefficient,Composition & stoichiometry,0.026003014
+tier2,FiM,number_of_unique_elements,Composition & stoichiometry,0.0076898597
+tier2,FiM,total_atoms,Composition & stoichiometry,0.12260252
+tier2,FiM,avg_oxidation_state,Oxidation chemistry,0.08816046
+tier2,FiM,minimum_oxidation_state,Oxidation chemistry,0.02067389
+tier2,FiM,maximum_oxidation_state,Oxidation chemistry,0.034031805
+tier2,FiM,oxidation_state_range,Oxidation chemistry,0.02822088
+tier2,FiM,oxidation_state_variance,Oxidation chemistry,0.078263886
+tier2,FiM,oxidation_state_std,Oxidation chemistry,0.014995268
+tier2,FiM,number_of_possible_oxidation_states,Oxidation chemistry,0.027721142
+tier2,FiM,oxidation_solution_found,Oxidation chemistry,0.0
+tier2,NM,basic_comp__n_elements,Composition & stoichiometry,0.02685495
+tier2,NM,basic_comp__total_atoms_formula,Composition & stoichiometry,0.28733304
+tier2,NM,basic_comp__contains_transition_metal,Magnetic-element content,0.015516662
+tier2,NM,basic_comp__transition_metal_fraction,Magnetic-element content,0.055613153
+tier2,NM,basic_comp__contains_rare_earth,Magnetic-element content,0.09598387
+tier2,NM,basic_comp__rare_earth_fraction,Magnetic-element content,0.0490655
+tier2,NM,basic_comp__contains_actinide,Magnetic-element content,0.009696193
+tier2,NM,basic_comp__actinide_fraction,Magnetic-element content,0.01722641
+tier2,NM,basic_comp__magnetic_element_fraction,Magnetic-element content,0.9160296
+tier2,NM,basic_comp__contains_Fe,Magnetic-element content,0.04085735
+tier2,NM,basic_comp__fraction_Fe,Magnetic-element content,0.064056024
+tier2,NM,basic_comp__contains_Co,Magnetic-element content,0.020404793
+tier2,NM,basic_comp__fraction_Co,Magnetic-element content,0.04266398
+tier2,NM,basic_comp__contains_Ni,Magnetic-element content,0.03276017
+tier2,NM,basic_comp__fraction_Ni,Magnetic-element content,0.030103358
+tier2,NM,basic_comp__contains_Mn,Magnetic-element content,0.4769702
+tier2,NM,basic_comp__fraction_Mn,Magnetic-element content,0.059423827
+tier2,NM,basic_comp__contains_Cr,Magnetic-element content,0.014213635
+tier2,NM,basic_comp__fraction_Cr,Magnetic-element content,0.015274719
+tier2,NM,basic_comp__contains_Gd,Magnetic-element content,0.0
+tier2,NM,basic_comp__fraction_Gd,Magnetic-element content,0.0
+tier2,NM,basic_comp__contains_Nd,Magnetic-element content,0.002948131
+tier2,NM,basic_comp__fraction_Nd,Magnetic-element content,0.012289746
+tier2,NM,basic_comp__contains_Sm,Magnetic-element content,0.0
+tier2,NM,basic_comp__fraction_Sm,Magnetic-element content,0.0
+tier2,NM,basic_comp__contains_Dy,Magnetic-element content,0.0023613125
+tier2,NM,basic_comp__fraction_Dy,Magnetic-element content,0.009006749
+tier2,NM,basic_comp__contains_Tb,Magnetic-element content,5.327933e-05
+tier2,NM,basic_comp__fraction_Tb,Magnetic-element content,0.0
+tier2,NM,basic_comp__contains_B,Light-element (B/C/N/O) content,0.0032499034
+tier2,NM,basic_comp__fraction_B,Light-element (B/C/N/O) content,0.01658968
+tier2,NM,basic_comp__contains_C,Light-element (B/C/N/O) content,0.0037517413
+tier2,NM,basic_comp__fraction_C,Light-element (B/C/N/O) content,0.022413697
+tier2,NM,basic_comp__contains_N,Light-element (B/C/N/O) content,0.0078115896
+tier2,NM,basic_comp__fraction_N,Light-element (B/C/N/O) content,0.009471063
+tier2,NM,basic_comp__contains_O,Light-element (B/C/N/O) content,0.0016291355
+tier2,NM,basic_comp__fraction_O,Light-element (B/C/N/O) content,0.06714779
+tier2,NM,magnetic_prior__d_block_fraction,d/f-electron & valence proxies,0.03890769
+tier2,NM,magnetic_prior__f_block_fraction,d/f-electron & valence proxies,0.039158303
+tier2,NM,magnetic_prior__s_block_fraction,d/f-electron & valence proxies,0.042462014
+tier2,NM,magnetic_prior__p_block_fraction,d/f-electron & valence proxies,0.07895779
+tier2,NM,average_unpaired_electron_proxy,d/f-electron & valence proxies,0.40111175
+tier2,NM,average_d_electron_count,d/f-electron & valence proxies,0.17136128
+tier2,NM,average_f_electron_count,d/f-electron & valence proxies,0.08732424
+tier2,NM,valence_electron_concentration,d/f-electron & valence proxies,0.3225587
+tier2,NM,average_atomic_radius,Atomic size & periodic statistics,0.23224385
+tier2,NM,atomic_radius_variance,Atomic size & periodic statistics,0.18485497
+tier2,NM,atomic_size_mismatch,Atomic size & periodic statistics,0.27262118
+tier2,NM,electronegativity_difference,Atomic size & periodic statistics,0.15623796
+tier2,NM,electronegativity_variance,Atomic size & periodic statistics,0.21979174
+tier2,NM,average_atomic_mass,Atomic size & periodic statistics,0.27545208
+tier2,NM,atomic_mass_variance,Atomic size & periodic statistics,0.3361331
+tier2,NM,average_melting_temperature,Atomic size & periodic statistics,0.3264582
+tier2,NM,melting_temperature_variance,Atomic size & periodic statistics,0.32266268
+tier2,NM,period_variance,Atomic size & periodic statistics,0.20605208
+tier2,NM,group_variance,Atomic size & periodic statistics,0.2552461
+tier2,NM,mixing_entropy,Composition & stoichiometry,0.10560097
+tier2,NM,formula_entropy,Composition & stoichiometry,0.016732642
+tier2,NM,normalized_formula_entropy,Composition & stoichiometry,0.08577939
+tier2,NM,formula_complexity,Composition & stoichiometry,0.12562908
+tier2,NM,formula_complexity_index,Composition & stoichiometry,0.026037699
+tier2,NM,stoichiometric_variance,Composition & stoichiometry,0.07816012
+tier2,NM,maximum_stoichiometric_coefficient,Composition & stoichiometry,0.030337112
+tier2,NM,number_of_unique_elements,Composition & stoichiometry,0.0039296187
+tier2,NM,total_atoms,Composition & stoichiometry,0.061660174
+tier2,NM,avg_oxidation_state,Oxidation chemistry,0.06285751
+tier2,NM,minimum_oxidation_state,Oxidation chemistry,0.030337345
+tier2,NM,maximum_oxidation_state,Oxidation chemistry,0.028697258
+tier2,NM,oxidation_state_range,Oxidation chemistry,0.035415716
+tier2,NM,oxidation_state_variance,Oxidation chemistry,0.13738947
+tier2,NM,oxidation_state_std,Oxidation chemistry,0.028770922
+tier2,NM,number_of_possible_oxidation_states,Oxidation chemistry,0.041688446
+tier2,NM,oxidation_solution_found,Oxidation chemistry,0.0
+tier3,FM,basic_comp__n_elements,Composition & stoichiometry,0.004819277
+tier3,FM,basic_comp__total_atoms_formula,Composition & stoichiometry,0.027564326
+tier3,FM,basic_comp__contains_transition_metal,Magnetic-element content,0.00041660454
+tier3,FM,basic_comp__transition_metal_fraction,Magnetic-element content,0.021590227
+tier3,FM,basic_comp__contains_rare_earth,Magnetic-element content,0.002225588
+tier3,FM,basic_comp__rare_earth_fraction,Magnetic-element content,0.012623999
+tier3,FM,basic_comp__contains_actinide,Magnetic-element content,0.0015874844
+tier3,FM,basic_comp__actinide_fraction,Magnetic-element content,0.009125709
+tier3,FM,basic_comp__magnetic_element_fraction,Magnetic-element content,0.025149807
+tier3,FM,basic_comp__contains_Fe,Magnetic-element content,0.003054591
+tier3,FM,basic_comp__fraction_Fe,Magnetic-element content,0.02699827
+tier3,FM,basic_comp__contains_Co,Magnetic-element content,0.0130949225
+tier3,FM,basic_comp__fraction_Co,Magnetic-element content,0.10885617
+tier3,FM,basic_comp__contains_Ni,Magnetic-element content,0.0015494338
+tier3,FM,basic_comp__fraction_Ni,Magnetic-element content,0.016293641
+tier3,FM,basic_comp__contains_Mn,Magnetic-element content,0.0036086736
+tier3,FM,basic_comp__fraction_Mn,Magnetic-element content,0.01638253
+tier3,FM,basic_comp__contains_Cr,Magnetic-element content,0.004500506
+tier3,FM,basic_comp__fraction_Cr,Magnetic-element content,0.008132867
+tier3,FM,basic_comp__contains_Gd,Magnetic-element content,0.0
+tier3,FM,basic_comp__fraction_Gd,Magnetic-element content,0.0
+tier3,FM,basic_comp__contains_Nd,Magnetic-element content,0.0003243254
+tier3,FM,basic_comp__fraction_Nd,Magnetic-element content,0.0007399962
+tier3,FM,basic_comp__contains_Sm,Magnetic-element content,0.0024875079
+tier3,FM,basic_comp__fraction_Sm,Magnetic-element content,0.002955402
+tier3,FM,basic_comp__contains_Dy,Magnetic-element content,0.0012912025
+tier3,FM,basic_comp__fraction_Dy,Magnetic-element content,0.0006788662
+tier3,FM,basic_comp__contains_Tb,Magnetic-element content,0.00087258895
+tier3,FM,basic_comp__fraction_Tb,Magnetic-element content,0.0026216235
+tier3,FM,basic_comp__contains_B,Light-element (B/C/N/O) content,0.0003855218
+tier3,FM,basic_comp__fraction_B,Light-element (B/C/N/O) content,0.00096439687
+tier3,FM,basic_comp__contains_C,Light-element (B/C/N/O) content,9.759763e-05
+tier3,FM,basic_comp__fraction_C,Light-element (B/C/N/O) content,0.0022097419
+tier3,FM,basic_comp__contains_N,Light-element (B/C/N/O) content,0.0007171689
+tier3,FM,basic_comp__fraction_N,Light-element (B/C/N/O) content,0.0020487
+tier3,FM,basic_comp__contains_O,Light-element (B/C/N/O) content,0.013826336
+tier3,FM,basic_comp__fraction_O,Light-element (B/C/N/O) content,0.03349914
+tier3,FM,magnetic_prior__d_block_fraction,d/f-electron & valence proxies,0.010278322
+tier3,FM,magnetic_prior__f_block_fraction,d/f-electron & valence proxies,0.010214555
+tier3,FM,magnetic_prior__s_block_fraction,d/f-electron & valence proxies,0.011514268
+tier3,FM,magnetic_prior__p_block_fraction,d/f-electron & valence proxies,0.034899607
+tier3,FM,average_unpaired_electron_proxy,d/f-electron & valence proxies,0.041901782
+tier3,FM,average_d_electron_count,d/f-electron & valence proxies,0.09543256
+tier3,FM,average_f_electron_count,d/f-electron & valence proxies,0.018551104
+tier3,FM,valence_electron_concentration,d/f-electron & valence proxies,0.07319265
+tier3,FM,average_atomic_radius,Atomic size & periodic statistics,0.080645114
+tier3,FM,atomic_radius_variance,Atomic size & periodic statistics,0.040683597
+tier3,FM,atomic_size_mismatch,Atomic size & periodic statistics,0.04281672
+tier3,FM,electronegativity_difference,Atomic size & periodic statistics,0.06274926
+tier3,FM,electronegativity_variance,Atomic size & periodic statistics,0.049183354
+tier3,FM,average_atomic_mass,Atomic size & periodic statistics,0.04492192
+tier3,FM,atomic_mass_variance,Atomic size & periodic statistics,0.0576664
+tier3,FM,average_melting_temperature,Atomic size & periodic statistics,0.059962735
+tier3,FM,melting_temperature_variance,Atomic size & periodic statistics,0.04223522
+tier3,FM,period_variance,Atomic size & periodic statistics,0.029658018
+tier3,FM,group_variance,Atomic size & periodic statistics,0.115399875
+tier3,FM,mixing_entropy,Composition & stoichiometry,0.019997524
+tier3,FM,formula_entropy,Composition & stoichiometry,0.0043045953
+tier3,FM,normalized_formula_entropy,Composition & stoichiometry,0.042947926
+tier3,FM,formula_complexity,Composition & stoichiometry,0.017770963
+tier3,FM,formula_complexity_index,Composition & stoichiometry,0.018666562
+tier3,FM,stoichiometric_variance,Composition & stoichiometry,0.055633858
+tier3,FM,maximum_stoichiometric_coefficient,Composition & stoichiometry,0.028220044
+tier3,FM,number_of_unique_elements,Composition & stoichiometry,0.00012212426
+tier3,FM,total_atoms,Composition & stoichiometry,0.012595643
+tier3,FM,avg_oxidation_state,Oxidation chemistry,0.02705891
+tier3,FM,minimum_oxidation_state,Oxidation chemistry,0.0189702
+tier3,FM,maximum_oxidation_state,Oxidation chemistry,0.022854574
+tier3,FM,oxidation_state_range,Oxidation chemistry,0.008694678
+tier3,FM,oxidation_state_variance,Oxidation chemistry,0.020104803
+tier3,FM,oxidation_state_std,Oxidation chemistry,0.006816075
+tier3,FM,number_of_possible_oxidation_states,Oxidation chemistry,0.018136084
+tier3,FM,oxidation_solution_found,Oxidation chemistry,0.0
+tier3,FM,p3_formation_energy_per_atom,Thermodynamic stability,0.10211363
+tier3,FM,p3_energy_above_hull,Thermodynamic stability,0.045982696
+tier3,FM,p3_is_stable,Thermodynamic stability,0.0025911795
+tier3,FM,p3_band_gap,Electronic structure,0.014759995
+tier3,FM,p3_is_metal,Electronic structure,0.0
+tier3,FM,p3_is_gap_direct,Electronic structure,0.0014704244
+tier3,FM,p3_efermi,Electronic structure,0.05017784
+tier3,FM,p3_vbm,Electronic structure,0.026924627
+tier3,FM,p3_cbm,Electronic structure,0.045143735
+tier3,FM,p3_spacegroup_number,Symmetry,0.015364107
+tier3,FM,p3_crystal_system,Symmetry,0.010408731
+tier3,FM,p3_point_group,Symmetry,0.22161582
+tier3,FM,p3_density,Structural packing,0.033737745
+tier3,FM,p3_volume,Structural packing,0.05337824
+tier3,FM,p3_volume_per_atom,Structural packing,0.06252463
+tier3,FM,p3_bulk_modulus,Elastic response,0.08044834
+tier3,FM,p3_shear_modulus,Elastic response,0.0446783
+tier3,FM,p3_poisson_ratio,Elastic response,0.037291083
+tier3,FM,p3_elastic_anisotropy,Elastic response,0.045775875
+tier3,FM,p3_dielectric_static,Dielectric & optical,0.09889512
+tier3,FM,p3_dielectric_optical,Dielectric & optical,0.023523606
+tier3,FM,p3_dielectric_ionic,Dielectric & optical,0.009257848
+tier3,FM,p3_refractive_index,Dielectric & optical,0.0040192707
+tier3,FM,p3_piezo_max,Dielectric & optical,0.0037746895
+tier3,AFM,basic_comp__n_elements,Composition & stoichiometry,0.0077513773
+tier3,AFM,basic_comp__total_atoms_formula,Composition & stoichiometry,0.054443642
+tier3,AFM,basic_comp__contains_transition_metal,Magnetic-element content,0.001374829
+tier3,AFM,basic_comp__transition_metal_fraction,Magnetic-element content,0.022704367
+tier3,AFM,basic_comp__contains_rare_earth,Magnetic-element content,0.0020816305
+tier3,AFM,basic_comp__rare_earth_fraction,Magnetic-element content,0.008368197
+tier3,AFM,basic_comp__contains_actinide,Magnetic-element content,0.00025672265
+tier3,AFM,basic_comp__actinide_fraction,Magnetic-element content,0.0036287962
+tier3,AFM,basic_comp__magnetic_element_fraction,Magnetic-element content,0.051939342
+tier3,AFM,basic_comp__contains_Fe,Magnetic-element content,0.0061697545
+tier3,AFM,basic_comp__fraction_Fe,Magnetic-element content,0.026528433
+tier3,AFM,basic_comp__contains_Co,Magnetic-element content,0.0053205336
+tier3,AFM,basic_comp__fraction_Co,Magnetic-element content,0.046198912
+tier3,AFM,basic_comp__contains_Ni,Magnetic-element content,0.0034707633
+tier3,AFM,basic_comp__fraction_Ni,Magnetic-element content,0.011339426
+tier3,AFM,basic_comp__contains_Mn,Magnetic-element content,0.0029780155
+tier3,AFM,basic_comp__fraction_Mn,Magnetic-element content,0.079156
+tier3,AFM,basic_comp__contains_Cr,Magnetic-element content,0.0015799695
+tier3,AFM,basic_comp__fraction_Cr,Magnetic-element content,0.015659293
+tier3,AFM,basic_comp__contains_Gd,Magnetic-element content,0.0
+tier3,AFM,basic_comp__fraction_Gd,Magnetic-element content,0.0
+tier3,AFM,basic_comp__contains_Nd,Magnetic-element content,0.0003878845
+tier3,AFM,basic_comp__fraction_Nd,Magnetic-element content,0.0009327467
+tier3,AFM,basic_comp__contains_Sm,Magnetic-element content,0.0065988163
+tier3,AFM,basic_comp__fraction_Sm,Magnetic-element content,0.0010483658
+tier3,AFM,basic_comp__contains_Dy,Magnetic-element content,0.00052668113
+tier3,AFM,basic_comp__fraction_Dy,Magnetic-element content,0.0
+tier3,AFM,basic_comp__contains_Tb,Magnetic-element content,0.00048119552
+tier3,AFM,basic_comp__fraction_Tb,Magnetic-element content,0.00063113694
+tier3,AFM,basic_comp__contains_B,Light-element (B/C/N/O) content,0.0009430046
+tier3,AFM,basic_comp__fraction_B,Light-element (B/C/N/O) content,0.001860169
+tier3,AFM,basic_comp__contains_C,Light-element (B/C/N/O) content,0.00014077034
+tier3,AFM,basic_comp__fraction_C,Light-element (B/C/N/O) content,0.0006943714
+tier3,AFM,basic_comp__contains_N,Light-element (B/C/N/O) content,0.0014921267
+tier3,AFM,basic_comp__fraction_N,Light-element (B/C/N/O) content,0.017268986
+tier3,AFM,basic_comp__contains_O,Light-element (B/C/N/O) content,0.0072164717
+tier3,AFM,basic_comp__fraction_O,Light-element (B/C/N/O) content,0.03859188
+tier3,AFM,magnetic_prior__d_block_fraction,d/f-electron & valence proxies,0.02704466
+tier3,AFM,magnetic_prior__f_block_fraction,d/f-electron & valence proxies,0.010033988
+tier3,AFM,magnetic_prior__s_block_fraction,d/f-electron & valence proxies,0.0191139
+tier3,AFM,magnetic_prior__p_block_fraction,d/f-electron & valence proxies,0.14665115
+tier3,AFM,average_unpaired_electron_proxy,d/f-electron & valence proxies,0.07888218
+tier3,AFM,average_d_electron_count,d/f-electron & valence proxies,0.09825027
+tier3,AFM,average_f_electron_count,d/f-electron & valence proxies,0.04145331
+tier3,AFM,valence_electron_concentration,d/f-electron & valence proxies,0.09557857
+tier3,AFM,average_atomic_radius,Atomic size & periodic statistics,0.066543296
+tier3,AFM,atomic_radius_variance,Atomic size & periodic statistics,0.08831993
+tier3,AFM,atomic_size_mismatch,Atomic size & periodic statistics,0.03642907
+tier3,AFM,electronegativity_difference,Atomic size & periodic statistics,0.076727
+tier3,AFM,electronegativity_variance,Atomic size & periodic statistics,0.049823582
+tier3,AFM,average_atomic_mass,Atomic size & periodic statistics,0.061182685
+tier3,AFM,atomic_mass_variance,Atomic size & periodic statistics,0.042494014
+tier3,AFM,average_melting_temperature,Atomic size & periodic statistics,0.0534085
+tier3,AFM,melting_temperature_variance,Atomic size & periodic statistics,0.05699096
+tier3,AFM,period_variance,Atomic size & periodic statistics,0.05753084
+tier3,AFM,group_variance,Atomic size & periodic statistics,0.07337111
+tier3,AFM,mixing_entropy,Composition & stoichiometry,0.02385766
+tier3,AFM,formula_entropy,Composition & stoichiometry,0.0061556585
+tier3,AFM,normalized_formula_entropy,Composition & stoichiometry,0.040656496
+tier3,AFM,formula_complexity,Composition & stoichiometry,0.020645462
+tier3,AFM,formula_complexity_index,Composition & stoichiometry,0.006532406
+tier3,AFM,stoichiometric_variance,Composition & stoichiometry,0.07966343
+tier3,AFM,maximum_stoichiometric_coefficient,Composition & stoichiometry,0.013748152
+tier3,AFM,number_of_unique_elements,Composition & stoichiometry,0.002226982
+tier3,AFM,total_atoms,Composition & stoichiometry,0.05642935
+tier3,AFM,avg_oxidation_state,Oxidation chemistry,0.020431805
+tier3,AFM,minimum_oxidation_state,Oxidation chemistry,0.0045219357
+tier3,AFM,maximum_oxidation_state,Oxidation chemistry,0.024817761
+tier3,AFM,oxidation_state_range,Oxidation chemistry,0.007945361
+tier3,AFM,oxidation_state_variance,Oxidation chemistry,0.06300594
+tier3,AFM,oxidation_state_std,Oxidation chemistry,0.0051658973
+tier3,AFM,number_of_possible_oxidation_states,Oxidation chemistry,0.0042268806
+tier3,AFM,oxidation_solution_found,Oxidation chemistry,0.0
+tier3,AFM,p3_formation_energy_per_atom,Thermodynamic stability,0.28115192
+tier3,AFM,p3_energy_above_hull,Thermodynamic stability,0.44627345
+tier3,AFM,p3_is_stable,Thermodynamic stability,0.06761597
+tier3,AFM,p3_band_gap,Electronic structure,0.043849614
+tier3,AFM,p3_is_metal,Electronic structure,0.0010196412
+tier3,AFM,p3_is_gap_direct,Electronic structure,0.0042845025
+tier3,AFM,p3_efermi,Electronic structure,0.061207928
+tier3,AFM,p3_vbm,Electronic structure,0.02331367
+tier3,AFM,p3_cbm,Electronic structure,0.030516978
+tier3,AFM,p3_spacegroup_number,Symmetry,0.015631203
+tier3,AFM,p3_crystal_system,Symmetry,0.02236087
+tier3,AFM,p3_point_group,Symmetry,0.22841838
+tier3,AFM,p3_density,Structural packing,0.048527554
+tier3,AFM,p3_volume,Structural packing,0.1081786
+tier3,AFM,p3_volume_per_atom,Structural packing,0.054258388
+tier3,AFM,p3_bulk_modulus,Elastic response,0.035318505
+tier3,AFM,p3_shear_modulus,Elastic response,0.028517919
+tier3,AFM,p3_poisson_ratio,Elastic response,0.041235868
+tier3,AFM,p3_elastic_anisotropy,Elastic response,0.057746086
+tier3,AFM,p3_dielectric_static,Dielectric & optical,0.15331323
+tier3,AFM,p3_dielectric_optical,Dielectric & optical,0.025874339
+tier3,AFM,p3_dielectric_ionic,Dielectric & optical,0.009527467
+tier3,AFM,p3_refractive_index,Dielectric & optical,0.051920574
+tier3,AFM,p3_piezo_max,Dielectric & optical,0.0046607642
+tier3,FiM,basic_comp__n_elements,Composition & stoichiometry,0.018489635
+tier3,FiM,basic_comp__total_atoms_formula,Composition & stoichiometry,0.11922016
+tier3,FiM,basic_comp__contains_transition_metal,Magnetic-element content,0.002179983
+tier3,FiM,basic_comp__transition_metal_fraction,Magnetic-element content,0.09621123
+tier3,FiM,basic_comp__contains_rare_earth,Magnetic-element content,0.008805932
+tier3,FiM,basic_comp__rare_earth_fraction,Magnetic-element content,0.017443959
+tier3,FiM,basic_comp__contains_actinide,Magnetic-element content,0.0012873415
+tier3,FiM,basic_comp__actinide_fraction,Magnetic-element content,0.0030917504
+tier3,FiM,basic_comp__magnetic_element_fraction,Magnetic-element content,0.3230515
+tier3,FiM,basic_comp__contains_Fe,Magnetic-element content,0.015384979
+tier3,FiM,basic_comp__fraction_Fe,Magnetic-element content,0.03300114
+tier3,FiM,basic_comp__contains_Co,Magnetic-element content,0.005847845
+tier3,FiM,basic_comp__fraction_Co,Magnetic-element content,0.031095207
+tier3,FiM,basic_comp__contains_Ni,Magnetic-element content,0.003418978
+tier3,FiM,basic_comp__fraction_Ni,Magnetic-element content,0.017616794
+tier3,FiM,basic_comp__contains_Mn,Magnetic-element content,0.009466356
+tier3,FiM,basic_comp__fraction_Mn,Magnetic-element content,0.028497221
+tier3,FiM,basic_comp__contains_Cr,Magnetic-element content,0.00632756
+tier3,FiM,basic_comp__fraction_Cr,Magnetic-element content,0.017286934
+tier3,FiM,basic_comp__contains_Gd,Magnetic-element content,0.0
+tier3,FiM,basic_comp__fraction_Gd,Magnetic-element content,0.0
+tier3,FiM,basic_comp__contains_Nd,Magnetic-element content,0.0010214457
+tier3,FiM,basic_comp__fraction_Nd,Magnetic-element content,0.0004222192
+tier3,FiM,basic_comp__contains_Sm,Magnetic-element content,0.0012492245
+tier3,FiM,basic_comp__fraction_Sm,Magnetic-element content,0.005434912
+tier3,FiM,basic_comp__contains_Dy,Magnetic-element content,0.0022970983
+tier3,FiM,basic_comp__fraction_Dy,Magnetic-element content,0.0018470662
+tier3,FiM,basic_comp__contains_Tb,Magnetic-element content,0.00058240246
+tier3,FiM,basic_comp__fraction_Tb,Magnetic-element content,3.9571132e-05
+tier3,FiM,basic_comp__contains_B,Light-element (B/C/N/O) content,0.0036544066
+tier3,FiM,basic_comp__fraction_B,Light-element (B/C/N/O) content,0.0030509303
+tier3,FiM,basic_comp__contains_C,Light-element (B/C/N/O) content,0.006666642
+tier3,FiM,basic_comp__fraction_C,Light-element (B/C/N/O) content,0.0017337371
+tier3,FiM,basic_comp__contains_N,Light-element (B/C/N/O) content,0.0011595263
+tier3,FiM,basic_comp__fraction_N,Light-element (B/C/N/O) content,0.007259737
+tier3,FiM,basic_comp__contains_O,Light-element (B/C/N/O) content,0.0002679643
+tier3,FiM,basic_comp__fraction_O,Light-element (B/C/N/O) content,0.025668003
+tier3,FiM,magnetic_prior__d_block_fraction,d/f-electron & valence proxies,0.041673124
+tier3,FiM,magnetic_prior__f_block_fraction,d/f-electron & valence proxies,0.0054999627
+tier3,FiM,magnetic_prior__s_block_fraction,d/f-electron & valence proxies,0.0747686
+tier3,FiM,magnetic_prior__p_block_fraction,d/f-electron & valence proxies,0.080673814
+tier3,FiM,average_unpaired_electron_proxy,d/f-electron & valence proxies,0.3337449
+tier3,FiM,average_d_electron_count,d/f-electron & valence proxies,0.1509602
+tier3,FiM,average_f_electron_count,d/f-electron & valence proxies,0.018349858
+tier3,FiM,valence_electron_concentration,d/f-electron & valence proxies,0.08988953
+tier3,FiM,average_atomic_radius,Atomic size & periodic statistics,0.06926081
+tier3,FiM,atomic_radius_variance,Atomic size & periodic statistics,0.054491624
+tier3,FiM,atomic_size_mismatch,Atomic size & periodic statistics,0.06856892
+tier3,FiM,electronegativity_difference,Atomic size & periodic statistics,0.0361451
+tier3,FiM,electronegativity_variance,Atomic size & periodic statistics,0.07160321
+tier3,FiM,average_atomic_mass,Atomic size & periodic statistics,0.072016515
+tier3,FiM,atomic_mass_variance,Atomic size & periodic statistics,0.06978187
+tier3,FiM,average_melting_temperature,Atomic size & periodic statistics,0.05780185
+tier3,FiM,melting_temperature_variance,Atomic size & periodic statistics,0.11024125
+tier3,FiM,period_variance,Atomic size & periodic statistics,0.061969865
+tier3,FiM,group_variance,Atomic size & periodic statistics,0.09816978
+tier3,FiM,mixing_entropy,Composition & stoichiometry,0.06715224
+tier3,FiM,formula_entropy,Composition & stoichiometry,0.0096701775
+tier3,FiM,normalized_formula_entropy,Composition & stoichiometry,0.054140583
+tier3,FiM,formula_complexity,Composition & stoichiometry,0.011144554
+tier3,FiM,formula_complexity_index,Composition & stoichiometry,0.0067244894
+tier3,FiM,stoichiometric_variance,Composition & stoichiometry,0.030821742
+tier3,FiM,maximum_stoichiometric_coefficient,Composition & stoichiometry,0.014520104
+tier3,FiM,number_of_unique_elements,Composition & stoichiometry,0.0035043815
+tier3,FiM,total_atoms,Composition & stoichiometry,0.07705975
+tier3,FiM,avg_oxidation_state,Oxidation chemistry,0.07937366
+tier3,FiM,minimum_oxidation_state,Oxidation chemistry,0.015689254
+tier3,FiM,maximum_oxidation_state,Oxidation chemistry,0.024806501
+tier3,FiM,oxidation_state_range,Oxidation chemistry,0.011233143
+tier3,FiM,oxidation_state_variance,Oxidation chemistry,0.07111554
+tier3,FiM,oxidation_state_std,Oxidation chemistry,0.011594162
+tier3,FiM,number_of_possible_oxidation_states,Oxidation chemistry,0.02561601
+tier3,FiM,oxidation_solution_found,Oxidation chemistry,0.0
+tier3,FiM,p3_formation_energy_per_atom,Thermodynamic stability,0.16053857
+tier3,FiM,p3_energy_above_hull,Thermodynamic stability,0.156645
+tier3,FiM,p3_is_stable,Thermodynamic stability,0.03741899
+tier3,FiM,p3_band_gap,Electronic structure,0.17392214
+tier3,FiM,p3_is_metal,Electronic structure,0.0
+tier3,FiM,p3_is_gap_direct,Electronic structure,0.005791503
+tier3,FiM,p3_efermi,Electronic structure,0.09224485
+tier3,FiM,p3_vbm,Electronic structure,0.054935463
+tier3,FiM,p3_cbm,Electronic structure,0.059292506
+tier3,FiM,p3_spacegroup_number,Symmetry,0.020970393
+tier3,FiM,p3_crystal_system,Symmetry,0.025016738
+tier3,FiM,p3_point_group,Symmetry,0.41503736
+tier3,FiM,p3_density,Structural packing,0.059690967
+tier3,FiM,p3_volume,Structural packing,0.08177455
+tier3,FiM,p3_volume_per_atom,Structural packing,0.11421965
+tier3,FiM,p3_bulk_modulus,Elastic response,0.06646533
+tier3,FiM,p3_shear_modulus,Elastic response,0.03843033
+tier3,FiM,p3_poisson_ratio,Elastic response,0.07714579
+tier3,FiM,p3_elastic_anisotropy,Elastic response,0.10643267
+tier3,FiM,p3_dielectric_static,Dielectric & optical,0.117372
+tier3,FiM,p3_dielectric_optical,Dielectric & optical,0.119154595
+tier3,FiM,p3_dielectric_ionic,Dielectric & optical,0.01739857
+tier3,FiM,p3_refractive_index,Dielectric & optical,0.03273683
+tier3,FiM,p3_piezo_max,Dielectric & optical,0.011457491
+tier3,NM,basic_comp__n_elements,Composition & stoichiometry,0.024483489
+tier3,NM,basic_comp__total_atoms_formula,Composition & stoichiometry,0.3044594
+tier3,NM,basic_comp__contains_transition_metal,Magnetic-element content,0.005150743
+tier3,NM,basic_comp__transition_metal_fraction,Magnetic-element content,0.033497155
+tier3,NM,basic_comp__contains_rare_earth,Magnetic-element content,0.024733074
+tier3,NM,basic_comp__rare_earth_fraction,Magnetic-element content,0.04083104
+tier3,NM,basic_comp__contains_actinide,Magnetic-element content,0.0035297824
+tier3,NM,basic_comp__actinide_fraction,Magnetic-element content,0.011671163
+tier3,NM,basic_comp__magnetic_element_fraction,Magnetic-element content,1.0010878
+tier3,NM,basic_comp__contains_Fe,Magnetic-element content,0.053295065
+tier3,NM,basic_comp__fraction_Fe,Magnetic-element content,0.05779347
+tier3,NM,basic_comp__contains_Co,Magnetic-element content,0.026150893
+tier3,NM,basic_comp__fraction_Co,Magnetic-element content,0.0494425
+tier3,NM,basic_comp__contains_Ni,Magnetic-element content,0.015602227
+tier3,NM,basic_comp__fraction_Ni,Magnetic-element content,0.01022901
+tier3,NM,basic_comp__contains_Mn,Magnetic-element content,0.33980837
+tier3,NM,basic_comp__fraction_Mn,Magnetic-element content,0.057945322
+tier3,NM,basic_comp__contains_Cr,Magnetic-element content,0.010066421
+tier3,NM,basic_comp__fraction_Cr,Magnetic-element content,0.008147646
+tier3,NM,basic_comp__contains_Gd,Magnetic-element content,0.0
+tier3,NM,basic_comp__fraction_Gd,Magnetic-element content,0.0
+tier3,NM,basic_comp__contains_Nd,Magnetic-element content,0.0017917417
+tier3,NM,basic_comp__fraction_Nd,Magnetic-element content,0.0028007382
+tier3,NM,basic_comp__contains_Sm,Magnetic-element content,0.0
+tier3,NM,basic_comp__fraction_Sm,Magnetic-element content,0.0
+tier3,NM,basic_comp__contains_Dy,Magnetic-element content,0.0014659015
+tier3,NM,basic_comp__fraction_Dy,Magnetic-element content,0.009956202
+tier3,NM,basic_comp__contains_Tb,Magnetic-element content,0.0
+tier3,NM,basic_comp__fraction_Tb,Magnetic-element content,0.0
+tier3,NM,basic_comp__contains_B,Light-element (B/C/N/O) content,0.0023153033
+tier3,NM,basic_comp__fraction_B,Light-element (B/C/N/O) content,0.01271818
+tier3,NM,basic_comp__contains_C,Light-element (B/C/N/O) content,0.0034569788
+tier3,NM,basic_comp__fraction_C,Light-element (B/C/N/O) content,0.020390036
+tier3,NM,basic_comp__contains_N,Light-element (B/C/N/O) content,0.0047995774
+tier3,NM,basic_comp__fraction_N,Light-element (B/C/N/O) content,0.0071005626
+tier3,NM,basic_comp__contains_O,Light-element (B/C/N/O) content,0.0051944605
+tier3,NM,basic_comp__fraction_O,Light-element (B/C/N/O) content,0.046730395
+tier3,NM,magnetic_prior__d_block_fraction,d/f-electron & valence proxies,0.032492373
+tier3,NM,magnetic_prior__f_block_fraction,d/f-electron & valence proxies,0.025561152
+tier3,NM,magnetic_prior__s_block_fraction,d/f-electron & valence proxies,0.037801884
+tier3,NM,magnetic_prior__p_block_fraction,d/f-electron & valence proxies,0.04316069
+tier3,NM,average_unpaired_electron_proxy,d/f-electron & valence proxies,0.25506085
+tier3,NM,average_d_electron_count,d/f-electron & valence proxies,0.12359286
+tier3,NM,average_f_electron_count,d/f-electron & valence proxies,0.061661914
+tier3,NM,valence_electron_concentration,d/f-electron & valence proxies,0.17683966
+tier3,NM,average_atomic_radius,Atomic size & periodic statistics,0.12205812
+tier3,NM,atomic_radius_variance,Atomic size & periodic statistics,0.1071246
+tier3,NM,atomic_size_mismatch,Atomic size & periodic statistics,0.1884972
+tier3,NM,electronegativity_difference,Atomic size & periodic statistics,0.10110896
+tier3,NM,electronegativity_variance,Atomic size & periodic statistics,0.15144908
+tier3,NM,average_atomic_mass,Atomic size & periodic statistics,0.12548524
+tier3,NM,atomic_mass_variance,Atomic size & periodic statistics,0.19750361
+tier3,NM,average_melting_temperature,Atomic size & periodic statistics,0.13007355
+tier3,NM,melting_temperature_variance,Atomic size & periodic statistics,0.19945452
+tier3,NM,period_variance,Atomic size & periodic statistics,0.114244856
+tier3,NM,group_variance,Atomic size & periodic statistics,0.17053995
+tier3,NM,mixing_entropy,Composition & stoichiometry,0.05826036
+tier3,NM,formula_entropy,Composition & stoichiometry,0.013144804
+tier3,NM,normalized_formula_entropy,Composition & stoichiometry,0.060960554
+tier3,NM,formula_complexity,Composition & stoichiometry,0.088849545
+tier3,NM,formula_complexity_index,Composition & stoichiometry,0.035364278
+tier3,NM,stoichiometric_variance,Composition & stoichiometry,0.042931948
+tier3,NM,maximum_stoichiometric_coefficient,Composition & stoichiometry,0.030859776
+tier3,NM,number_of_unique_elements,Composition & stoichiometry,0.006861018
+tier3,NM,total_atoms,Composition & stoichiometry,0.024792908
+tier3,NM,avg_oxidation_state,Oxidation chemistry,0.05695092
+tier3,NM,minimum_oxidation_state,Oxidation chemistry,0.025287606
+tier3,NM,maximum_oxidation_state,Oxidation chemistry,0.035110712
+tier3,NM,oxidation_state_range,Oxidation chemistry,0.03499785
+tier3,NM,oxidation_state_variance,Oxidation chemistry,0.07444605
+tier3,NM,oxidation_state_std,Oxidation chemistry,0.016942885
+tier3,NM,number_of_possible_oxidation_states,Oxidation chemistry,0.05081512
+tier3,NM,oxidation_solution_found,Oxidation chemistry,0.0
+tier3,NM,p3_formation_energy_per_atom,Thermodynamic stability,0.23328055
+tier3,NM,p3_energy_above_hull,Thermodynamic stability,0.2219132
+tier3,NM,p3_is_stable,Thermodynamic stability,0.005516128
+tier3,NM,p3_band_gap,Electronic structure,0.017787924
+tier3,NM,p3_is_metal,Electronic structure,0.0010272834
+tier3,NM,p3_is_gap_direct,Electronic structure,0.0036269575
+tier3,NM,p3_efermi,Electronic structure,0.13426551
+tier3,NM,p3_vbm,Electronic structure,0.10254979
+tier3,NM,p3_cbm,Electronic structure,0.116290264
+tier3,NM,p3_spacegroup_number,Symmetry,0.047758937
+tier3,NM,p3_crystal_system,Symmetry,0.0422651
+tier3,NM,p3_point_group,Symmetry,0.87654567
+tier3,NM,p3_density,Structural packing,0.10401737
+tier3,NM,p3_volume,Structural packing,0.2319027
+tier3,NM,p3_volume_per_atom,Structural packing,0.114607126
+tier3,NM,p3_bulk_modulus,Elastic response,0.1027061
+tier3,NM,p3_shear_modulus,Elastic response,0.109030984
+tier3,NM,p3_poisson_ratio,Elastic response,0.119926974
+tier3,NM,p3_elastic_anisotropy,Elastic response,0.15022133
+tier3,NM,p3_dielectric_static,Dielectric & optical,0.35891822
+tier3,NM,p3_dielectric_optical,Dielectric & optical,0.111711174
+tier3,NM,p3_dielectric_ionic,Dielectric & optical,0.010971265
+tier3,NM,p3_refractive_index,Dielectric & optical,0.01353073
+tier3,NM,p3_piezo_max,Dielectric & optical,0.011585777

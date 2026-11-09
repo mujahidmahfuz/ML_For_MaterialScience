@@ -1,0 +1,4 @@
+target,algorithm,physics_importance_share,top_physics_feature,top_physics_feature_rank,n_features
+ordering,xgboost,0.2252739015352691,p3_is_stable,5,97
+curie,xgboost,0.3544899946544966,p3_volume,1,97
+ms_moment,xgboost,0.27068509359958215,p3_formation_energy_per_atom,4,97

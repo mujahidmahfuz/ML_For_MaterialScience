@@ -1,0 +1,10 @@
+target,split,N_tier1,N_tier2,pct_oxidation_solution_found,pct_n_possible_present
+ordering,train,66193,66193,19.13,39.36
+ordering,validation,14218,14218,20.44,39.84
+ordering,test,14207,14207,18.7,39.33
+curie,train,23987,23987,25.88,43.62
+curie,validation,5170,5170,31.14,48.05
+curie,test,5165,5165,24.14,38.39
+ms_moment,train,61254,61254,18.34,44.47
+ms_moment,validation,13130,13130,17.74,43.1
+ms_moment,test,13129,13129,19.14,44.38
