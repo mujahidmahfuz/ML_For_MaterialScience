@@ -1,0 +1,283 @@
+# Phase 6 analysis configuration -- single source of truth for every Phase 6 stage.
+# Phase_6_Analytics_Execution_Plan.docx section 13: seeds, targets, feature lists,
+# split rules, models and metrics live here. Any change to the analysis dataset
+# must bump analysis_dataset_version rather than silently editing a frozen version.
+# Earlier versions: 00_config/archive/analysis_config_v1.1.yaml (v1.0 settings are recorded in the Stage 1 v1.0 archive).
+
+analysis_dataset_version: "v1.2"
+frozen_on: "2026-09-28"
+previous_version: "v1.1"   # v1.1 package untouched in EDA/datasets/v1.1/; its Stage 1 outputs stay in EDA/01_eda/v1.1/
+random_seed: 20260925
+
+paths:
+  project_root: "SET_BY_setup_workspace.py"
+  eda_root: "EDA"
+  dataset_manifest: "EDA/datasets/v1.2/MANIFEST_v1.2.json"
+  feature_repository_parquet: "EDA/datasets/v1.2/feature_repository_v1.2.parquet"
+  data_dictionary: "EDA/datasets/v1.2/data_dictionary_v1.2.csv"
+  target_harmonization_dir: "EDA/datasets/v1.2/targets"
+  tiers_dir: "EDA/datasets/v1.2/tiers"
+  group_membership: "EDA/datasets/v1.2/groups/group_membership_v1.2.parquet"
+  d7_quarantine: "EDA/datasets/v1.2/excluded/D7_pseudo_formula_materials.csv"
+  # Previous version (read-only), used to verify v1.2 against v1.1.
+  previous_feature_repository_parquet: "EDA/datasets/v1.1/feature_repository_v1.1.parquet"
+  previous_target_harmonization_dir: "EDA/datasets/v1.1/targets"
+  previous_splits_dir: "EDA/02_splits/v1.1"
+  # v1.0 / Phase 5 references (read-only).
+  phase5_target_harmonization_dir: "new_work(8-1-2026)/datasets/target_harmonization"
+  audit_clean_dir: "new_work(8-1-2026)/datasets/audit_clean"
+  v1_0_feature_repository_parquet: "new_datasets/MMFD/phase4/data/phase4_ml_ready.parquet"
+
+# Reviewer decisions. D1-D6 approved 2026-09-26 (Phase6_Stage1_Status_Brief.docx, confirmed by
+# Analysis_Dataset_v1.1_Pre_Stage2_Instructions.docx); D7 approved 2026-09-28.
+decisions:
+  D1: "Recompute the 4 empty electronic descriptors (EDA/src/build_analysis_dataset_v1_1.py)"
+  D2: "Exclude the 54 encoded github_datasets_magnetic.csv Curie values"
+  D3: "Keep p3_is_magnetic, p3_num_magnetic_sites, p3_magnetic_species, p3_elastic_tensor out of predictors"
+  D4: "Primary test split grouped by reduced_formula (unseen compositions)"
+  D5: "Experimental ordering subset = provenance comparison slice only, not a separate four-class model"
+  D6: "Exclude implausible secondary Ms values (mass > 300 emu/g; 0 < volume < 100 A/m)"
+  D7: "Exclude the 1,940 pseudo-formula materials from all analysis; quarantined in EDA/datasets/v1.2/excluded/"
+
+# valid_col: null means "value_col is not null" defines the clean population
+# (the Ms file carries three unit families in one file, never merged).
+targets:
+  ordering:
+    file: "ordering/target_ordering_clean.csv"
+    valid_col: "ordering_valid"
+    value_col: "magnetic_ordering_clean"
+    task: "classification"
+    role: "primary"
+    classes: ["FM", "AFM", "FiM", "NM"]
+    expected_n: 94618   # sign-off 95,307 minus 689 pseudo-formula materials (D7)
+  curie:
+    file: "curie/target_curie_clean.csv"
+    valid_col: "target_valid"
+    value_col: "TC_K_clean"
+    unit: "K"
+    task: "regression"
+    role: "primary"
+    expected_n: 34322   # v1.0 35,304 minus 54 (D2) minus 928 (D7)
+  ms_moment:
+    file: "ms/target_ms_clean.csv"
+    valid_col: null
+    value_col: "Ms_momentPerUnitCell_clean"
+    unit: "muB/unit-cell"
+    task: "regression"
+    role: "primary"
+    expected_n: 87513   # unchanged since v1.0
+  ms_mass:
+    file: "ms/target_ms_clean.csv"
+    valid_col: null
+    value_col: "Ms_massMagnetization_clean"
+    unit: "emu/g"
+    task: "regression"
+    role: "secondary"
+    expected_n: 4318    # v1.0 4,569 minus 17 (D6) minus 234 (D7)
+  ms_volume:
+    file: "ms/target_ms_clean.csv"
+    valid_col: null
+    value_col: "Ms_volumeMagnetization_clean"
+    unit: "A/m"
+    task: "regression"
+    role: "exploratory"
+    expected_n: 788     # v1.0 943 minus 91 (D6) minus 64 (D7)
+  k1:
+    file: "k1/target_k1_clean.csv"
+    valid_col: "target_valid"
+    value_col: "K1_clean"
+    unit: "J/m^3"
+    task: "regression"
+    role: "exploratory"
+    expected_n: 1862    # v1.0 1,976 minus 114 (D7)
+
+tiers:
+  tier1:
+    predictors_file: "00_config/tier1_predictors.txt"
+    data_file: "tier1_core_v1.2.parquet"
+    rows: "all"
+  tier2:
+    predictors_file: "00_config/tier2_predictors.txt"
+    data_file: "tier2_extended_v1.2.parquet"
+    rows: "all"
+  tier3:
+    predictors_file: "00_config/tier3_predictors.txt"
+    data_file: "tier3_physics_v1.2.parquet"
+    rows: "physics_bundle_complete"
+
+# Exact rules used by new_work(8-1-2026)/scripts/build_datasets.py -- not re-invented here.
+predictor_rules:
+  tier1_dictionary_groups: ["Composition (Protocol I)", "Elemental/Electronic (Protocol II)"]
+  oxidation_cols:
+    - avg_oxidation_state
+    - minimum_oxidation_state
+    - maximum_oxidation_state
+    - oxidation_state_range
+    - oxidation_state_variance
+    - oxidation_state_std
+    - number_of_possible_oxidation_states
+    - oxidation_solution_found
+  tier3_added_dictionary_group: "Phase 3 DFT-derived"
+  physics_bundle:
+    - p3_formation_energy_per_atom
+    - p3_band_gap
+    - p3_volume_per_atom
+    - p3_crystal_system
+  # Object-dtype Tier 3 predictors (not boolean, not numeric) -- the only two among the 24 physics
+  # columns; used by Stage 4 to route these through one-hot (linear) or native categorical (GB/XGB
+  # via category dtype) handling instead of median imputation.
+  categorical_predictors:
+    - p3_crystal_system
+    - p3_point_group
+  # Excluded from tier3_predictors.txt by decision D3 (target-proximal / non-scalar).
+  excluded_predictors:
+    target_proximal:
+      - p3_is_magnetic
+      - p3_num_magnetic_sites
+      - p3_magnetic_species
+    non_scalar:
+      - p3_elastic_tensor
+
+# display name -> column in the group membership parquet (rules from build_datasets.py step_4_groups)
+groups:
+  Experimental: "B_experimental"
+  Computational: "C_computational"
+  Transition Metal: "D_transition_metals"
+  Rare Earth: "E_rare_earth"
+  Actinide: "F_actinides"
+  Oxide: "G_oxides"
+  Intermetallic: "H_intermetallics"
+  Physics-complete: "I_physics_complete"
+  Tier1-descriptor-complete: "J_descriptor_complete"
+
+eda:
+  high_corr_threshold: 0.90
+  nzv_freq_ratio_cut: 19.0      # dominant/second-most-common value ratio (95/5)
+  nzv_unique_pct_cut: 10.0      # distinct values as % of non-missing rows
+  min_n_for_group_distribution: 150
+  min_class_n: 150
+  curie_high_value_k: 2000.0
+
+# Defined by the plan (sections 7.2-7.3). The same grids (= tuning budget) and selection rule are
+# reused unchanged in Stages 3-4; tier comparisons differ only in the features. `algorithms` is the
+# Stage 2 benchmark set (all four) and stays frozen there. Per plan s7.2, Stage 3 onward drops
+# random_forest and keeps only the strongest algorithms: in Stage 2, Random Forest was never better
+# than the two boosting models by more than noise, and the boosters use far less memory (fits within
+# Claude Code; RF did not at Tier 2+ scale). Later stage configs (stage4, ...) should reuse
+# `reduced_algorithms`, not `algorithms`.
+models:
+  algorithms: ["linear", "random_forest", "gradient_boosting", "xgboost"]
+  reduced_algorithms: ["linear", "gradient_boosting", "xgboost"]
+  reference: "dummy (majority class / training mean) - context only, not a benchmark algorithm"
+  selection: "fit each grid config on train, keep the best validation score, refit it on train+validation, score test once"
+  selection_metric: {classification: "macro_f1", regression: "rmse"}
+  classification_weighting: "balanced class weights for all four algorithms (modeling choice; data are not resampled)"
+  regression_target_scale: "raw units (K, muB/unit-cell); no target transform"
+  bootstrap: {n_resamples: 500, unit: "reduced_formula group", ci: 0.95}
+  grids:
+    linear:
+      classification: {C: [0.1, 1.0, 10.0]}          # LogisticRegression (multinomial), median impute + standardize
+      regression: {alpha: [0.1, 1.0, 10.0, 100.0]}    # Ridge, median impute + standardize
+    random_forest:                                     # median impute; 300 trees
+      both: {n_estimators: [300], min_samples_leaf: [1, 5], max_features: ["sqrt", 0.5]}
+    gradient_boosting:                                 # sklearn HistGradientBoosting (native missing values)
+      both: {max_iter: [500], learning_rate: [0.05, 0.1], max_leaf_nodes: [31, 127]}
+    xgboost:                                           # hist trees (native missing values)
+      both: {n_estimators: [500], max_depth: [6, 10], learning_rate: [0.05, 0.1], subsample: [0.8], colsample_bytree: [0.8]}
+
+stage2:
+  tier: "tier1"
+  targets: ["ordering", "curie", "ms_moment"]
+  split_files: {ordering: "split_ordering.csv", curie: "split_curie.csv", ms_moment: "split_ms.csv"}
+  output_dir: "EDA/03_baseline_tier1/v1.2"
+
+stage3:
+  algorithms: "models.reduced_algorithms (linear, gradient_boosting, xgboost) -- random_forest dropped per plan s7.2"
+  tiers: ["tier1", "tier2"]
+  targets: ["ordering", "curie", "ms_moment"]
+  split_files: {ordering: "split_ordering.csv", curie: "split_curie.csv", ms_moment: "split_ms.csv"}
+  tier1_results_dir: "EDA/03_baseline_tier1/v1.2"   # Tier 1 = the Stage 2 fits (identical splits, grids, seed; verified)
+  output_dir: "EDA/04_tier2_ablation/v1.2"
+  population: "Tier 2 has the same rows as Tier 1 (added columns only), so the matched population = the full clean population"
+  missing_values: "handled in-pipeline (train-fitted median imputation for linear/RF; native for boosters)"
+  missingness_indicators: "none added: the six oxidation-state statistics are missing exactly when oxidation_solution_found is False, and that flag is itself a Tier 2 predictor"
+  decision_rule: "Tier 2 adds stable value for an algorithm when the 95% paired-bootstrap CI of the primary-metric improvement excludes 0"
+stage4:
+  algorithms: "models.reduced_algorithms (linear, gradient_boosting, xgboost) -- same set as Stage 3, per plan s7.2"
+  tiers: ["tier1", "tier2", "tier3"]
+  targets: ["ordering", "curie", "ms_moment"]
+  split_files: {ordering: "matched_split_ordering.csv", curie: "matched_split_curie.csv", ms_moment: "matched_split_ms.csv"}
+  output_dir: "EDA/05_matched_tier_physics/v1.2"
+  population: "Tier 3 physics-complete matched population per target (plan s9), reused unchanged at every tier: ordering N=13,914, curie N=5,490, ms_moment N=10,852 (v1.2, after D7)"
+  missing_values: "handled in-pipeline (train-fitted median imputation for linear; native for boosters) at every tier; Tier 3 physics-complete rows have 0% missing on the 24 added physics columns. A handful of numeric values (e.g. p3_elastic_anisotropy, finite-but-astronomical near-zero-denominator ratio artifacts ~5.68e110) are masked to NaN at load time because they overflow to inf under XGBoost's internal float32 cast; count reported per run in matched_population_check.csv / the Stage 4 summary"
+  categorical_handling: "p3_crystal_system/p3_point_group (predictor_rules.categorical_predictors) -- one-hot (impute most_frequent + OneHotEncoder) for linear; native category-dtype handling for gradient_boosting (categorical_features='from_dtype') and xgboost (enable_categorical=True)"
+  decision_rule: "same CI-excludes-0 rule as Stage 3, applied to Tier1->Tier2, Tier2->Tier3 and Tier1->Tier3 on the identical matched test materials (plan s9.1 core comparison table)"
+
+stage5:
+  tier: "tier1"   # family models use the high-coverage Tier 1 predictors on the full clean population (plan s10)
+  algorithms: "models.reduced_algorithms (linear, gradient_boosting, xgboost) -- same grids/selection rule as Stages 2-4"
+  targets: ["ordering", "curie", "ms_moment"]
+  split_files: {ordering: "split_ordering.csv", curie: "split_curie.csv", ms_moment: "split_ms.csv"}
+  families: ["Transition Metal", "Rare Earth", "Oxide", "Intermetallic"]   # keys of `groups`
+  provenance_slices: ["Experimental", "Computational"]   # general model evaluated only (plan s10: provenance, not family)
+  general_model: "Stage 2 Tier 1 predictions (EDA/03_baseline_tier1/v1.2), same material_ids and split files"
+  min_total_n: 1000          # family population needed to fit a separate model (train+val+test); else general-model-only
+  min_class_n: 150           # ordering: smallest class in the family must reach this count (matches eda.min_class_n)
+  min_test_n_per_class: 30   # ordering: every class needs this many test rows for a per-family macro-F1 to be meaningful
+  comparison: "family-specific model vs general model on the same family test rows (paired formula-grouped bootstrap), and general model on family vs on the rest of the test set (same bootstrap draws)"
+  output_dir: "EDA/06_material_groups/v1.2"
+  subdirs: {"Transition Metal": "transition_metals", "Rare Earth": "rare_earth", "Oxide": "oxides", "Intermetallic": "intermetallics", "Experimental": "provenance", "Computational": "provenance"}
+stage6:
+  model: "xgboost"   # strongest tree model that TreeSHAP supports natively; HistGradientBoosting is statistically tied (Stages 2-4) but has no TreeSHAP
+  tiers: ["tier1", "tier2", "tier3"]
+  targets: ["ordering", "curie", "ms_moment"]
+  population: "Stage 4 matched populations and matched split files; SHAP on the whole matched test set (fixed, identical materials at every tier)"
+  hyperparameters: "Stage 4 selected XGBoost hyperparameters per target and tier (EDA/05_matched_tier_physics/v1.2/*/hyperparameters_and_preprocessing_matched_*.json), refit on train+validation"
+  shap_method: "exact TreeSHAP via xgboost Booster.predict(pred_contribs=True) (native categorical support); ordering = mean |SHAP| averaged over the 4 classes in margin (log-odds) units; regression in raw target units"
+  dependence_features_per_target: 3
+  dependence_class_for_ordering: "FM"
+  family_groups: ["Transition Metal", "Rare Earth", "Oxide", "Intermetallic"]
+  min_group_test_n: 100
+  output_dir: "EDA/07_interpretability/v1.2"
+  subdirs: {ordering: "ordering", curie: "curie", ms_moment: "ms"}
+
+stage7:
+  targets: ["k1", "ms_mass", "ms_volume"]   # exploratory/secondary (plan s12); never merged with the primary Ms moment target
+  algorithms: "models.reduced_algorithms plus the dummy (training-mean) reference; same grids/selection rule as Stages 2-6"
+  cv: {n_folds: 5, n_repeats: 3, group_col: "reduced_formula", inner_validation_fraction: 0.20}
+  cv_rule: "repeated formula-grouped K-fold on the whole clean population (single 15% test splits are 122-648 rows); per outer fold the grid is selected on a formula-grouped inner validation split and refit on the remaining training rows"
+  uncertainty: "paired formula-grouped bootstrap (n_resamples from models.bootstrap) of the metric averaged over CV repeats; same draws for every model/tier"
+  k1_log_variant: "K1 spans -7.2e7 to 6.4e8 J/m^3 (median 1.5e5), so raw-unit MAE/RMSE/R2 are dominated by a few values. Extra exploratory variant 'k1_log': train and score on sign(y)*log10(1+|y|). Raw-unit K1 is still reported. Rank correlation (weighted Pearson of ranks) is reported for every target."
+  matched_tiers:
+    tiers: ["tier1", "tier2", "tier3"]
+    population: "rows of each clean target that are in the Tier 3 physics-complete bundle (plan: K1 404, mass ~249, volume ~287 before D6/D7; counts re-derived on v1.2 and reported)"
+    claim_rule: "plan s12: no Tier 1->2->3 claim from these small sets unless stable; 'stable' = the 95% CI of the improvement excludes 0 in the same direction for all three algorithms"
+  output_dir: "EDA/08_secondary/v1.2"
+  subdirs: {k1: "k1", k1_log: "k1", ms_mass: "ms_mass", ms_volume: "ms_volume"}
+
+final:
+  output_dir: "EDA/09_final_tables_figures"   # plan s14/s15: Tables 1-4 + supplements, Figures 1-5, phase6_final_summary.txt
+  inputs: "assembled only from the saved stage outputs (01_eda, 03-08 folders) and the frozen v1.2 targets; no model is refit"
+  headline_algorithm: "xgboost"
+  primary_metric: {ordering: "macro_f1", curie: "mae", ms_moment: "mae"}
+  secondary_metric: {ordering: "balanced_accuracy", curie: "r2", ms_moment: "r2"}
+
+metrics:
+  classification:
+    primary: ["macro_f1", "balanced_accuracy"]
+    secondary: ["accuracy", "per_class_precision_recall_f1", "confusion_matrix"]
+  regression:
+    primary: ["mae", "rmse", "r2"]
+    secondary: ["median_absolute_error", "residual_plots"]
+splits:
+  status: "v1.2 split files are DERIVED from the frozen v1.1 splits by dropping D7 materials (make_splits.py --derive)"
+  primary_rule: "grouped"
+  group_col: "reduced_formula"
+  stratify_classification_by: "magnetic_ordering_clean"
+  stratify_regression_by: "quantile bin of the formula-group mean target (10 bins if >= 2,000 groups else 5)"
+  method: "size-balanced stratified group assignment (largest group first to the split furthest below target; seeded)"
+  fractions: {train: 0.70, validation: 0.15, test: 0.15}
+  matched_rule: "Tier 3 matched split = the same method applied to the Tier 3 matched population, reused for Tier 1/2/3"
+  derived_from_dir: "EDA/02_splits/v1.1"   # every surviving material keeps its v1.1 assignment
+  output_dir: "EDA/02_splits/v1.2"
+experimental_ordering_role: "provenance_slice"   # D5

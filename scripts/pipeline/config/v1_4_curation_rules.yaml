@@ -1,0 +1,60 @@
+# Analysis Dataset v1.4 curation rules (roadmap item R10: secondary targets) -- written BEFORE any model was fit on the cleaned secondary targets.
+# Governance: v1.3 stays frozen. Every rule REMOVES rows only (never edits a value); removed rows go to EDA/datasets/v1.4/excluded/ with all
+# columns and reason codes, as in D6/D7/v1.3. Rules are screens with documented known losses, not proofs.
+# Scope: Ms-mass (emu/g), Ms-volume (A/m) and K1 (J/m^3). The Ms-per-cell moment target, Curie, ordering, splits, tiers are unchanged.
+
+version: "v1.4"
+parent_version: "v1.3"
+defined_on: "2026-10-18"
+
+# Physical ceilings (bulk magnetic materials, any temperature down to 0 K).
+#   Fe-Co alloy ~ 2.45 T -> Ms 1.95e6 A/m, 240 emu/g.  Heavy rare-earth metals at 4 K: Dy ~3.0e6 A/m, ~350 emu/g.
+#   Best-established |K1|: SmCo5 ~17e6 J/m^3 at RT, ~3e7 at 4 K; Pr2Fe14B ~2.5e7 at 4 K.
+heavy_rare_earths: [Gd, Tb, Dy, Ho, Er, Tm, Eu]
+
+ms_mass:
+  rules:
+    M1_above_ceiling_no_heavy_RE:
+      text: "Ms-mass > 245 emu/g for a formula with no heavy rare earth: exceeds the Fe-Co maximum (~240 emu/g)"
+      threshold_emu_g: 245.0
+    M2_above_ceiling_heavy_RE:
+      text: "Ms-mass > 360 emu/g for a formula with a heavy rare earth: exceeds the 4 K Dy/Ho metal values (~350 emu/g)"
+      threshold_emu_g: 360.0
+    M3_zero_value:
+      text: "Ms-mass == 0: placeholder/'not magnetic' entry, not a measured saturation magnetization of a magnetic material"
+
+ms_volume:
+  rules:
+    V1_above_ceiling_no_heavy_RE:
+      text: "Ms-volume > 2.0e6 A/m for a formula with no heavy rare earth: exceeds the Fe-Co maximum (~1.95e6 A/m)"
+      threshold_a_per_m: 2000000.0
+    V2_above_ceiling_heavy_RE:
+      text: "Ms-volume > 3.1e6 A/m for a formula with a heavy rare earth: exceeds the 4 K Dy value (~3.0e6 A/m)"
+      threshold_a_per_m: 3100000.0
+    V3_zero_value:
+      text: "Ms-volume == 0: placeholder entry"
+    V4_mass_unit_misparsed:
+      text: "unit_raw is a mass magnetization (m^2/kg, Am2/kg) but was filed under volume magnetization A/m: unit-family mis-parse; the row is removed from Ms-volume (a recovered Ms-mass candidate is reported, not added)"
+
+k1:
+  rules:
+    K1_above_ceiling:
+      text: "|K1| > 5e7 J/m^3: more than 1.6x the largest well-established value (SmCo5 at 4 K); typical cause is an erg/cm^3 vs J/m^3 or 10^n prefix error"
+      threshold_j_per_m3: 50000000.0
+  flag_only_not_removed:
+    - "K1 == 0 exactly (26 rows): possible for a compensated cubic composition; kept, reported"
+    - "2e7 < |K1| <= 5e7 J/m^3: kept (SmCo5, Pr2Fe14B at low temperature are real)"
+
+known_losses:
+  - "Fe16N2/Fe8N 'giant moment' claims (Ms ~2.2e6 A/m) exceed the ceiling and are removed although the claim is published (and disputed)"
+  - "Thin-film / low-dimensional entries are not separated by these ceilings; only impossible bulk values are caught"
+  - "K1 values wrong by less than the ceiling (e.g. a 10x prefix error on a 1 MJ/m^3 material) are not detectable from composition and stay"
+
+ms_moment_naming:
+  official_name: "DFT total magnetic moment per unit cell (0 K)"
+  columns_unchanged: "Ms_momentPerUnitCell_clean keeps its column name (code depends on it); the official name is documented here, in the manifest and in the data dictionary"
+  evidence: >
+    99.99% of rows are computed (Materials Project 72,010; JARVIS 15,493; 10 experimental). Verified through the Materials Project API on 2026-10-18:
+    total_magnetization is per CELL (Fe3O4 mp-19306: 14 sites, total_magnetization 28.0 uB, total_magnetization_normalized_formula_units 14.0 uB).
+    The Phase 3 dictionary label for p3_total_magnetization ('muB/f.u.') is therefore wrong -- it is uB per cell, matching the Phase 2 conversion
+    (uB/unit-cell). On materials present in both, the Phase 2 target / p3_total_magnetization ratio has median 1.00 (78% within 5%; the rest are polymorph differences).

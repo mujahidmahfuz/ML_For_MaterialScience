@@ -1,0 +1,49 @@
+# Analysis Dataset v1.3 curation rules -- written BEFORE any model was fit on the curated targets.
+# Origin: Phase 7 review (EDA/10_phase7_validation/v1.2/review/), blocking items R1 (Curie target) and R2 (ordering provenance).
+# Governance: v1.2 stays frozen. Every rule below removes rows only (never edits a value); removed rows go to
+# EDA/datasets/v1.3/excluded/ with all columns and reason codes, exactly as D7 did for v1.2.
+# These are SCREENS, not proofs: each rule is a documented heuristic with known false positives (listed under `known_losses`).
+
+version: "v1.3"
+parent_version: "v1.2"
+defined_on: "2026-10-17"
+
+curie:
+  question: "Is this value a magnetic Curie temperature (ferro-/ferrimagnetic ordering temperature)?"
+  evidence:
+    - "text-mined chemdata_curie_neel rows include superconducting Tc (e.g. Ti 0.39 K, Pb, Al, Si, MgB2), ferroelectric Curie points (BaTiO3, PbTiO3, LiNbO3) and Neel temperatures"
+    - "172 values < 1 K (123 chemdata), 166 values > 1400 K (152 chemdata), max 2986 K; highest known ferromagnetic Curie temperature is Co at ~1388 K"
+  rules:
+    C1_no_magnetism_capable_element:
+      text: "formula contains no element from magnetism_capable_elements -> no source of an ordered magnetic moment"
+    C2_elemental_non_magnet:
+      text: "single-element formula that is not a ferromagnetic element (allowed: ferromagnetic_elements)"
+    C3_below_1K:
+      text: "TC < 1 K: superconducting-Tc / placeholder / nuclear-ordering regime, not comparable with electronic Curie temperatures"
+      threshold_k: 1.0
+    C4_above_1400K:
+      text: "TC > 1400 K: above the highest known ferromagnetic Curie temperature (Co, ~1388 K)"
+      threshold_k: 1400.0
+    C5_afm_only_formula:
+      text: "every ordering label for this reduced_formula (all sources, v1.2 ordering target) is AFM -> a Curie temperature is undefined; the value is probably a Neel temperature"
+  magnetism_capable_elements: [V, Cr, Mn, Fe, Co, Ni, Cu, Ru, Rh, Pd, Os, Ir, Re, Pt,
+                               Ce, Pr, Nd, Pm, Sm, Eu, Gd, Tb, Dy, Ho, Er, Tm, Yb,
+                               Th, Pa, U, Np, Pu, Am, Cm, Bk, Cf, Es, Fm, Md, No, Lr]
+  ferromagnetic_elements: [Fe, Co, Ni, Gd, Tb, Dy, Ho, Er, Tm]
+  known_losses:
+    - "Ti3+ ferromagnets such as YTiO3 have no listed magnetism-capable element and are removed by C1"
+    - "Multiferroics (e.g. BiFeO3) keep ferroelectric-TC / Neel-TN ambiguity; not detectable from composition"
+    - "AFM-only rule C5 depends on ordering coverage; formulas absent from the ordering target are not affected"
+  sensitivity: "primary v1.3 target = C1..C5; sensitivity target = C1..C4 only (keeps AFM-only formulas)"
+
+ordering:
+  question: "Is this label an assigned magnetic ordering?"
+  evidence:
+    - "scripts/collect_jarvis_magnetic.py::infer_magnetic_type returns the constant 'Ferromagnetic' for every entry (comment: JARVIS DFT does not distinguish FM/FiM/AFM easily); the collection is filtered on magmom > 0.05"
+    - "all 15,493 JARVIS rows (16% of the v1.2 ordering target) carry the FM label"
+  rules:
+    O1_jarvis_default_fm:
+      text: "_source starts with jarvis_magnetic.csv: label is a collector default, not an ordering assignment -> quarantined from the ordering target (rows stay in the repository and in every other target)"
+
+# Predictors, tiers, group definitions, Ms/K1 targets and the v1.2 splits are unchanged; splits are DERIVED from v1.2 by dropping
+# quarantined rows (all other assignments identical), as in make_splits.py --derive.

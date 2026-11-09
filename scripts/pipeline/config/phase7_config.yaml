@@ -1,0 +1,65 @@
+# Phase 7 publication-readiness validation -- prespecified settings (Phase_7_Publication_Readiness_Validation_Protocol.docx).
+# Fixed BEFORE any Phase 7 model was fit. Phase 6 files (analysis_config.yaml, v1.2 dataset, splits, results) are read-only;
+# estimators, grids, selection rule and metrics are reused unchanged from analysis_config.yaml -> models.
+
+phase7_version: "1.0"
+prespecified_on: "2026-10-16"
+dataset_version: "v1.2"
+output_dir: "EDA/10_phase7_validation/v1.2"
+
+# Section 2.A / 2.B: independent reduced_formula-grouped train/validation/test splits of the Stage 4 matched
+# populations. Seeds are prespecified: split i uses seed base + i. The frozen Phase 6 split is also re-run as a
+# reproduction check ("frozen") and is NOT part of the pooled statistics.
+multisplit:
+  n_splits: 10
+  base_seed: 20267000          # split i -> 20267000 + i  (i = 0..9)
+  fractions: {train: 0.70, validation: 0.15, test: 0.15}
+  n_strata_bins: 5             # same rule as make_splits.py for < 2000 formulas (quantile bins of the formula-mean target)
+  capacity_tolerance: 0.25     # a group may overfill its split's target row count by at most this fraction
+  targets:
+    curie:     {target: "curie",     frozen_split: "matched_split_curie.csv", primary_metric: "mae"}
+    ms_moment: {target: "ms_moment", frozen_split: "matched_split_ms.csv",    primary_metric: "mae"}
+  tiers: ["tier1", "tier2", "tier3"]
+  algorithms: ["linear", "gradient_boosting", "xgboost"]   # models.reduced_algorithms -- no new algorithms (scope boundary)
+  bootstrap: {n_resamples: 1000, ci: 0.95, seed: 20267100}
+
+# Section 2.A: one clearly labelled sensitivity analysis of extreme Curie observations (primary target never changed).
+curie_sensitivity:
+  extreme_threshold_k: 1400.0  # ~ 99th percentile of the matched Curie population (reported at run time)
+  analyses:
+    - "rescore_excluding_extreme_test_rows: same fitted models, test rows with TC > threshold removed from scoring"
+    - "refit_without_extreme_rows: population restricted to TC <= threshold in train, validation and test (new fits, same splits)"
+    - "formula_macro_mae: MAE averaged per reduced_formula, then over formulas (removes weight of heavily repeated formulas)"
+  linear_diagnostic: "train-fold 1st/99th-percentile clipping inside the Ridge pipeline; diagnostic only, not a new benchmark algorithm"
+
+# Section 2.C: Tier 3 restricted-feature sensitivity variants (labelled S_*; Tier 3 predictors minus the listed columns).
+tier3_restricted_variants:
+  S_no_point_group: ["p3_point_group"]
+  S_no_volume_family: ["p3_volume", "p3_density", "p3_volume_per_atom"]
+  S_no_symmetry: ["p3_spacegroup_number", "p3_crystal_system", "p3_point_group"]
+  S_no_identity_proxies: ["p3_spacegroup_number", "p3_crystal_system", "p3_point_group",
+                          "p3_volume", "p3_density", "p3_volume_per_atom"]
+  S_no_same_calculation_outputs: ["p3_formation_energy_per_atom", "p3_energy_above_hull", "p3_is_stable", "p3_band_gap",
+                                  "p3_is_metal", "p3_is_gap_direct", "p3_efermi", "p3_vbm", "p3_cbm"]
+  S_elastic_dielectric_only: ["p3_formation_energy_per_atom", "p3_energy_above_hull", "p3_is_stable", "p3_band_gap",
+                              "p3_is_metal", "p3_is_gap_direct", "p3_efermi", "p3_vbm", "p3_cbm",
+                              "p3_spacegroup_number", "p3_crystal_system", "p3_point_group",
+                              "p3_volume", "p3_density", "p3_volume_per_atom"]
+
+# Section 2.C companion: add ONE physics-column group to Tier 2 (A_* variants). Registered on 2026-10-16 while the main runs were
+# executing and before any multisplit result had been inspected (recorded in the deviations log).
+tier2_plus_variants:
+  A_T2_plus_volume_family: ["p3_volume", "p3_density", "p3_volume_per_atom"]
+  A_T2_plus_symmetry: ["p3_spacegroup_number", "p3_crystal_system", "p3_point_group"]
+  A_T2_plus_same_calculation_outputs: ["p3_formation_energy_per_atom", "p3_energy_above_hull", "p3_is_stable", "p3_band_gap",
+                                       "p3_is_metal", "p3_is_gap_direct", "p3_efermi", "p3_vbm", "p3_cbm"]
+  A_T2_plus_elastic_dielectric: ["p3_bulk_modulus", "p3_shear_modulus", "p3_poisson_ratio", "p3_elastic_anisotropy",
+                                 "p3_dielectric_static", "p3_dielectric_optical", "p3_dielectric_ionic",
+                                 "p3_refractive_index", "p3_piezo_max"]
+
+# Decision-gate thresholds (section 5), fixed in advance.
+decision_gate:
+  stable_ms_gain: "pooled paired 95% bootstrap CI of the Tier1->Tier3 MAE improvement excludes 0 for every algorithm AND the improvement is > 0 in at least 70% of splits for every algorithm"
+  min_fraction_splits_positive: 0.70
+  leakage_material_if: "restricted-feature variant removes more than half of the full Tier 3 improvement, or the improvement CI of the restricted variant includes 0 while the full one excludes it"
+  small_subgroup_distinct_formulas_test: 30   # family/provenance comparisons with fewer distinct test formulas are 'too small for strong conclusions'
