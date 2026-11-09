@@ -1,0 +1,17 @@
+\begin{table}[h]
+\caption{Prediction targets of the curated analysis dataset}
+\label{tab:table1_dataset}
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}llllll}
+\toprule
+Target & Unit & Records & Formulas & Train / validation / test & Matched Tier 1/2/3 records \\
+\midrule
+Magnetic ordering (FM/AFM/FiM/NM) & class & 79,125 & 70,293 & 55,249/11,974/11,902 & 6,061 \\
+Curie temperature & K & 29,740 & 14,145 & 20,508/4,691/4,541 & 4,602 \\
+DFT total magnetic moment per unit cell (Ms) & $\mu_\mathrm{B}$/cell & 87,513 & 77,402 & 61,254/13,130/13,129 & 10,852 \\
+Mass magnetization (secondary) & emu/g & 4,317 & 3,218 & 3,021/648/648 & - \\
+Volume magnetization (secondary) & A/m & 779 & 454 & 535/124/120 & - \\
+Anisotropy constant K1 (secondary) & J/m$^3$ & 1,847 & 1,182 & 1,296/280/271 & - \\
+\botrule
+\end{tabular*}
+\footnotetext{Analysis dataset v1.4 (frozen); formula-grouped 70/15/15 splits. Ordering classes: FM 34,098, NM 31,673, FiM 7,161, AFM 6,193. Tier 1 = 65 composition descriptors; Tier 2 = Tier 1 + 8 oxidation-chemistry descriptors; Tier 3 = Tier 2 + DFT physics descriptors (97 in total).}
+\end{table}

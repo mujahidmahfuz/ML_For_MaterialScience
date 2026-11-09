@@ -1,0 +1,7 @@
+Target,Method,"Coverage, frozen split",Mean width,"Coverage, 10 splits: mean (SD)",Splits within ±2 points,"Hardest decile, 10 splits"
+Curie temperature,Split conformal,"95.1 [93.9, 96.1]",552,89.3 (6.0),1/10,56.0
+Curie temperature,Normalized conformal,"91.7 [90.4, 92.9]",366,90.3 (2.5),5/10,89.6
+Curie temperature,CQR,"92.5 [90.8, 93.9]",438,89.4 (5.8),0/10,62.9
+Ms per cell,Split conformal,"90.4 [89.8, 91.0]",12.8,90.0 (0.4),10/10,49.7
+Ms per cell,Normalized conformal,"90.3 [89.7, 90.8]",11.6,90.0 (0.5),10/10,88.8
+Ms per cell,CQR,"89.4 [88.9, 90.0]",9.8,90.1 (0.4),10/10,78.9

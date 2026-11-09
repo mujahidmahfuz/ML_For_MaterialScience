@@ -1,0 +1,23 @@
+\begin{table}[h]
+\caption{Effect of oxidation-chemistry (Tier 2) and DFT physics (Tier 3) descriptors on matched populations}
+\label{tab:table2_physics_descriptors}
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lllll}
+\toprule
+Target, metric & Algorithm & Tier 1$\rightarrow$2 & Tier 1$\rightarrow$3 & Tier 1$\rightarrow$3 verdict \\
+\midrule
+Curie temperature, MAE (K) & Gradient boosting & -0.4 [-9.6, +7.5] & -14.3 [-31.3, +3.8] & no meaningful improvement \\
+Curie temperature, MAE (K) & Ridge / logistic & -3.6 [-11.0, +4.6] & -825.2 [-2938.0, +8.8] & no meaningful improvement \\
+Curie temperature, MAE (K) & XGBoost & +1.1 [-5.9, +8.0] & -9.7 [-24.1, +3.5] & no meaningful improvement \\
+Ms per atom, relative MAE gain (\%) & Gradient boosting & - & +2.9 [+1.5, +4.4] & stable gain \\
+Ms per atom, relative MAE gain (\%) & Ridge / logistic & - & +6.0 [+5.1, +6.8] & stable gain \\
+Ms per atom, relative MAE gain (\%) & XGBoost & - & +2.8 [+1.6, +3.9] & stable gain \\
+Ms per cell, MAE ($\mu_\mathrm{B}$/cell) & Gradient boosting & +0.005 [-0.009, +0.021] & +0.079 [+0.049, +0.111] & stable improvement \\
+Ms per cell, MAE ($\mu_\mathrm{B}$/cell) & Ridge / logistic & +0.006 [-0.003, +0.016] & +0.055 [+0.002, +0.099] & stable improvement \\
+Ms per cell, MAE ($\mu_\mathrm{B}$/cell) & XGBoost & -0.004 [-0.021, +0.013] & +0.037 [-0.000, +0.072] & not stable \\
+Ordering, macro-F1 & Gradient boosting & -0.029 [-0.057, -0.001] & -0.034 [-0.073, +0.002] & not stable \\
+Ordering, macro-F1 & Ridge / logistic & +0.004 [-0.009, +0.019] & +0.024 [-0.008, +0.058] & not stable \\
+Ordering, macro-F1 & XGBoost & +0.005 [-0.009, +0.019] & +0.005 [-0.024, +0.033] & not stable \\
+\botrule
+\end{tabular*}
+\footnotetext{Improvement = Tier k minus Tier 1 performance, positive = better; identical rows, splits, grids and metrics at every tier; 10 repeated formula-grouped splits; 95\% intervals. Matched N: ordering 6,061, Curie 4,602, Ms 10,852 (per atom 10,821 after the denominator correction). Curie verdict uses a 10 K margin. Ridge Curie Tier 3 fits are numerically unstable (exploded predictions on a few rows). XGBoost results depend on the thread count; across thread/seed realisations the Ms per-cell XGBoost Tier 1$\rightarrow$3 gain ranges from +0.026 to +0.062 $\mu_\mathrm{B}$/cell.}
+\end{table}

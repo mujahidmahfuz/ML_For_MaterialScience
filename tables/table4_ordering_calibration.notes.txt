@@ -1,0 +1,1 @@
+Test N = 11,902; 90% nominal sets; ECE with 95% formula-bootstrap interval. Per-class columns are set coverage (%) on the frozen split; over 10 repeated splits the marginal sets cover AFM 57.2% and FiM 54.8%, the class-conditional sets 89.9-91.1% for every class.

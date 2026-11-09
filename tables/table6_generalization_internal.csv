@@ -1,0 +1,6 @@
+Test,Target,Metric,Familiar → unfamiliar,Change [95% CI],Splits worse
+Leave chemical system out (10 paired splits),Ordering,macro-F1,0.712 → 0.684,"-0.028 [-0.041, -0.016]",10/10
+Leave chemical system out (10 paired splits),Curie temperature,MAE,99.2 → 101.9,"+2.7 [-16.8, +22.2]",5/10
+Leave chemical system out (10 paired splits),Ms per cell,MAE,2.591 → 2.663,"+0.073 [-0.009, +0.154]",7/10
+Label provenance: train computational_MP → test experimental,Ordering,macro-F1 / balanced accuracy,0.284 / 0.323,-,-
+Label provenance: train experimental → test computational_MP,Ordering,macro-F1 / balanced accuracy,0.159 / 0.399,-,-
