@@ -1,0 +1,7 @@
+target,algorithm,metric,improvement_tier1_to_tier2,ci_low,ci_high,verdict
+ordering,linear,macro_f1,0.0014368759399400188,-0.0039419252576764876,0.007394003790937856,no stable change
+ordering,linear,balanced_accuracy,-0.002384504387322961,-0.010413230669859039,0.006358628662673731,no stable change
+ordering,gradient_boosting,macro_f1,0.0021617645572611366,-0.004715966675080313,0.011053035443081059,no stable change
+ordering,gradient_boosting,balanced_accuracy,-2.1251157557022893e-05,-0.006847960880661882,0.006951151131519581,no stable change
+ordering,xgboost,macro_f1,-0.008495599480539906,-0.016364914702886767,-0.0014393765202144315,stable degradation
+ordering,xgboost,balanced_accuracy,0.0066401908487125905,-0.0006140359063996042,0.014160653317564394,no stable change

@@ -1,0 +1,4 @@
+metric,max_abs_difference,n_compared
+macro_f1,5.551115123125783e-17,45
+balanced_accuracy,5.551115123125783e-17,45
+accuracy,5.551115123125783e-17,45

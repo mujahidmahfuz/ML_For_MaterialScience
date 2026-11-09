@@ -1,0 +1,301 @@
+target,split_id,method,group,n_rows,n_formulas,coverage,mean_width
+curie,0,split_conformal,all,4460,2035,0.8560538116591928,445.33856201171875
+curie,0,split_conformal,family:Transition Metal,4194,1932,0.8483547925608012,445.33856201171875
+curie,0,split_conformal,family:Rare Earth,2065,1127,0.9699757869249395,445.33856201171875
+curie,0,split_conformal,family:Oxide,1281,653,0.9461358313817331,445.33856201171875
+curie,0,split_conformal,family:Intermetallic,2236,1126,0.9347048300536672,445.33856201171875
+curie,0,split_conformal,source:chemdata_curie_neel,1533,525,0.6973255055446836,445.33856201171875
+curie,0,split_conformal,source:magnetic_anisotropy_materials,653,403,0.9280245022970903,445.33856201171875
+curie,0,split_conformal,source:magnetic_materials_reformatted,2274,1518,0.9423922603342129,445.33856201171875
+curie,0,split_conformal,predicted_value:highest_third,1487,604,0.6650975117686617,445.33856201171875
+curie,0,split_conformal,difficulty_decile:10,155,43,0.6129032258064516,445.33856201171875
+curie,0,normalized_conformal,all,4460,2035,0.9065022421524663,459.3343922486499
+curie,0,normalized_conformal,family:Transition Metal,4194,1932,0.9043872198378636,472.97582764614987
+curie,0,normalized_conformal,family:Rare Earth,2065,1127,0.9012106537530267,225.4536527937921
+curie,0,normalized_conformal,family:Oxide,1281,653,0.8899297423887588,345.6781362702579
+curie,0,normalized_conformal,family:Intermetallic,2236,1126,0.9320214669051878,409.40475524235126
+curie,0,normalized_conformal,source:chemdata_curie_neel,1533,525,0.8799739073711677,646.9768937203735
+curie,0,normalized_conformal,source:magnetic_anisotropy_materials,653,403,0.9402756508422665,469.31480851078123
+curie,0,normalized_conformal,source:magnetic_materials_reformatted,2274,1518,0.9146877748460862,329.9706426552795
+curie,0,normalized_conformal,predicted_value:highest_third,1487,604,0.8702084734364492,654.0475719680945
+curie,0,normalized_conformal,difficulty_decile:10,155,43,0.967741935483871,1263.7184513999375
+curie,0,cqr,all,4460,2035,0.840134529147982,409.77548358667593
+curie,0,cqr,family:Transition Metal,4194,1932,0.8366714353838818,418.8205097933355
+curie,0,cqr,family:Rare Earth,2065,1127,0.9457627118644067,318.3603760863043
+curie,0,cqr,family:Oxide,1281,653,0.9047619047619048,370.74388756750153
+curie,0,cqr,family:Intermetallic,2236,1126,0.9239713774597496,427.2440479305008
+curie,0,cqr,source:chemdata_curie_neel,1533,525,0.6744944553163731,423.5513376738616
+curie,0,cqr,source:magnetic_anisotropy_materials,653,403,0.8989280245022971,451.77072051655824
+curie,0,cqr,source:magnetic_materials_reformatted,2274,1518,0.9349164467897977,388.4292768888444
+curie,0,cqr,predicted_value:highest_third,1487,604,0.65635507733692,492.3759494777005
+curie,0,cqr,difficulty_decile:10,155,43,0.6193548387096774,525.1482028315144
+curie,1,split_conformal,all,4462,2185,0.9412819363514119,591.8203613281248
+curie,1,split_conformal,family:Transition Metal,4261,2104,0.9403895799108191,591.8203613281249
+curie,1,split_conformal,family:Rare Earth,2074,1113,0.9705882352941176,591.820361328125
+curie,1,split_conformal,family:Oxide,1369,674,0.9634769905040176,591.8203613281248
+curie,1,split_conformal,family:Intermetallic,2476,1166,0.9337641357027464,591.8203613281249
+curie,1,split_conformal,source:chemdata_curie_neel,1171,540,0.892399658411614,591.8203613281248
+curie,1,split_conformal,source:magnetic_anisotropy_materials,951,490,0.9379600420609885,591.8203613281249
+curie,1,split_conformal,source:magnetic_materials_reformatted,2340,1607,0.9670940170940171,591.8203613281249
+curie,1,split_conformal,predicted_value:highest_third,1488,814,0.9038978494623656,591.8203613281249
+curie,1,split_conformal,difficulty_decile:10,447,167,0.7941834451901566,591.8203613281248
+curie,1,normalized_conformal,all,4462,2185,0.9238009861048857,429.6175030048687
+curie,1,normalized_conformal,family:Transition Metal,4261,2104,0.9234921379957757,431.6723351313753
+curie,1,normalized_conformal,family:Rare Earth,2074,1113,0.9189971070395371,276.74830295016636
+curie,1,normalized_conformal,family:Oxide,1369,674,0.9320672023374726,359.86858403183663
+curie,1,normalized_conformal,family:Intermetallic,2476,1166,0.9273021001615509,458.0560913463948
+curie,1,normalized_conformal,source:chemdata_curie_neel,1171,540,0.8906917164816396,521.7352175365295
+curie,1,normalized_conformal,source:magnetic_anisotropy_materials,951,490,0.9305993690851735,488.6036097507006
+curie,1,normalized_conformal,source:magnetic_materials_reformatted,2340,1607,0.9376068376068376,359.54672042715026
+curie,1,normalized_conformal,predicted_value:highest_third,1488,814,0.9025537634408602,517.476242822503
+curie,1,normalized_conformal,difficulty_decile:10,447,167,0.9239373601789709,1017.7010369751001
+curie,1,cqr,all,4462,2185,0.9462124607799193,533.6399627840176
+curie,1,cqr,family:Transition Metal,4261,2104,0.9474301807087538,541.2120189497873
+curie,1,cqr,family:Rare Earth,2074,1113,0.9537126325940212,426.7076124277616
+curie,1,cqr,family:Oxide,1369,674,0.9685902118334551,471.9112912086434
+curie,1,cqr,family:Intermetallic,2476,1166,0.9511308562197092,566.2835227598847
+curie,1,cqr,source:chemdata_curie_neel,1171,540,0.9026473099914603,574.2701835756394
+curie,1,cqr,source:magnetic_anisotropy_materials,951,490,0.953732912723449,580.648018176686
+curie,1,cqr,source:magnetic_materials_reformatted,2340,1607,0.964957264957265,494.20293320050604
+curie,1,cqr,predicted_value:highest_third,1488,814,0.9280913978494624,646.9065763194073
+curie,1,cqr,difficulty_decile:10,447,167,0.8568232662192393,715.360008734718
+curie,2,split_conformal,all,4462,2078,0.9341102644554011,694.6319213867187
+curie,2,split_conformal,family:Transition Metal,4254,2005,0.9322990126939351,694.6319213867188
+curie,2,split_conformal,family:Rare Earth,2157,1079,0.9791376912378303,694.6319213867189
+curie,2,split_conformal,family:Oxide,1455,610,0.8776632302405498,694.6319213867188
+curie,2,split_conformal,family:Intermetallic,2345,1121,0.9727078891257995,694.6319213867188
+curie,2,split_conformal,source:chemdata_curie_neel,1320,510,0.8340909090909091,694.6319213867188
+curie,2,split_conformal,source:magnetic_anisotropy_materials,885,470,0.96045197740113,694.631921386719
+curie,2,split_conformal,source:magnetic_materials_reformatted,2257,1519,0.9822773593265397,694.6319213867189
+curie,2,split_conformal,predicted_value:highest_third,1488,822,0.8474462365591398,694.6319213867188
+curie,2,split_conformal,difficulty_decile:10,377,75,0.5119363395225465,694.6319213867188
+curie,2,normalized_conformal,all,4462,2078,0.9298520842671448,461.13035508979874
+curie,2,normalized_conformal,family:Transition Metal,4254,2005,0.9292430653502586,467.35206555460115
+curie,2,normalized_conformal,family:Rare Earth,2157,1079,0.923041261010663,270.20011557858913
+curie,2,normalized_conformal,family:Oxide,1455,610,0.9381443298969072,431.66476309740455
+curie,2,normalized_conformal,family:Intermetallic,2345,1121,0.9368869936034115,486.41242739952196
+curie,2,normalized_conformal,source:chemdata_curie_neel,1320,510,0.9121212121212121,611.7451509644167
+curie,2,normalized_conformal,source:magnetic_anisotropy_materials,885,470,0.9514124293785311,520.029945057212
+curie,2,normalized_conformal,source:magnetic_materials_reformatted,2257,1519,0.9317678334071776,349.94840219850215
+curie,2,normalized_conformal,predicted_value:highest_third,1488,822,0.9227150537634409,589.1265915049262
+curie,2,normalized_conformal,difficulty_decile:10,377,75,0.9708222811671088,1166.888827202694
+curie,2,cqr,all,4462,2078,0.9379202151501569,655.8179567310035
+curie,2,cqr,family:Transition Metal,4254,2005,0.9355900329102022,661.5332087343866
+curie,2,cqr,family:Rare Earth,2157,1079,0.9856281872971719,561.0306341350899
+curie,2,cqr,family:Oxide,1455,610,0.874914089347079,634.4768450518552
+curie,2,cqr,family:Intermetallic,2345,1121,0.9761194029850746,662.0751902926125
+curie,2,cqr,source:chemdata_curie_neel,1320,510,0.8416666666666667,710.0783893102371
+curie,2,cqr,source:magnetic_anisotropy_materials,885,470,0.9672316384180791,683.4922294312951
+curie,2,cqr,source:magnetic_materials_reformatted,2257,1519,0.9827204253433761,613.2324439510538
+curie,2,cqr,predicted_value:highest_third,1488,822,0.8494623655913979,788.9030460772976
+curie,2,cqr,difficulty_decile:10,377,75,0.5278514588859416,936.38588655659
+curie,3,split_conformal,all,4463,1827,0.8418104414071252,453.5045166015625
+curie,3,split_conformal,family:Transition Metal,3912,1736,0.8338445807770961,453.5045166015625
+curie,3,split_conformal,family:Rare Earth,2262,1014,0.9540229885057471,453.5045166015625
+curie,3,split_conformal,family:Oxide,1446,580,0.9149377593360996,453.5045166015625
+curie,3,split_conformal,family:Intermetallic,2035,1002,0.9056511056511056,453.5045166015625
+curie,3,split_conformal,source:chemdata_curie_neel,1604,515,0.6895261845386533,453.5045166015625
+curie,3,split_conformal,source:magnetic_anisotropy_materials,673,389,0.8974739970282318,453.5045166015625
+curie,3,split_conformal,source:magnetic_materials_reformatted,2186,1328,0.9364135407136323,453.5045166015625
+curie,3,split_conformal,predicted_value:highest_third,1541,614,0.6774821544451655,453.5045166015625
+curie,3,split_conformal,difficulty_decile:10,446,57,0.2914798206278027,453.5045166015625
+curie,3,normalized_conformal,all,4463,1827,0.9159758010306969,544.2639426567124
+curie,3,normalized_conformal,family:Transition Metal,3912,1736,0.9092535787321063,548.9071586912694
+curie,3,normalized_conformal,family:Rare Earth,2262,1014,0.9429708222811671,309.0852741512666
+curie,3,normalized_conformal,family:Oxide,1446,580,0.9045643153526971,365.2129214503581
+curie,3,normalized_conformal,family:Intermetallic,2035,1002,0.9031941031941032,375.5549185978348
+curie,3,normalized_conformal,source:chemdata_curie_neel,1604,515,0.8983790523690773,852.0593380389183
+curie,3,normalized_conformal,source:magnetic_anisotropy_materials,673,389,0.9093610698365527,435.5738294135548
+curie,3,normalized_conformal,source:magnetic_materials_reformatted,2186,1328,0.9309240622140896,351.87813845707234
+curie,3,normalized_conformal,predicted_value:highest_third,1541,614,0.8948734587929915,913.1163600316577
+curie,3,normalized_conformal,difficulty_decile:10,446,57,0.9977578475336323,2049.984602358844
+curie,3,cqr,all,4463,1827,0.8622003136903428,477.0464051516233
+curie,3,cqr,family:Transition Metal,3912,1736,0.8535276073619632,467.7344612155742
+curie,3,cqr,family:Rare Earth,2262,1014,0.9482758620689655,382.4427501777175
+curie,3,cqr,family:Oxide,1446,580,0.9080221300138313,405.02843467571756
+curie,3,cqr,family:Intermetallic,2035,1002,0.8992628992628993,427.9491565688529
+curie,3,cqr,source:chemdata_curie_neel,1604,515,0.7524937655860349,564.3434517525527
+curie,3,cqr,source:magnetic_anisotropy_materials,673,389,0.8959881129271917,469.15931052846327
+curie,3,cqr,source:magnetic_materials_reformatted,2186,1328,0.9322964318389753,415.41948471863884
+curie,3,cqr,predicted_value:highest_third,1541,614,0.7624918883841661,639.6731716950632
+curie,3,cqr,difficulty_decile:10,446,57,0.49551569506726456,806.0361190612006
+curie,4,split_conformal,all,4462,2226,0.9870013446884806,1059.8677978515625
+curie,4,split_conformal,family:Transition Metal,4113,2123,0.986627765621201,1059.8677978515625
+curie,4,split_conformal,family:Rare Earth,2304,1204,0.9978298611111112,1059.8677978515625
+curie,4,split_conformal,family:Oxide,1231,688,0.9902518277822908,1059.8677978515625
+curie,4,split_conformal,family:Intermetallic,2428,1194,0.9868204283360791,1059.8677978515625
+curie,4,split_conformal,source:chemdata_curie_neel,1330,576,0.9706766917293234,1059.8677978515625
+curie,4,split_conformal,source:magnetic_anisotropy_materials,736,484,0.9904891304347826,1059.8677978515625
+curie,4,split_conformal,source:magnetic_materials_reformatted,2396,1624,0.994991652754591,1059.8677978515625
+curie,4,split_conformal,predicted_value:highest_third,1489,791,0.9825386165211552,1059.8677978515625
+curie,4,split_conformal,difficulty_decile:10,447,92,0.9574944071588367,1059.8677978515625
+curie,4,normalized_conformal,all,4462,2226,0.9432989690721649,481.7455757799136
+curie,4,normalized_conformal,family:Transition Metal,4113,2123,0.9423778264040846,499.01588602949226
+curie,4,normalized_conformal,family:Rare Earth,2304,1204,0.9526909722222222,286.6497040144867
+curie,4,normalized_conformal,family:Oxide,1231,688,0.9358245329000813,375.9972540836759
+curie,4,normalized_conformal,family:Intermetallic,2428,1194,0.9485172981878089,476.08832768910094
+curie,4,normalized_conformal,source:chemdata_curie_neel,1330,576,0.9233082706766917,629.8408615005658
+curie,4,normalized_conformal,source:magnetic_anisotropy_materials,736,484,0.9429347826086957,531.2815096639548
+curie,4,normalized_conformal,source:magnetic_materials_reformatted,2396,1624,0.9545075125208681,384.3227137819496
+curie,4,normalized_conformal,predicted_value:highest_third,1489,791,0.9408999328408327,660.2104797148161
+curie,4,normalized_conformal,difficulty_decile:10,447,92,0.9619686800894854,1163.0304316071768
+curie,4,cqr,all,4462,2226,0.9728821156432094,787.2777013132212
+curie,4,cqr,family:Transition Metal,4113,2123,0.9720398735716023,800.2746445500312
+curie,4,cqr,family:Rare Earth,2304,1204,0.9939236111111112,698.7567738484099
+curie,4,cqr,family:Oxide,1231,688,0.9780666125101544,733.0568501226162
+curie,4,cqr,family:Intermetallic,2428,1194,0.9802306425041186,794.8985974086078
+curie,4,cqr,source:chemdata_curie_neel,1330,576,0.9421052631578948,817.0235583605623
+curie,4,cqr,source:magnetic_anisotropy_materials,736,484,0.9755434782608695,832.7105311926292
+curie,4,cqr,source:magnetic_materials_reformatted,2396,1624,0.9891485809682805,756.8100249091278
+curie,4,cqr,predicted_value:highest_third,1489,791,0.9529885829415715,913.0470190413291
+curie,4,cqr,difficulty_decile:10,447,92,0.9038031319910514,923.6118442569536
+curie,5,split_conformal,all,4461,1954,0.8220130015691549,409.2481689453125
+curie,5,split_conformal,family:Transition Metal,3910,1884,0.809462915601023,409.2481689453125
+curie,5,split_conformal,family:Rare Earth,2111,997,0.9398389388915206,409.2481689453125
+curie,5,split_conformal,family:Oxide,1401,576,0.9414703783012134,409.2481689453125
+curie,5,split_conformal,family:Intermetallic,1910,1041,0.8450261780104712,409.2481689453125
+curie,5,split_conformal,source:chemdata_curie_neel,1522,525,0.664257555847569,409.2481689453125
+curie,5,split_conformal,source:magnetic_anisotropy_materials,810,425,0.8654320987654321,409.2481689453125
+curie,5,split_conformal,source:magnetic_materials_reformatted,2129,1385,0.918271488961954,409.2481689453125
+curie,5,split_conformal,predicted_value:highest_third,1487,680,0.6738399462004036,409.2481689453125
+curie,5,split_conformal,difficulty_decile:10,441,59,0.2698412698412698,409.2481689453125
+curie,5,normalized_conformal,all,4461,1954,0.8836583725622058,498.72622745275595
+curie,5,normalized_conformal,family:Transition Metal,3910,1884,0.8746803069053708,488.9735046179489
+curie,5,normalized_conformal,family:Rare Earth,2111,997,0.9081004263382283,333.0242047826354
+curie,5,normalized_conformal,family:Oxide,1401,576,0.9172019985724482,352.9518570395775
+curie,5,normalized_conformal,family:Intermetallic,1910,1041,0.8869109947643979,394.4539914943741
+curie,5,normalized_conformal,source:chemdata_curie_neel,1522,525,0.8318002628120894,736.4799433002898
+curie,5,normalized_conformal,source:magnetic_anisotropy_materials,810,425,0.9148148148148149,436.7561567256227
+curie,5,normalized_conformal,source:magnetic_materials_reformatted,2129,1385,0.9088774072334429,352.3357163062228
+curie,5,normalized_conformal,predicted_value:highest_third,1487,680,0.8412911903160726,719.7076703838471
+curie,5,normalized_conformal,difficulty_decile:10,441,59,0.7369614512471655,1440.475940774028
+curie,5,cqr,all,4461,1954,0.8173055368751401,415.337003005866
+curie,5,cqr,family:Transition Metal,3910,1884,0.8127877237851663,443.03574539771506
+curie,5,cqr,family:Rare Earth,2111,997,0.9071530080530554,322.1830245494059
+curie,5,cqr,family:Oxide,1401,576,0.9114917915774446,397.25452275543364
+curie,5,cqr,family:Intermetallic,1910,1041,0.8602094240837697,446.1852435989725
+curie,5,cqr,source:chemdata_curie_neel,1522,525,0.6504599211563732,415.39900121784984
+curie,5,cqr,source:magnetic_anisotropy_materials,810,425,0.891358024691358,467.30503800474565
+curie,5,cqr,source:magnetic_materials_reformatted,2129,1385,0.9084077031470174,395.52090642168
+curie,5,cqr,predicted_value:highest_third,1487,680,0.6785474108944183,532.4481937521323
+curie,5,cqr,difficulty_decile:10,441,59,0.2766439909297052,413.8352366099282
+curie,6,split_conformal,all,4461,2129,0.908989015915714,461.95263671875
+curie,6,split_conformal,family:Transition Metal,4184,2036,0.9070267686424475,461.95263671875
+curie,6,split_conformal,family:Rare Earth,2381,1118,0.9685006299874003,461.95263671875
+curie,6,split_conformal,family:Oxide,1557,654,0.9004495825305073,461.95263671875
+curie,6,split_conformal,family:Intermetallic,2372,1148,0.9203204047217538,461.95263671875
+curie,6,split_conformal,source:chemdata_curie_neel,1216,606,0.8462171052631579,461.95263671875
+curie,6,split_conformal,source:magnetic_anisotropy_materials,854,452,0.9168618266978923,461.95263671875
+curie,6,split_conformal,source:magnetic_materials_reformatted,2391,1549,0.9381012128816395,461.95263671875
+curie,6,split_conformal,predicted_value:highest_third,1487,717,0.8560860793544048,461.95263671875
+curie,6,split_conformal,difficulty_decile:10,401,170,0.770573566084788,461.95263671875
+curie,6,normalized_conformal,all,4461,2129,0.8924008069939475,367.5389223082471
+curie,6,normalized_conformal,family:Transition Metal,4184,2036,0.8934034416826003,370.8858450004935
+curie,6,normalized_conformal,family:Rare Earth,2381,1118,0.9164216715665686,243.52167163993613
+curie,6,normalized_conformal,family:Oxide,1557,654,0.8696210661528581,346.9537977719969
+curie,6,normalized_conformal,family:Intermetallic,2372,1148,0.9051433389544689,367.25553033016513
+curie,6,normalized_conformal,source:chemdata_curie_neel,1216,606,0.8519736842105263,452.02689470973735
+curie,6,normalized_conformal,source:magnetic_anisotropy_materials,854,452,0.9180327868852459,409.20483021352004
+curie,6,normalized_conformal,source:magnetic_materials_reformatted,2391,1549,0.903805938937683,309.6886254486422
+curie,6,normalized_conformal,predicted_value:highest_third,1487,717,0.8681909885675857,495.4937360557321
+curie,6,normalized_conformal,difficulty_decile:10,401,170,0.942643391521197,889.8500666286488
+curie,6,cqr,all,4461,2129,0.9320780094149294,480.9499602751851
+curie,6,cqr,family:Transition Metal,4184,2036,0.9314053537284895,493.75215743200755
+curie,6,cqr,family:Rare Earth,2381,1118,0.9676606467870642,391.90589854824645
+curie,6,cqr,family:Oxide,1557,654,0.9293513166345536,435.61220873144856
+curie,6,cqr,family:Intermetallic,2372,1148,0.9409780775716695,501.86632775919884
+curie,6,cqr,source:chemdata_curie_neel,1216,606,0.8856907894736842,518.6911217639909
+curie,6,cqr,source:magnetic_anisotropy_materials,854,452,0.9379391100702577,529.4936157886541
+curie,6,cqr,source:magnetic_materials_reformatted,2391,1549,0.9535759096612296,444.4173236466237
+curie,6,cqr,predicted_value:highest_third,1487,717,0.9092131809011432,645.4700056754589
+curie,6,cqr,difficulty_decile:10,401,170,0.8753117206982544,719.7474696891861
+curie,7,split_conformal,all,4460,2418,0.8587443946188341,456.5892333984375
+curie,7,split_conformal,family:Transition Metal,4291,2319,0.8552784898625029,456.5892333984375
+curie,7,split_conformal,family:Rare Earth,1959,1270,0.9698825931597754,456.5892333984375
+curie,7,split_conformal,family:Oxide,1221,761,0.8968058968058968,456.5892333984375
+curie,7,split_conformal,family:Intermetallic,2490,1326,0.9273092369477912,456.5892333984375
+curie,7,split_conformal,source:chemdata_curie_neel,1379,593,0.6867295141406816,456.5892333984375
+curie,7,split_conformal,source:magnetic_anisotropy_materials,728,480,0.929945054945055,456.5892333984375
+curie,7,split_conformal,source:magnetic_materials_reformatted,2353,1803,0.9375265618359541,456.5892333984375
+curie,7,split_conformal,predicted_value:highest_third,1498,700,0.6909212283044058,456.5892333984375
+curie,7,split_conformal,difficulty_decile:10,446,103,0.26905829596412556,456.5892333984375
+curie,7,normalized_conformal,all,4460,2418,0.873542600896861,407.7923379859687
+curie,7,normalized_conformal,family:Transition Metal,4291,2319,0.8760195758564437,414.83046397603556
+curie,7,normalized_conformal,family:Rare Earth,1959,1270,0.9122001020929046,234.706138672758
+curie,7,normalized_conformal,family:Oxide,1221,761,0.8796068796068796,351.7325432125041
+curie,7,normalized_conformal,family:Intermetallic,2490,1326,0.9208835341365462,365.2837848461111
+curie,7,normalized_conformal,source:chemdata_curie_neel,1379,593,0.7766497461928934,555.1974660715717
+curie,7,normalized_conformal,source:magnetic_anisotropy_materials,728,480,0.9395604395604396,406.74927838640986
+curie,7,normalized_conformal,source:magnetic_materials_reformatted,2353,1803,0.9099022524436889,321.7267518229563
+curie,7,normalized_conformal,predicted_value:highest_third,1498,700,0.7917222963951935,580.4250126602519
+curie,7,normalized_conformal,difficulty_decile:10,446,103,0.5919282511210763,991.7838007277071
+curie,7,cqr,all,4460,2418,0.8540358744394618,451.9552697011625
+curie,7,cqr,family:Transition Metal,4291,2319,0.8543463062223258,460.9075926231879
+curie,7,cqr,family:Rare Earth,1959,1270,0.9443593670239918,343.9543419353257
+curie,7,cqr,family:Oxide,1221,761,0.8877968877968878,410.4362522824244
+curie,7,cqr,family:Intermetallic,2490,1326,0.9056224899598394,446.3829409594965
+curie,7,cqr,source:chemdata_curie_neel,1379,593,0.7121102248005802,488.97414608380774
+curie,7,cqr,source:magnetic_anisotropy_materials,728,480,0.8983516483516484,483.86084496915583
+curie,7,cqr,source:magnetic_materials_reformatted,2353,1803,0.9235019124521887,420.3886359031314
+curie,7,cqr,predicted_value:highest_third,1498,700,0.7136181575433912,595.2551702905561
+curie,7,cqr,difficulty_decile:10,446,103,0.3968609865470852,595.6339737225006
+curie,8,split_conformal,all,4461,2435,0.9589778076664425,671.3614501953125
+curie,8,split_conformal,family:Transition Metal,4121,2328,0.958505217180296,671.3614501953125
+curie,8,split_conformal,family:Rare Earth,2492,1267,0.9843499197431782,671.3614501953125
+curie,8,split_conformal,family:Oxide,1475,769,0.9654237288135593,671.3614501953125
+curie,8,split_conformal,family:Intermetallic,2337,1299,0.9644843816859221,671.3614501953125
+curie,8,split_conformal,source:chemdata_curie_neel,1169,639,0.9050470487596236,671.3614501953125
+curie,8,split_conformal,source:magnetic_anisotropy_materials,767,520,0.9687092568448501,671.3614501953125
+curie,8,split_conformal,source:magnetic_materials_reformatted,2525,1777,0.980990099009901,671.3614501953125
+curie,8,split_conformal,predicted_value:highest_third,1487,914,0.9240080699394755,671.3614501953125
+curie,8,split_conformal,difficulty_decile:10,446,238,0.7914798206278026,671.3614501953125
+curie,8,normalized_conformal,all,4461,2435,0.8939699618919524,343.39176628200846
+curie,8,normalized_conformal,family:Transition Metal,4121,2328,0.891531181752002,344.00825726219307
+curie,8,normalized_conformal,family:Rare Earth,2492,1267,0.9044943820224719,242.91844006812335
+curie,8,normalized_conformal,family:Oxide,1475,769,0.9071186440677966,309.09204518175295
+curie,8,normalized_conformal,family:Intermetallic,2337,1299,0.887890457851947,339.6881117704517
+curie,8,normalized_conformal,source:chemdata_curie_neel,1169,639,0.8331907613344739,422.1718137544189
+curie,8,normalized_conformal,source:magnetic_anisotropy_materials,767,520,0.9048239895697523,365.7069605295144
+curie,8,normalized_conformal,source:magnetic_materials_reformatted,2525,1777,0.9188118811881189,300.1404278728659
+curie,8,normalized_conformal,predicted_value:highest_third,1487,914,0.8661735036987223,463.9838308027655
+curie,8,normalized_conformal,difficulty_decile:10,446,238,0.8856502242152466,834.8052178671808
+curie,8,cqr,all,4461,2435,0.9470970634386908,519.0860159771609
+curie,8,cqr,family:Transition Metal,4121,2328,0.9485561756855132,526.3797321022172
+curie,8,cqr,family:Rare Earth,2492,1267,0.9658908507223114,438.02502392820213
+curie,8,cqr,family:Oxide,1475,769,0.9593220338983051,476.26325164875743
+curie,8,cqr,family:Intermetallic,2337,1299,0.9473684210526315,516.5341029310448
+curie,8,cqr,source:chemdata_curie_neel,1169,639,0.8964927288280582,546.549402440883
+curie,8,cqr,source:magnetic_anisotropy_materials,767,520,0.9465449804432855,542.8780557411435
+curie,8,cqr,source:magnetic_materials_reformatted,2525,1777,0.9706930693069307,499.1441572543625
+curie,8,cqr,predicted_value:highest_third,1487,914,0.9186281102891728,673.6553740645705
+curie,8,cqr,difficulty_decile:10,446,238,0.820627802690583,764.4689544444661
+curie,9,split_conformal,all,4460,2026,0.8235426008968609,442.2357177734375
+curie,9,split_conformal,family:Transition Metal,4239,1920,0.8150507195093183,442.2357177734375
+curie,9,split_conformal,family:Rare Earth,2079,1116,0.9701779701779701,442.2357177734375
+curie,9,split_conformal,family:Oxide,1514,649,0.8361955085865258,442.2357177734375
+curie,9,split_conformal,family:Intermetallic,2244,1115,0.9010695187165776,442.2357177734375
+curie,9,split_conformal,source:chemdata_curie_neel,1540,549,0.6318181818181818,442.2357177734375
+curie,9,split_conformal,source:magnetic_anisotropy_materials,648,396,0.8765432098765432,442.2357177734375
+curie,9,split_conformal,source:magnetic_materials_reformatted,2272,1514,0.9383802816901409,442.2357177734375
+curie,9,split_conformal,predicted_value:highest_third,1604,516,0.6203241895261845,442.2357177734375
+curie,9,split_conformal,difficulty_decile:10,446,71,0.33183856502242154,442.2357177734375
+curie,9,normalized_conformal,all,4460,2026,0.8690582959641255,518.6236046297192
+curie,9,normalized_conformal,family:Transition Metal,4239,1920,0.8669497523000708,533.9574703957876
+curie,9,normalized_conformal,family:Rare Earth,2079,1116,0.9013949013949014,229.13561878540887
+curie,9,normalized_conformal,family:Oxide,1514,649,0.8137384412153237,377.38933686438884
+curie,9,normalized_conformal,family:Intermetallic,2244,1115,0.8948306595365418,377.3215442484371
+curie,9,normalized_conformal,source:chemdata_curie_neel,1540,549,0.7987012987012987,849.4310982737803
+curie,9,normalized_conformal,source:magnetic_anisotropy_materials,648,396,0.8873456790123457,426.58406428625267
+curie,9,normalized_conformal,source:magnetic_materials_reformatted,2272,1514,0.9115316901408451,320.64740829640607
+curie,9,normalized_conformal,predicted_value:highest_third,1604,516,0.7886533665835411,870.7045086860014
+curie,9,normalized_conformal,difficulty_decile:10,446,71,0.9775784753363229,1942.3881110627176
+curie,9,cqr,all,4460,2026,0.834304932735426,463.46734743964913
+curie,9,cqr,family:Transition Metal,4239,1920,0.8310922387355508,474.52642266261785
+curie,9,cqr,family:Rare Earth,2079,1116,0.9408369408369408,324.1937434106936
+curie,9,cqr,family:Oxide,1514,649,0.8295904887714664,413.61945693196833
+curie,9,cqr,family:Intermetallic,2244,1115,0.9019607843137255,436.750903340943
+curie,9,cqr,source:chemdata_curie_neel,1540,549,0.6714285714285714,550.6695180887816
+curie,9,cqr,source:magnetic_anisotropy_materials,648,396,0.8765432098765432,479.80736854819605
+curie,9,cqr,source:magnetic_materials_reformatted,2272,1514,0.9326584507042254,399.6998842010917
+curie,9,cqr,predicted_value:highest_third,1604,516,0.678927680798005,625.5317679426616
+curie,9,cqr,difficulty_decile:10,446,71,0.5201793721973094,798.4266827940406

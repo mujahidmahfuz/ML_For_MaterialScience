@@ -1,0 +1,9 @@
+train_on,test_on,algorithm,n_train,n_test,n_test_rows_dropped_class_unseen_in_training,classes_scored,macro_f1,balanced_accuracy,accuracy
+computational_MP,experimental,dummy,52137,2772,0,FM/AFM/FiM,0.0,0.0,0.0
+computational_MP,experimental,linear,52137,2772,0,FM/AFM/FiM,0.26641442128360243,0.3913353568285936,0.2417027417027417
+computational_MP,experimental,gradient_boosting,52137,2772,0,FM/AFM/FiM,0.2759094749631436,0.31774265782016825,0.38961038961038963
+computational_MP,experimental,xgboost,52137,2772,0,FM/AFM/FiM,0.2842463149578704,0.3230573840290709,0.38672438672438675
+experimental,computational_MP,dummy,14521,4377,4753,FM/AFM/FiM,0.2940926115083418,0.3333333333333333,0.7893534384281471
+experimental,computational_MP,linear,14521,4377,4753,FM/AFM/FiM,0.17154812051487098,0.37635623388008116,0.1619830934429975
+experimental,computational_MP,gradient_boosting,14521,4377,4753,FM/AFM/FiM,0.1602414729855581,0.3919927059138337,0.20493488690884168
+experimental,computational_MP,xgboost,14521,4377,4753,FM/AFM/FiM,0.15867674402891632,0.3989543158764373,0.188256796892849

@@ -1,0 +1,9 @@
+_source,category,rows,share_of_source_pct
+jarvis_magnetic.csv,consistent_atoms_different_record,2407,30.65070673627913
+jarvis_magnetic.csv,consistent_same_record,3231,41.143512033617725
+jarvis_magnetic.csv,mismatch_atoms,2215,28.205781230103145
+magnetic_anisotropy_materials.csv,experimental_no_cell_reference,3,100.0
+mp_reformatted.csv,ambiguous_or_unresolved,28,0.9345794392523364
+mp_reformatted.csv,consistent_atoms_different_record,536,17.890520694259013
+mp_reformatted.csv,consistent_same_record,1894,63.21762349799733
+mp_reformatted.csv,mismatch_atoms,538,17.95727636849132

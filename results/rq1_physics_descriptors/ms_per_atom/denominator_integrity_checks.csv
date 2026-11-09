@@ -1,0 +1,12 @@
+check,value
+matched rows,10852.0
+denominator finite,10852.0
+denominator > 0,10852.0
+zero or missing denominators,0.0
+denominator integer within 1e-6,10852.0
+max |n_sites_raw - round(n_sites_raw)|,2.842170943040401e-14
+denominator equals stored MP nsites (p3_nsites),10852.0
+numerator finite,10852.0
+numerator exactly 0 (valid non-magnetic rows),71.0
+denominator range (min),1.0
+denominator range (max),128.0

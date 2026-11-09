@@ -1,0 +1,47 @@
+target,tier,family,share
+ordering,tier1,Composition & stoichiometry,0.14564648
+ordering,tier1,Magnetic-element content,0.22218159
+ordering,tier1,Light-element (B/C/N/O) content,0.0239128
+ordering,tier1,d/f-electron & valence proxies,0.23070565
+ordering,tier1,Atomic size & periodic statistics,0.3775535
+ordering,tier2,Composition & stoichiometry,0.13661063
+ordering,tier2,Magnetic-element content,0.22705872
+ordering,tier2,Light-element (B/C/N/O) content,0.022116356
+ordering,tier2,d/f-electron & valence proxies,0.22323477
+ordering,tier2,Atomic size & periodic statistics,0.33950943
+ordering,tier2,Oxidation chemistry,0.051470168
+ordering,tier3,Composition & stoichiometry,0.082082905
+ordering,tier3,Magnetic-element content,0.15629259
+ordering,tier3,Light-element (B/C/N/O) content,0.010045703
+ordering,tier3,d/f-electron & valence proxies,0.13268013
+ordering,tier3,Atomic size & periodic statistics,0.17850153
+ordering,tier3,Oxidation chemistry,0.036182903
+ordering,tier3,Thermodynamic stability,0.09349489
+ordering,tier3,Electronic structure,0.049355183
+ordering,tier3,Symmetry,0.069263026
+ordering,tier3,Structural packing,0.06725183
+ordering,tier3,Elastic response,0.070642255
+ordering,tier3,Dielectric & optical,0.05420706
+curie,tier1,Composition & stoichiometry,0.06809041
+curie,tier1,Magnetic-element content,0.37470114
+curie,tier1,Light-element (B/C/N/O) content,0.024716334
+curie,tier1,d/f-electron & valence proxies,0.17096066
+curie,tier1,Atomic size & periodic statistics,0.3615315
+curie,tier2,Composition & stoichiometry,0.06957735
+curie,tier2,Magnetic-element content,0.2822317
+curie,tier2,Light-element (B/C/N/O) content,0.0139787225
+curie,tier2,d/f-electron & valence proxies,0.13502257
+curie,tier2,Atomic size & periodic statistics,0.44721106
+curie,tier2,Oxidation chemistry,0.0519786
+curie,tier3,Composition & stoichiometry,0.037269864
+curie,tier3,Magnetic-element content,0.16458057
+curie,tier3,Light-element (B/C/N/O) content,0.008530115
+curie,tier3,d/f-electron & valence proxies,0.13541156
+curie,tier3,Atomic size & periodic statistics,0.25699326
+curie,tier3,Oxidation chemistry,0.034263678
+curie,tier3,Thermodynamic stability,0.021018455
+curie,tier3,Electronic structure,0.03049371
+curie,tier3,Symmetry,0.09179586
+curie,tier3,Structural packing,0.09334807
+curie,tier3,Elastic response,0.03935728
+curie,tier3,Dielectric & optical,0.08693762

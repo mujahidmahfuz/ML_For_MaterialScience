@@ -1,0 +1,7 @@
+mode,variant,n_predictions,max_abs_diff,mean_abs_diff,rms_diff,p99_abs_diff,share_rows_diff_gt_0.01,n_identical
+refit,tier1,17912,0.0,0.0,0.0,0.0,0.0,17912
+refit,tier2,17912,0.0,0.0,0.0,0.0,0.0,17912
+refit,tier3,17912,0.0,0.0,0.0,0.0,0.0,17912
+select,tier1,17912,0.0,0.0,0.0,0.0,0.0,17912
+select,tier2,17912,0.0,0.0,0.0,0.0,0.0,17912
+select,tier3,17912,0.0,0.0,0.0,0.0,0.0,17912
