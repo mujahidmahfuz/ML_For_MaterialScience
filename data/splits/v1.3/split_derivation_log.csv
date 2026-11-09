@@ -1,0 +1,10 @@
+file,n_previous,n_dropped,n_kept
+split_curie.csv,34322,4582,29740
+matched_split_curie.csv,5490,888,4602
+split_ordering.csv,94618,15493,79125
+matched_split_ordering.csv,13914,7853,6061
+split_ms.csv,87513,0,87513
+split_ms_mass.csv,4318,0,4318
+split_ms_volume.csv,788,0,788
+split_k1.csv,1862,0,1862
+matched_split_ms.csv,10852,0,10852

@@ -1,0 +1,10 @@
+file,n_previous,n_dropped_D7,n_kept,dropped_train,dropped_validation,dropped_test
+split_ordering.csv,95307,689,94618,519,81,89
+split_curie.csv,35250,928,34322,686,120,122
+split_ms.csv,87513,0,87513,0,0,0
+split_ms_mass.csv,4552,234,4318,159,38,37
+split_ms_volume.csv,852,64,788,51,6,7
+split_k1.csv,1976,114,1862,75,14,25
+matched_split_ordering.csv,13914,0,13914,0,0,0
+matched_split_curie.csv,5490,0,5490,0,0,0
+matched_split_ms.csv,10852,0,10852,0,0,0
