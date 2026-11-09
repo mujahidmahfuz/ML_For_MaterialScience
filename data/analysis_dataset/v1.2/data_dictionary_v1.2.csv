@@ -1,0 +1,128 @@
+column,group,dtype,pct_available
+material_id,Metadata/ID,object,100.0
+Material_Name,Metadata/ID,object,100.0
+formula_raw,Metadata/ID,object,100.0
+formula_clean,Metadata/ID,object,100.0
+reduced_formula,Metadata/ID,object,100.0
+formula_valid,Metadata/ID,bool,100.0
+_source,Metadata/ID,object,100.0
+DOI,Metadata/ID,object,100.0
+Experimental,Metadata/ID,bool,100.0
+Material_Type,Metadata/ID,object,89.33
+Magnetic_type,Target,object,29.76
+Curie(TC),Target,object,15.76
+Saturation_Magnetization,Target,object,21.62
+Anisotropy Constant K1,Target,object,60.32
+Neel(TN),Target,object,4.43
+Anisotropy_Energy,Target,object,59.66
+Anisotropy Constant K2,Target,object,0.11
+Coercivity,Target,object,2.39
+Remanence_Magnetization,Target,object,0.8
+(BH_Max),Target,object,0.23
+Curie_Weiss,Target,object,1.94
+Intrinsic Coercivity,Target,object,0.05
+Anisotropy_Field,Target,object,0.29
+Magnet_type,Target,object,3.07
+p3_ordering,Target,object,6.02
+p3_total_magnetization,Target,float64,21.86
+basic_comp__n_elements,Composition (Protocol I),float64,100.0
+basic_comp__total_atoms_formula,Composition (Protocol I),float64,100.0
+basic_comp__contains_transition_metal,Composition (Protocol I),float64,100.0
+basic_comp__transition_metal_fraction,Composition (Protocol I),float64,100.0
+basic_comp__contains_rare_earth,Composition (Protocol I),float64,100.0
+basic_comp__rare_earth_fraction,Composition (Protocol I),float64,100.0
+basic_comp__contains_actinide,Composition (Protocol I),float64,100.0
+basic_comp__actinide_fraction,Composition (Protocol I),float64,100.0
+basic_comp__magnetic_element_fraction,Composition (Protocol I),float64,100.0
+basic_comp__contains_Fe,Composition (Protocol I),float64,100.0
+basic_comp__fraction_Fe,Composition (Protocol I),float64,100.0
+basic_comp__contains_Co,Composition (Protocol I),float64,100.0
+basic_comp__fraction_Co,Composition (Protocol I),float64,100.0
+basic_comp__contains_Ni,Composition (Protocol I),float64,100.0
+basic_comp__fraction_Ni,Composition (Protocol I),float64,100.0
+basic_comp__contains_Mn,Composition (Protocol I),float64,100.0
+basic_comp__fraction_Mn,Composition (Protocol I),float64,100.0
+basic_comp__contains_Cr,Composition (Protocol I),float64,100.0
+basic_comp__fraction_Cr,Composition (Protocol I),float64,100.0
+basic_comp__contains_Gd,Composition (Protocol I),float64,100.0
+basic_comp__fraction_Gd,Composition (Protocol I),float64,100.0
+basic_comp__contains_Nd,Composition (Protocol I),float64,100.0
+basic_comp__fraction_Nd,Composition (Protocol I),float64,100.0
+basic_comp__contains_Sm,Composition (Protocol I),float64,100.0
+basic_comp__fraction_Sm,Composition (Protocol I),float64,100.0
+basic_comp__contains_Dy,Composition (Protocol I),float64,100.0
+basic_comp__fraction_Dy,Composition (Protocol I),float64,100.0
+basic_comp__contains_Tb,Composition (Protocol I),float64,100.0
+basic_comp__fraction_Tb,Composition (Protocol I),float64,100.0
+basic_comp__contains_B,Composition (Protocol I),float64,100.0
+basic_comp__fraction_B,Composition (Protocol I),float64,100.0
+basic_comp__contains_C,Composition (Protocol I),float64,100.0
+basic_comp__fraction_C,Composition (Protocol I),float64,100.0
+basic_comp__contains_N,Composition (Protocol I),float64,100.0
+basic_comp__fraction_N,Composition (Protocol I),float64,100.0
+basic_comp__contains_O,Composition (Protocol I),float64,100.0
+basic_comp__fraction_O,Composition (Protocol I),float64,100.0
+magnetic_prior__d_block_fraction,Composition (Protocol I),float64,100.0
+magnetic_prior__f_block_fraction,Composition (Protocol I),float64,100.0
+magnetic_prior__s_block_fraction,Composition (Protocol I),float64,100.0
+magnetic_prior__p_block_fraction,Composition (Protocol I),float64,100.0
+average_unpaired_electron_proxy,Elemental/Electronic (Protocol II),float64,100.0
+average_d_electron_count,Elemental/Electronic (Protocol II),float64,100.0
+average_f_electron_count,Elemental/Electronic (Protocol II),float64,100.0
+valence_electron_concentration,Elemental/Electronic (Protocol II),float64,100.0
+avg_oxidation_state,Elemental/Electronic (Protocol II),float64,15.56
+minimum_oxidation_state,Elemental/Electronic (Protocol II),float64,15.56
+maximum_oxidation_state,Elemental/Electronic (Protocol II),float64,15.56
+oxidation_state_range,Elemental/Electronic (Protocol II),float64,15.56
+oxidation_state_variance,Elemental/Electronic (Protocol II),float64,15.56
+oxidation_state_std,Elemental/Electronic (Protocol II),float64,15.56
+number_of_possible_oxidation_states,Elemental/Electronic (Protocol II),float64,73.14
+oxidation_solution_found,Elemental/Electronic (Protocol II),bool,100.0
+average_atomic_radius,Elemental/Electronic (Protocol II),float64,100.0
+atomic_radius_variance,Elemental/Electronic (Protocol II),float64,100.0
+atomic_size_mismatch,Elemental/Electronic (Protocol II),float64,100.0
+electronegativity_difference,Elemental/Electronic (Protocol II),float64,100.0
+electronegativity_variance,Elemental/Electronic (Protocol II),float64,100.0
+average_atomic_mass,Elemental/Electronic (Protocol II),float64,100.0
+atomic_mass_variance,Elemental/Electronic (Protocol II),float64,100.0
+average_melting_temperature,Elemental/Electronic (Protocol II),float64,100.0
+melting_temperature_variance,Elemental/Electronic (Protocol II),float64,100.0
+period_variance,Elemental/Electronic (Protocol II),float64,100.0
+group_variance,Elemental/Electronic (Protocol II),float64,100.0
+mixing_entropy,Elemental/Electronic (Protocol II),float64,100.0
+formula_entropy,Elemental/Electronic (Protocol II),float64,100.0
+normalized_formula_entropy,Elemental/Electronic (Protocol II),float64,100.0
+formula_complexity,Elemental/Electronic (Protocol II),float64,100.0
+formula_complexity_index,Elemental/Electronic (Protocol II),float64,100.0
+stoichiometric_variance,Elemental/Electronic (Protocol II),float64,100.0
+maximum_stoichiometric_coefficient,Elemental/Electronic (Protocol II),float64,100.0
+number_of_unique_elements,Elemental/Electronic (Protocol II),int64,100.0
+total_atoms,Elemental/Electronic (Protocol II),float64,100.0
+p3_is_magnetic,Phase 3 DFT-derived,object,6.02
+p3_num_magnetic_sites,Phase 3 DFT-derived,float64,6.02
+p3_magnetic_species,Phase 3 DFT-derived,object,3.37
+p3_formation_energy_per_atom,Phase 3 DFT-derived,float64,22.23
+p3_energy_above_hull,Phase 3 DFT-derived,float64,22.21
+p3_is_stable,Phase 3 DFT-derived,object,6.02
+p3_band_gap,Phase 3 DFT-derived,float64,22.21
+p3_is_metal,Phase 3 DFT-derived,object,6.02
+p3_is_gap_direct,Phase 3 DFT-derived,object,6.02
+p3_efermi,Phase 3 DFT-derived,float64,6.02
+p3_vbm,Phase 3 DFT-derived,float64,1.96
+p3_cbm,Phase 3 DFT-derived,float64,1.96
+p3_spacegroup_number,Phase 3 DFT-derived,float64,22.23
+p3_crystal_system,Phase 3 DFT-derived,object,6.02
+p3_point_group,Phase 3 DFT-derived,object,6.02
+p3_density,Phase 3 DFT-derived,float64,22.23
+p3_volume,Phase 3 DFT-derived,float64,6.04
+p3_volume_per_atom,Phase 3 DFT-derived,float64,6.04
+p3_bulk_modulus,Phase 3 DFT-derived,float64,7.68
+p3_shear_modulus,Phase 3 DFT-derived,float64,7.68
+p3_poisson_ratio,Phase 3 DFT-derived,float64,7.66
+p3_elastic_anisotropy,Phase 3 DFT-derived,float64,2.09
+p3_elastic_tensor,Phase 3 DFT-derived,object,7.41
+p3_dielectric_static,Phase 3 DFT-derived,float64,14.7
+p3_dielectric_optical,Phase 3 DFT-derived,float64,5.32
+p3_dielectric_ionic,Phase 3 DFT-derived,float64,1.46
+p3_refractive_index,Phase 3 DFT-derived,float64,0.67
+p3_piezo_max,Phase 3 DFT-derived,float64,1.11

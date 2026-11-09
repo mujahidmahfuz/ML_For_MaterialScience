@@ -1,0 +1,147 @@
+{
+  "analysis_dataset_version": "v1.2",
+  "built_on": "2026-09-28",
+  "derived_from": "v1.1",
+  "builder": "EDA/src/build_analysis_dataset_v1_2.py",
+  "decisions": {
+    "D1": "recompute 4 electronic descriptors",
+    "D2": "exclude encoded Curie values",
+    "D3": "keep 4 Tier 3 columns excluded from predictors (config only)",
+    "D4": "reduced_formula-grouped primary split (config only)",
+    "D5": "Experimental ordering = provenance slice only (config only)",
+    "D6": "exclude implausible secondary Ms values",
+    "D7": "exclude pseudo-formula materials from all analysis; quarantined in excluded/"
+  },
+  "D7_rule": "reduced_formula fails pymatgen Composition parsing, contains a non-element symbol, or contains a synthetic superheavy element (Z >= 104); identical to the set with NaN D1 descriptors in v1.1",
+  "D7_quarantine": {
+    "n_materials": 1940,
+    "n_labels": 1071,
+    "clean_target_rows_excluded": {
+      "magnetic_ordering_clean": 689,
+      "TC_K_clean": 928,
+      "Ms_momentPerUnitCell_clean": 0,
+      "Ms_massMagnetization_clean": 234,
+      "Ms_volumeMagnetization_clean": 64,
+      "K1_clean": 114
+    }
+  },
+  "structure": {
+    "feature_repository": {
+      "v1.1": 475660,
+      "v1.2": 473720
+    },
+    "tier1_core": {
+      "v1.1": 475660,
+      "v1.2": 473720
+    },
+    "tier2_extended": {
+      "v1.1": 475660,
+      "v1.2": 473720
+    },
+    "tier3_physics": {
+      "v1.1": 28512,
+      "v1.2": 28512
+    },
+    "groups": {
+      "A_all": {
+        "v1.1": 475660,
+        "v1.2": 473720
+      },
+      "B_experimental": {
+        "v1.1": 102182,
+        "v1.2": 100313
+      },
+      "C_computational": {
+        "v1.1": 373478,
+        "v1.2": 373407
+      },
+      "D_transition_metals": {
+        "v1.1": 384620,
+        "v1.2": 383973
+      },
+      "E_rare_earth": {
+        "v1.1": 242013,
+        "v1.2": 241884
+      },
+      "F_actinides": {
+        "v1.1": 39965,
+        "v1.2": 39955
+      },
+      "G_oxides": {
+        "v1.1": 100957,
+        "v1.2": 100579
+      },
+      "H_intermetallics": {
+        "v1.1": 335526,
+        "v1.2": 334822
+      },
+      "I_physics_complete": {
+        "v1.1": 28512,
+        "v1.2": 28512
+      },
+      "J_descriptor_complete": {
+        "v1.1": 473714,
+        "v1.2": 473714
+      }
+    }
+  },
+  "targets": {
+    "magnetic_ordering_clean": {
+      "v1.1": 95307,
+      "v1.2": 94618,
+      "excluded": 689
+    },
+    "TC_K_clean": {
+      "v1.1": 35250,
+      "v1.2": 34322,
+      "excluded": 928
+    },
+    "Ms_momentPerUnitCell_clean": {
+      "v1.1": 87513,
+      "v1.2": 87513,
+      "excluded": 0
+    },
+    "Ms_massMagnetization_clean": {
+      "v1.1": 4552,
+      "v1.2": 4318,
+      "excluded": 234
+    },
+    "Ms_volumeMagnetization_clean": {
+      "v1.1": 852,
+      "v1.2": 788,
+      "excluded": 64
+    },
+    "K1_clean": {
+      "v1.1": 1976,
+      "v1.2": 1862,
+      "excluded": 114
+    }
+  },
+  "inherited_from_v1.1": {
+    "build_history": [
+      {
+        "build": "2026-09-26",
+        "note": "initial v1.1 build (D1, D2, D6)"
+      },
+      {
+        "build": "2026-09-27",
+        "note": "pre-freeze correction found by the required manual D1 check: d/f counts now use the noble-gas-core valence convention (the 2026-09-26 build counted the filled inner 4d10 shell as d electrons for lanthanides without 5d electrons, e.g. Nd/Sm/Dy d=10). D1 values propagated to v1.1 Tier files and group membership. Supersedes the 2026-09-26 build; nothing downstream used it except Stage 1 EDA, which was re-run."
+      }
+    ],
+    "D1_convention": "composition-weighted free-atom values from reduced_formula: d/f electrons outside the preceding noble-gas core; Hund's-rule unpaired electrons min(occ, capacity-occ) summed over subshells; VEC = group (1-12), group-10 (13-18), He 2, lanthanides/actinides 3"
+  },
+  "files": {
+    "data_dictionary_v1.2.csv": "0871335faa2d30a6476a744b30a1e0b76f1dc73dd2d7fa2b448911f3fb40e7be",
+    "excluded/D7_pseudo_formula_labels.csv": "0edf042903f6609bd1b39159509b52fceacfe67c66c86da66315ad8602e0b497",
+    "excluded/D7_pseudo_formula_materials.csv": "3ac9f8034e575daf698252e68f76cb79868bcfcead85066d2ae56a3f623cf807",
+    "feature_repository_v1.2.parquet": "603d04962e45ecfb7087bc556df6e5108eeee67c67b7f522353b11f9e8896a56",
+    "groups/group_membership_v1.2.parquet": "7ccd70f4b5752a01bc707a64c5337ef4cf0bf47ea05fb82fd04fd1dfe6987ac1",
+    "targets/curie/target_curie_clean.csv": "13846a8f789b13cf4f4e4aaee82a10e776e1cad4470411edc0348792501da1be",
+    "targets/k1/target_k1_clean.csv": "49d4872ea1ead331a5ca4c9e821db078fbbaa63d96e1fba711300fdea1da1540",
+    "targets/ms/target_ms_clean.csv": "c399e57a66199b1c8bc60e93a5c62ab86dc01dc4c8c6edee1455aeacf7dd6ac6",
+    "targets/ordering/target_ordering_clean.csv": "58c92625bb534a11fd2dcdef22abdaa7446529e615171945ec99fa2e61a0f5e6",
+    "tiers/tier1_core_v1.2.parquet": "30c5571466dc27a5bf788fcbd2c11587f2c661ca7a46a007e10e81421191875b",
+    "tiers/tier2_extended_v1.2.parquet": "3947041cac4d386aa36a129f165af655e910916a28c121d34eb5021a0afef706",
+    "tiers/tier3_physics_v1.2.parquet": "473aa69400e5aa29590367c22e708ebf43a0fd3ec4d015553960683a99636592"
+  }
+}
