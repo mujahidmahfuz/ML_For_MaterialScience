@@ -1,0 +1,110 @@
+{
+  "version": "v1.3",
+  "parent": "v1.2",
+  "rules_file": "EDA/00_config/v1_3_curation_rules.yaml",
+  "curie": {
+    "v1_2_n": 34322,
+    "v1_3_primary_n": 29740,
+    "v1_3_sensitivity_n": 30059,
+    "removed_primary": 4582,
+    "per_rule": {
+      "C1_no_magnetism_capable_element": {
+        "rows": 3282,
+        "only_this_rule": 2153
+      },
+      "C2_elemental_non_magnet": {
+        "rows": 1798,
+        "only_this_rule": 700
+      },
+      "C3_below_1K": {
+        "rows": 172,
+        "only_this_rule": 119
+      },
+      "C4_above_1400K": {
+        "rows": 166,
+        "only_this_rule": 63
+      },
+      "C5_afm_only_formula": {
+        "rows": 414,
+        "only_this_rule": 319
+      }
+    }
+  },
+  "ordering": {
+    "v1_2_n": 94618,
+    "v1_3_n": 79125,
+    "removed": 15493,
+    "classes": {
+      "FM": 34098,
+      "NM": 31673,
+      "FiM": 7161,
+      "AFM": 6193
+    }
+  },
+  "split_derivation": [
+    {
+      "file": "split_curie.csv",
+      "n_previous": 34322,
+      "n_dropped": 4582,
+      "n_kept": 29740
+    },
+    {
+      "file": "matched_split_curie.csv",
+      "n_previous": 5490,
+      "n_dropped": 888,
+      "n_kept": 4602
+    },
+    {
+      "file": "split_ordering.csv",
+      "n_previous": 94618,
+      "n_dropped": 15493,
+      "n_kept": 79125
+    },
+    {
+      "file": "matched_split_ordering.csv",
+      "n_previous": 13914,
+      "n_dropped": 7853,
+      "n_kept": 6061
+    },
+    {
+      "file": "split_ms.csv",
+      "n_previous": 87513,
+      "n_dropped": 0,
+      "n_kept": 87513
+    },
+    {
+      "file": "split_ms_mass.csv",
+      "n_previous": 4318,
+      "n_dropped": 0,
+      "n_kept": 4318
+    },
+    {
+      "file": "split_ms_volume.csv",
+      "n_previous": 788,
+      "n_dropped": 0,
+      "n_kept": 788
+    },
+    {
+      "file": "split_k1.csv",
+      "n_previous": 1862,
+      "n_dropped": 0,
+      "n_kept": 1862
+    },
+    {
+      "file": "matched_split_ms.csv",
+      "n_previous": 10852,
+      "n_dropped": 0,
+      "n_kept": 10852
+    }
+  ],
+  "sha256": {
+    "excluded\\R1_curie_quarantine.csv": "a592191f23c3ae02e042510d3c8c8ceb7e8eaaf76fa9892e258634e293b2f8ad",
+    "excluded\\R2_ordering_jarvis_default_fm_quarantine.csv": "b6acddce9423df7f11f161cb7e67517571faf243b3dc6e753b2dd6ff81b0171f",
+    "targets\\curie\\target_curie_clean.csv": "46f6770bca0cb6e7b96654b9704908a2ecc7ad2b00ee65275425bde30f90aa0f",
+    "targets\\curie\\target_curie_sensitivity_without_C5.csv": "04b1684ffdb8a7a44d47689680cddad4edab1336e2176587c910db28ab48a49d",
+    "targets\\k1\\target_k1_clean.csv": "49d4872ea1ead331a5ca4c9e821db078fbbaa63d96e1fba711300fdea1da1540",
+    "targets\\ms\\target_ms_clean.csv": "c399e57a66199b1c8bc60e93a5c62ab86dc01dc4c8c6edee1455aeacf7dd6ac6",
+    "targets\\ordering\\target_ordering_clean.csv": "ba662e6dda81b321eee73f9c50ae2612f9a8fcbb42f321000e9f537cefc96156"
+  },
+  "unchanged": "feature repository, tiers, groups, data dictionary, ms/k1 targets (copied), D1-D7 decisions (see v1.2 manifest)"
+}
