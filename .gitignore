@@ -2,12 +2,13 @@ __pycache__/
 *.pyc
 .pytest_cache/
 # LaTeX build products
-manuscript/*.aux
-manuscript/*.log
-manuscript/*.out
-manuscript/*.bbl
-manuscript/*.blg
-manuscript/*.synctex.gz
+manuscript/**/*.aux
+manuscript/**/*.log
+manuscript/**/*.out
+manuscript/**/*.bbl
+manuscript/**/*.blg
+manuscript/**/*.toc
+manuscript/**/*.synctex.gz
 # never commit credentials or the unlicensed third-party table
 .env
 **/curie_temperature_of_ferromagnetic_materials.csv
