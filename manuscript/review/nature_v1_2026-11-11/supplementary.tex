@@ -1,0 +1,114 @@
+%% Supplementary Information for "Reliability beyond accuracy in machine learning of magnetic materials" (Nature format, 2026-11-10).
+%% Nature: Supplementary Information holds no figures (the former Fig. S1 is Extended Data Fig. 1 of the main file); tables are "Supplementary Table N".
+%% Tables are local copies in tables/ (refresh with refresh_from_package.py); S9 and S10 are written here from
+%% paper/results/revision/research/prior_results_table.md and data_licences.md. Compile like the main text (pdflatex, bibtex).
+
+\documentclass[11pt,a4paper]{article}
+\input{nature-style}
+\renewcommand{\tablename}{Supplementary Table}
+\floatplacement{table}{H}
+
+\begin{document}
+\pagestyle{plain}
+
+\begin{flushleft}
+{\sffamily\bfseries\fontsize{17}{21}\selectfont Supplementary Information\par}
+\vspace{6pt}
+{\sffamily\bfseries\large Reliability beyond accuracy in machine learning of magnetic materials\par}
+\vspace{8pt}
+{\sffamily Mujahidul Islam and Gayan P.~Hettiarachchi\par}
+\end{flushleft}
+
+\section*{Contents}
+\begin{itemize}
+\item Supplementary Tables 1--3: audit of the external Curie benchmark, subset comparisons, and error by composition distance.
+\item Supplementary Table 4: the external benchmark under three resampling units and two interval types.
+\item Supplementary Table 5: residual label noise in the curated Curie target.
+\item Supplementary Table 6: design effects and distance-aware conformal variants.
+\item Supplementary Table 7: ordering performance with and without compounds lacking a magnetism-capable element.
+\item Supplementary Table 8: tier effects for the moment per formula unit.
+\item Supplementary Table 9: prior ML results for magnetic ordering and Curie temperature.
+\item Supplementary Table 10: data licences.
+\item Supplementary Table 11: Curie-temperature interval coverage in every subgroup evaluated.
+\item Reproducibility notes.
+\end{itemize}
+
+\input{tables/tableS1_benchmark_audit.tex}
+\input{tables/tableS2_subset_comparisons.tex}
+\input{tables/tableS3_error_vs_distance.tex}
+\input{tables/tableS4_external_clusterings.tex}
+\input{tables/tableS5_curie_label_noise.tex}
+\input{tables/tableS6_design_effect_distance_conformal.tex}
+\input{tables/tableS7_ordering_decomposition.tex}
+\input{tables/tableS8_moment_per_fu.tex}
+
+\begin{table}
+\caption{Prior ML results for magnetic ordering and Curie temperature (as reported; read from the versions noted)}
+\label{tab:tableS9_prior_results}
+\tablefont
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}Xl>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+\toprule
+\textbf{Study} & \textbf{Task, data} & \textbf{Split} & \textbf{Headline result} & \textbf{Unseen-chemistry test} \\
+\midrule
+Nelson \& Sanvito 2019~\cite{nelson2019curie} & \Tc{}, $\sim$2,500 experimental & single partition & MAE 57 K, $R^2$ 0.87 & qualitative only \\
+Long et al.\ 2021~\cite{long2021ferro} & FM/AFM + \Tc{}, 2,805 intermetallics & 90/10 & accuracy 86\%; \Tc{} MAE 58 K, $R^2$ 0.92 & no \\
+Merker et al.\ 2022~\cite{merker2022classifiers} & ordering (MP labels), 34,856 & random 80/10/10 & accuracy 77.8\%, AFM F1 0.69 & no \\
+Belot et al.\ 2023~\cite{belot2023curie} & \Tc{}, 2,557 + 3,194 & random 1/3 & MAE 69 K; other dataset 90 K & cross-dataset (overlapping) \\
+Itani et al.\ 2025 (NEMAD)~\cite{itani2025nemad} & ordering 35,037; \Tc{} 15,577 & stratified random & accuracy 0.91, AFM F1 0.80; MAE 56 K, $R^2$ 0.87 & no \\
+Abedi Orang et al.\ 2026~\cite{abediorang2026curie} & \Tc{}, 2,500 curated & random 80/20 & $R^2$ 0.87--0.91 (0.66 uncurated) & no \\
+Acosta et al.\ 2022~\cite{acosta2022ordering2d} & 2D magnets, M/NM and FM/AFM & OOB; external set & accuracy 92.5\%; FM/AFM 87--90\% & external, 54 materials \\
+This work & ordering 79,125; \Tc{} 29,740 & formula-, system-, provenance-grouped & macro-F1 0.73; \Tc{} MAE 76 K & yes (Extended Data Tables 5 and 6) \\
+\bottomrule
+\end{tabularx}
+\par\vspace{4pt}\noindent {Numbers as reported by each study, on its own data and splits; they are not directly comparable with each other or with ours. Nelson \& Sanvito, Long, Belot, NEMAD, Abedi Orang and Acosta were read as arXiv versions (results/revision/research/prior\_results\_table.md lists sources and locations). Court \& Cole 2020~\cite{court2020phase} report family-specific N\'eel-temperature predictions and no dataset-wide metric.}
+\end{table}
+
+\begin{table}
+\caption{Licences of the upstream data and the redistribution plan}
+\label{tab:tableS10_licences}
+\tablefont
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+\toprule
+\textbf{Source} & \textbf{Licence / terms} & \textbf{Redistribution of derived values} & \textbf{Plan} \\
+\midrule
+Materials Project & CC BY 4.0 (terms of use) & yes, with attribution & ship values \\
+OQMD (jarvis-tools mirror) & CC BY 4.0 & yes, with attribution & ship values \\
+JARVIS-DFT (Figshare) & CC BY 4.0 & yes, with attribution & ship values \\
+Kelly \& Cole 2025 (Figshare) & CC BY 4.0 & yes, with attribution & ship values \\
+NEMAD (Zenodo release) & CC BY 4.0 & yes, with attribution & ship values \\
+AFLOW (AFLUX) & scientific, non-commercial use only & not addressed & identifiers + script, or non-commercial release \\
+MAGNDATA (Bilbao server) & no public licence; conditional access & not granted publicly & identifiers + script, or permission \\
+Two experimental compilations & origin undocumented & unknown & identifiers only until origin is confirmed \\
+External benchmark (malaei/Magnetic\_data) & no licence & no & retrieval script with SHA-256 check \\
+\bottomrule
+\end{tabularx}
+\par\vspace{4pt}\noindent {Evidence (quoted terms and URLs) in results/revision/research/data\_licences.md. This is a report of the terms, not legal advice; the remaining decisions rest with the authors. \todo{Implement the plan for AFLOW, MAGNDATA, the compilations and the external table before deposit.}}
+\end{table}
+
+\input{tables/tableS11_curie_subgroups.tex}
+
+\section*{Reproducibility notes}
+
+\paragraph{Package and checks.} The reproducibility package (paper/; README first) contains the frozen datasets, splits, results, code, tests and the table and figure builders. SHA-256 checksums cover all data and result files.
+
+\paragraph{Revision analyses.} They are in scripts/pipeline/revision/ and results/revision/, with the analysis plan and deviations log in results/revision/PLAN.md. Three analyses planned for the revision were dropped for run time before their results were seen:
+\begin{itemize}
+\item the magnetic-physics test for ordering and the moment;
+\item the matched leave-chemical-system-out comparison;
+\item seed averaging for ordering XGBoost.
+\end{itemize}
+
+\paragraph{XGBoost thread count.} XGBoost results depend on the thread count, which acts like a random seed. Exact reproduction requires 16 threads; conclusions are stated across splits and realizations. Gradient boosting and Ridge do not depend on the thread count.
+
+\paragraph{Runtime.} On a 16-thread, 16-GB workstation:
+\begin{itemize}
+\item tier fits: about 1--3 minutes per split and target;
+\item uncertainty runs: 2--10 minutes per split;
+\item external-benchmark analyses: minutes.
+\end{itemize}
+The full revision set runs in about 3 hours when run sequentially.
+
+{\singlespacing
+\bibliography{references}
+}
+\end{document}
