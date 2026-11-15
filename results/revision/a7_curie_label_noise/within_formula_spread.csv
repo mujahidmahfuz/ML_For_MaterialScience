@@ -1,0 +1,2 @@
+scope,n_formulas,n_records,share_of_records,median_sd_k,median_mad_k,mean_sd_k,share_sd_gt_50k,share_sd_gt_100k,median_range_k
+all formulas with >=2 records,3634,19229,0.6465702757229321,4.22864882610178,0.3000000000000007,39.04970871340407,0.20913593835993396,0.12850853054485414,7.849999999999989
