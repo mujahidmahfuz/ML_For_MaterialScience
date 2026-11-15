@@ -1,9 +1,10 @@
-\begin{table}[h]
+\begin{table}
 \caption{Audit of the external Curie benchmark (2,500 records; 105 excluded in total)}
 \label{tab:tableS1_benchmark_audit}
-\begin{tabular*}{\textwidth}{@{\extracolsep\fill}llll}
+\tablefont
+\begin{tabularx}{\textwidth}{@{}l>{\raggedright\arraybackslash}Xrl@{}}
 \toprule
-Code & Check & Records & Action \\
+\textbf{Code} & \textbf{Check} & \textbf{Records} & \textbf{Action} \\
 \midrule
 A1 & Computational label (source paper reports no measurement) & 60 & excluded \\
 A2 & Malformed composition (mixed-scale, impossible ionic, shorthand) & 18 & excluded \\
@@ -14,6 +15,6 @@ A6 & Possibly not directly comparable (film, nano, pressure, 2D...) & 160 & flag
 A7 & Composition already in training repository & 1,998 & defines subsets \\
 A7 & Value identical to a value in our Curie data & 1,200 & defines subsets \\
 A8 & No DOI (book reference) & 34 & flagged \\
-\botrule
-\end{tabular*}
+\bottomrule
+\end{tabularx}
 \end{table}

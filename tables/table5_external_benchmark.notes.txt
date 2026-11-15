@@ -1,1 +1,0 @@
-Primary benchmark after the audit (2,395 of 2,500 records). Seen/blind by composition identity against the training repository. 95% intervals from a cluster bootstrap over source papers (10,000 resamples); papers = first-listed DOIs. Model and intervals unchanged from the blind test.

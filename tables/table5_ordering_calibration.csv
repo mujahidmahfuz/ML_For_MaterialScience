@@ -1,0 +1,6 @@
+Probabilities / sets,Top-label ECE,Classwise ECE,Coverage (%),FM,AFM,FiM,NM,Set size
+raw (balanced-weight) probabilities,0.064,0.035,-,-,-,-,-,-
+prior-corrected,0.090,0.049,-,-,-,-,-,-
+prior-corrected + temperature,0.014,0.032,-,-,-,-,-,-
+Class-conditional sets,-,-,90.1 (0.6),90.1,90.9,90.8,89.8,1.61
+Marginal sets,-,-,89.8 (0.9),96.2,57.0,54.3,97.7,1.39

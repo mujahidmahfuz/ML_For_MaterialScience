@@ -1,1 +1,0 @@
-Nominal coverage 90%; calibration on 20% of training formulas; coverage in %; widths in K (Curie) or μB/cell (Ms). Hardest decile = test rows with the largest model-estimated difficulty.

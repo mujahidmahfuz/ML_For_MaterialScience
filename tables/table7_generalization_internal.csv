@@ -1,0 +1,7 @@
+Test,Target,Metric,Familiar → unfamiliar,Change [95% CI],Reference
+Leave chemical system out (10 paired splits),Ordering,macro-F1,0.712 → 0.684,"-0.028 [-0.041, -0.016]",10/10 splits worse
+Leave chemical system out (10 paired splits),Curie temperature,MAE,99.2 → 101.9,"+2.7 [-16.8, +22.2]",5/10 splits worse
+Leave chemical system out (10 paired splits),Moment per cell,MAE,2.591 → 2.663,"+0.073 [-0.009, +0.154]",7/10 splits worse
+"Label agreement, MP vs experimental (949 shared formulas)",Ordering,agreement / κ,0.28 / 0.00,"κ [-0.03, 0.03]",κ = 0: chance agreement
+Label provenance: train MP → test experimental (FM/AFM/FiM),Ordering,balanced accuracy,0.769 → 0.337,"0.337 [0.273, 0.396]","shuffled-label null, 97.5th pct 0.374"
+Label provenance: train experimental → test MP (FM/AFM/FiM),Ordering,balanced accuracy,0.591 → 0.384,"0.384 [0.366, 0.401]","shuffled-label null, 97.5th pct 0.351"

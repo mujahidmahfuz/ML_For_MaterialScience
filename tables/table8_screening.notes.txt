@@ -1,0 +1,1 @@
+The 465 truly blind external records; base rate of Tc > 300 K = 0.57. Paper-cluster bootstrap 95% intervals (10,000 resamples). Distance = composition (total-variation) distance to the nearest training formula; width = width of the normalized-conformal interval.

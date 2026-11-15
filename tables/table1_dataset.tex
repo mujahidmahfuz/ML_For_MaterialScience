@@ -1,17 +1,18 @@
-\begin{table}[h]
+\begin{table}
 \caption{Prediction targets of the curated analysis dataset}
 \label{tab:table1_dataset}
-\begin{tabular*}{\textwidth}{@{\extracolsep\fill}llllll}
+\tablefont
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}Xlrrlr@{}}
 \toprule
-Target & Unit & Records & Formulas & Train / validation / test & Matched Tier 1/2/3 records \\
+\textbf{Target} & \textbf{Unit} & \textbf{Records} & \textbf{Formulas} & \textbf{Train / validation / test} & \textbf{Matched records} \\
 \midrule
 Magnetic ordering (FM/AFM/FiM/NM) & class & 79,125 & 70,293 & 55,249/11,974/11,902 & 6,061 \\
 Curie temperature & K & 29,740 & 14,145 & 20,508/4,691/4,541 & 4,602 \\
-DFT total magnetic moment per unit cell (Ms) & $\mu_\mathrm{B}$/cell & 87,513 & 77,402 & 61,254/13,130/13,129 & 10,852 \\
-Mass magnetization (secondary) & emu/g & 4,317 & 3,218 & 3,021/648/648 & - \\
-Volume magnetization (secondary) & A/m & 779 & 454 & 535/124/120 & - \\
-Anisotropy constant K1 (secondary) & J/m$^3$ & 1,847 & 1,182 & 1,296/280/271 & - \\
-\botrule
-\end{tabular*}
-\footnotetext{Analysis dataset v1.4 (frozen); formula-grouped 70/15/15 splits. Ordering classes: FM 34,098, NM 31,673, FiM 7,161, AFM 6,193. Tier 1 = 65 composition descriptors; Tier 2 = Tier 1 + 8 oxidation-chemistry descriptors; Tier 3 = Tier 2 + DFT physics descriptors (97 in total).}
+DFT total magnetic moment, per cell ($m_\mathrm{cell}$) & $\mu_\mathrm{B}$/cell & 87,513 & 77,402 & 61,254/13,130/13,129 & 10,852 \\
+Mass magnetization (secondary) & emu/g & 4,317 & 3,218 & 3,021/648/648 & -- \\
+Volume magnetization (secondary) & A/m & 779 & 454 & 535/124/120 & -- \\
+Anisotropy constant $K_1$ (secondary) & J/m$^3$ & 1,847 & 1,182 & 1,296/280/271 & -- \\
+\bottomrule
+\end{tabularx}
+\par\vspace{4pt}\raggedright\noindent Analysis dataset v1.4 (frozen); formula-grouped 70/15/15 splits. Matched records = materials with complete Tier 3 descriptors, used at every tier. Ordering classes: FM 34,098, NM 31,673, FiM 7,161, AFM 6,193. The DFT moment is the Materials Project/JARVIS total moment of the computed cell at 0 K (not an experimental saturation magnetization); the moment per formula unit ($m_\mathrm{fu}$ = $m_\mathrm{cell}\times$ atoms per formula unit / atoms in the cell, 10,821 matched rows) is analysed alongside. Tier 1 = 65 composition descriptors; Tier 2 = Tier 1 + 8 oxidation-state descriptors; Tier 3 = Tier 2 + 24 non-magnetic DFT descriptors (97).
 \end{table}

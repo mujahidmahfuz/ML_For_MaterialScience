@@ -1,0 +1,20 @@
+\begin{table}
+\caption{What the predictions support in a screening setting (blind external compositions)}
+\label{tab:table8_screening}
+\tablefont
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}Xrl@{}}
+\toprule
+\textbf{Use} & \textbf{n (papers)} & \textbf{Result} \\
+\midrule
+Abstain on composition distance, keep 100\% & 465 (81) & MAE 103 [78, 154] K; coverage 0.89 [0.83, 0.92] \\
+Abstain on composition distance, keep 50\% & 238 (42) & MAE 71 [61, 97] K; coverage 0.93 [0.88, 0.96] \\
+Abstain on interval width, keep 50\% & 233 (50) & MAE 73 [59, 109] K; coverage 0.88 [0.77, 0.92] \\
+$T_\mathrm{C}$ > 300 K from the point prediction: accuracy & 465 (81) & 0.802 [0.717, 0.879] \\
+\quad recall & 465 (81) & 0.936 [0.866, 0.973] \\
+\quad precision & 465 (81) & 0.769 [0.667, 0.902] \\
+Decide only when the 90\% interval excludes 300 K: share decided & 465 (81) & 0.374 [0.261, 0.598] \\
+\quad accuracy of those decisions & 465 (81) & 0.925 [0.837, 0.982] \\
+\bottomrule
+\end{tabularx}
+\par\vspace{4pt}\raggedright\noindent The 465 truly blind external records; base rate of $T_\mathrm{C}$ > 300 K = 0.57. Paper-cluster bootstrap 95\% intervals (10,000 resamples). Distance = composition (total-variation) distance to the nearest training formula; width = width of the normalized-conformal interval.
+\end{table}

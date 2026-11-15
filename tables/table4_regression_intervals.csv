@@ -1,0 +1,7 @@
+Target,Method,"All, mean (SD)",Mean width,High predictions,Second subgroup,Farthest distance decile
+Curie temperature,Split conformal,89.3 (6.0),569 K,top decile 65.5,text-mined 78.2,86.6
+Curie temperature,Normalized conformal,90.3 (2.5),451 K,top decile 87.4,text-mined 86.0,88.2
+Curie temperature,CQR,89.4 (5.8),519 K,top decile 68.6,text-mined 79.3,89.7
+Moment per cell,Split conformal,90.0 (0.4),12.6 μB/cell,top third 72.3,oxides 84.0,-
+Moment per cell,Normalized conformal,90.0 (0.5),11.7 μB/cell,top third 86.7,oxides 91.0,-
+Moment per cell,CQR,90.1 (0.4),9.8 μB/cell,top third 83.4,oxides 89.5,-

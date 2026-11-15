@@ -1,0 +1,11 @@
+Quantity,Value
+likely wrong label (other transition + implausible value + computational),"22/200 = 11.0% [7.4, 16.1]"
+non-Curie transition,"7/200 = 3.5% [1.7, 7.0]"
+implausible value,"7/200 = 3.5% [1.7, 7.0]"
+computational source,"8/200 = 4.0% [2.0, 7.7]"
+paper about a different compound,"32/200 = 16.0% [11.6, 21.7]"
+film/nano/amorphous sample,"25/200 = 12.5% [8.6, 17.8]"
+unclear or no title,"7/200 = 3.5% [1.7, 7.0]"
+formulas with >= 2 retained records,"3,634 (65% of records)"
+median within-formula SD of Tc,4.2 K
+share of those formulas with SD > 50 K / > 100 K,21% / 13%
