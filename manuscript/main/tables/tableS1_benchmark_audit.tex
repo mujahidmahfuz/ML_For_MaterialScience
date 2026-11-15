@@ -1,0 +1,20 @@
+\begin{table}
+\caption{Audit of the external Curie benchmark (2,500 records; 105 excluded in total)}
+\label{tab:tableS1_benchmark_audit}
+\tablefont
+\begin{tabularx}{\textwidth}{@{}l>{\raggedright\arraybackslash}Xrl@{}}
+\toprule
+\textbf{Code} & \textbf{Check} & \textbf{Records} & \textbf{Action} \\
+\midrule
+A1 & Computational label (source paper reports no measurement) & 60 & excluded \\
+A2 & Malformed composition (mixed-scale, impossible ionic, shorthand) & 18 & excluded \\
+A3 & Duplicate records (exact or same composition) & 0 & merged \\
+A4 & Outside the training target definition (rules C1-C5) & 35 & excluded \\
+A5 & Transition not a magnetic Curie point (from title) & 0 & excluded \\
+A6 & Possibly not directly comparable (film, nano, pressure, 2D...) & 160 & flagged \\
+A7 & Composition already in training repository & 1,998 & defines subsets \\
+A7 & Value identical to a value in our Curie data & 1,200 & defines subsets \\
+A8 & No DOI (book reference) & 34 & flagged \\
+\bottomrule
+\end{tabularx}
+\end{table}

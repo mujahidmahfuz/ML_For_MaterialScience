@@ -1,0 +1,18 @@
+\begin{table}
+\caption{Why Curie interval coverage varies between splits, and distance-aware conformal variants}
+\label{tab:tableS6_design_effect_distance_conformal}
+\tablefont
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}Xrrrrrr@{}}
+\toprule
+\textbf{Method / variant} & \textbf{Design effect} & \textbf{Effective size} & \textbf{Implied SD} & \textbf{Observed SD} & \textbf{Mean coverage} & \textbf{Farthest decile} \\
+\midrule
+Split conformal & 13.7 & 305 & 0.5 / 1.7 & 6.0 & -- & -- \\
+Normalized conformal & 12.4 & 337 & 0.5 / 1.6 & 2.5 & -- & -- \\
+CQR & 16.7 & 251 & 0.5 / 1.9 & 5.8 & -- & -- \\
+Normalized, plain & -- & -- & -- & 2.5 & 90.3 & 88.2 \\
+Normalized, calibrated per distance quartile & -- & -- & -- & 2.3 & 89.5 & 90.3 \\
+Normalized, weighted for covariate shift & -- & -- & -- & 2.4 & 90.3 & 88.2 \\
+\bottomrule
+\end{tabularx}
+\par\vspace{4pt}\raggedright\noindent Design effect from the within-formula intraclass correlation of the calibration exceedance indicator. Effective size = effective number of independent calibration units. Implied SD of training-conditional coverage: for exchangeable rows / for the effective size. Observed SD across 10 splits. SD and coverage in percentage points; farthest decile = coverage in the farthest decile of composition distance.
+\end{table}

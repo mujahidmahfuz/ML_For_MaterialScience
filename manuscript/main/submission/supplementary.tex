@@ -1,0 +1,480 @@
+%% Supplementary Information for "Reliability beyond accuracy in machine learning of magnetic materials".
+%% Springer Nature LaTeX template (sn-jnl.cls), same conventions as manuscript.tex: one file, tables inline, references
+%% pasted in by inline_references.py. Supplementary Information holds tables only (no figures). No author names yet.
+
+\documentclass[pdflatex,sn-nature]{sn-jnl}
+
+\usepackage{graphicx}%
+\usepackage{multirow}%
+\usepackage{amsmath,amssymb,amsfonts}%
+\usepackage{amsthm}%
+\usepackage{mathrsfs}%
+\usepackage[title]{appendix}%
+\usepackage{xcolor}%
+\usepackage{textcomp}%
+\usepackage{manyfoot}%
+\usepackage{booktabs}%
+\usepackage{array}%
+
+\newcommand{\muB}{\ensuremath{\mu_\mathrm{B}}}
+\newcommand{\Tc}{\ensuremath{T_\mathrm{C}}}
+\newcommand{\ci}[2]{[#1, #2]}
+\newcommand{\hd}[1]{\begin{tabular}[b]{@{}c@{}}#1\end{tabular}}
+\newcommand{\est}[3]{\begin{tabular}[t]{@{}l@{}}#1\\{[}#2, #3{]}\end{tabular}}
+
+\raggedbottom
+\unnumbered
+\brokenpenalty=500
+\renewcommand{\tablename}{Supplementary Table}
+
+\begin{document}
+
+\title[Supplementary Information]{Supplementary Information for: Reliability beyond accuracy in machine learning of magnetic materials}
+
+\maketitle
+
+\section{Contents}
+
+\begin{itemize}
+\item Supplementary Tables 1--3: audit of the external Curie benchmark, comparisons between its subsets, and error by composition distance.
+\item Supplementary Table 4: the external benchmark under three resampling units and two interval types.
+\item Supplementary Table 5: residual label noise in the curated Curie target.
+\item Supplementary Table 6: design effects and distance-aware conformal variants.
+\item Supplementary Table 7: ordering performance with and without compounds that lack a magnetism-capable element.
+\item Supplementary Table 8: tier effects for the DFT moment per formula unit and per atom.
+\item Supplementary Table 9: prior machine-learning results for magnetic ordering and the Curie temperature.
+\item Supplementary Table 10: licences of the upstream data.
+\item Supplementary Table 11: Curie-temperature interval coverage in every subgroup evaluated.
+\item Supplementary Table 12: ordering labels of Materials Project against experimental sources, and transfer between them.
+\item Reproducibility notes.
+\end{itemize}
+
+Extended Data items and Methods sections referred to below are those of the main article.
+
+%% ---------------------------------------------------------------------------------------------------------- Table 1
+\begin{table}[!ht]
+\caption{\textbf{Audit of the external Curie benchmark (2,500 records; 105 excluded in total).}}\label{tab:s1}%
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lp{215pt}lr@{}}
+\toprule
+Code & Check & Action & Records \\
+\midrule
+A1 & Computational label (source paper reports no measurement) & excluded & 60 \\
+A2 & Malformed composition (mixed-scale, impossible ionic, shorthand) & excluded & 18 \\
+A3 & Duplicate records (exact or same composition) & merged & 0 \\
+A4 & Outside the training target definition (rules C1--C5) & excluded & 35 \\
+A5 & Transition not a magnetic Curie point (from the title) & excluded & 0 \\
+A6 & Possibly not directly comparable (film, nanoscale, pressure, 2D) & flagged & 160 \\
+A7 & Composition already in the training repository & defines subsets & 1,998 \\
+A7 & Value identical to a value in our Curie data & defines subsets & 1,200 \\
+A8 & No DOI (book reference) & flagged & 34 \\
+\botrule
+\end{tabular*}
+\footnotetext{Some records fall under more than one exclusion code, so the exclusions sum to more than 105. The checks were written down before any record-level error was linked to an audit flag or to a distance (Methods, External benchmark and audit).}
+\end{table}
+
+%% ---------------------------------------------------------------------------------------------------------- Table 2
+\begin{table}[!ht]
+\caption{\textbf{Grouped-bootstrap comparisons between external-benchmark subsets (first minus second subset).}}\label{tab:s2}%
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}llrlr@{}}
+\toprule
+Resampling unit & MAE difference (K) & \hd{Share\\worse} & $R^2$ difference & \hd{Share\\worse} \\
+\midrule
+\multicolumn{5}{@{}l}{\textit{Blind, unseen system vs blind, seen system}}\\
+Paper & $+81$ \ci{$-27$}{$+165$} & 0.89 & $-0.95$ \ci{$-1.69$}{$-0.06$} & 0.99 \\
+Paper (first DOI) & $+81$ \ci{$-23$}{$+164$} & 0.91 & $-0.95$ \ci{$-1.68$}{$-0.08$} & 0.99 \\
+Chemical system & $+81$ \ci{$+29$}{$+145$} & 1.00 & $-0.95$ \ci{$-1.50$}{$-0.53$} & 1.00 \\
+\midrule
+\multicolumn{5}{@{}l}{\textit{Blind vs seen composition}}\\
+Paper & $+45$ \ci{$+22$}{$+94$} & 1.00 & $-0.12$ \ci{$-0.44$}{$+0.01$} & 0.96 \\
+Paper (first DOI) & $+45$ \ci{$+23$}{$+71$} & 1.00 & $-0.12$ \ci{$-0.38$}{$+0.02$} & 0.95 \\
+Chemical system & $+45$ \ci{$+32$}{$+60$} & 1.00 & $-0.12$ \ci{$-0.26$}{$-0.02$} & 1.00 \\
+\midrule
+\multicolumn{5}{@{}l}{\textit{Blind, new paper, unseen system vs blind, new paper, seen system}}\\
+Paper & $+39$ \ci{$-42$}{$+170$} & 0.76 & $-0.95$ \ci{$-4.95$}{$+0.06$} & 0.96 \\
+Paper (first DOI) & $+39$ \ci{$-39$}{$+145$} & 0.77 & $-0.95$ \ci{$-2.86$}{$+0.05$} & 0.96 \\
+Chemical system & $+39$ \ci{$-38$}{$+142$} & 0.76 & $-0.95$ \ci{$-2.70$}{$+0.05$} & 0.96 \\
+\botrule
+\end{tabular*}
+\footnotetext{Differences with 95\% cluster-bootstrap intervals; `share worse' is the fraction of bootstrap resamples in which the first subset is worse. Subset names as in Extended Data Table~6.}
+\end{table}
+
+%% ---------------------------------------------------------------------------------------------------------- Table 3
+\begin{table}[!ht]
+\caption{\textbf{Error and interval behaviour by composition distance to the training set (465 blind records).}}\label{tab:s3}%
+\setlength{\tabcolsep}{2.5pt}%
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}llrlrlr@{}}
+\toprule
+\hd{Distance\\quartile} & \hd{Composition\\distance} & \hd{$n$\\(papers)} & MAE (K) & \hd{Mean\\width (K)} & Coverage & \hd{Unseen-\\system share} \\
+\midrule
+Q1 (closest) & 0.000--0.015 & 117 (31) & 62.3 \ci{49.7}{93.0} & 388 & 0.95 \ci{0.89}{0.98} & 0.00 \\
+Q2 & 0.015--0.033 & 121 (24) & 79.8 \ci{66.4}{109.1} & 380 & 0.91 \ci{0.86}{0.96} & 0.12 \\
+Q3 & 0.034--0.083 & 114 (39) & 106.4 \ci{81.0}{145.8} & 424 & 0.87 \ci{0.80}{0.93} & 0.12 \\
+Q4 (farthest) & 0.087--0.550 & 113 (37) & 165.3 \ci{98.8}{240.2} & 529 & 0.85 \ci{0.72}{0.93} & 0.36 \\
+\botrule
+\end{tabular*}
+\footnotetext{Composition distance: total-variation distance between element-fraction vectors, to the nearest training formula. Paper-cluster bootstrap 95\% intervals. Width and coverage refer to the 90\% normalized conformal interval.}
+\end{table}
+
+%% ---------------------------------------------------------------------------------------------------------- Table 4
+\begin{table}[!ht]
+\caption{\textbf{External benchmark under three resampling units and two interval types.}}\label{tab:s4}%
+\setlength{\tabcolsep}{4pt}%
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lrllll@{}}
+\toprule
+Resampling unit & $n$ (clusters) & $R^2$, percentile & $R^2$, BCa & Skill, BCa & \hd{Upper limit\\$\leq$ 0.2?} \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Blind}}\\
+Paper & 465 (81) & \est{0.69}{0.38}{0.81} & \est{0.69}{0.43}{0.82} & \est{0.70}{0.41}{0.84} & no \\[1pt]
+Paper (first DOI) & 465 (134) & \est{0.69}{0.41}{0.82} & \est{0.69}{0.43}{0.82} & \est{0.70}{0.44}{0.84} & no \\[1pt]
+Chemical system & 465 (251) & \est{0.69}{0.55}{0.78} & \est{0.69}{0.56}{0.78} & \est{0.70}{0.58}{0.80} & no \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Blind, seen chemical system}}\\
+Paper & 396 (72) & \est{0.78}{0.57}{0.84} & \est{0.78}{0.67}{0.87} & \est{0.79}{0.66}{0.89} & no \\[1pt]
+Paper (first DOI) & 396 (121) & \est{0.78}{0.60}{0.85} & \est{0.78}{0.65}{0.86} & \est{0.79}{0.65}{0.88} & no \\[1pt]
+Chemical system & 396 (203) & \est{0.78}{0.68}{0.84} & \est{0.78}{0.70}{0.85} & \est{0.79}{0.71}{0.87} & no \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Blind, unseen chemical system}}\\
+Paper & 69 (18) & \est{$-0.17$}{$-0.91$}{0.68} & \est{$-0.17$}{$-1.02$}{0.64} & \est{$-0.17$}{$-0.77$}{0.56} & no \\[1pt]
+Paper (first DOI) & 69 (26) & \est{$-0.17$}{$-0.89$}{0.66} & \est{$-0.17$}{$-0.97$}{0.63} & \est{$-0.17$}{$-0.77$}{0.56} & no \\[1pt]
+Chemical system & 69 (48) & \est{$-0.17$}{$-0.71$}{0.23} & \est{$-0.17$}{$-0.75$}{0.21} & \est{$-0.17$}{$-0.77$}{0.17} & skill only \\
+\botrule
+\end{tabular*}
+\footnotetext{Skill = 1 $-$ MSE/MSE of a constant prediction equal to the training mean (338~K). Last column: whether the upper 95\% limit of $R^2$ or of the skill is at most 0.2. Our prespecified wording rule applies this condition to $R^2$ before `no skill beyond the mean' may be stated. Under chemical-system resampling only the skill meets it (upper limit 0.17); the BCa upper limit of $R^2$ is 0.21 there.}
+\end{table}
+
+%% ---------------------------------------------------------------------------------------------------------- Table 5
+\begin{table}[!ht]
+\caption{\textbf{Residual label noise in the curated Curie target.}}\label{tab:s5}%
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}p{240pt}r@{}}
+\toprule
+Quantity & Value \\
+\midrule
+\multicolumn{2}{@{}l}{\textit{Title-based screen of 200 records}}\\
+Likely wrong label (other transition, implausible value or computational source) & 22/200 = 11.0\% \ci{7.4}{16.1} \\
+\quad Transition other than a magnetic Curie point & 7/200 = 3.5\% \ci{1.7}{7.0} \\
+\quad Implausible value & 7/200 = 3.5\% \ci{1.7}{7.0} \\
+\quad Computational source & 8/200 = 4.0\% \ci{2.0}{7.7} \\
+Paper about a different compound & 32/200 = 16.0\% \ci{11.6}{21.7} \\
+Film, nanoscale or amorphous sample & 25/200 = 12.5\% \ci{8.6}{17.8} \\
+Unclear or no title & 7/200 = 3.5\% \ci{1.7}{7.0} \\
+\midrule
+\multicolumn{2}{@{}l}{\textit{Repeated records of one formula}}\\
+Formulas with at least two retained records & 3,634 (65\% of records) \\
+Median within-formula standard deviation of \Tc{} & 4.2 K \\
+Share of those formulas with a standard deviation above 50 K / above 100 K & 21\% / 13\% \\
+\botrule
+\end{tabular*}
+\footnotetext{Title-based screen, not a full-text audit: a random sample of 200 retained records stratified by source and \Tc{} tercile (seed 20261110), each classified with the help of a large language model from the Crossref title, the compound and the plausibility of the value; Wilson 95\% intervals in \%. The label of every record is released with the reproducibility package (\texttt{results/revision/a7\_curie\_label\_noise/title\_audit\_adjudicated.csv}).}
+\end{table}
+
+%% ---------------------------------------------------------------------------------------------------------- Table 6
+\begin{table}[!ht]
+\caption{\textbf{Why Curie interval coverage varies between splits, and distance-aware conformal variants.}}\label{tab:s6}%
+\setlength{\tabcolsep}{3pt}%
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lrrrrrr@{}}
+\toprule
+Method or variant & \hd{Design\\effect} & \hd{Effective\\size} & \hd{Implied s.d.\\(rows / units)} & \hd{Observed\\s.d.} & \hd{Mean\\coverage} & \hd{Farthest\\decile} \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Variability between splits}}\\
+Split conformal & 13.7 & 305 & 0.5 / 1.7 & 6.0 & -- & -- \\
+Normalized conformal & 12.4 & 337 & 0.5 / 1.6 & 2.5 & -- & -- \\
+CQR & 16.7 & 251 & 0.5 / 1.9 & 5.8 & -- & -- \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Distance-aware variants of normalized conformal}}\\
+Plain & -- & -- & -- & 2.5 & 90.3 & 88.2 \\
+Calibrated per distance quartile & -- & -- & -- & 2.3 & 89.5 & 90.3 \\
+Weighted for covariate shift & -- & -- & -- & 2.4 & 90.3 & 88.2 \\
+\botrule
+\end{tabular*}
+\footnotetext{Design effect from the within-formula intraclass correlation of the indicator that a calibration row exceeds its interval. Effective size: effective number of independent calibration units. Implied s.d.: standard deviation of training-conditional coverage expected for exchangeable rows and for the effective size. Observed s.d.: across ten splits. Standard deviations and coverages in percentage points; farthest decile = coverage in the farthest decile of composition distance.}
+\end{table}
+
+%% ---------------------------------------------------------------------------------------------------------- Table 7
+\begin{table}[!ht]
+\caption{\textbf{Magnetic-ordering performance with and without compounds that lack a magnetism-capable element.}}\label{tab:s7}%
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}p{180pt}rr@{}}
+\toprule
+Quantity & \hd{All test\\compounds} & \hd{Compounds with a magnetism-\\capable element} \\
+\midrule
+Macro-F1 (four classes) & 0.692 & 0.681 \\
+Macro-F1 over FM, AFM and FiM & -- & 0.654 \\
+Recall, FM & 0.774 & 0.800 \\
+Recall, AFM & 0.546 & 0.551 \\
+Recall, FiM & 0.485 & 0.500 \\
+Recall, NM & 0.906 & 0.837 \\
+\botrule
+\end{tabular*}
+\footnotetext{Tier~1 XGBoost on the full ordering population; means over ten prespecified splits. Magnetism-capable elements: the list of curation rule C1 (Methods). Compounds with such an element make up 0.683 of all test rows and 0.388 of the non-magnetic test rows.}
+\end{table}
+
+%% ---------------------------------------------------------------------------------------------------------- Table 8
+\begin{table}[!ht]
+\caption{\textbf{Tier effects for the DFT moment per formula unit and per atom.}}\label{tab:s8}%
+\setlength{\tabcolsep}{2.5pt}%
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}llrrl@{}}
+\toprule
+Algorithm & Contrast & Improvement & \hd{Splits\\better} & Verdict \\
+\midrule
+\multicolumn{5}{@{}l}{\textit{Per formula unit, all rows (\muB{} per formula unit)}}\\
+Ridge & Tier 1 $\to$ Tier 2 & $+0.018$ \ci{$+0.013$}{$+0.023$} & 10/10 & stable gain \\
+Ridge & Tier 1 $\to$ Tier 3 & $+0.053$ \ci{$+0.035$}{$+0.070$} & 10/10 & stable gain \\
+Ridge & Tier 2 $\to$ Tier 3 & $+0.034$ \ci{$+0.015$}{$+0.054$} & 10/10 & stable gain \\
+Ridge & Tier 1 $\to$ Tier 2 + site count & $+0.022$ \ci{$+0.017$}{$+0.027$} & 10/10 & stable gain \\
+Ridge & Tier 2 + site count $\to$ Tier 3 & $+0.030$ \ci{$+0.010$}{$+0.051$} & 10/10 & stable gain \\
+Gradient boosting & Tier 1 $\to$ Tier 2 & $+0.012$ \ci{$-0.009$}{$+0.032$} & 7/10 & borderline gain \\
+Gradient boosting & Tier 1 $\to$ Tier 3 & $+0.031$ \ci{$+0.014$}{$+0.048$} & 10/10 & stable gain \\
+Gradient boosting & Tier 2 $\to$ Tier 3 & $+0.019$ \ci{$+0.003$}{$+0.036$} & 10/10 & stable gain \\
+Gradient boosting & Tier 1 $\to$ Tier 2 + site count & $+0.017$ \ci{$-0.003$}{$+0.038$} & 9/10 & borderline gain \\
+Gradient boosting & Tier 2 + site count $\to$ Tier 3 & $+0.014$ \ci{$-0.001$}{$+0.028$} & 9/10 & none \\
+XGBoost & Tier 1 $\to$ Tier 2 & $+0.009$ \ci{$-0.013$}{$+0.030$} & 7/10 & none \\
+XGBoost & Tier 1 $\to$ Tier 3 & $+0.023$ \ci{$+0.010$}{$+0.036$} & 10/10 & stable gain \\
+XGBoost & Tier 2 $\to$ Tier 3 & $+0.014$ \ci{$-0.015$}{$+0.043$} & 9/10 & none \\
+XGBoost & Tier 1 $\to$ Tier 2 + site count & $+0.019$ \ci{$-0.007$}{$+0.046$} & 8/10 & borderline gain \\
+XGBoost & Tier 2 + site count $\to$ Tier 3 & $+0.004$ \ci{$-0.026$}{$+0.033$} & 5/10 & none \\
+\midrule
+\multicolumn{5}{@{}l}{\textit{Per formula unit, non-zero moments only (\muB{} per formula unit)}}\\
+Ridge & Tier 1 $\to$ Tier 2 & $+0.018$ \ci{$+0.013$}{$+0.023$} & 10/10 & stable gain \\
+Ridge & Tier 1 $\to$ Tier 3 & $+0.053$ \ci{$+0.036$}{$+0.071$} & 10/10 & stable gain \\
+Ridge & Tier 2 $\to$ Tier 3 & $+0.035$ \ci{$+0.015$}{$+0.054$} & 10/10 & stable gain \\
+Ridge & Tier 1 $\to$ Tier 2 + site count & $+0.022$ \ci{$+0.017$}{$+0.027$} & 10/10 & stable gain \\
+Ridge & Tier 2 + site count $\to$ Tier 3 & $+0.031$ \ci{$+0.011$}{$+0.051$} & 10/10 & stable gain \\
+Gradient boosting & Tier 1 $\to$ Tier 2 & $+0.011$ \ci{$-0.009$}{$+0.032$} & 7/10 & borderline gain \\
+Gradient boosting & Tier 1 $\to$ Tier 3 & $+0.031$ \ci{$+0.014$}{$+0.049$} & 10/10 & stable gain \\
+Gradient boosting & Tier 2 $\to$ Tier 3 & $+0.020$ \ci{$+0.003$}{$+0.037$} & 10/10 & stable gain \\
+Gradient boosting & Tier 1 $\to$ Tier 2 + site count & $+0.017$ \ci{$-0.003$}{$+0.038$} & 9/10 & borderline gain \\
+Gradient boosting & Tier 2 + site count $\to$ Tier 3 & $+0.014$ \ci{$-0.000$}{$+0.029$} & 9/10 & none \\
+XGBoost & Tier 1 $\to$ Tier 2 & $+0.009$ \ci{$-0.013$}{$+0.031$} & 7/10 & none \\
+XGBoost & Tier 1 $\to$ Tier 3 & $+0.024$ \ci{$+0.012$}{$+0.037$} & 10/10 & stable gain \\
+XGBoost & Tier 2 $\to$ Tier 3 & $+0.015$ \ci{$-0.013$}{$+0.043$} & 9/10 & none \\
+XGBoost & Tier 1 $\to$ Tier 2 + site count & $+0.019$ \ci{$-0.008$}{$+0.046$} & 8/10 & borderline gain \\
+XGBoost & Tier 2 + site count $\to$ Tier 3 & $+0.005$ \ci{$-0.023$}{$+0.033$} & 5/10 & none \\
+\midrule
+\multicolumn{5}{@{}l}{\textit{Per atom (moment divided by the number of sites), all rows (\% of MAE)}}\\
+Ridge & Tier 1 $\to$ Tier 3 & $+6.0$ \ci{$+5.1$}{$+6.8$} & 10/10 & stable gain \\
+Gradient boosting & Tier 1 $\to$ Tier 3 & $+2.9$ \ci{$+1.5$}{$+4.4$} & 9/10 & stable gain \\
+XGBoost & Tier 1 $\to$ Tier 3 & $+2.8$ \ci{$+1.6$}{$+3.9$} & 10/10 & stable gain \\
+\botrule
+\end{tabular*}
+\footnotetext{Per formula unit: 10,821 rows, ten prespecified splits, Nadeau--Bengio 95\% intervals; improvement positive = better; verdicts as in Extended Data Table~1. `Site count' is the number of sites in the DFT cell. Per atom: the same rows and splits in an earlier analysis with the corrected same-calculation atom count; relative MAE gain with a descriptive across-split $t$ interval. XGBoost: one realization.}
+\end{table}
+
+%% ---------------------------------------------------------------------------------------------------------- Table 9
+\begin{table}[!ht]
+\caption{\textbf{Prior machine-learning results for magnetic ordering and the Curie temperature, as reported.}}\label{tab:s9}%
+\setlength{\tabcolsep}{4pt}%
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{62pt}>{\raggedright\arraybackslash}p{78pt}>{\raggedright\arraybackslash}p{56pt}>{\raggedright\arraybackslash}p{92pt}>{\raggedright\arraybackslash}p{52pt}@{}}
+\toprule
+Study & Task and data & Split & Headline result & Unseen-chemistry test \\
+\midrule
+Nelson and Sanvito 2019\cite{nelson2019curie} & \Tc{}; about 2,500 experimental & single partition & MAE 57 K, $R^2$ 0.87 & qualitative only \\[2pt]
+Long et al.\ 2021\cite{long2021ferro} & FM/AFM and \Tc{}; 2,805 intermetallics & 90/10 & accuracy 86\%; \Tc{} MAE 58 K, $R^2$ 0.92 & no \\[2pt]
+Merker et al.\ 2022\cite{merker2022classifiers} & ordering (Materials Project labels); 34,856 & random 80/10/10 & accuracy 77.8\%; AFM F1 0.69 & no \\[2pt]
+Belot et al.\ 2023\cite{belot2023curie} & \Tc{}; 2,557 and 3,194 & random one third & MAE 69 K; other dataset 90 K & cross-dataset (overlapping) \\[2pt]
+Itani et al.\ 2025 (NEMAD)\cite{itani2025nemad} & ordering 35,037; \Tc{} 15,577 & stratified random & accuracy 0.91, AFM F1 0.80; MAE 56 K, $R^2$ 0.87 & no \\[2pt]
+Orang et al.\ 2026\cite{abediorang2026curie} & \Tc{}; 2,500 curated & random 80/20 & $R^2$ 0.87--0.91 (0.66 uncurated) & no \\[2pt]
+Acosta et al.\ 2022\cite{acosta2022ordering2d} & 2D magnets; magnetic/non-magnetic and FM/AFM & out-of-bag; external set & accuracy 92.5\%; FM/AFM 87--90\% & external, 54 materials \\[2pt]
+This work & ordering 79,125; \Tc{} 29,740 & formula-, system- and provenance-grouped & macro-F1 0.73; \Tc{} MAE 76 K & yes (Extended Data Tables 5 and 6) \\
+\botrule
+\end{tabular}
+\footnotetext{Numbers as reported by each study, on its own data and splits; they are not directly comparable with each other or with ours. The studies of Nelson and Sanvito, Long et al., Belot et al., Itani et al., Orang et al.\ and Acosta et al.\ were read as arXiv versions. Court and Cole\cite{court2020phase} report family-specific N\'eel-temperature predictions and no dataset-wide metric.}
+\end{table}
+
+%% ---------------------------------------------------------------------------------------------------------- Table 10
+\begin{table}[!ht]
+\caption{\textbf{Licences of the upstream data.}}\label{tab:s10}%
+\setlength{\tabcolsep}{4pt}%
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{110pt}>{\raggedright\arraybackslash}p{90pt}>{\raggedright\arraybackslash}p{70pt}>{\raggedright\arraybackslash}p{78pt}@{}}
+\toprule
+Source & Licence or terms & \hd{Redistribution of\\derived values} & Planned release \\
+\midrule
+Materials Project & CC BY 4.0 (terms of use) & yes, with attribution & values \\
+OQMD (jarvis-tools mirror) & CC BY 4.0 & yes, with attribution & values \\
+JARVIS-DFT (Figshare) & CC BY 4.0 & yes, with attribution & values \\
+Kelly and Cole 2025 (Figshare) & CC BY 4.0 & yes, with attribution & values \\
+NEMAD (Zenodo release) & CC BY 4.0 & yes, with attribution & values \\
+AFLOW (AFLUX) & scientific, non-commercial use only & not addressed & identifiers and retrieval script \\
+MAGNDATA (Bilbao server) & no public licence; conditional access & not granted publicly & identifiers and retrieval script \\
+Two experimental compilations & origin undocumented & unknown & identifiers only \\
+External benchmark table & no licence & no & retrieval script with SHA-256 check \\
+\botrule
+\end{tabular}
+\footnotetext{A report of the stated terms, not legal advice; the quoted terms and their URLs are kept with the reproducibility package.}
+\end{table}
+
+%% ---------------------------------------------------------------------------------------------------------- Table 11
+\begin{table}[!ht]
+\caption{\textbf{Coverage (\%) of 90\% Curie-temperature intervals in every subgroup evaluated.}}\label{tab:s11}%
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}p{190pt}rrrr@{}}
+\toprule
+Subgroup & \hd{Median\\formulas} & Split & Normalized & CQR \\
+\midrule
+All test materials & 2,103 & 89.3 & 90.3 & 89.4 \\
+Top decile of predicted value & 117 & 65.5 & 87.4 & 68.6 \\
+Farthest distance decile & 232 & 86.6 & 88.2 & 89.7 \\
+\midrule
+\multicolumn{5}{@{}l}{\textit{Label source}}\\
+Text-mined database & 544 & 78.2 & 86.0 & 79.3 \\
+Curated compilation (anisotropy) & 461 & 92.7 & 92.4 & 92.4 \\
+Curated compilation (magnetic materials) & 1,534 & 95.4 & 92.2 & 94.9 \\
+\midrule
+\multicolumn{5}{@{}l}{\textit{Chemical family}}\\
+Actinide & 47 & 96.2 & 88.9 & 89.6 \\
+Intermetallic & 1,137 & 92.9 & 91.4 & 92.9 \\
+Oxide & 653 & 92.3 & 89.9 & 91.5 \\
+Physics-complete (full Tier~3 record) & 81 & 70.2 & 87.0 & 74.5 \\
+Rare earth & 1,117 & 97.0 & 91.8 & 95.5 \\
+Transition metal & 2,020 & 88.9 & 90.1 & 89.2 \\
+\midrule
+\multicolumn{5}{@{}l}{\textit{Circular definition, for comparison only}}\\
+Hardest decile of the normalized method's own difficulty scale & 84 & 54.2 & 88.5 & 61.0 \\
+\botrule
+\end{tabular*}
+\footnotetext{Means over ten prespecified splits. The constant-width methods over-cover several families (rare earth, actinide, intermetallic) because their intervals are wide everywhere; normalized conformal stays within about 2 points of nominal except for text-mined labels and physics-complete materials.}
+\end{table}
+
+%% ---------------------------------------------------------------------------------------------------------- Table 12
+\begin{table}[!ht]
+\caption{\textbf{Ordering labels of Materials Project against experimental sources, and transfer between them.}}\label{tab:s12}%
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lrrrrr@{}}
+\toprule
+\multicolumn{6}{@{}l}{\textbf{a}\enspace Labels of the 949 formulas labelled by both sources}\\
+\midrule
+& \multicolumn{4}{c}{Materials Project label} & \\
+\cmidrule{2-5}
+Experimental label & AFM & FM & FiM & NM & Total \\
+\midrule
+AFM & 49 & 336 & 47 & 76 & 508 \\
+FM & 6 & 189 & 124 & 47 & 366 \\
+FiM & 2 & 41 & 27 & 4 & 74 \\
+NM & 0 & 0 & 1 & 0 & 1 \\
+\botrule
+\end{tabular*}
+
+\vspace{12pt}
+\setlength{\tabcolsep}{3pt}%
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lrrrrr@{}}
+\toprule
+\multicolumn{6}{@{}l}{\textbf{b}\enspace Transfer of XGBoost models on the FM, AFM and FiM classes}\\
+\midrule
+& & \multicolumn{3}{c}{Recall} & \\
+\cmidrule{3-5}
+Training $\to$ test labels, probabilities & Balanced accuracy & FM & AFM & FiM & Test rows \\
+\midrule
+MP $\to$ experimental, raw & 0.337 \ci{0.273}{0.396} & 0.59 & 0.07 & 0.35 & 2,772 \\
+MP $\to$ experimental, prior-corrected & 0.314 \ci{0.247}{0.381} & 0.67 & 0.05 & 0.22 & 2,772 \\
+Experimental $\to$ MP, raw & 0.384 \ci{0.366}{0.401} & 0.19 & 0.90 & 0.06 & 4,377 \\
+Experimental $\to$ MP, prior-corrected & 0.400 \ci{0.370}{0.430} & 0.60 & 0.57 & 0.04 & 4,377 \\
+Experimental $\to$ experimental, raw & 0.769 \ci{0.727}{0.811} & 0.89 & 0.90 & 0.52 & 2,772 \\
+MP $\to$ MP, raw & 0.591 \ci{0.562}{0.618} & 0.91 & 0.31 & 0.56 & 4,377 \\
+\botrule
+\end{tabular*}
+\footnotetext{MP, Materials Project. \textbf{a}, Most frequent label of each provenance per formula; agreement 28\%, Cohen's $\kappa$ = 0.00 \ci{$-0.03$}{0.03}. \textbf{b}, 95\% intervals from a bootstrap over formulas; prior-corrected = probabilities corrected to the class prior of the training partition of the target domain. Null distribution from 20 refits on permuted training labels: median 0.342 and 97.5th percentile 0.374 (MP $\to$ experimental), 97.5th percentile 0.351 (experimental $\to$ MP). Median composition distance of the test formulas to the nearest training formula: 0.081 (MP $\to$ experimental), 0.169 (experimental $\to$ MP), 0.077 (within MP) and 0.033 (within experimental). Gradient boosting gives the same picture.}
+\end{table}
+
+\clearpage
+\section{Reproducibility notes}
+
+\subsection{Package and checks}
+The reproducibility package contains the frozen datasets, splits, results, code, tests and the builders of the tables and figures. SHA-256 checksums cover all data and result files.
+
+\subsection{Later analyses}
+The analyses planned in writing after the first round of checks are in the package folders \texttt{scripts/pipeline/revision} and \texttt{results/revision}, with the analysis plan and its log of deviations in \texttt{results/revision/PLAN.md}. Six planned analyses were dropped for run time before any of their results were seen:
+\begin{itemize}
+\item the magnetic-physics test for ordering and for the moment;
+\item the Curie-temperature comparison restricted to records whose source reports the same space group as the computed polymorph;
+\item the matched leave-chemical-system-out comparison;
+\item seed averaging for the ordering XGBoost models;
+\item a rerun of the moment intervals with per-row output (the saved subgroups of the earlier run are used);
+\item a refit for the ordering decomposition (its quantities come from saved probabilities).
+\end{itemize}
+The categories of the title-based screen were extended during classification (Methods).
+
+\subsection{XGBoost thread count}
+XGBoost results depend on the thread count, which acts like a random seed. Exact reproduction requires 16 threads; conclusions are stated across splits and realizations. Gradient boosting and ridge regression do not depend on the thread count.
+
+\subsection{Run time}
+On a 16-thread workstation with 16 GB of memory, the tier fits take about 1--3 minutes per split and target, the uncertainty runs 2--10 minutes per split, and the external-benchmark analyses a few minutes. The full set of later analyses runs in about 3 hours when run sequentially.
+
+%% References of the Supplementary Information (numbered separately). Generated by inline_references.py.
+%%% BEGIN REFERENCES
+\begin{thebibliography}{1}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\burl{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
+\providecommand{\doi}[1]{\url{https://doi.org/#1}}
+\bibcommenthead
+
+\bibitem{nelson2019curie}
+\bibinfo{author}{Nelson, J.} \& \bibinfo{author}{Sanvito, S.}
+\newblock \bibinfo{title}{Predicting the {Curie} temperature of ferromagnets
+  using machine learning}.
+\newblock \emph{\bibinfo{journal}{Physical Review Materials}}
+  \textbf{\bibinfo{volume}{3}}, \bibinfo{pages}{104405} (\bibinfo{year}{2019}).
+
+\bibitem{long2021ferro}
+\bibinfo{author}{Long, T.}, \bibinfo{author}{Fortunato, N.~M.},
+  \bibinfo{author}{Zhang, Y.}, \bibinfo{author}{Gutfleisch, O.} \&
+  \bibinfo{author}{Zhang, H.}
+\newblock \bibinfo{title}{{An accelerating approach of designing ferromagnetic
+  materials via machine learning modeling of magnetic ground state and Curie
+  temperature}}.
+\newblock \emph{\bibinfo{journal}{Materials Research Letters}}
+  \textbf{\bibinfo{volume}{9}}, \bibinfo{pages}{169--174}
+  (\bibinfo{year}{2021}).
+
+\bibitem{merker2022classifiers}
+\bibinfo{author}{Merker, H.~A.} \emph{et~al.}
+\newblock \bibinfo{title}{{Machine learning magnetism classifiers from atomic
+  coordinates}}.
+\newblock \emph{\bibinfo{journal}{iScience}} \textbf{\bibinfo{volume}{25}},
+  \bibinfo{pages}{105192} (\bibinfo{year}{2022}).
+
+\bibitem{belot2023curie}
+\bibinfo{author}{Belot, J.~F.}, \bibinfo{author}{Taufour, V.},
+  \bibinfo{author}{Sanvito, S.} \& \bibinfo{author}{Hart, G. L.~W.}
+\newblock \bibinfo{title}{Machine learning predictions of
+  high-{Curie}-temperature materials}.
+\newblock \emph{\bibinfo{journal}{Applied Physics Letters}}
+  \textbf{\bibinfo{volume}{123}}, \bibinfo{pages}{042405}
+  (\bibinfo{year}{2023}).
+
+\bibitem{itani2025nemad}
+\bibinfo{author}{Itani, S.}, \bibinfo{author}{Zhang, Y.} \&
+  \bibinfo{author}{Zang, J.}
+\newblock \bibinfo{title}{The northeast materials database for magnetic
+  materials}.
+\newblock \emph{\bibinfo{journal}{Nature Communications}}
+  \textbf{\bibinfo{volume}{16}}, \bibinfo{pages}{9415} (\bibinfo{year}{2025}).
+
+\bibitem{abediorang2026curie}
+\bibinfo{author}{Orang, A.~A.}, \bibinfo{author}{Alaei, M.} \&
+  \bibinfo{author}{Oganov, A.~R.}
+\newblock \bibinfo{title}{Predicting the {Curie} temperature of magnetic
+  materials with machine learning: Descriptor engineering, graph neural
+  networks, and the role of curated data}.
+\newblock \emph{\bibinfo{journal}{Computational Materials Science}}
+  \textbf{\bibinfo{volume}{269}}, \bibinfo{pages}{114663}
+  (\bibinfo{year}{2026}).
+
+\bibitem{acosta2022ordering2d}
+\bibinfo{author}{Acosta, C.~M.}, \bibinfo{author}{Ogoshi, E.},
+  \bibinfo{author}{Souza, J.~A.} \& \bibinfo{author}{Dalpian, G.~M.}
+\newblock \bibinfo{title}{{Machine Learning Study of the Magnetic Ordering in
+  2D Materials}}.
+\newblock \emph{\bibinfo{journal}{ACS Applied Materials \& Interfaces}}
+  \textbf{\bibinfo{volume}{14}}, \bibinfo{pages}{9418--9432}
+  (\bibinfo{year}{2022}).
+
+\bibitem{court2020phase}
+\bibinfo{author}{Court, C.~J.} \& \bibinfo{author}{Cole, J.~M.}
+\newblock \bibinfo{title}{{Magnetic and superconducting phase diagrams and
+  transition temperatures predicted using text mining and machine learning}}.
+\newblock \emph{\bibinfo{journal}{npj Computational Materials}}
+  \textbf{\bibinfo{volume}{6}}, \bibinfo{pages}{18} (\bibinfo{year}{2020}).
+
+\end{thebibliography}
+%%% END REFERENCES
+
+\end{document}

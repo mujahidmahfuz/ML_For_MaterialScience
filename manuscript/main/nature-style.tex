@@ -1,0 +1,78 @@
+%% Shared page design for manuscript.tex and supplementary.tex (plain article class; Nature has no required LaTeX class
+%% and takes a PDF at first submission). Two modes:
+%%   reading mode (default)       : single-spaced, no line numbers -- a clean copy to read and circulate;
+%%   submission mode              : double-spaced with line numbers, as the Nature formatting guide asks for a PDF submission.
+%% Submission mode is switched on by defining \submissionmode before this file is read (see manuscript_submission.tex).
+
+\usepackage[a4paper,left=22mm,right=22mm,top=24mm,bottom=26mm]{geometry}
+\usepackage{iftex}
+\ifPDFTeX                                   % pdfLaTeX (Overleaf default)
+  \usepackage[T1]{fontenc}
+  \usepackage{newtxtext,newtxmath}          % Times-like text and matching mathematics
+  \usepackage[scaled=0.9]{helvet}           % Helvetica-like sans serif for title, headings, captions and tables
+\else                                       % XeLaTeX / LuaLaTeX / tectonic
+  \usepackage{newtxtext,newtxmath}
+  \setsansfont{texgyreheros}[Extension=.otf,UprightFont=*-regular,BoldFont=*-bold,ItalicFont=*-italic,BoldItalicFont=*-bolditalic,Scale=0.9]
+\fi
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{booktabs,tabularx,array}
+\usepackage{float}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage[super,comma,sort&compress]{natbib}   % Nature: superscript reference numbers
+\usepackage{titlesec}
+\usepackage{caption}
+\usepackage[hidelinks]{hyperref}
+
+\bibliographystyle{sn-nature}
+\providecommand{\bibcommenthead}{}          % written by sn-nature.bst; defined by the Springer class only
+\renewcommand{\bibnumfmt}[1]{#1.}           % Nature reference list: "1." not "[1]"
+\setlength{\bibsep}{2pt}
+\renewcommand{\bibfont}{\small}
+
+%% Headings: bold sans serif, unnumbered, close to the text they introduce.
+\titleformat{\section}{\sffamily\bfseries\large\raggedright}{}{0pt}{}
+\titlespacing*{\section}{0pt}{16pt plus 2pt minus 2pt}{4pt}
+\titleformat{\subsection}{\sffamily\bfseries\normalsize\raggedright}{}{0pt}{}
+\titlespacing*{\subsection}{0pt}{10pt plus 2pt minus 1pt}{2pt}
+\newcommand{\bmhead}[1]{\subsection*{#1}}
+
+%% Captions in Nature style: "Fig. 1 | Title. Text" and "Table 1 | Title", small sans serif, full width.
+\DeclareCaptionLabelSeparator{bar}{\ \textbar\ }
+\captionsetup{font={footnotesize,sf},labelfont=bf,labelsep=bar,justification=justified,singlelinecheck=false,skip=6pt}
+\captionsetup[table]{position=top,textfont=bf,skip=4pt}
+\renewcommand{\figurename}{Fig.}
+
+%% One font for every table (the table files call \tablefont).
+\newcommand{\tablefont}{\sffamily\fontsize{7.5}{9.5}\selectfont}
+\renewcommand{\arraystretch}{1.1}
+
+%% Floats: allow large figures and tables at the top of a page without pushing them to the end.
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.6}
+\renewcommand{\textfraction}{0.08}
+\renewcommand{\floatpagefraction}{0.75}
+\setlength{\textfloatsep}{14pt plus 2pt minus 2pt}
+\floatplacement{table}{t}
+\floatplacement{figure}{t}
+
+\setlength{\parindent}{1.2em}
+\setlength{\parskip}{0pt}
+\emergencystretch=2em                       % no line may stick out into the margin
+\frenchspacing
+\raggedbottom
+
+\ifdefined\submissionmode
+  \usepackage{lineno}
+  \renewcommand{\linenumberfont}{\normalfont\scriptsize\sffamily\color{black!55}}
+  \setlength{\linenumbersep}{8pt}
+  \AtBeginDocument{\doublespacing\linenumbers}
+\fi
+
+\newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
+\newcommand{\muB}{\ensuremath{\mu_\mathrm{B}}}
+\newcommand{\Tc}{\ensuremath{T_\mathrm{C}}}
+\newcommand{\mcell}{\ensuremath{m_\mathrm{cell}}}
+\newcommand{\mfu}{\ensuremath{m_\mathrm{fu}}}

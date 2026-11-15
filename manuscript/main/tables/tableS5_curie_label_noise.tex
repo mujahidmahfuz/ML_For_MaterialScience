@@ -1,0 +1,22 @@
+\begin{table}
+\caption{Residual label noise in the curated Curie target}
+\label{tab:tableS5_curie_label_noise}
+\tablefont
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}Xl@{}}
+\toprule
+\textbf{Quantity} & \textbf{Value} \\
+\midrule
+likely wrong label (other transition + implausible value + computational) & 22/200 = 11.0\% [7.4, 16.1] \\
+non-Curie transition & 7/200 = 3.5\% [1.7, 7.0] \\
+implausible value & 7/200 = 3.5\% [1.7, 7.0] \\
+computational source & 8/200 = 4.0\% [2.0, 7.7] \\
+paper about a different compound & 32/200 = 16.0\% [11.6, 21.7] \\
+film/nano/amorphous sample & 25/200 = 12.5\% [8.6, 17.8] \\
+unclear or no title & 7/200 = 3.5\% [1.7, 7.0] \\
+formulas with $\geq$ 2 retained records & 3,634 (65\% of records) \\
+median within-formula SD of $T_\mathrm{C}$ & 4.2 K \\
+share of those formulas with SD > 50 K / > 100 K & 21\% / 13\% \\
+\bottomrule
+\end{tabularx}
+\par\vspace{4pt}\raggedright\noindent Title-based screen, not a full-text audit: stratified random sample of 200 retained records (source x $T_\mathrm{C}$ tercile, seed 20261110), each classified by the AI assistant from the Crossref title, the compound and the plausibility of the value; Wilson 95\% intervals. Per-record labels for checking: results/revision/a7\_curie\_label\_noise/title\_audit\_adjudicated.csv.
+\end{table}
