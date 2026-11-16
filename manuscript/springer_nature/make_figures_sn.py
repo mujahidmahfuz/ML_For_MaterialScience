@@ -235,8 +235,57 @@ def edfig1() -> None:
     save(fig, "edfig1")
 
 
+SUMMARY_ROWS = (
+    ("Accuracy",
+     "Composition alone is accurate within the training data: ordering macro-F1 0.73 and Curie-temperature error 76 K.",
+     "Accuracy is necessary, but it says nothing about the other three properties.",
+     "Report accuracy on formula-grouped splits."),
+    ("Added physics",
+     "DFT descriptors gave no detectable gain for ordering or the Curie temperature; the moment gain mostly reflected cell size.",
+     "A model can use extra descriptors without gaining information from them.",
+     "Compare descriptor sets on identical rows, with a size control."),
+    ("Calibration",
+     "Coverage was near 90% overall, but 65.5% in the top Curie-temperature decile (constant-width intervals) and 54% and 57% for two ordering classes.",
+     "Average coverage hides failures in subgroups.",
+     "Report subgroup coverage; use normalized or class-conditional sets; abstain on wide intervals."),
+    ("Transfer",
+     "Computed and experimental ordering labels agreed no better than chance (κ 0.00); in unseen chemical systems performance was much weaker, with wide uncertainty.",
+     "A model can match a labelling convention and still fail on new chemistry.",
+     "Audit labels across sources; define novelty by chemical system; recalibrate when the source changes."),
+)
+
+
+def edfig2() -> None:
+    """Closing summary: for each of the four properties, what was observed, what it means and what we recommend (text only; numbers as in Results)."""
+    import textwrap
+    from matplotlib.patches import FancyBboxPatch
+    height_mm, row_h, gap = 86.0, 18.0, 2.2
+    fig, ax = plt.subplots(figsize=(WIDTH_IN, height_mm / 25.4))
+    fig.subplots_adjust(left=0, right=1, bottom=0, top=1)
+    ax.set_xlim(-1, 132)
+    ax.set_ylim(-1, height_mm)
+    ax.axis("off")
+    cols = ((0.0, 52.0, "Observation", "#eaf2fc", BLUE, 40), (58.0, 34.0, "Interpretation", "#f3f3f1", GREY, 23), (98.0, 33.0, "Strategy", "#fdeee7", ORANGE, 23))
+    for x0, w, head, _fc, _ec, _wrap in cols:
+        ax.text(x0 + w / 2, height_mm - 2.0, head, ha="center", va="center", fontsize=7.5, fontweight="bold", color=INK2)
+    top = height_mm - 6.0
+    for r, (name, obs, interp, strat) in enumerate(SUMMARY_ROWS):
+        y = top - r * (row_h + gap) - row_h
+        for (x0, w, _head, fc, ec, wrap), body in zip(cols, (obs, interp, strat)):
+            ax.add_patch(FancyBboxPatch((x0, y), w, row_h, boxstyle="round,pad=0,rounding_size=1.2", fc=fc, ec=ec, lw=0.7))
+            ytxt = y + row_h - 1.8
+            if x0 == 0.0:
+                ax.text(x0 + 2.2, ytxt, name, ha="left", va="top", fontsize=6.9, fontweight="bold", color=INK2)
+                ytxt -= 3.6
+            ax.text(x0 + 2.2, ytxt, textwrap.fill(body, wrap), ha="left", va="top", fontsize=6.3, color=INK2, linespacing=1.25)
+        for x_from, x_to in ((52.0, 58.0), (92.0, 98.0)):
+            ax.annotate("", xy=(x_to - 0.4, y + row_h / 2), xytext=(x_from + 0.4, y + row_h / 2),
+                        arrowprops=dict(arrowstyle="-|>", color=INK2, lw=0.8, mutation_scale=6))
+    save(fig, "edfig2")
+
+
 def main() -> None:
-    for build in (fig1, fig2, fig3, fig4, edfig1):
+    for build in (fig1, fig2, fig3, fig4, edfig1, edfig2):
         build()
     print("written:", ", ".join(sorted(p.name for p in HERE.glob("*.pdf"))))
 
