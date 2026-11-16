@@ -1,0 +1,2 @@
+n_rows,share_near_zero_overall,spearman_Z_vs_m_fu,spearman_Z_vs_is_FM_(FM_AFM_FiM_rows),n_FM_AFM_FiM_rows,auc_Z_for_near_zero,auc_cell_atoms_for_near_zero,share_Z_gt_1,share_missing_ordering
+10821,0.024397005822012752,-0.16202817351429122,-0.1399227092818973,7561,0.6953708726939759,0.632929536915044,0.41964698271878753,0.0

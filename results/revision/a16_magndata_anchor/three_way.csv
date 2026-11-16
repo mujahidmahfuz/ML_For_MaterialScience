@@ -1,0 +1,6 @@
+MP_vs_exp_agree,MP_right,exp_right,n_compositions
+False,False,False,5
+False,False,True,107
+False,True,False,2
+True,False,False,6
+True,True,True,30

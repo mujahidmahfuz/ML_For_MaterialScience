@@ -141,6 +141,77 @@ results were known.
 **A13 (RR1, RR2, RR8, RR9, SR9). Writing.** Manuscript rewrite, related work and prior-results table, SI, data/code availability,
 licences, AI disclosure, reproducibility notes (lock file, smoke run, runtimes from the saved `refit_seconds`).
 
+## Added after the round-3 review (2026-11-16; not in the original plan; specifications are in the script docstrings, written before the runs)
+**A14 (R3-1, R3-2). Pooled Tier 1 -> 3 contrast and the planned Holm family.** `scripts/a14_pooled_tier_inference.py`, no refit. Per split, the
+mean of the three algorithms' improvements (Curie: clipped ridge, gradient boosting, XGBoost seed mean; moment: ridge, gradient boosting,
+XGBoost seed mean; ordering: logistic, gradient boosting, XGBoost single realisation); corrected-t interval from the split-to-split spread of
+that mean, bootstrap with formula draws shared by the algorithms. Also recomputes the Holm family with the CLIPPED Curie ridge member, as A1
+planned. Output `outputs/a14_pooled/`. Result: Curie -12.3 K [-32.7, +8.1] (worse in 8/10 splits; upper limit below the 10 K margin),
+moment +0.065 [+0.038, +0.092] (10/10 splits), ordering -0.002 [-0.035, +0.031] (does not exclude the 0.02 margin); Holm with the clipped member:
+Curie ridge 0.740, the other eight unchanged.
+
+**A15 (R4-2). A9 screening rules on the internal test sets.** `scripts/a15_internal_screening.py`, no refit. Saved per-row Curie test intervals
+of the 10 splits (A4), the A9 definitions (abstain on composition distance or interval width; threshold task Tc > 300 K; interval decisions;
+top-k), computed per split and averaged. Output `outputs/a15_internal_screening/`. Result: abstaining on interval width works inside the
+training chemistry (MAE 103 -> 43 K at 50% retained, coverage 0.92); abstaining on composition distance does not (closest 25%: 103 K); interval
+decisions settle 44% of records at 97.6% accuracy.
+
+**A20 (R1-5). End-to-end graph-network check for the Curie temperature. STATUS: STOPPED 2026-11-17 BY THE USER, NOT COMPLETED, NOT ANALYSED, NOT IN THE PAPER.** Reason: optional; the manuscript already limits its null to formula-joined descriptors and a frozen embedding. About 26 of 90 planned runs finished (seed 0, splits 0-8 partly); the files in outputs/a20_gnn/preds are partial and were never scored against the claim rule, so they must not be quoted. a20_gnn_analysis.py was written but not run. (Specified 2026-11-16, before any model was trained.)
+Question: the null for Tier 3 concerns descriptors joined by formula and a frozen CHGNet embedding (A6c). Does a pretrained graph network that is fine-tuned
+end to end on the matched Curie rows (4,602 records, only 521 distinct MP structures) add anything to composition features?
+Variants, same matched rows and the SAME 10 Phase 7 split labels (train / validation / test), same head for all:
+  - mlp_t1  : MLP on the Tier 1 predictors only (control, no structure);
+  - gnn_t1  : pretrained CHGNet (v0.3.0 weights), crystal feature (64-d) trainable, concatenated with the Tier 1 predictors, MLP head;
+  - gnn_only: the CHGNet branch alone with the same head (no Tier 1 predictors).
+Fixed settings (no tuning): target standardised on the training rows; Huber loss; AdamW, weight decay 1e-4; learning rate 1e-3 head / 1e-4 CHGNet; batch 32;
+max 60 epochs, early stopping on validation MAE (patience 10), best-validation weights scored on test (NOT refitted on train+validation, unlike the boosting
+baselines, which slightly favours them); Tier 1 predictors median-imputed and standardised on the training rows; 3 seeds per split averaged in prediction space.
+Contrasts (MAE, K; positive = first variant better; refit-aware interval as in A1/A19, 10 splits): PRIMARY C1 = mlp_t1 - gnn_t1 (does end-to-end structure add
+to composition?). Secondary: boosting Tier 1 (saved, gradient_boosting and XGBoost seed-mean) - gnn_t1; boosting Tier 3 - gnn_t1; boosting Tier 1 - gnn_only.
+Claim rule, fixed before the run:
+  * C1 interval above zero => 'end-to-end structure learning adds to composition for this network'; it is then reported against the boosting baselines, and
+    'beats the boosting Tier 1 baseline' is claimed only if that secondary interval is also above zero;
+  * C1 interval includes zero => 'no detectable gain from end-to-end structure learning either', with the minimum detectable effect; the null is then NOT specific to
+    formula-joined descriptors or to a frozen embedding, but remains limited to this network, this data size (521 distinct structures) and these fixed settings;
+  * C1 interval below zero => reported as a loss.
+Limits to state: MP structures are those of the lowest-energy polymorph (the same join as Tier 3); results hold for CHGNet only, not other architectures; no tuning.
+
+**A19 (R1-3; plan item A6(e), originally dropped). Same-space-group test of the descriptor join. STATUS: RUN 2026-11-16, claim rule fixed in the script docstring BEFORE the run.**
+`scripts/a19_same_spacegroup.py`. Saved test predictions scored on records whose source space group (parsed by fixed rules) equals the polymorph's (536) vs differs (237); 69
+unparsable, 3,760 report none. RESULT: pooled Tier 1 -> 3 on 'same' = -10.9 K [-23.8, +2.0] (3/10 splits better, MDE 17.9 K); 'different' -6.0 [-27.3, +15.3]; difference -4.9
+[-28.0, +18.2] => no detectable gain even where the join is right; the noisy-join explanation is NOT supported (limits: models trained on all rows, only 18% of records report a
+space group, small). Parsing rules were not extended after the unresolved symbols were seen.
+
+**A18 (round-2 follow-up to R2-2). Why a site count helps the intensive per-formula-unit moment. STATUS: RUN 2026-11-16 (descriptive, no fit; hypothesis in the script docstring written before
+the data were read). `scripts/a18_sitecount_explanation.py`. Result: cells holding more than one formula unit (42% of 10,821 rows) have a lower moment per formula unit (3.11 -> 1.71 muB from one
+to three-or-four formula units) and more AFM labels (3.2% -> 16.7%); near-zero moments 1.1% -> 8.8%; Spearman -0.16, AUC 0.70 => a weak proxy for the ordering, hypothesis partly supported, mechanism
+not tested. The other round-2 item (frequency of FM configurations in MP) is answered from the source: Horton et al. 2019 report 31,631 of 33,986 magnetic MP entries (93%) in a FM configuration.**
+
+**A17 (R1-1). Larger hyperparameter search for the primary Curie contrast. STATUS: RUN 2026-11-16 (the first attempt with 4 workers was killed by the host's low-memory
+reaper before any split finished; rerun with 2 workers, 10 splits, about 1.5 h). RESULT: the null is robust to tuning. Original grid Tier 1 -> 3 = -14.3 K [-42.5, +13.9]; larger
+search -11.8 K [-35.2, +11.7] (bootstrap [-21.9, -0.04] -> "borderline loss" by the A1 rule); test MAE Tier 1 202.9 -> 203.7 K, Tier 3 217.2 -> 215.5 K (moved < 2 K) although the
+validation RMSE of the selected settings fell by 27 K (Tier 1) and 34 K (Tier 3): the search fitted validation noise. Specified 2026-11-16 BEFORE the run.** `scripts/a17_tuning_grid.py`.
+Matched Curie population (4,602), the 10 splits, histogram gradient boosting (deterministic), Tier 1 vs Tier 3. Candidates: the 4 original settings + 60 random draws from
+learning_rate {0.02, 0.05, 0.1} x max_leaf_nodes {7, 15, 31, 63, 127} x min_samples_leaf {5, 10, 20, 40} x l2 {0, 1, 10} x max_features {0.3, 0.5, 0.75, 1.0} x
+max_iter {250, 500} (seed 20261116), the SAME 64 for both tiers; selection rule unchanged (validation RMSE). Decision rule: if the tuned Tier 1 -> 3 contrast still
+shows no stable gain (A1 rule) the null is robust to tuning; if it shows a stable gain, report it and revise the claim. Scope: gradient boosting only (XGBoost depends on the
+thread count and is not covered). Run with OMP_NUM_THREADS=3 x 4 workers (thread-invariant for this algorithm).
+
+**A16 (R2-1). MAGNDATA as an independent anchor for the ordering labels. STATUS: RUN 2026-11-16 on the official repository download (2,997 paths; 509 macOS
+'._' stubs skipped; 2,488 structure files).** Two script changes were made after the first parse and BEFORE any comparison was seen: skip the '._' stubs, and label
+partial-occupancy structures 'disordered' (not used) instead of 'unparseable'. Result: 936 AFM / 91 FM / 80 FiM collinear entries (840 compositions; 19 with conflicting
+entries), 797 non-collinear, 397 disordered, 169 incommensurate, 18 unlabelled. Agreement with the structure: experimental 0.923 [0.900, 0.948] (n = 442, kappa 0.715),
+Materials Project 0.219 [0.171, 0.275] (n = 251, kappa 0.032); where MP and experiment disagree (114 compositions) the experimental label matches the structure in 107.
+Labeller sanity check: 7/7 textbook compounds present are AFM as expected. Result tables AND the derived per-entry / per-composition labels are in the package (2026-11-16: the user read the MAGNDATA usage conditions: use is for science, with
+the condition to cite the Bilbao Crystallographic Server and MAGNDATA, done in the manuscript, the SI and SOURCE_AND_CITATION.md); the .mcif structure files are not redistributed. Original status line follows.
+`scripts/a16_magndata_anchor.py`. Input: the MAGNDATA repository (.mcif files) from the official download, which needs a registered academic account and
+acceptance of the usage conditions (to be done by the user; `magndata_download.html`). Each structure is labelled FM/AFM/FiM from its own collinear moments
+(pymatgen CollinearMagneticStructureAnalyzer; incommensurate and non-collinear entries are not used); MP and the experimental sources (A2 definitions) are
+scored against that label on shared compositions (matched by composition key): agreement, kappa, per-class recall, confusion matrices, and a three-way table of
+who is right when MP and experiment disagree. Claim rule, fixed before any real run: report the agreement of each source with the anchor with formula-bootstrap
+intervals; say "source X is wrong in Y% of cases" only if the sample is at least 20 compositions per source and the intervals support it; collinear entries only,
+so the anchor covers a subset of compounds (state the coverage). The earlier project copy of MAGNDATA (no formulas, keyword-inferred labels) is NOT used.
+
 ## Deviations log
 - 2026-11-10 A6: the descriptor geometry was first checked on MnO and SrFeO3 and found to miss periodic-image M-X-M pairs. It was fixed
   (angles are now measured around each anion site) before any fit used it.
@@ -160,6 +231,15 @@ licences, AI disclosure, reproducibility notes (lock file, smoke run, runtimes f
   - A1 ordering XGBoost seed averaging (4 partial splits moved to `outputs/a1/ordering_xgb_seeds_partial_unused`, not used). Ordering
     XGBoost is reported as a single realisation, and the deterministic gradient-boosting result is the reference.
   Kept: A2, A4 ordering, A5.
+- 2026-11-10 (logged late, 2026-11-16, found in the round-3 check of `paper/results/revision/a1_tier_inference.csv`): A1 did NOT replace the
+  unstable Ridge row by the clipped one in the Holm family. The family kept the unclipped Curie `linear` contrast (mean -825.2 K,
+  Holm p = 1.0), and `linear_clip` (-14.4 K [-33.5, +4.8], NB p = 0.123) was labelled secondary. The manuscript states this (Extended Data
+  Table 1 note: using the clipped contrast gives an adjusted p of 0.740 for it and leaves the other eight unchanged).
+- 2026-11-10 (logged late, 2026-11-16): A5 declared the moment per formula unit the "new primary target". The manuscript kept the per-cell
+  moment (m_cell) as primary (it is the quantity the databases report, and the comparisons were configured on it in advance) and
+  analyses m_fu alongside it (Fig. 1d, Supplementary Table 8). Round 2 flagged this as an unlogged deviation (RR7); open follow-ups from
+  round 2: quantify "most entries were computed from ferromagnetic initial configurations"; explain why a site count still helps for the
+  intensive per-formula-unit target.
 - 2026-11-10 (disclosed after the round-2 re-review): A6(e), the Curie comparison restricted to records whose source space group matches the
   computed polymorph, was also not run (dropped with the other A6 cuts, before any result was seen). The manuscript now says the
   "noisy join" explanation is untested.

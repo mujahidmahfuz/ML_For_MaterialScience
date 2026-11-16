@@ -1,0 +1,5 @@
+search,tier,mae_mean_over_splits,mae_sd_across_splits
+original 2x2 grid,tier1,202.85586435073978,75.36919926018524
+original 2x2 grid,tier3,217.14939471057136,57.51603388356086
+larger search (64 settings),tier1,203.72026737445753,78.92012446186389
+larger search (64 settings),tier3,215.48821857569254,68.80752245018712
