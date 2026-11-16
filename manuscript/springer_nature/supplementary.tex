@@ -38,14 +38,18 @@
 \begin{itemize}
 \item Supplementary Tables 1--3: audit of the external Curie benchmark, comparisons between its subsets, and error by composition distance.
 \item Supplementary Table 4: the external benchmark under three resampling units and two interval types.
-\item Supplementary Table 5: residual label noise in the curated Curie target.
+\item Supplementary Table 5: residual label noise in the curated Curie target (unverified title-based screen).
 \item Supplementary Table 6: design effects and distance-aware conformal variants.
 \item Supplementary Table 7: ordering performance with and without compounds that lack a magnetism-capable element.
 \item Supplementary Table 8: tier effects for the DFT moment per formula unit and per atom.
 \item Supplementary Table 9: prior machine-learning results for magnetic ordering and the Curie temperature.
 \item Supplementary Table 10: licences of the upstream data.
 \item Supplementary Table 11: Curie-temperature interval coverage in every subgroup evaluated.
-\item Supplementary Table 12: ordering labels of Materials Project against experimental sources, and transfer between them.
+\item Supplementary Table 12: ordering labels of Materials Project against experimental sources, transfer between them, and both against MAGNDATA structures.
+\item Supplementary Tables 13 and 14: when each reported analysis was specified, and what happened to it.
+\item Supplementary Table 15: the DFT moment per formula unit by cell size.
+\item Supplementary Table 16: the Tier 1 to Tier 3 change for the Curie temperature by agreement of the source space group with the computed polymorph.
+\item Supplementary Table 17: a second reading of 32 curated Curie-temperature records by the language model that made the title screen.
 \item Reproducibility notes.
 \end{itemize}
 
@@ -112,7 +116,7 @@ Q3 & 0.034--0.083 & 114 (39) & 106.4 \ci{81.0}{145.8} & 424 & 0.87 \ci{0.80}{0.9
 Q4 (farthest) & 0.087--0.550 & 113 (37) & 165.3 \ci{98.8}{240.2} & 529 & 0.85 \ci{0.72}{0.93} & 0.36 \\
 \botrule
 \end{tabular*}
-\footnotetext{Composition distance: total-variation distance between element-fraction vectors, to the nearest training formula. Paper-cluster bootstrap 95\% intervals. Width and coverage refer to the 90\% normalized conformal interval.}
+\footnotetext{Composition distance: total-variation distance between element-fraction vectors, to the nearest training formula. Paper-cluster bootstrap 95\% intervals. Width and coverage refer to the 90\% normalized conformal interval. Distance explains only part of the weaker result in unseen systems: blind records in seen systems in the same distance range had an MAE of 109~K and $R^2$ of 0.75, compared with 172~K and $-0.17$ for unseen systems (difference in $R^2$ $-0.92$, 95\% interval $-1.66$ to $-0.05$; distance accounts for about a fifth of the MAE gap).}
 \end{table}
 
 %% ---------------------------------------------------------------------------------------------------------- Table 4
@@ -144,7 +148,7 @@ Chemical system & 69 (48) & \est{$-0.17$}{$-0.71$}{0.23} & \est{$-0.17$}{$-0.75$
 
 %% ---------------------------------------------------------------------------------------------------------- Table 5
 \begin{table}[!ht]
-\caption{\textbf{Residual label noise in the curated Curie target.}}\label{tab:s5}%
+\caption{\textbf{Residual label noise in the curated Curie target (unverified title-based screen).}}\label{tab:s5}%
 \begin{tabular*}{\textwidth}{@{\extracolsep\fill}p{240pt}r@{}}
 \toprule
 Quantity & Value \\
@@ -293,7 +297,7 @@ JARVIS-DFT (Figshare) & CC BY 4.0 & yes, with attribution & values \\
 Kelly and Cole 2025 (Figshare) & CC BY 4.0 & yes, with attribution & values \\
 NEMAD (Zenodo release) & CC BY 4.0 & yes, with attribution & values \\
 AFLOW (AFLUX) & scientific, non-commercial use only & not addressed & identifiers and retrieval script \\
-MAGNDATA (Bilbao server) & no public licence; conditional access & not granted publicly & identifiers and retrieval script \\
+MAGNDATA (Bilbao server) & no public licence; bulk download only for registered academic users who accept the usage conditions & no restriction on derived results in the conditions as read by the authors & derived labels; structure files not redistributed \\
 Two experimental compilations & origin undocumented & unknown & identifiers only \\
 External benchmark table & no licence & no & retrieval script with SHA-256 check \\
 \botrule
@@ -368,7 +372,135 @@ Experimental $\to$ experimental, raw & 0.769 \ci{0.727}{0.811} & 0.89 & 0.90 & 0
 MP $\to$ MP, raw & 0.591 \ci{0.562}{0.618} & 0.91 & 0.31 & 0.56 & 4,377 \\
 \botrule
 \end{tabular*}
-\footnotetext{MP, Materials Project. \textbf{a}, Most frequent label of each provenance per formula; agreement 28\%, Cohen's $\kappa$ = 0.00 \ci{$-0.03$}{0.03}. \textbf{b}, 95\% intervals from a bootstrap over formulas; prior-corrected = probabilities corrected to the class prior of the training partition of the target domain. Null distribution from 20 refits on permuted training labels: median 0.342 and 97.5th percentile 0.374 (MP $\to$ experimental), 97.5th percentile 0.351 (experimental $\to$ MP). Median composition distance of the test formulas to the nearest training formula: 0.081 (MP $\to$ experimental), 0.169 (experimental $\to$ MP), 0.077 (within MP) and 0.033 (within experimental). Gradient boosting gives the same picture.}
+
+\vspace{6pt}
+\setlength{\tabcolsep}{3pt}%
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lrrrrr@{}}
+\toprule
+\multicolumn{6}{@{}l}{\textbf{c}\enspace Structure-based reference (MAGNDATA) against the label sources: numbers of compositions}\\
+\midrule
+& \multicolumn{4}{c}{Materials Project label} & \\
+\cmidrule{2-5}
+MAGNDATA label & AFM & FM & FiM & NM & Total \\
+AFM & 43 & 125 & 20 & 30 & 218 \\
+FM & 1 & 8 & 0 & 4 & 13 \\
+FiM & 1 & 12 & 4 & 3 & 20 \\
+\midrule
+& \multicolumn{3}{c}{Experimental label} & & \\
+\cmidrule{2-4}
+MAGNDATA label & AFM & FM & FiM & & Total \\
+AFM & 360 & 17 & 4 & & 381 \\
+FM & 3 & 31 & 1 & & 35 \\
+FiM & 5 & 4 & 17 & & 26 \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Compositions labelled by Materials Project, an experimental source and MAGNDATA (150)}}\\
+\multicolumn{5}{@{}l}{Both sources agree and match the structure} & 30 \\
+\multicolumn{5}{@{}l}{Both sources agree and both differ from the structure} & 6 \\
+\multicolumn{5}{@{}l}{Sources disagree; the experimental label matches the structure} & 107 \\
+\multicolumn{5}{@{}l}{Sources disagree; the Materials Project label matches the structure} & 2 \\
+\multicolumn{5}{@{}l}{Sources disagree; neither matches the structure} & 5 \\
+\botrule
+\end{tabular*}
+\footnotetext{MP, Materials Project. \textbf{a}, Most frequent label of each provenance per formula; agreement 28\%, Cohen's $\kappa$ = 0.00 \ci{$-0.03$}{0.03}. \textbf{b}, 95\% intervals from a bootstrap over formulas; prior-corrected = probabilities corrected to the class prior of the training partition of the target domain. Null distribution from 20 refits on permuted training labels: median 0.342 and 97.5th percentile 0.374 (MP $\to$ experimental), 97.5th percentile 0.351 (experimental $\to$ MP). Median composition distance of the test formulas to the nearest training formula: 0.081 (MP $\to$ experimental), 0.169 (experimental $\to$ MP), 0.077 (within MP) and 0.033 (within experimental). Gradient boosting gives the same picture. \textbf{c}, MAGNDATA\cite{gallego2016magndata} structures from the Bilbao Crystallographic Server\cite{aroyo2011bcs,aroyo2006bcs1,aroyo2006bcs2}, labelled FM, AFM or FiM from their own moments (ordered, collinear entries; Methods of the main article, Structural reference for ordering labels); 840 compositions, of which 251 carry a Materials Project label and 442 an experimental label. Agreement with the structure: experimental 0.92 (95\% interval 0.90--0.95; $\kappa$ 0.72), Materials Project 0.22 (0.17--0.28; $\kappa$ 0.03).}
+\end{table}
+
+%% ---------------------------------------------------------------------------------------------------------- Table 13
+\begin{table}[!ht]
+\caption{\textbf{When each reported analysis was specified, and what happened to it (part 1 of 2).}}\label{tab:s13}%
+\setlength{\tabcolsep}{3pt}%
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{88pt}>{\raggedright\arraybackslash}p{150pt}>{\raggedright\arraybackslash}p{116pt}@{}}
+\toprule
+Analysis & When it was specified & Outcome \\
+\midrule
+Curation rules and targets (C1--C5; JARVIS default labels; non-chemical formulas) & After analyses of an earlier dataset version had been seen; before any model was fitted to the curated targets & Applied (Methods); a sensitivity target without C5 was run afterwards \\
+Baselines and tier comparison on ten formula-grouped splits & Design before the fits (Phase 6 plan); ten-split replication prespecified after the first Phase 6 results; practical margins before the corresponding analyses & Run (Results). One Tier~2 gain for ordering did not replicate and is listed as an error corrected \\
+Feature attribution (TreeSHAP) & Part of the Phase 6 plan; re-run after the curation changes & Run; rankings stable for ordering and the moment, not for \Tc{} \\
+Stability rule, Holm family, refit-aware intervals, detectable effects (A1) & After the first review round; written in the plan before the run & Run; the clipped ridge was meant to replace the unclipped contrast in the Holm family and did not (logged late; Extended Data Table~1) \\
+Cross-provenance ordering (A2) & After the first review round; plan and wording rule before the run & Run; the rule did not allow saying that ordering `does not transfer', and it is not said \\
+External benchmark audit and inference (A1--A8 checks; A3) & Checks written before any record-level error was linked to a flag, but after subset results of an earlier, flawed analysis were known; wording rule fixed afterwards; three amendments (one after the first bootstrap run) & Run (Supplementary Tables 1--4) \\
+Coverage by subgroup and distance-aware variants (Phase 8; A4, A10) & Phase 8 after the Phase 6--7 results; subgroups independent of the method's difficulty score added after the first review (an earlier subgroup defined by it is shown only for comparison) & Run (Supplementary Tables 6 and 11) \\
+Ordering calibration and prediction sets (Phase 8; A4) & Phase 8; temperature and conformal thresholds fitted on separate calibration halves after the first review & Run (Extended Data Table~4) \\
+Leave-chemical-system-out comparison (Phase 8) & After the Phase 6--7 results; the matched version (A12) was planned and dropped & Run in the unmatched form; changes mix novelty with test-set composition \\
+\botrule
+\end{tabular}
+\footnotetext{`First review round' and `later review round': simulated review rounds run on the manuscript during its preparation. Analysis names follow the analysis plan and its log of deviations (released with the package).}
+\end{table}
+
+\begin{table}[!ht]
+\caption{\textbf{When each reported analysis was specified, and what happened to it (part 2 of 2).}}\label{tab:s14}%
+\setlength{\tabcolsep}{3pt}%
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{88pt}>{\raggedright\arraybackslash}p{150pt}>{\raggedright\arraybackslash}p{116pt}@{}}
+\toprule
+Analysis & When it was specified & Outcome \\
+\midrule
+Magnetic-physics test (A6) & After the first review; plan before the runs; scope cut for run time before any result was seen & Run for \Tc{} only (Extended Data Table~2) \\
+Moment per formula unit (A5) & After the first review; the plan named it the primary moment target & Run (Fig.~1d, Supplementary Table~8); the per-cell moment stayed primary (deviation logged late) \\
+Label-noise screen (A7) & After the first review; plan before the run; three categories added during classification & Run (Supplementary Table~5); human spot check not yet done \\
+Screening rules on the 465 blind records (A9) & After the first review; plan before the run & Run (Extended Data Table~7) \\
+Pooled contrast, internal screening, larger tuning search, cell-size check, same-space-group test (A14, A15, A17, A18, A19) & Added after the main analyses in response to a later review round; specification (for A18, the hypothesis; for A19, the claim rule) written before each run & Run (Extended Data Tables 1 and 8, Supplementary Tables 15 and 16); the tuning search covers gradient boosting and \Tc{} only; the space-group test covers the 18\% of records that report a space group \\
+MAGNDATA as a structural reference (A16) & Added in response to review; claim rule written before the real run; two script changes (metadata stubs skipped, disordered structures labelled separately) after the first parse and before any comparison was seen & Run (Supplementary Table~12c) \\
+Dropped analyses & Planned after the first review; dropped for run time before any result was seen & Magnetic-physics test for ordering and the moment; matched leave-system-out; seed averaging for ordering XGBoost; moment intervals rerun with per-row output; refit for the ordering decomposition \\
+\botrule
+\end{tabular}
+\footnotetext{A11, the reconciliation of the matched and full-population baselines, has no separate output; both sets of numbers are in Results.}
+\end{table}
+
+%% ---------------------------------------------------------------------------------------------------------- Table 15
+\begin{table}[!ht]
+\caption{\textbf{DFT moment per formula unit by cell size.}}\label{tab:s15}%
+\setlength{\tabcolsep}{3pt}%
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lrrrrrrrr@{}}
+\toprule
+& & & & \multicolumn{5}{c}{Materials Project ordering label (\%)} \\
+\cmidrule{5-9}
+Cell holds & Rows & \hd{Mean moment\\(\muB{}/f.u.)} & \hd{$|m|<0.05$\\(\%)} & FM & AFM & FiM & NM & Unknown \\
+\midrule
+one formula unit & 6,280 & 3.11 & 1.1 & 55.8 & 3.2 & 9.3 & 3.9 & 27.7 \\
+two & 3,425 & 2.56 & 3.0 & 53.6 & 11.5 & 7.3 & 3.5 & 24.1 \\
+three or four & 986 & 1.71 & 8.8 & 44.3 & 16.7 & 10.0 & 3.0 & 25.9 \\
+five to eight & 111 & 2.32 & 2.7 & 41.4 & 14.4 & 12.6 & 1.8 & 29.7 \\
+more than eight & 19 & 1.95 & 5.3 & 21.1 & 15.8 & 15.8 & 5.3 & 42.1 \\
+\botrule
+\end{tabular*}
+\footnotetext{The 10,821 matched rows of the moment per formula unit; the cell holds as many formula units as its number of atoms divided by the atoms of the reduced formula (42\% of the rows hold more than one). The ordering label is the Materials Project DFT ordering of the entry, which is excluded from every predictor set and is used here only to describe the data. Spearman correlation of the number of formula units with the moment: $-0.16$; with a ferromagnetic label among rows labelled FM, AFM or FiM ($n=7{,}561$): $-0.14$. The number of formula units tells a near-zero moment from other moments with an AUC of 0.70. Descriptive, no model is fitted.}
+\end{table}
+
+%% ---------------------------------------------------------------------------------------------------------- Table 16
+\begin{table}[!ht]
+\caption{\textbf{Tier~1 to Tier~3 change for the Curie temperature by agreement of the source space group with the computed polymorph.}}\label{tab:s16}%
+\setlength{\tabcolsep}{3pt}%
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}>{\raggedright\arraybackslash}p{96pt}rllrr@{}}
+\toprule
+Records & \hd{Matched\\records} & \hd{Change in MAE (K);\\refit-aware 95\% interval} & \hd{Bootstrap\\95\% interval} & \hd{Splits\\better} & \hd{Detectable\\(K)} \\
+\midrule
+Source space group equals the polymorph's & 536 & $-10.9$ \ci{$-23.8$}{$+2.0$} & \ci{$-23.7$}{$+0.9$} & 3/10 & 17.9 \\
+Source space group differs & 237 & $-6.0$ \ci{$-27.3$}{$+15.3$} & \ci{$-17.6$}{$+7.2$} & 4/10 & 29.6 \\
+Difference (same minus differs) & -- & $-4.9$ \ci{$-28.0$}{$+18.2$} & \ci{$-23.2$}{$+10.2$} & 4/10 & 32.1 \\
+\midrule
+No space group reported & 3,760 & \multicolumn{4}{@{}l}{not used} \\
+Symbol not parsable & 69 & \multicolumn{4}{@{}l}{not used} \\
+\botrule
+\end{tabular*}
+\footnotetext{Mean improvement over the three algorithms (clipped ridge regression, gradient boosting, XGBoost) in each split that had at least five test rows in the subset (on average 91.8 test rows per split for the same space group and 43.4 for a different one); positive = Tier~3 better. Saved test predictions of the models trained on all matched rows; nothing was refitted. Detectable = minimum detectable effect at 80\% power. Source symbols were parsed with fixed rules (Methods); the 4,602 matched records are those with complete Tier~3 descriptors. The result can show only a large effect, and the models were trained on all rows, including those whose join is wrong.}
+\end{table}
+
+%% ---------------------------------------------------------------------------------------------------------- Table 17
+\begin{table}[!ht]
+\caption{\textbf{Second reading of 32 curated Curie-temperature records by the language model that made the title screen.}}\label{tab:s17}%
+\setlength{\tabcolsep}{3pt}%
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lrrrrr@{}}
+\toprule
+Call of the title screen & Records & \hd{Same\\decision} & \hd{Same, other\\reason} & \hd{Opposite\\decision} & Unclear \\
+\midrule
+Kept (magnetic Curie transition) & 10 & 8 & 0 & 1 & 1 \\
+Computational source & 8 & 8 & 0 & 0 & 0 \\
+Another kind of transition & 7 & 5 & 1 & 0 & 1 \\
+Implausible value & 7 & 5 & 2 & 0 & 0 \\
+\midrule
+All & 32 & 26 & 3 & 1 & 2 \\
+\botrule
+\end{tabular*}
+\footnotetext{The records had been prepared for a manual check; this is not that check, and the checker is the model that made the first call, so the two are not independent. The abstract was retrievable for 18 records. Verdicts rest on an abstract for 16 records, on a literature value that we found in a source for 8, on the title alone for 5 and on a literature value that we could not confirm for 5 (some rest on two bases). `Same, other reason': the record is also doubtful, but because the formula does not match the paper, or the paper is computational, not for the reason that the screen gave. The opposite decision concerned a theoretical paper that had been kept. The sample is small and was not drawn to estimate an error rate; the checked records and verdicts are in the reproducibility package.}
 \end{table}
 
 \clearpage
@@ -381,7 +513,7 @@ The reproducibility package contains the frozen datasets, splits, results, code,
 The analyses planned in writing after the first round of checks are in the package folders \texttt{scripts/pipeline/revision} and \texttt{results/revision}, with the analysis plan and its log of deviations in \texttt{results/revision/PLAN.md}. Six planned analyses were dropped for run time before any of their results were seen:
 \begin{itemize}
 \item the magnetic-physics test for ordering and for the moment;
-\item the Curie-temperature comparison restricted to records whose source reports the same space group as the computed polymorph;
+\item the Curie-temperature comparison restricted to records whose source reports the same space group as the computed polymorph (run later; Supplementary Table 16);
 \item the matched leave-chemical-system-out comparison;
 \item seed averaging for the ordering XGBoost models;
 \item a rerun of the moment intervals with per-row output (the saved subgroups of the earlier run are used);
@@ -397,7 +529,7 @@ On a 16-thread workstation with 16 GB of memory, the tier fits take about 1--3 m
 
 %% References of the Supplementary Information (numbered separately). Generated by inline_references.py.
 %%% BEGIN REFERENCES
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\burl{#1}}\fi
 \expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
@@ -473,6 +605,40 @@ On a 16-thread workstation with 16 GB of memory, the tier fits take about 1--3 m
   transition temperatures predicted using text mining and machine learning}}.
 \newblock \emph{\bibinfo{journal}{npj Computational Materials}}
   \textbf{\bibinfo{volume}{6}}, \bibinfo{pages}{18} (\bibinfo{year}{2020}).
+
+\bibitem{gallego2016magndata}
+\bibinfo{author}{Gallego, S.~V.} \emph{et~al.}
+\newblock \bibinfo{title}{{MAGNDATA}: towards a database of magnetic
+  structures. {I}. {The} commensurate case}.
+\newblock \emph{\bibinfo{journal}{Journal of Applied Crystallography}}
+  \textbf{\bibinfo{volume}{49}}, \bibinfo{pages}{1750--1776}
+  (\bibinfo{year}{2016}).
+
+\bibitem{aroyo2011bcs}
+\bibinfo{author}{Aroyo, M.~I.} \emph{et~al.}
+\newblock \bibinfo{title}{Crystallography online: {Bilbao Crystallographic
+  Server}}.
+\newblock \emph{\bibinfo{journal}{Bulgarian Chemical Communications}}
+  \textbf{\bibinfo{volume}{43}}, \bibinfo{pages}{183--197}
+  (\bibinfo{year}{2011}).
+
+\bibitem{aroyo2006bcs1}
+\bibinfo{author}{Aroyo, M.~I.} \emph{et~al.}
+\newblock \bibinfo{title}{{Bilbao Crystallographic Server}: {I}. {Databases}
+  and crystallographic computing programs}.
+\newblock \emph{\bibinfo{journal}{Zeitschrift f{\"u}r Kristallographie}}
+  \textbf{\bibinfo{volume}{221}}, \bibinfo{pages}{15--27}
+  (\bibinfo{year}{2006}).
+
+\bibitem{aroyo2006bcs2}
+\bibinfo{author}{Aroyo, M.~I.}, \bibinfo{author}{Kirov, A.},
+  \bibinfo{author}{Capillas, C.}, \bibinfo{author}{Perez-Mato, J.~M.} \&
+  \bibinfo{author}{Wondratschek, H.}
+\newblock \bibinfo{title}{{Bilbao Crystallographic Server}. {II}.
+  {Representations} of crystallographic point groups and space groups}.
+\newblock \emph{\bibinfo{journal}{Acta Crystallographica Section A}}
+  \textbf{\bibinfo{volume}{62}}, \bibinfo{pages}{115--128}
+  (\bibinfo{year}{2006}).
 
 \end{thebibliography}
 %%% END REFERENCES

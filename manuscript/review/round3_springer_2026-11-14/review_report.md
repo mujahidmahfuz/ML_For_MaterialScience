@@ -83,8 +83,10 @@ JARVIS default-label discovery). The physical interpretation is careful. Two des
 - **R2-1. Which ordering label is right?** Materials Project and the experimental sources agree on 28% of 949 formulas (kappa 0.00), and
   336 of 508 experimental antiferromagnets are ferromagnetic in Materials Project. The text explains this by the FM-initialized workflow
   (Horton et al.), which is plausible, but the experimental labels are themselves partly text-mined, and the paper never establishes which
-  side is wrong for a given formula. The authors already hold MAGNDATA (2,208 neutron-determined magnetic structures; Methods, Data
-  collection). Request: use MAGNDATA as a gold standard for the formulas it covers and report the agreement of each source with it.
+  side is wrong for a given formula. MAGNDATA (neutron-determined magnetic structures) is the obvious anchor.
+  **Correction (2026-11-16): the review wrongly assumed the project already holds it in usable form. The copy in the project has no formulas
+  and keyword-inferred labels, and contributes no rows to any target; see `code_data_verification.md`.**
+  Request: use a properly collected MAGNDATA as a gold standard for the formulas it covers and report the agreement of each source with it.
   This turns "the sources disagree" into "source X is wrong in Y% of cases", which is the actionable finding for anyone training on
   Materials Project ordering labels.
 - **R2-2. The primary moment target builds in its own result.** The total moment of the DFT cell grows with the number of atoms in the

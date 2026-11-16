@@ -23,7 +23,7 @@ full responsibility for the content.
   - reference verification against Crossref and publisher records;
   - two rounds of simulated peer review.
 - **AI-made judgements that a person has not yet verified:**
-  - The **title-based screen of 200 Curie-temperature labels** (the "about 11% likely wrong" estimate). It was classified by the AI assistant from paper titles, not full texts. A spot-check sheet for the authors is in `../../review/curie_spotcheck_32.csv` (**TODO:** complete it, then fill in the number checked and disagreements in Methods).
+  - The **title-based screen of 200 Curie-temperature labels** (the "about 11% likely wrong" estimate). It was classified by the AI assistant from paper titles, not full texts. A spot-check sheet for the authors is in `../../review/curie_spotcheck_32.csv` (**TODO:** complete it, then fill in the number checked and disagreements in Methods). An AI-assisted abstract-level re-check of the same 32 records (not independent of the first screen, not a human check) is in `../../review/curie_spotcheck_32_claude_check.csv`: 29 of 32 agree with the title-screen call, 1 disagrees, 2 unclear; reported in Methods and Supplementary Table 17; it does not replace the authors' check.
   - The adjudications in the external-benchmark audit (A1/A2/A5).
 - **Not done by AI:** no AI-generated images; all figures are plots of computed results.
 - **TODO:** adapt the wording to the target journal's policy (Springer Nature: disclose in Methods/Acknowledgements; AI is not listed as an author).
