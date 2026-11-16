@@ -12,3 +12,6 @@ manuscript/**/*.synctex.gz
 # never commit credentials or the unlicensed third-party table
 .env
 **/curie_temperature_of_ferromagnetic_materials.csv
+
+# reference papers for writing style (published, copyrighted PDFs: never commit)
+concept/
