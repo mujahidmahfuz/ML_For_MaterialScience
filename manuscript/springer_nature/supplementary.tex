@@ -49,7 +49,6 @@
 \item Supplementary Tables 13 and 14: when each reported analysis was specified, and what happened to it.
 \item Supplementary Table 15: the DFT moment per formula unit by cell size.
 \item Supplementary Table 16: the Tier 1 to Tier 3 change for the Curie temperature by agreement of the source space group with the computed polymorph.
-\item Supplementary Table 17: a second reading of 32 curated Curie-temperature records by the language model that made the title screen.
 \item Reproducibility notes.
 \end{itemize}
 
@@ -482,25 +481,6 @@ Symbol not parsable & 69 & \multicolumn{4}{@{}l}{not used} \\
 \botrule
 \end{tabular*}
 \footnotetext{Mean improvement over the three algorithms (clipped ridge regression, gradient boosting, XGBoost) in each split that had at least five test rows in the subset (on average 91.8 test rows per split for the same space group and 43.4 for a different one); positive = Tier~3 better. Saved test predictions of the models trained on all matched rows; nothing was refitted. Detectable = minimum detectable effect at 80\% power. Source symbols were parsed with fixed rules (Methods); the 4,602 matched records are those with complete Tier~3 descriptors. The result can show only a large effect, and the models were trained on all rows, including those whose join is wrong.}
-\end{table}
-
-%% ---------------------------------------------------------------------------------------------------------- Table 17
-\begin{table}[!ht]
-\caption{\textbf{Second reading of 32 curated Curie-temperature records by the language model that made the title screen.}}\label{tab:s17}%
-\setlength{\tabcolsep}{3pt}%
-\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lrrrrr@{}}
-\toprule
-Call of the title screen & Records & \hd{Same\\decision} & \hd{Same, other\\reason} & \hd{Opposite\\decision} & Unclear \\
-\midrule
-Kept (magnetic Curie transition) & 10 & 8 & 0 & 1 & 1 \\
-Computational source & 8 & 8 & 0 & 0 & 0 \\
-Another kind of transition & 7 & 5 & 1 & 0 & 1 \\
-Implausible value & 7 & 5 & 2 & 0 & 0 \\
-\midrule
-All & 32 & 26 & 3 & 1 & 2 \\
-\botrule
-\end{tabular*}
-\footnotetext{The records had been prepared for a manual check; this is not that check, and the checker is the model that made the first call, so the two are not independent. The abstract was retrievable for 18 records. Verdicts rest on an abstract for 16 records, on a literature value that we found in a source for 8, on the title alone for 5 and on a literature value that we could not confirm for 5 (some rest on two bases). `Same, other reason': the record is also doubtful, but because the formula does not match the paper, or the paper is computational, not for the reason that the screen gave. The opposite decision concerned a theoretical paper that had been kept. The sample is small and was not drawn to estimate an error rate; the checked records and verdicts are in the reproducibility package.}
 \end{table}
 
 \clearpage
