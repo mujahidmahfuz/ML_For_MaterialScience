@@ -214,6 +214,30 @@ who is right when MP and experiment disagree. Claim rule, fixed before any real 
 intervals; say "source X is wrong in Y% of cases" only if the sample is at least 20 compositions per source and the intervals support it; collinear entries only,
 so the anchor covers a subset of compounds (state the coverage). The earlier project copy of MAGNDATA (no formulas, keyword-inferred labels) is NOT used.
 
+## Added for the revision guide (2026-11-20; `paper/Revision Guide for the Paper.docx`, item 5.1; specified here BEFORE the run)
+**A23. Are the computed and experimental ordering labels about comparable phases?** `scripts/a23_label_comparability.py`, no model fit.
+Question: the 949 formulas labelled by both Materials Project and an experimental source agree on 28% (kappa 0.00). Does the disagreement persist
+when the two labels refer to the same crystal structure? Inputs: the v1.3 ordering target (A2 definitions), the source records' space group,
+crystal structure and material type (MMFD metadata), the raw Materials Project file (entry-level ordering of every polymorph of the formula, the
+labels used in training) and, from the Materials Project API, the space-group number and energy above hull of those entries.
+Subsets (nested, each with formula-bootstrap agreement and kappa, confusion matrix, AFM -> FM rate):
+  (a) all 949 (reproduces A2); (b) bulk experimental records only (thin films and nanostructures removed);
+  (c) PHASE-MATCHED: an experimental record of the formula reports a space group (A19 parser, unchanged) equal to the space group of at least
+      one Materials Project entry of the same composition; the MP label is that entry's (lowest energy above hull among the matching entries),
+      the experimental label is the modal label of the matching records;
+  (d) (c) restricted to stoichiometric formulas (integer subscripts) and bulk records.
+Claim rule: if (c) has >= 30 formulas and its kappa upper limit stays below 0.40, report 'disagreement persists among phase-matched records';
+if the kappa interval of (c) lies wholly above that of (a), report 'disagreement is partly explained by phase mismatch'; with < 30 formulas,
+report the subset as too small to decide. In every case the text describes the result as a disagreement between source-specific labels, and
+which side is right is judged only by the MAGNDATA structures (A16). A seeded random sample of 30 shared formulas with their source fields is
+written for the scientific-validation note (seed 20261120).
+RESULT (run 2026-11-20; MP API fields fetched for all 1,940 entries of the 949 formulas; the raw-file orderings equal today's API orderings for every
+entry): all 949: agreement 0.279 [0.251, 0.309], kappa 0.001 [-0.029, 0.031]; bulk 908: 0.273, kappa 0.004; PHASE-MATCHED 330 formulas (682 report a
+parsable space group): agreement 0.252 [0.209, 0.300], kappa 0.013 [-0.029, 0.057], 71% of experimental AFM labelled FM by MP; phase-matched,
+stoichiometric and bulk 314: 0.248, kappa 0.019 [-0.023, 0.064]. => by the rule: 'disagreement persists among phase-matched records'. Descriptive:
+of the 29 phase-matched formulas labelled FM by experiment and FiM by MP, 18 contain a rare earth (a label-definition difference: compounds with
+antiparallel sublattices are often called ferromagnets in experimental sources); 103 of 949 formulas have MP polymorphs with different labels.
+
 ## Deviations log
 - 2026-11-10 A6: the descriptor geometry was first checked on MnO and SrFeO3 and found to miss periodic-image M-X-M pairs. It was fixed
   (angles are now measured around each anion site) before any fit used it.
