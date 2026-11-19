@@ -1,6 +1,6 @@
-%% Supplementary Information for "Reliability beyond accuracy in machine learning of magnetic materials".
+%% Supplementary Information for "Label provenance, physical descriptors and chemical novelty constrain machine-learning predictions of magnetic materials".
 %% Springer Nature LaTeX template (sn-jnl.cls), same conventions as manuscript.tex: one file, tables inline, references
-%% pasted in by inline_references.py. Supplementary Information holds tables only (no figures). No author names yet.
+%% pasted in by inline_references.py. Supplementary Information holds Supplementary Figures 1-2 and Tables 1-24. No author names yet.
 
 \documentclass[pdflatex,sn-nature]{sn-jnl}
 
@@ -26,16 +26,19 @@
 \unnumbered
 \brokenpenalty=500
 \renewcommand{\tablename}{Supplementary Table}
+\renewcommand{\figurename}{Supplementary Fig.}
 
 \begin{document}
 
-\title[Supplementary Information]{Supplementary Information for: Reliability beyond accuracy in machine learning of magnetic materials}
+\title[Supplementary Information]{Supplementary Information for: Label provenance, physical descriptors and chemical novelty constrain machine-learning predictions of magnetic materials}
 
 \maketitle
 
 \section{Contents}
 
 \begin{itemize}
+\item Supplementary Fig.~1: error against chemical distance for every blind external record.
+\item Supplementary Fig.~2: summary of the four findings (observation, interpretation, practice).
 \item Supplementary Tables 1--3: audit of the external Curie benchmark, comparisons between its subsets, and error by composition distance.
 \item Supplementary Table 4: the external benchmark under three resampling units and two interval types.
 \item Supplementary Table 5: residual label noise in the curated Curie target (unverified title-based screen).
@@ -49,10 +52,17 @@
 \item Supplementary Tables 13 and 14: when each reported analysis was specified, and what happened to it.
 \item Supplementary Table 15: the DFT moment per formula unit by cell size.
 \item Supplementary Table 16: the Tier 1 to Tier 3 change for the Curie temperature by agreement of the source space group with the computed polymorph.
+\item Supplementary Table 17: agreement of Materials Project and experimental ordering labels after phase matching.
+\item Supplementary Table 18: magnetic and structure-aware physics for the Curie temperature.
+\item Supplementary Table 19: coverage of 90\% conformal prediction intervals, overall and in subgroups.
+\item Supplementary Table 20: calibration of magnetic-ordering probabilities and prediction sets.
+\item Supplementary Table 21: generalization to unfamiliar chemical systems and to another label source.
+\item Supplementary Tables 22 and 23: screening rules on the blind external records and on the internal test sets.
+\item Supplementary Table 24: three worked examples of the screening rules.
 \item Reproducibility notes.
 \end{itemize}
 
-Extended Data items and Methods sections referred to below are those of the main article.
+Figures, tables and Methods sections without the prefix `Supplementary' are those of the main article.
 
 %% ---------------------------------------------------------------------------------------------------------- Table 1
 \begin{table}[!ht]
@@ -98,7 +108,7 @@ Paper (first DOI) & $+39$ \ci{$-39$}{$+145$} & 0.77 & $-0.95$ \ci{$-2.86$}{$+0.0
 Chemical system & $+39$ \ci{$-38$}{$+142$} & 0.76 & $-0.95$ \ci{$-2.70$}{$+0.05$} & 0.96 \\
 \botrule
 \end{tabular*}
-\footnotetext{Differences with 95\% cluster-bootstrap intervals; `share worse' is the fraction of bootstrap resamples in which the first subset is worse. Subset names as in Extended Data Table~6.}
+\footnotetext{Differences with 95\% cluster-bootstrap intervals; `share worse' is the fraction of bootstrap resamples in which the first subset is worse. Subset names as in Table~3.}
 \end{table}
 
 %% ---------------------------------------------------------------------------------------------------------- Table 3
@@ -258,7 +268,7 @@ Gradient boosting & Tier 1 $\to$ Tier 3 & $+2.9$ \ci{$+1.5$}{$+4.4$} & 9/10 & st
 XGBoost & Tier 1 $\to$ Tier 3 & $+2.8$ \ci{$+1.6$}{$+3.9$} & 10/10 & stable gain \\
 \botrule
 \end{tabular*}
-\footnotetext{Per formula unit: 10,821 rows, ten prespecified splits, Nadeau--Bengio 95\% intervals; improvement positive = better; verdicts as in Extended Data Table~1. `Site count' is the number of sites in the DFT cell. Per atom: the same rows and splits in an earlier analysis with the corrected same-calculation atom count; relative MAE gain with a descriptive across-split $t$ interval. XGBoost: one realization.}
+\footnotetext{Per formula unit: 10,821 rows, ten prespecified splits, Nadeau--Bengio 95\% intervals; improvement positive = better; verdicts as in Table~2. `Site count' is the number of sites in the DFT cell. Per atom: the same rows and splits in an earlier analysis with the corrected same-calculation atom count; relative MAE gain with a descriptive across-split $t$ interval. XGBoost: one realization.}
 \end{table}
 
 %% ---------------------------------------------------------------------------------------------------------- Table 9
@@ -276,7 +286,7 @@ Belot et al.\ 2023\cite{belot2023curie} & \Tc{}; 2,557 and 3,194 & random one th
 Itani et al.\ 2025 (NEMAD)\cite{itani2025nemad} & ordering 35,037; \Tc{} 15,577 & stratified random & accuracy 0.91, AFM F1 0.80; MAE 56 K, $R^2$ 0.87 & no \\[2pt]
 Orang et al.\ 2026\cite{abediorang2026curie} & \Tc{}; 2,500 curated & random 80/20 & $R^2$ 0.87--0.91 (0.66 uncurated) & no \\[2pt]
 Acosta et al.\ 2022\cite{acosta2022ordering2d} & 2D magnets; magnetic/non-magnetic and FM/AFM & out-of-bag; external set & accuracy 92.5\%; FM/AFM 87--90\% & external, 54 materials \\[2pt]
-This work & ordering 79,125; \Tc{} 29,740 & formula-, system- and provenance-grouped & macro-F1 0.73; \Tc{} MAE 76 K & yes (Extended Data Tables 5 and 6) \\
+This work & ordering 79,125; \Tc{} 29,740 & formula-, system- and provenance-grouped & macro-F1 0.73; \Tc{} MAE 76 K & yes (Table~3, Supplementary Table~21) \\
 \botrule
 \end{tabular}
 \footnotetext{Numbers as reported by each study, on its own data and splits; they are not directly comparable with each other or with ours. The studies of Nelson and Sanvito, Long et al., Belot et al., Itani et al., Orang et al.\ and Acosta et al.\ were read as arXiv versions. Court and Cole\cite{court2020phase} report family-specific N\'eel-temperature predictions and no dataset-wide metric.}
@@ -414,11 +424,11 @@ Analysis & When it was specified & Outcome \\
 Curation rules and targets (C1--C5; JARVIS default labels; non-chemical formulas) & After analyses of an earlier dataset version had been seen; before any model was fitted to the curated targets & Applied (Methods); a sensitivity target without C5 was run afterwards \\
 Baselines and tier comparison on ten formula-grouped splits & Design before the fits (Phase 6 plan); ten-split replication prespecified after the first Phase 6 results; practical margins before the corresponding analyses & Run (Results). One Tier~2 gain for ordering did not replicate and is listed as an error corrected \\
 Feature attribution (TreeSHAP) & Part of the Phase 6 plan; re-run after the curation changes & Run; rankings stable for ordering and the moment, not for \Tc{} \\
-Stability rule, Holm family, refit-aware intervals, detectable effects (A1) & After the first review round; written in the plan before the run & Run; the clipped ridge was meant to replace the unclipped contrast in the Holm family and did not (logged late; Extended Data Table~1) \\
+Stability rule, Holm family, refit-aware intervals, detectable effects (A1) & After the first review round; written in the plan before the run & Run; the clipped ridge was meant to replace the unclipped contrast in the Holm family and did not (logged late; Table~2) \\
 Cross-provenance ordering (A2) & After the first review round; plan and wording rule before the run & Run; the rule did not allow saying that ordering `does not transfer', and it is not said \\
 External benchmark audit and inference (A1--A8 checks; A3) & Checks written before any record-level error was linked to a flag, but after subset results of an earlier, flawed analysis were known; wording rule fixed afterwards; three amendments (one after the first bootstrap run) & Run (Supplementary Tables 1--4) \\
 Coverage by subgroup and distance-aware variants (Phase 8; A4, A10) & Phase 8 after the Phase 6--7 results; subgroups independent of the method's difficulty score added after the first review (an earlier subgroup defined by it is shown only for comparison) & Run (Supplementary Tables 6 and 11) \\
-Ordering calibration and prediction sets (Phase 8; A4) & Phase 8; temperature and conformal thresholds fitted on separate calibration halves after the first review & Run (Extended Data Table~4) \\
+Ordering calibration and prediction sets (Phase 8; A4) & Phase 8; temperature and conformal thresholds fitted on separate calibration halves after the first review & Run (Supplementary Table~20) \\
 Leave-chemical-system-out comparison (Phase 8) & After the Phase 6--7 results; the matched version (A12) was planned and dropped & Run in the unmatched form; changes mix novelty with test-set composition \\
 \botrule
 \end{tabular}
@@ -432,12 +442,13 @@ Leave-chemical-system-out comparison (Phase 8) & After the Phase 6--7 results; t
 \toprule
 Analysis & When it was specified & Outcome \\
 \midrule
-Magnetic-physics test (A6) & After the first review; plan before the runs; scope cut for run time before any result was seen & Run for \Tc{} only (Extended Data Table~2) \\
-Moment per formula unit (A5) & After the first review; the plan named it the primary moment target & Run (Fig.~1d, Supplementary Table~8); the per-cell moment stayed primary (deviation logged late) \\
+Magnetic-physics test (A6) & After the first review; plan before the runs; scope cut for run time before any result was seen & Run for \Tc{} only (Supplementary Table~18) \\
+Moment per formula unit (A5) & After the first review; the plan named it the primary moment target & Run (Fig.~2d, Supplementary Table~8); the per-cell moment stayed primary (deviation logged late) \\
 Label-noise screen (A7) & After the first review; plan before the run; three categories added during classification & Run (Supplementary Table~5); human spot check not yet done \\
-Screening rules on the 465 blind records (A9) & After the first review; plan before the run & Run (Extended Data Table~7) \\
-Pooled contrast, internal screening, larger tuning search, cell-size check, same-space-group test (A14, A15, A17, A18, A19) & Added after the main analyses in response to a later review round; specification (for A18, the hypothesis; for A19, the claim rule) written before each run & Run (Extended Data Tables 1 and 8, Supplementary Tables 15 and 16); the tuning search covers gradient boosting and \Tc{} only; the space-group test covers the 18\% of records that report a space group \\
+Screening rules on the 465 blind records (A9) & After the first review; plan before the run & Run (Supplementary Table~22) \\
+Pooled contrast, internal screening, larger tuning search, cell-size check, same-space-group test (A14, A15, A17, A18, A19) & Added after the main analyses in response to a later review round; specification (for A18, the hypothesis; for A19, the claim rule) written before each run & Run (Table~2, Supplementary Tables 15, 16 and 23); the tuning search covers gradient boosting and \Tc{} only; the space-group test covers the 18\% of records that report a space group \\
 MAGNDATA as a structural reference (A16) & Added in response to review; claim rule written before the real run; two script changes (metadata stubs skipped, disordered structures labelled separately) after the first parse and before any comparison was seen & Run (Supplementary Table~12c) \\
+Phase-matched comparison of ordering labels (A23) & Added in response to a later review; subsets and claim rule written before the run & Run; the disagreement persists among phase-matched records (Supplementary Table~17) \\
 Dropped analyses & Planned after the first review; dropped for run time before any result was seen & Magnetic-physics test for ordering and the moment; matched leave-system-out; seed averaging for ordering XGBoost; moment intervals rerun with per-row output; refit for the ordering decomposition \\
 \botrule
 \end{tabular}
@@ -481,6 +492,214 @@ Symbol not parsable & 69 & \multicolumn{4}{@{}l}{not used} \\
 \botrule
 \end{tabular*}
 \footnotetext{Mean improvement over the three algorithms (clipped ridge regression, gradient boosting, XGBoost) in each split that had at least five test rows in the subset (on average 91.8 test rows per split for the same space group and 43.4 for a different one); positive = Tier~3 better. Saved test predictions of the models trained on all matched rows; nothing was refitted. Detectable = minimum detectable effect at 80\% power. Source symbols were parsed with fixed rules (Methods); the 4,602 matched records are those with complete Tier~3 descriptors. The result can show only a large effect, and the models were trained on all rows, including those whose join is wrong.}
+\end{table}
+
+%% ---------------------------------------------------------------------------------------------------------- Figures
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\textwidth]{sfig1.pdf}
+\caption{\textbf{Error against chemical distance for every blind external record.} Absolute error of the predicted Curie temperature against the composition distance to the nearest training formula (logarithmic axis) for the 465 blind records of the external benchmark, coloured by whether their chemical system occurs in the training data.}\label{fig:s1}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\textwidth]{sfig2.pdf}
+\caption{\textbf{Summary of the four findings.} For label provenance, added physics, calibration and chemical novelty, what was observed (left), what it means (middle) and what follows for practice (right). Text only; the numbers are those given in Results of the main article.}\label{fig:s2}
+\end{figure}
+
+\clearpage
+%% ---------------------------------------------------------------------------------------------------------- Table 17
+\begin{table}[!ht]
+\caption{\textbf{Agreement of Materials Project and experimental ordering labels after phase matching.}}\label{tab:s17}%
+\setlength{\tabcolsep}{3pt}%
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lrlll@{}}
+\toprule
+\textbf{a} Subset & Formulas & Agreement & Cohen's $\kappa$ & \hd{Exp.\ AFM called\\FM by MP} \\
+\midrule
+All shared formulas & 949 & 0.28 \ci{0.25}{0.31} & 0.00 \ci{$-0.03$}{0.03} & 66\% (508) \\
+Bulk records only & 908 & 0.27 \ci{0.24}{0.30} & 0.00 \ci{$-0.03$}{0.03} & 66\% (507) \\
+Same space group & 330 & 0.25 \ci{0.21}{0.30} & 0.01 \ci{$-0.03$}{0.06} & 71\% (222) \\
+Same s.g., stoichiometric, bulk & 314 & 0.25 \ci{0.20}{0.30} & 0.02 \ci{$-0.02$}{0.06} & 70\% (216) \\
+\botrule
+\end{tabular*}
+
+\vspace{6pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lrrrrr@{}}
+\toprule
+\textbf{b} Phase-matched formulas & \multicolumn{4}{c}{Materials Project label} & \\
+\cmidrule{2-5}
+Experimental label & FM & AFM & FiM & NM & Total \\
+\midrule
+\quad FM & 50 & 1 & 29 & 7 & 87 \\
+\quad AFM & 157 & 26 & 15 & 24 & 222 \\
+\quad FiM & 12 & 1 & 7 & 0 & 20 \\
+\quad NM & 0 & 0 & 1 & 0 & 1 \\
+\botrule
+\end{tabular*}
+\footnotetext{MP, Materials Project. Formulas labelled by both MP and an experimental source (modal label per provenance in \textbf{a}, rows 1--2). Phase-matched: an experimental record reports a space group equal to that of an MP entry of the same composition; the MP label is that entry's (lowest energy above the hull among the matching entries) and the experimental label is the modal label of the matching records (Methods of the main article). 682 of the 949 formulas report a parsable experimental space group; the 1,940 MP entries of the shared formulas include 84 with an unknown ordering (not used as labels), and 103 formulas have MP polymorphs with different labels. The orderings recorded in our MP file equal those served by the MP API for every entry. Of the 29 phase-matched formulas that are FM in the experimental sources and FiM in MP, 18 contain a rare earth. Agreement and $\kappa$: 95\% intervals from a bootstrap over formulas (1,000 resamples). Claim rule fixed before the analysis: with at least 30 phase-matched formulas and an upper $\kappa$ limit below 0.40, the disagreement persists among phase-matched records. A space group does not fix the magnetic cell or the composition of a sample.}
+\end{table}
+
+%% ---------------------------------------------------------------------------------------------------------- Table 18
+\begin{table}[!ht]
+\caption{\textbf{Magnetic and structure-aware physics for the Curie temperature.}}\label{tab:s18}%
+\setlength{\tabcolsep}{4pt}%
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lrllll@{}}
+\toprule
+Algorithm & MAE (K) & vs Tier 1 & Verdict & vs Tier 3 & Verdict \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Tier 1 + magnetic-sublattice geometry (10 descriptors)}}\\
+Gradient boosting & 202.6 & $+0.3$ \ci{$-13.9$}{$+14.5$} & none & -- & -- \\
+XGBoost & 203.6 & $+5.8$ \ci{$-15.8$}{$+27.4$} & none & -- & -- \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Tier 3 + magnetic-sublattice geometry}}\\
+Gradient boosting & 220.2 & -- & -- & $-3.1$ \ci{$-27.6$}{$+21.4$} & none \\
+XGBoost & 211.0 & -- & -- & $+8.0$ \ci{$-15.8$}{$+31.9$} & none \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Tier 3 + DFT magnetic outputs (4 descriptors)}}\\
+Gradient boosting & 197.6 & $+5.3$ \ci{$-29.9$}{$+40.4$} & none & $+19.6$ \ci{$-3.1$}{$+42.3$} & borderline \\
+XGBoost & 210.7 & $-1.4$ \ci{$-35.8$}{$+33.0$} & none & $+8.3$ \ci{$-27.5$}{$+44.2$} & none \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Tier 3 + geometry + DFT magnetic outputs}}\\
+Gradient boosting & 205.6 & $-2.8$ \ci{$-39.1$}{$+33.6$} & none & $+11.5$ \ci{$-14.4$}{$+37.4$} & none \\
+XGBoost & 201.9 & $+7.5$ \ci{$-33.8$}{$+48.8$} & none & $+17.2$ \ci{$-9.5$}{$+43.9$} & borderline \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Tier 3 + CHGNet crystal embedding (64 dimensions)}}\\
+Gradient boosting & 213.7 & $-10.8$ \ci{$-22.5$}{$+0.9$} & none & $+3.5$ \ci{$-19.2$}{$+26.2$} & none \\
+XGBoost & 199.9 & $+9.5$ \ci{$-28.7$}{$+47.7$} & none & $+19.2$ \ci{$+0.4$}{$+38.0$} & stable \\
+\botrule
+\end{tabular*}
+\footnotetext{Matched Curie population (4,602 records) and the same ten splits as Table~2 of the main article. MAE of Tier~1 and Tier~3: gradient boosting 202.9 and 217.1~K, XGBoost 209.3 and 219.1~K. Improvements in K, positive = better, with Nadeau--Bengio 95\% intervals; verdicts refer to gains and are defined as in Table~2 of the main article. Geometry: magnetic-ion site fraction and density, nearest and mean M--M distance, M--M connectivity, M--X distance and coordination, mean M--X--M angle and the fractions of angles in 150--180$^\circ$ and 80--100$^\circ$, from the Materials Project structure of the same entry. DFT magnetic outputs (moment per atom, magnetic-site fraction, magnetization per volume, magnetic flag) cannot leak experimental Curie temperatures. CHGNet: frozen 64-dimensional crystal feature of the pretrained universal potential. XGBoost: one realization.}
+\end{table}
+%% ---------------------------------------------------------------------------------------------------------- Table 19
+\begin{table}[!ht]
+\caption{\textbf{Coverage of 90\% conformal prediction intervals, overall and in subgroups.}}\label{tab:s19}%
+\setlength{\tabcolsep}{4pt}%
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lrrrrr@{}}
+\toprule
+Method & \hd{All test materials,\\mean (s.d.)} & \hd{Mean\\width} & \hd{Highest\\predictions} & \hd{Second\\subgroup} & \hd{Farthest\\distance decile} \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Curie temperature (highest: top decile; second: text-mined labels)}}\\
+Split conformal & 89.3 (6.0) & 569 K & 65.5 & 78.2 & 86.6 \\
+Normalized conformal & 90.3 (2.5) & 451 K & 87.4 & 86.0 & 88.2 \\
+CQR & 89.4 (5.8) & 519 K & 68.6 & 79.3 & 89.7 \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{DFT moment per cell (highest: top third; second: oxides)}}\\
+Split conformal & 90.0 (0.4) & 12.6 \muB{} & 72.3 & 84.0 & -- \\
+Normalized conformal & 90.0 (0.5) & 11.7 \muB{} & 86.7 & 91.0 & -- \\
+CQR & 90.1 (0.4) & 9.8 \muB{} & 83.4 & 89.5 & -- \\
+\botrule
+\end{tabular*}
+\footnotetext{Coverage in \%; nominal 90\%; ten prespecified formula-grouped splits; calibration on 20\% of the training formulas. Subgroups are defined without the difficulty score of any method: the highest point predictions, the text-mined label source (Curie temperature) or oxides (moment), and the farthest decile of composition distance to the training formulas. For comparison, on the decile defined by the normalized method's own difficulty scale (a circular definition used in an earlier analysis), Curie coverage was 54, 89 and 61\% for split, normalized and CQR. Every Curie subgroup that we evaluated is in Supplementary Table~11.}
+\end{table}
+%% ---------------------------------------------------------------------------------------------------------- Table 20
+\begin{table}[!ht]
+\caption{\textbf{Calibration of magnetic-ordering probabilities and prediction sets.}}\label{tab:s20}%
+\setlength{\tabcolsep}{4pt}%
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lrrrrrrrr@{}}
+\toprule
+& \multicolumn{2}{c}{ECE} & \multicolumn{5}{c}{Coverage (\%)} & \\
+\cmidrule{2-3}\cmidrule{4-8}
+Probabilities or sets & \hd{Top\\label} & \hd{Class-\\wise} & All & FM & AFM & FiM & NM & \hd{Set\\size} \\
+\midrule
+Raw (balanced weights) & 0.064 & 0.035 & -- & -- & -- & -- & -- & -- \\
+Prior-corrected & 0.090 & 0.049 & -- & -- & -- & -- & -- & -- \\
+Prior-corrected + temperature & 0.014 & 0.032 & -- & -- & -- & -- & -- & -- \\
+Marginal sets & -- & -- & 89.8 & 96.2 & 57.0 & 54.3 & 97.7 & 1.39 \\
+Class-conditional sets & -- & -- & 90.1 & 90.1 & 90.9 & 90.8 & 89.8 & 1.61 \\
+\botrule
+\end{tabular*}
+\footnotetext{Means over ten prespecified splits (Tier~1 XGBoost, full ordering population). ECE, expected calibration error with 15 equal-width bins. Sets are at 90\% nominal coverage on prior-corrected, temperature-scaled probabilities; the temperature was fitted on half of the calibration formulas and the conformal thresholds on the other half (re-using one calibration set changes coverage by less than 0.3 points). Standard deviation of overall coverage across splits: 0.9 (marginal) and 0.6 (class-conditional) points.}
+\end{table}
+%% ---------------------------------------------------------------------------------------------------------- Table 21
+\begin{table}[!ht]
+\caption{\textbf{Generalization to unfamiliar chemical systems and to another label source.}}\label{tab:s21}%
+\setlength{\tabcolsep}{4pt}%
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}llrrlr@{}}
+\toprule
+Test & Metric & Familiar & Unfamiliar & \hd{Change or 95\%\\interval} & \hd{Splits worse\\or null limit} \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Leave chemical system out (ten paired splits)}}\\
+Ordering & macro-F1 & 0.712 & 0.684 & $-0.028$ \ci{$-0.041$}{$-0.016$} & 10/10 \\
+Curie temperature & MAE (K) & 99.2 & 101.9 & $+2.7$ \ci{$-16.8$}{$+22.2$} & 5/10 \\
+DFT moment per cell & MAE (\muB{}) & 2.591 & 2.663 & $+0.073$ \ci{$-0.009$}{$+0.154$} & 7/10 \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Label source, ordering on FM, AFM and FiM (metric: balanced accuracy)}}\\
+MP $\to$ experimental & -- & 0.769 & 0.337 & \ci{0.273}{0.396} & 0.374 \\
+Experimental $\to$ MP & -- & 0.591 & 0.384 & \ci{0.366}{0.401} & 0.351 \\
+\botrule
+\end{tabular*}
+\footnotetext{Leave chemical system out: the formula-grouped and system-grouped test sets differ, so each change combines novelty with test-set composition; change = unfamiliar minus familiar with a 95\% interval; last column, splits (of ten) in which the unfamiliar setting was worse. Label source (MP, Materials Project): `familiar' = a model trained and tested within the target label source, `unfamiliar' = trained on the other source; last column, 97.5th percentile of the null distribution; NM removed on both sides (the experimental labels contain 5 NM rows); training formulas present in the target test set removed; 95\% formula-bootstrap interval of the unfamiliar value; null = 20 refits on permuted training labels. Label agreement for the 949 formulas labelled by both sources: 28\%, Cohen's $\kappa$ = 0.00 \ci{$-0.03$}{0.03} (Supplementary Table~12).}
+\end{table}
+%% ---------------------------------------------------------------------------------------------------------- Table 22
+\begin{table}[!ht]
+\caption{\textbf{What the predictions support in a screening setting (465 blind external records).}}\label{tab:s22}%
+\setlength{\tabcolsep}{4pt}%
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lrlrl@{}}
+\toprule
+Rule & $n$ (papers) & Measure & Estimate & 95\% interval \\
+\midrule
+\multicolumn{5}{@{}l}{\textit{Abstention}}\\
+No abstention & 465 (81) & MAE (K) & 103 & \ci{78}{154} \\
+ & & coverage & 0.89 & \ci{0.83}{0.92} \\
+Keep the 50\% closest compositions & 238 (42) & MAE (K) & 71 & \ci{61}{97} \\
+ & & coverage & 0.93 & \ci{0.88}{0.96} \\
+Keep the 50\% narrowest intervals & 233 (50) & MAE (K) & 73 & \ci{59}{109} \\
+ & & coverage & 0.88 & \ci{0.77}{0.92} \\
+\midrule
+\multicolumn{5}{@{}l}{\textit{Room-temperature screen (\Tc{} $>$ 300 K)}}\\
+Point prediction & 465 (81) & accuracy & 0.802 & \ci{0.717}{0.879} \\
+ & & recall & 0.936 & \ci{0.866}{0.973} \\
+ & & precision & 0.769 & \ci{0.667}{0.902} \\
+Decide only if the 90\% interval & 465 (81) & share decided & 0.374 & \ci{0.261}{0.598} \\
+\quad excludes 300 K & & accuracy of decisions & 0.925 & \ci{0.837}{0.982} \\
+\botrule
+\end{tabular*}
+\footnotetext{The 465 blind external records; base rate of \Tc{} $>$ 300~K = 0.57. Paper-cluster bootstrap 95\% intervals (10,000 resamples). Distance: composition (total-variation) distance to the nearest training formula; interval: the 90\% normalized conformal interval.}
+\end{table}
+%% ---------------------------------------------------------------------------------------------------------- Table 23
+\begin{table}[!ht]
+\caption{\textbf{Screening rules on the internal test sets (Curie temperature, ten splits).}}\label{tab:s23}%
+\setlength{\tabcolsep}{4pt}%
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lrrr@{}}
+\toprule
+Rule & \hd{Retained\\share} & MAE (K) & Coverage \\
+\midrule
+\multicolumn{4}{@{}l}{\textit{Abstention}}\\
+No abstention & 1.000 & 102.9 (19.1) & 0.903 (0.025) \\
+Keep the narrowest intervals & 0.761 & 62.5 (5.9) & 0.912 (0.016) \\
+ & 0.500 & 42.5 (4.1) & 0.920 (0.015) \\
+ & 0.250 & 30.8 (2.6) & 0.920 (0.020) \\
+Keep the closest compositions & 0.757 & 100.1 (26.2) & 0.910 (0.030) \\
+ & 0.508 & 85.6 (28.6) & 0.919 (0.036) \\
+ & 0.271 & 103.0 (58.8) & 0.914 (0.063) \\
+\midrule
+\multicolumn{4}{@{}l}{\textit{Room-temperature screen (\Tc{} $>$ 300 K; base rate 0.454 (0.020))}}\\
+Point prediction: accuracy & & & 0.857 (0.018) \\
+\quad precision & & & 0.822 (0.042) \\
+\quad recall & & & 0.876 (0.028) \\
+Interval decisions: share decided & & & 0.437 (0.043) \\
+\quad accuracy of decisions & & & 0.976 (0.015) \\
+Precision among the 25 highest predictions & & & 0.956 (0.126) \\
+\quad 50 highest & & & 0.952 (0.119) \\
+\quad 100 highest & & & 0.921 (0.126) \\
+\botrule
+\end{tabular*}
+\footnotetext{Mean (standard deviation across splits) over the ten prespecified formula-grouped splits, about 4,460 test rows each; Tier~1 XGBoost and 90\% normalized conformal intervals from the uncertainty runs, whose ten splits and 80\% training share differ from the frozen split (MAE 76~K for the baseline in Results). The standard deviation is descriptive because the test sets of different splits overlap. Ties at a distance cut-off are kept, so the retained share can exceed the nominal 0.75, 0.50 and 0.25. Interval decisions: a record is decided only if its 90\% interval lies wholly above or wholly below 300 K. Rules and thresholds as for the external records (Supplementary Table~22).}
+\end{table}
+%% ---------------------------------------------------------------------------------------------------------- Table 24
+\begin{table}[!ht]
+\caption{\textbf{Three worked examples of the screening rules (Curie temperature, internal test sets).}}\label{tab:s24}%
+\setlength{\tabcolsep}{3pt}%
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lrrrrr>{\raggedright\arraybackslash}p{66pt}@{}}
+\toprule
+Compound & Records & \hd{Measured\\median (range)} & \hd{Predicted} & \hd{90\% interval} & \hd{Distance\\(share closer)} & Outcome of the 300 K rule \\
+\midrule
+SmCo$_5$ & 68 & 1,020 (473--1,388) & 1,078 & 681--1,474 & 0.008 (26\%) & Decided `above'; correct \\
+Gd$_5$Si$_4$ & 27 & 336 (40--345) & 305 & 207--404 & 0.056 (64\%) & Abstained: interval contains 300 K \\
+Ho & 10 & 20 (5--542) & 260 & $-62$ to 583 & 0.286 (97\%) & Abstained: interval contains 300 K; far from training data \\
+\botrule
+\end{tabular*}
+\footnotetext{Temperatures in K. Tier~1 XGBoost with 90\% normalized conformal intervals from the uncertainty runs; one test set per compound (splits 1, 4 and 2 of the ten, numbered from 0), in which every record of the formula is a test record. Values are medians over the records of the formula. Distance is the composition distance to the nearest training formula, and the share is the fraction of the test records that are at least as close. Rule as in Supplementary Table~22.}
 \end{table}
 
 \clearpage
