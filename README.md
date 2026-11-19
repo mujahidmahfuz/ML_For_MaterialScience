@@ -20,7 +20,8 @@ paper/
 ├── results/                saved outputs, organised by research question  (results/README.md)
 ├── tables/                 Tables 1-6 and S1-S3 as CSV + LaTeX  (tables/README.md)
 ├── figures/                Figures 1-4 and S1 as PDF + PNG  (figures/README.md)
-└── manuscript/             Springer Nature LaTeX template (sn-jnl.cls, option sn-nature) for the manuscript
+└── manuscript/             the manuscript: springer_nature/ (current, Nature Communications format; README there),
+                            revision_guide_2026-11-20/ (revision deliverables), main/submission/ (minimal submission copy)
 ```
 
 ## Quick start
@@ -40,7 +41,8 @@ To re-run the analyses themselves, follow `scripts/README.md`. It sets up a work
 | Ms per-atom gain is modest (GB +2.9%, XGB +2.7%, Ridge +6.0%) | Table 2, Fig. 1d | `ms_per_atom/peratom_corrected_tier_effect.csv` |
 | Normalized conformal is the only Tc interval method near nominal; the hardest decile is under-covered | Table 3, Fig. 2a | `results/rq2_uncertainty/repeated_splits/curie/` |
 | Marginal ordering sets miss AFM/FiM (about 57% / 55%); class-conditional sets cover about 90% for every class (89.9-91.1% over 10 splits) | Table 4, Fig. 2c | `results/rq2_uncertainty/ordering/uq_conformal_sets.csv`, `REPEATED_SPLIT_COVERAGE.md` |
-| Ordering degrades on unseen chemical systems (−0.028 macro-F1, 10/10 splits) and does not transfer across label provenance | Table 6 | `results/rq3_generalization/leave_chemical_system_out/`, `label_provenance/` |
+| Ordering degrades on unseen chemical systems (−0.028 macro-F1, 10/10 splits) and transfers poorly across label provenance | Table 6 | `results/rq3_generalization/leave_chemical_system_out/`, `label_provenance/` |
+| Computed (Materials Project) and experimental ordering labels agree at chance level (28%, κ 0.00, 949 formulas), also when phase-matched by space group (25%, κ 0.01, 330 formulas) | Manuscript Fig. 1, Supplementary Table 17 | `results/revision/a2_provenance/`, `results/revision/a23_label_comparability/` |
 | External benchmark: blind compositions MAE 102.7 K [79, 154]; unseen systems R² −0.17 [−0.93, 0.66] | Table 5, Fig. 3 | `results/rq3_generalization/external_benchmark/subset_metrics_bootstrap.csv` |
 | Error grows with composition distance (ρ = 0.28 [0.10, 0.49]); coverage falls from 0.95 to 0.85 | Table S3, Fig. 4 | `external_benchmark/similarity_spearman.csv`, `similarity_bins.csv` |
 | Audit: 105 of 2,500 external records excluded for stated reasons; 80% of compositions already in our data | Table S1 | `external_benchmark/audit_counts.csv`, `AUDIT_RESULTS.md` |
