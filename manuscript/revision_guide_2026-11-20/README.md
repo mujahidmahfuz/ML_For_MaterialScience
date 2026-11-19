@@ -4,7 +4,7 @@ The guide asks for five deliverables. Where each one is:
 
 | Deliverable | File |
 |---|---|
-| A. Revised manuscript | `../springer_nature/manuscript.tex` -> `manuscript.pdf` (reading copy, 32 pp) and `manuscript_review.pdf` (double-spaced, line numbers, 46 pp); `../springer_nature/supplementary.tex` -> `supplementary.pdf` (22 pp). Submission copy: `../main/submission/` |
+| A. Revised manuscript | `../springer_nature/manuscript.tex` -> `manuscript.pdf` (reading copy, 31 pp) and `manuscript_review.pdf` (double-spaced, line numbers, 46 pp); `../springer_nature/supplementary.tex` -> `supplementary.pdf` (22 pp). Submission copy: `../main/submission/` |
 | B. Revised figure package | `figure_plan.md`; figures `../springer_nature/fig1.pdf` ... `fig5.pdf`, `sfig1.pdf`, `sfig2.pdf` (script `make_figures_sn.py`) |
 | C. Novelty assessment | `novelty_assessment.md` |
 | D. Scientific-validation note | `scientific_validation_note.md` (includes the new phase-matched label check, A23) |

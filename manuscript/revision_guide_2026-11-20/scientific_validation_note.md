@@ -15,7 +15,7 @@ analysis was run (A23, item 5.1); everything else was checked against the saved 
 | Subset | Formulas | Agreement [95% CI] | kappa [95% CI] | Exp. AFM called FM by MP |
 |---|---|---|---|---|
 | All shared formulas | 949 | 0.28 [0.25, 0.31] | 0.00 [-0.03, 0.03] | 66% |
-| Bulk records only | 908 | 0.27 [0.24, 0.30] | 0.00 [-0.03, 0.03] | 66% |
+| Bulk records only | 909 | 0.27 [0.24, 0.30] | 0.00 [-0.03, 0.03] | 66% |
 | Same space group (phase-matched) | 330 | 0.25 [0.21, 0.30] | 0.01 [-0.03, 0.06] | 71% |
 | Same s.g., stoichiometric, bulk | 314 | 0.25 [0.20, 0.30] | 0.02 [-0.02, 0.06] | 70% |
 

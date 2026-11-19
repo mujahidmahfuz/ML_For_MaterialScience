@@ -3,7 +3,7 @@
 Guide: `paper/Revision Guide for the Paper.docx` (2026-11-20). Revised files: `paper/manuscript/springer_nature/manuscript.tex`
 (+ PDF, review PDF) and `supplementary.tex` (+ PDF); figures from `make_figures_sn.py`. Target journal changed to
 **Nature Communications** as the guide recommends (format rules applied: title 13 words <= 15; abstract 185 words <= 200 with no
-references; main text 4,999 words <= 5,000; 8 display items <= 10; 59 references <= 70; Discussion without subheadings; no
+references; main text 5,000 words (limit ~5,000); 8 display items <= 10; 59 references <= 70; Discussion without subheadings; no
 Extended Data). Numbers were not changed except where a new analysis (A23) adds them.
 
 | Guide item | What was done | Where |

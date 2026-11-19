@@ -39,7 +39,8 @@ OUT = ROOT / "final/revision/outputs/a23_label_comparability"
 N_BOOT, SEED, SAMPLE_SEED, N_SAMPLE, CHUNK = 1000, 20261110, 20261120, 30, 500
 CLASSES = ["FM", "AFM", "FiM", "NM"]
 MP_MAP = {"FM": "FM", "AFM": "AFM", "FiM": "FiM", "NM": "NM"}          # 'Unknown' entries are not labels
-NOT_BULK = re.compile(r"film|nano|thin|layer|wire|particle|dot|cluster|monolayer|multilayer|ribbon", re.I)
+# Form factors that are not bulk. 'layered' (a bulk crystal-structure description) must not match, so only mono-/epi-/multilayer count.
+NOT_BULK = re.compile(r"film|nano|thin|monolayer|epilayer|multilayer|wire|particle|\bdots?\b|cluster|ribbon", re.I)
 
 
 def kappa(a: np.ndarray, b: np.ndarray) -> float:

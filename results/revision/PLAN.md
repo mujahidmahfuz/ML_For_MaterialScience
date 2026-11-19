@@ -232,7 +232,7 @@ report the subset as too small to decide. In every case the text describes the r
 which side is right is judged only by the MAGNDATA structures (A16). A seeded random sample of 30 shared formulas with their source fields is
 written for the scientific-validation note (seed 20261120).
 RESULT (run 2026-11-20; MP API fields fetched for all 1,940 entries of the 949 formulas; the raw-file orderings equal today's API orderings for every
-entry): all 949: agreement 0.279 [0.251, 0.309], kappa 0.001 [-0.029, 0.031]; bulk 908: 0.273, kappa 0.004; PHASE-MATCHED 330 formulas (682 report a
+entry): all 949: agreement 0.279 [0.251, 0.309], kappa 0.001 [-0.029, 0.031]; bulk 909: 0.273, kappa 0.003 (908 before the 2026-11-20 fix logged below); PHASE-MATCHED 330 formulas (682 report a
 parsable space group): agreement 0.252 [0.209, 0.300], kappa 0.013 [-0.029, 0.057], 71% of experimental AFM labelled FM by MP; phase-matched,
 stoichiometric and bulk 314: 0.248, kappa 0.019 [-0.023, 0.064]. => by the rule: 'disagreement persists among phase-matched records'. Descriptive:
 of the 29 phase-matched formulas labelled FM by experiment and FiM by MP, 18 contain a rare earth (a label-definition difference: compounds with
@@ -269,3 +269,6 @@ antiparallel sublattices are often called ferromagnets in experimental sources);
 - 2026-11-10 (disclosed after the round-2 re-review): A6(e), the Curie comparison restricted to records whose source space group matches the
   computed polymorph, was also not run (dropped with the other A6 cuts, before any result was seen). The manuscript now says the
   "noisy join" explanation is untested.
+- 2026-11-20 A23: the non-bulk pattern matched the substring 'layer' and so also the bulk structure description 'Layered' (2 experimental
+  records). Fixed (only mono-/epi-/multilayer count as non-bulk) and re-run: the bulk subset went from 908 to 909 formulas (agreement 0.273,
+  kappa 0.003); the phase-matched subsets and every other number are unchanged.
