@@ -73,6 +73,34 @@ Here we ask under which conditions machine-learning predictions of magnetic prop
 
 We merged nine files from six providers into one schema that records the source of every row (507,828 rows; Methods): Materials Project\cite{jain2013materials}, OQMD\cite{saal2013oqmd}, JARVIS-DFT\cite{choudhary2020jarvis}, four files from NEMAD\cite{itani2025nemad}, the ChemDataExtractor Curie and N\'eel database\cite{kelly2025curie} and MAGNDATA\cite{gallego2016magndata}. Two of the NEMAD files are its literature tables of magnetic and of anisotropy properties, which a language-model pipeline extracted from journal articles\cite{zhang2024gptarticleextractor}; we call them the experimental compilations. `Experimental' here therefore means values reported from experiments in the literature and extracted automatically, not values that we measured or checked. Written curation rules, which only remove rows, defined three primary targets (Table~\ref{tab:dataset}): magnetic ordering (79,125 records), \Tc{} (29,740) and the total magnetic moment of the DFT cell at 0~K (\mcell{}; 87,513), a computed quantity that is not an experimental saturation magnetization. The targets differ in where their labels come from (Fig.~\ref{fig:provenance}a). The \Tc{} labels come from the literature, 69\% from experimental compilations and 31\% mined from text; the moment comes from DFT for all but 10 of its records; and the ordering labels mix the two kinds of source, 78\% from Materials Project and 22\% from experimental compilations. The class balance differs by provenance as well: 52\% of the Materials Project labels are NM and 2\% AFM, whereas 29\% of the experimental labels are AFM and almost none NM (Fig.~\ref{fig:provenance}b). Curation removed labels that did not mean what their column said, such as N\'eel, superconducting and ferroelectric temperatures recorded as Curie temperatures and 15,493 default `ferromagnetic' labels written by our JARVIS collector (Methods); 11--27\% of the remaining \Tc{} labels were doubtful in a title-based screen (Supplementary Table~5).
 
+\begin{table}[!t]
+\caption{\textbf{Prediction targets of the curated analysis dataset.}}\label{tab:dataset}%
+\setlength{\tabcolsep}{3pt}%
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lllrrrr@{}}
+\toprule
+Target & Symbol & Unit & Records & Formulas & \hd{Train/validation/test\\records} & \hd{Matched\\records} \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Primary targets}}\\
+Magnetic ordering & -- & class & 79,125 & 70,293 & 55,249/11,974/11,902 & 6,061 \\
+Curie temperature & \Tc{} & K & 29,740 & 14,145 & 20,508/4,691/4,541 & 4,602 \\
+DFT moment per cell & \mcell{} & \muB{} per cell & 87,513 & 77,402 & 61,254/13,130/13,129 & 10,852 \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Secondary targets (not analysed here)}}\\
+Mass magnetization & -- & emu g$^{-1}$ & 4,317 & 3,218 & 3,021/648/648 & -- \\
+Volume magnetization & -- & A m$^{-1}$ & 779 & 454 & 535/124/120 & -- \\
+Anisotropy constant & $K_1$ & J m$^{-3}$ & 1,847 & 1,182 & 1,296/280/271 & -- \\
+\botrule
+\end{tabular*}
+\footnotetext{Analysis dataset v1.4 (frozen); formula-grouped 70/15/15 splits. Matched = records with complete Tier~3 descriptors, used at every tier in the descriptor comparison. Ordering classes: FM 34,098, NM 31,673, FiM 7,161 and AFM 6,193 records; 61,484 labels come from Materials Project and 17,641 from experimental compilations. The DFT moment is the Materials Project or JARVIS total moment of the computed cell at 0~K, not an experimental saturation magnetization; the moment per formula unit, \mfu{} = \mcell{} $\times$ atoms per formula unit / atoms in the cell (10,821 matched rows), is analysed alongside it. Tier~1 = 65 composition descriptors; Tier~2 = Tier~1 + 8 oxidation-state descriptors; Tier~3 = Tier~2 + 24 structural and electronic DFT descriptors (97 in total).}
+\end{table}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig1.pdf}
+\caption{\textbf{Computed and experimental labels describe magnetic order differently.} \textbf{a}, Share of the records of each primary target by source. \textbf{b}, Ordering classes among the labels from Materials Project and from the experimental compilations (FM, ferromagnetic; AFM, antiferromagnetic; FiM, ferrimagnetic; NM, non-magnetic); the unlabelled segments are AFM (2\%) and FiM (9\%) for Materials Project and FiM (10\%) for the experimental labels, which contain 5 NM labels. \textbf{c}, Modal labels of the 949 formulas labelled by both Materials Project (columns) and an experimental source (rows); numbers are formulas and the shading is the share of each row; the one formula with an experimental NM label is not shown. \textbf{d}, Cohen's $\kappa$ with 95\% formula-bootstrap intervals, and raw agreement with the number of formulas or compositions (right), for Materials Project against experimental labels (MP--exp.) on all shared formulas, on bulk records only, on formulas whose experimental space group (s.g.) equals that of a Materials Project entry of the same composition, and on the bulk, stoichiometric part of those; and for each source against labels derived from the collinear magnetic structures of MAGNDATA. Agreement between two sources does not by itself show which label is physically correct.}\label{fig:provenance}
+\end{figure}
+
+
 Do the two kinds of ordering label describe the same physical state? For 949 formulas, both Materials Project and an experimental source supply a label. They agreed for 28\% of these formulas, with Cohen's $\kappa=0.00$ ($-0.03$ to $0.03$) (Fig.~\ref{fig:provenance}c). Because the two sources have very different class balances, $\kappa$ could not have exceeded 0.34, and the labels are associated (Cram\'er's $V=0.20$) but shifted: when Materials Project calls a compound AFM, the experimental label agrees in 86\% of cases, whereas 336 of 508 experimental antiferromagnets (66\%) are FM in Materials Project (Supplementary Table~25). The two labels might refer to different phases, so we compared them where phases can be matched (Methods; Supplementary Table~17). When an experimental record reports a space group equal to that of a Materials Project entry of the same composition, and the label of that entry is used (330 formulas), agreement was 25\% ($\kappa=0.01$; $-0.03$ to $0.06$), and restricting further to bulk, stoichiometric compounds (314 formulas) changed nothing ($\kappa=0.02$; $-0.02$ to $0.06$). Among the phase-matched formulas, 71\% of the experimental antiferromagnets are FM in Materials Project (Fig.~\ref{fig:provenance}d), and formulas whose space groups differ agreed just as poorly (28\%; difference $-0.03$, $-0.09$ to $0.04$). A mismatch of crystal structure, at least at the level of the space group, therefore does not explain the disagreement.
 
 Measured magnetic structures show which convention matches experiment. MAGNDATA\cite{gallego2016magndata,gallego2016magndata2}, hosted by the Bilbao Crystallographic Server\cite{aroyo2011bcs,aroyo2006bcs1,aroyo2006bcs2}, collects magnetic structures determined mainly by neutron diffraction; we labelled each ordered, collinear structure from its own moments (840 compositions; Methods). The experimental labels agreed with these structures for 92\% of 442 shared compositions ($\kappa=0.72$; 0.62 to 0.80; a labeller that always answers AFM would reach 86\%), and the Materials Project labels for 22\% of 251 ($\kappa=0.03$; 0.00 to 0.07); of 218 compounds that are AFM in their measured structure, Materials Project labels 125 (57\%) FM (Fig.~\ref{fig:provenance}d; Supplementary Table~12). The experimental compilations and MAGNDATA draw on the same literature, so this shows that the experimental labels reproduce published structure determinations, not that the two are independent.
@@ -87,6 +115,48 @@ Within the training distribution, composition alone was accurate. For ordering, 
 
 To test whether Tier~3 adds information, we compared the tiers on matched populations: the materials with complete Tier~3 descriptors, used with identical rows, splits, hyperparameter grids and metrics at every tier, over ten prespecified formula-grouped splits (Fig.~\ref{fig:rq1}, Table~\ref{tab:tiers}). Intervals allow for refitting\cite{nadeau2003inference}, and the nine contrasts between Tier~1 and Tier~3 are Holm-corrected\cite{holm1979simple} (stability rule in Methods). For ordering and \Tc{}, no algorithm showed a stable effect of Tier~2 or Tier~3, and every adjusted $P$ value was 1.0. For \Tc{} the Tier~3 point estimates were losses: $-14.3$~K ($-42.5$ to $+13.9$) for gradient boosting, $-8.2$~K ($-48.3$ to $+32.0$) for XGBoost and $-14.4$~K ($-33.5$ to $+4.8$) for ridge regression with clipped inputs. Pooled over the three algorithms the change was $-12.3$~K ($-32.7$ to $+8.1$; worse in eight of ten splits), so the average algorithm gains less than our 10-K margin of practical relevance, also after a 64-setting hyperparameter search (Table~\ref{tab:tiers}). The design detects only large effects, of 27--56~K for \Tc{} and 0.04--0.09 in macro-F1 for ordering, and the intervals leave room for \Tc{} gains of up to 5--32~K for single algorithms. We therefore report no detectable gain; we do not claim that a gain is absent. The matched \Tc{} population, which holds only materials with a full DFT record, is also harder (Tier~1 MAE 203~K, $R^2$ 0.35) and concentrated: 4,602 records from 521 formulas, five of which hold 29\% of the records. Weighting every formula equally did not change the result (gradient boosting $-5.3$~K, $-27.4$ to $+16.8$; Supplementary Table~26), and label noise is not the limit: predicting each test record from the other records of its formula gives an error of 66~K, against 204~K for the model on the same records.
 
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig2.pdf}
+\caption{\textbf{Structural and electronic DFT descriptors add little information beyond composition.} Change in test performance from Tier~1 (composition) to Tier~2 (oxidation states) and to Tier~3 (structural and electronic DFT descriptors) on identical matched materials; positive values are improvements. Points are means over ten prespecified formula-grouped splits and bars are 95\% intervals that account for refitting (Nadeau--Bengio). \textbf{a}, Macro-F1 for magnetic ordering. \textbf{b}, MAE for the Curie temperature; ridge regression uses clipped inputs. \textbf{c}, MAE for the DFT moment per cell. \textbf{d}, MAE for the DFT moment per formula unit. In \textbf{c} and \textbf{d}, grey points show the effect of Tier~3 beyond a model that adds a single descriptor, the number of sites in the DFT cell, to Tier~2: the size control. XGBoost values for Tier~2 and Tier~3 in \textbf{b} and \textbf{c} are means of eight realizations; all other XGBoost values come from one. A null difference with a wide interval is not evidence that a descriptor carries no information.}\label{fig:rq1}
+\end{figure}
+
+\begin{table}[!t]
+\caption{\textbf{Effect of oxidation-state (Tier~2) and DFT (Tier~3) descriptors on matched populations.}}\label{tab:tiers}%
+\setlength{\tabcolsep}{2.5pt}%
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lllll@{}}
+\toprule
+Algorithm & Tier 1 $\to$ 2 & Tier 1 $\to$ 3 & \hd{Verdict\\(1 $\to$ 3)} & \hd{Holm\\$P$} \\
+\midrule
+\multicolumn{5}{@{}l}{\textit{Ordering, macro-F1}}\\
+Ridge / logistic & $+0.003$ \ci{$-0.018$}{$+0.023$} & $+0.024$ \ci{$-0.018$}{$+0.065$} & none & 1.000 \\
+Gradient boosting & $-0.028$ \ci{$-0.078$}{$+0.021$} & $-0.034$ \ci{$-0.100$}{$+0.032$} & none & 1.000 \\
+XGBoost & $+0.005$ \ci{$-0.023$}{$+0.033$} & $+0.004$ \ci{$-0.024$}{$+0.033$} & none & 1.000 \\
+Pooled (three algorithms) & -- & $-0.002$ \ci{$-0.035$}{$+0.031$} & none & -- \\
+\midrule
+\multicolumn{5}{@{}l}{\textit{Curie temperature, MAE (K)}}\\
+Ridge (clipped) & $-2.5$ \ci{$-11.1$}{$+6.2$} & $-14.4$ \ci{$-33.5$}{$+4.8$} & none & -- \\
+Gradient boosting & $-0.4$ \ci{$-15.7$}{$+14.9$} & $-14.3$ \ci{$-42.5$}{$+13.9$} & none & 1.000 \\
+Boosting, larger search & -- & $-11.8$ \ci{$-35.2$}{$+11.7$} & borderline loss & -- \\
+XGBoost & $-1.0$ \ci{$-6.0$}{$+3.9$} & $-8.2$ \ci{$-48.3$}{$+32.0$} & none & 1.000 \\
+Pooled (three algorithms) & -- & $-12.3$ \ci{$-32.7$}{$+8.1$} & none & -- \\
+\midrule
+\multicolumn{5}{@{}l}{\textit{DFT moment per cell, MAE (\muB{} per cell)}}\\
+Ridge / logistic & $+0.006$ \ci{$-0.016$}{$+0.028$} & $+0.055$ \ci{$-0.001$}{$+0.111$} & none & 0.373 \\
+Gradient boosting & $+0.005$ \ci{$-0.023$}{$+0.033$} & $+0.079$ \ci{$+0.030$}{$+0.127$} & stable gain & 0.046 \\
+XGBoost & $+0.011$ \ci{$-0.007$}{$+0.029$} & $+0.062$ \ci{$+0.023$}{$+0.101$} & stable gain & 0.046 \\
+Pooled (three algorithms) & -- & $+0.065$ \ci{$+0.038$}{$+0.092$} & stable gain & -- \\
+\midrule
+\multicolumn{5}{@{}l}{\textit{DFT moment per formula unit, MAE (\muB{} per formula unit)}}\\
+Ridge / logistic & $+0.018$ \ci{$+0.013$}{$+0.023$} & $+0.053$ \ci{$+0.035$}{$+0.070$} & stable gain & -- \\
+Gradient boosting & $+0.012$ \ci{$-0.009$}{$+0.032$} & $+0.031$ \ci{$+0.014$}{$+0.048$} & stable gain & -- \\
+XGBoost & $+0.009$ \ci{$-0.013$}{$+0.030$} & $+0.023$ \ci{$+0.010$}{$+0.036$} & stable gain & -- \\
+\botrule
+\end{tabular*}
+\footnotetext{Improvement = deeper tier minus Tier~1 performance; positive = better. Identical matched rows, splits, grids and metrics at every tier; ten prespecified formula-grouped splits. Brackets: Nadeau--Bengio corrected resampled-$t$ 95\% intervals (refit-aware). Stable = this interval and the pooled formula-bootstrap interval both exclude zero and at least 7 of 10 splits share the sign; borderline = only one of the two intervals excludes zero; none = no stable change. Holm $P$: adjusted over the primary family of nine Tier~1 $\to$ 3 contrasts (ordering, Curie temperature and moment per cell, three algorithms each). The Curie ridge member of that family is the unclipped contrast (adjusted $P$ = 1.000; unclipped ridge is numerically unstable, $-825$~K); using the clipped contrast gives 0.740 and leaves the other eight unchanged. Ridge for the Curie temperature uses inputs clipped to the 1st and 99th percentiles of the training fold. XGBoost: mean of eight thread/seed realizations for the Curie temperature and the moment per cell, one realization otherwise. Pooled = in each split the mean of the three algorithms' improvements (clipped ridge for the Curie temperature); secondary and unadjusted; its minimum detectable effect is 28.4~K for the Curie temperature, 0.037~\muB{} per cell for the moment and 0.046 macro-F1 for ordering. Larger search: 64 candidate settings for gradient boosting instead of 4, secondary and unadjusted (minimum detectable effect 32.6~K); the formula-bootstrap interval is $-21.9$ to $-0.04$~K, which is why the verdict is a borderline loss. The gradient-boosting Tier~1 $\to$ 2 change for ordering is a borderline loss (the bootstrap interval excludes zero). Moment per formula unit: 10,821 rows; the effect of Tier~3 beyond a site-count descriptor is in Fig.~\ref{fig:rq1}c,d and Supplementary Table~8.}
+\end{table}
+
+
 For \mcell{}, Tier~3 gave gains that were stable but small: $+0.079$~\muB{} per cell ($+0.030$ to $+0.127$) for gradient boosting and $+0.062$ ($+0.023$ to $+0.101$) for XGBoost, or 2--3\% of the MAE (adjusted $P=0.046$). Most of this gain is structural normalization and not new information. A single descriptor, the number of sites in the DFT cell, recovered about 70\% of the gradient-boosting gain when it was added to Tier~2, and what Tier~3 added beyond it was not resolved for any algorithm ($+0.023$~\muB{} per cell, $-0.014$ to $+0.061$, for gradient boosting; Fig.~\ref{fig:rq1}c). The moment per formula unit (\mfu{}) behaved in the same way: its Tier~3 gains were stable for all three algorithms but not resolved beyond the site count for the two tree models, whereas ridge regression kept a stable $+0.030$ (Fig.~\ref{fig:rq1}d; Supplementary Table~8). Per atom, a modest gain of 2.8--6.0\% of the MAE remained (Methods). A site count can help even an intensive target because it is a weak proxy for magnetic order: cells that hold several formula units more often carry AFM labels and have lower moments per formula unit (Spearman $\rho=-0.16$; Supplementary Table~15). Tier~3 holds both the cell volume and the volume per atom, which together give the site count, and antiferromagnetic ground states are stored in magnetic supercells, so cell size partly encodes the computed magnetic configuration.
 
 Adding magnetic physics did not change the result for \Tc{} (Supplementary Table~18). Ten descriptors of the magnetic sublattice computed from the crystal structure, including the metal--anion--metal angles that govern superexchange, four magnetic outputs of DFT and a fixed 64-dimensional crystal embedding from the pretrained interatomic potential CHGNet\cite{deng2023chgnet} gave estimates between $-10.8$ and $+9.5$~K against Tier~1, and every interval included zero. Feature attribution would have suggested otherwise: TreeSHAP\cite{lundberg2017shap,lundberg2020treeshap} assigned 40\% (ordering) and 36\% (\Tc{}) of the mean absolute attribution of the Tier~3 XGBoost models to DFT descriptors that did not improve accuracy. Correlated composition and DFT features carry the same information, so attribution shows that a feature is used and not that it adds information. Tier~3 helped neither on Materials Project nor on experimental ordering labels (Supplementary Table~26). Energy differences between magnetic configurations, from which ordering and \Tc{} follow in standard theory, were not available and were not tested, and the sublattice geometry was tested for \Tc{} only.
@@ -96,6 +166,13 @@ Tier~3 also has practical limits for screening: it exists only after a DFT calcu
 \subsection{Marginal calibration conceals material-dependent failures}\label{sec:rq2}
 
 A useful prediction carries an uncertainty that holds for the materials of interest and not only on average. We compared three conformal methods\cite{vovk2005algorithmic,lei2018distribution,angelopoulos2023gentle} at a nominal coverage of 90\%: split conformal prediction, which gives intervals of constant width; normalized conformal prediction, which scales the width by a learned difficulty model\cite{papadopoulos2011normalized}; and conformalized quantile regression (CQR)\cite{romano2019cqr}. Calibration used whole formulas, so the guarantee refers to exchangeable formula groups and not to individual records, and about 4,200 calibration rows act like only 250--340 independent ones (Methods; Supplementary Table~6). On average all three methods met the nominal coverage, with 89.3--90.3\% for \Tc{} and 90.0--90.1\% for \mcell{} (Fig.~\ref{fig:uq}a,b).
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig3.pdf}
+\caption{\textbf{Marginal calibration conceals material-dependent failures.} \textbf{a},\textbf{b}, Coverage of 90\% prediction intervals for the Curie temperature (\textbf{a}) and the DFT moment per cell (\textbf{b}) under split, normalized and quantile (CQR) conformal prediction, for all test materials (blue), for the highest predictions (orange; top decile in \textbf{a}, top third in \textbf{b}) and for one further subgroup (aqua; text-mined labels in \textbf{a}, oxides in \textbf{b}). Below each method is the mean interval width for all test materials. Points are means over ten prespecified splits and bars are $\pm1$ s.d.\ across splits; in \textbf{b} most bars are smaller than the symbols. \textbf{c}, Mean coverage over the same splits of 90\% prediction sets for each ordering class, for marginal and class-conditional sets, with the mean set size in the legend. Dashed lines mark the nominal coverage. Subgroups are defined without reference to the difficulty score of any method; coverage is guaranteed only on average over exchangeable formula groups.}\label{fig:uq}
+\end{figure}
+
 
 Within physically defined subgroups, defined without reference to any method's difficulty score, they did not. Among the highest tenth of predicted \Tc{} values, which contain the materials most relevant to applications, constant-width intervals covered 65.5\% and quantile-regression intervals 68.6\%, against 87.4\% for normalized intervals. For text-mined labels the figures were 78--79\% against 86.0\%, and for the highest predicted third of \mcell{} 72.3\% and 83.4\% against 86.7\%. The normalized intervals were also narrower on average (451~K for \Tc{}, against 569~K), but not best everywhere (Supplementary Tables~11 and 19). Coverage was not protected against a change of label source: intervals calibrated on the larger experimental compilation covered 77--85\% of text-mined records on one frozen split.
 
@@ -109,16 +186,57 @@ For an external test we used a public table of 2,500 experimental Curie temperat
 
 On the 465 blind records, from 81 clusters of source papers, the MAE was 102.7~K (75.1--143.6~K), $R^2$ was 0.69 (0.43--0.82) and the intervals covered 89.5\% (Fig.~\ref{fig:novelty}a,b; Table~\ref{tab:external}). Blind compositions in chemical systems that occur in the training data scored an MAE of 90.6~K and $R^2$ of 0.78. The 69 records in unseen chemical systems, from only 18 clusters, scored 171.9~K (82.6--293.7~K) and $R^2$ of $-0.17$ ($-1.02$ to $0.64$). Performance in unseen chemical systems was thus much weaker, with wide uncertainty: the $R^2$ difference from blind records in seen systems was $-0.95$ ($-1.69$ to $-0.06$), whereas the MAE difference, $+81$~K ($-27$ to $+165$), was not resolved (Supplementary Table~2). Our prespecified condition for claiming no skill, an upper $R^2$ limit of at most 0.2, is not met (0.64, and 0.21 with chemical systems as the resampling unit; Supplementary Table~4). Skill in unseen chemical systems is therefore not established, and neither is its absence. Leaving out any one of the 18 clusters kept $R^2$ between $-0.31$ and 0.14 (Supplementary Table~27); the largest cluster, 17 records from one paper on high-entropy alloys, carries much of the error, and the Curie temperatures of such alloys depend on processing and phase separation that composition cannot describe.
 
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig4.pdf}
+\caption{\textbf{Predictive reliability decays with chemical novelty.} External table of 2,500 experimental Curie temperatures. \textbf{a},\textbf{b}, MAE (\textbf{a}) and $R^2$ (\textbf{b}) for nested novelty subsets, before (blue) and after (orange) the audit; the number of records after the audit is in parentheses. `Blind', the composition never occurs in the training repository; `new paper', no source DOI was used in training; `unseen system', the set of elements never occurs in training. Arrows mark lower limits of $R^2$ below $-1.5$. \textbf{c},\textbf{d}, MAE (\textbf{c}) and coverage of the 90\% normalized conformal interval (\textbf{d}) with records binned by composition distance to the nearest training formula (bin 0, identical composition; Q1--Q4, quartiles of the non-zero distances from closest to farthest), for all records after the audit and for the 465 blind records, which have no bin 0; the numbers at the bottom of \textbf{d} are the mean interval widths of the blind records. Bars are 95\% percentile intervals from a bootstrap over clusters of source papers (10,000 resamples); the bias-corrected intervals quoted in the text are in Table~\ref{tab:external}. The unseen-system subsets hold only 69 and 37 records from 18 and 12 clusters, hence their wide intervals.}\label{fig:novelty}
+\end{figure}
+
+\begin{table}[!t]
+\caption{\textbf{External experimental Curie benchmark by novelty subset.}}\label{tab:external}%
+\setlength{\tabcolsep}{3pt}%
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lrlllr@{}}
+\toprule
+Subset & $n$ (clusters) & MAE (K) & $R^2$ & Skill & Coverage \\
+\midrule
+All records & 2,395 (464) & \est{66.5}{57.2}{81.1} & \est{0.79}{0.69}{0.85} & \est{0.80}{0.70}{0.85} & 0.925 \\[1pt]
+Seen composition & 1,930 (440) & \est{57.7}{50.7}{70.4} & \est{0.80}{0.72}{0.86} & \est{0.83}{0.74}{0.87} & 0.933 \\[1pt]
+\quad seen, value not copied & 767 (208) & \est{84.5}{68.1}{110.2} & \est{0.70}{0.53}{0.80} & \est{0.71}{0.53}{0.81} & 0.890 \\[1pt]
+Blind & 465 (81) & \est{102.7}{75.1}{143.6} & \est{0.69}{0.43}{0.82} & \est{0.70}{0.41}{0.84} & 0.895 \\[1pt]
+\quad new paper & 293 (61) & \est{95.1}{73.1}{125.7} & \est{0.68}{0.43}{0.83} & \est{0.72}{0.50}{0.86} & 0.898 \\[1pt]
+\quad seen system & 396 (72) & \est{90.6}{71.8}{116.0} & \est{0.78}{0.67}{0.87} & \est{0.79}{0.66}{0.89} & 0.902 \\[1pt]
+\quad unseen system & 69 (18) & \est{171.9}{82.6}{293.7} & \est{$-0.17$}{$-1.02$}{0.64} & \est{$-0.17$}{$-0.77$}{0.56} & 0.855 \\[1pt]
+\quad new paper, unseen system & 37 (12) & \est{129.0}{61.8}{297.0} & \est{$-0.19$}{$-6.17$}{0.70} & \est{0.04}{$-1.03$}{0.69} & 0.757 \\
+\botrule
+\end{tabular*}
+\footnotetext{Primary benchmark after the audit (2,395 of 2,500 records). Seen or blind by composition identity; `new paper', no source DOI used in training; `unseen system', the set of elements never occurs in training. Only the blind rows are independent of the training repository. Clusters: source-paper components (records linked by any shared DOI), the resampling unit; 95\% BCa cluster-bootstrap intervals (10,000 resamples). Skill = 1 $-$ MSE/MSE of a constant prediction equal to the training mean (338~K), a fixed reference for all subsets. Coverage of the 90\% normalized conformal interval. Results under first-DOI and chemical-system clustering are in Supplementary Table~4.}
+\end{table}
+
+
 Error followed a similarity measure fixed in advance, the composition distance to the nearest training formula. On the blind records, error rose with distance (Spearman's $\rho=0.28$; 0.10--0.49), and the MAE grew from 62~K in the closest quartile to 165~K in the farthest (Fig.~\ref{fig:novelty}c; Supplementary Fig.~1). This association lies between source papers rather than within them: across the 81 clusters $\rho$ was 0.27, within clusters about zero (Supplementary Table~27). The normalized intervals widened from 388 to 529~K, but not enough: coverage fell from 0.95 to 0.85 (Fig.~\ref{fig:novelty}d; Supplementary Table~3). Distance does not explain everything, because blind records in seen systems at comparable distances kept an $R^2$ of 0.75, so a new combination of elements is harder than its distance alone suggests. A model whose error outgrows its intervals can still be useful if it may abstain, which we test last.
 
 \subsection{Selective prediction supports first-stage screening}\label{sec:screening}
 
 On the 465 blind records, abstaining on the half of the compositions that lie farthest from the training data lowered the MAE from 103 to 71~K and raised coverage to 0.93; abstaining on the half with the widest intervals gave a similar error (73~K) at a coverage of 0.88 (Fig.~\ref{fig:screen}a; Supplementary Table~22). The intervals of the two rules overlap, so we do not rank them. Inside the training chemistry the two rules separate (Fig.~\ref{fig:screen}b; Supplementary Table~23; means over the ten internal test sets): keeping the narrowest half of the intervals lowered the MAE from 103 to 43~K at a coverage of 0.92, whereas keeping the closest half lowered it only to 86~K, because internal test materials are rarely far from the training data. For a room-temperature screen (\Tc{} above 300~K; base rate 0.57), the point prediction had a recall of 0.94 and a precision of 0.77 on the blind records. Deciding only when the 90\% interval lay wholly above or wholly below 300~K settled 37\% of the blind records with an accuracy of 92.5\%, and 44\% of the internal test records with 97.6\% (Fig.~\ref{fig:screen}c; worked examples in Supplementary Table~24). Selective prediction thus turns the model into a first filter that settles part of the candidates and passes the rest on unresolved. The intervals are too wide to rank candidates within one family, and none of these results demonstrates the discovery of a new magnetic material.
 
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig5.pdf}
+\caption{\textbf{Selective prediction supports first-stage screening.} \textbf{a}, MAE of the records kept when the model abstains on the records farthest from the training chemistry (composition distance; blue) or on those with the widest 90\% normalized conformal intervals (orange), for the 465 blind external records. Lines use every cut-off and are descriptive; points are the prespecified cut-offs with 95\% paper-cluster bootstrap intervals (offset slightly for legibility). \textbf{b}, The same rules on the internal test sets of ten formula-grouped splits; points are means and bars $\pm1$ s.d.\ across splits. \textbf{c}, Screen for a Curie temperature above 300~K: accuracy of the point prediction, share of records decided when only intervals that lie wholly above or wholly below 300~K are acted on, and accuracy of those decisions, for the blind external records (95\% intervals) and the internal test sets (mean $\pm1$ s.d.). Abstention improves the reliability of what is kept at the cost of leaving the other candidates undecided.}\label{fig:screen}
+\end{figure}
+
+
 %% ===================================================================================================================
 \section{Discussion}\label{sec:discussion}
 
 The central finding of this study is that the reliability of machine-learning predictions for magnetic materials depends on three conditions that accuracy within the training distribution does not reveal: the physical consistency and provenance of the labels, the information that physical descriptors genuinely add and the chemical domain of application. Ordering labels from DFT and from experiment encode different conventions for the same compounds, and a model trained on one source learns its convention; calibration fails for antiferromagnets and ferrimagnets, the classes on which the conventions differ most. Structural and electronic DFT descriptors describe a computed, mostly ferromagnetic polymorph and add little to composition, and their one clear benefit, for the computed moment, largely reflects cell size. Away from familiar chemistry, error grows faster than the uncertainty estimates. These links are a synthesis of separate measurements, not a demonstration of one mechanism (Fig.~\ref{fig:summary}).
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig6.pdf}
+\caption{\textbf{Summary: what was observed, what it means and what follows.} For each of the four findings (label provenance, added physics, calibration and chemical novelty), the observation (left), its interpretation (middle) and the practice it suggests for model builders and data providers (right). Text only; the numbers are those given in Results.}\label{fig:summary}
+\end{figure}
+
 
 Why are physically meaningful descriptors not more predictive? Two explanations are supported by our analyses. Composition already fixes much of what the scalar descriptors encode, so they are used heavily without improving ordering or \Tc{} detectably, and structural size acts as a proxy for the moment. Other explanations remain hypotheses. The descriptors belong to the lowest-energy computed polymorph, not necessarily the measured sample; the same-space-group test found no hidden gain, but covers only 18\% of records. Scalar descriptors also say little about exchange interactions and the competition between magnetic configurations, which govern ordering and \Tc{}, and they were computed in a ferromagnetic state that is wrong for many experimental antiferromagnets. Label noise, by contrast, is not the binding limit: the spread between records of one formula is far smaller than the model error. The null result is therefore narrow. It concerns descriptors joined by formula, tabular models and one fixed embedding, and it is not evidence against physics-informed models in general or against networks that learn the coupling between structure and properties end to end from the measured phase.
 
@@ -718,123 +836,5 @@ The Supplementary Information contains Supplementary Figure~1, Supplementary Tab
 %% \bmhead{Code availability}
 %% \bmhead{Author contributions}
 %% \bmhead{Use of large language models}
-
-%% ===================================================================================================================
-%% Tables and figures (Nature Portfolio: at the end of the file, after Methods; each figure with its legend).
-%% Display items (9 of the 10 allowed): Tables 1-3 and Figs 1-6.
-
-\clearpage
-
-\begin{table}[p]
-\caption{\textbf{Prediction targets of the curated analysis dataset.}}\label{tab:dataset}%
-\setlength{\tabcolsep}{3pt}%
-\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lllrrrr@{}}
-\toprule
-Target & Symbol & Unit & Records & Formulas & \hd{Train/validation/test\\records} & \hd{Matched\\records} \\
-\midrule
-\multicolumn{7}{@{}l}{\textit{Primary targets}}\\
-Magnetic ordering & -- & class & 79,125 & 70,293 & 55,249/11,974/11,902 & 6,061 \\
-Curie temperature & \Tc{} & K & 29,740 & 14,145 & 20,508/4,691/4,541 & 4,602 \\
-DFT moment per cell & \mcell{} & \muB{} per cell & 87,513 & 77,402 & 61,254/13,130/13,129 & 10,852 \\
-\midrule
-\multicolumn{7}{@{}l}{\textit{Secondary targets (not analysed here)}}\\
-Mass magnetization & -- & emu g$^{-1}$ & 4,317 & 3,218 & 3,021/648/648 & -- \\
-Volume magnetization & -- & A m$^{-1}$ & 779 & 454 & 535/124/120 & -- \\
-Anisotropy constant & $K_1$ & J m$^{-3}$ & 1,847 & 1,182 & 1,296/280/271 & -- \\
-\botrule
-\end{tabular*}
-\footnotetext{Analysis dataset v1.4 (frozen); formula-grouped 70/15/15 splits. Matched = records with complete Tier~3 descriptors, used at every tier in the descriptor comparison. Ordering classes: FM 34,098, NM 31,673, FiM 7,161 and AFM 6,193 records; 61,484 labels come from Materials Project and 17,641 from experimental compilations. The DFT moment is the Materials Project or JARVIS total moment of the computed cell at 0~K, not an experimental saturation magnetization; the moment per formula unit, \mfu{} = \mcell{} $\times$ atoms per formula unit / atoms in the cell (10,821 matched rows), is analysed alongside it. Tier~1 = 65 composition descriptors; Tier~2 = Tier~1 + 8 oxidation-state descriptors; Tier~3 = Tier~2 + 24 structural and electronic DFT descriptors (97 in total).}
-\end{table}
-
-\begin{table}[p]
-\caption{\textbf{Effect of oxidation-state (Tier~2) and DFT (Tier~3) descriptors on matched populations.}}\label{tab:tiers}%
-\setlength{\tabcolsep}{2.5pt}%
-\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lllll@{}}
-\toprule
-Algorithm & Tier 1 $\to$ 2 & Tier 1 $\to$ 3 & \hd{Verdict\\(1 $\to$ 3)} & \hd{Holm\\$P$} \\
-\midrule
-\multicolumn{5}{@{}l}{\textit{Ordering, macro-F1}}\\
-Ridge / logistic & $+0.003$ \ci{$-0.018$}{$+0.023$} & $+0.024$ \ci{$-0.018$}{$+0.065$} & none & 1.000 \\
-Gradient boosting & $-0.028$ \ci{$-0.078$}{$+0.021$} & $-0.034$ \ci{$-0.100$}{$+0.032$} & none & 1.000 \\
-XGBoost & $+0.005$ \ci{$-0.023$}{$+0.033$} & $+0.004$ \ci{$-0.024$}{$+0.033$} & none & 1.000 \\
-Pooled (three algorithms) & -- & $-0.002$ \ci{$-0.035$}{$+0.031$} & none & -- \\
-\midrule
-\multicolumn{5}{@{}l}{\textit{Curie temperature, MAE (K)}}\\
-Ridge (clipped) & $-2.5$ \ci{$-11.1$}{$+6.2$} & $-14.4$ \ci{$-33.5$}{$+4.8$} & none & -- \\
-Gradient boosting & $-0.4$ \ci{$-15.7$}{$+14.9$} & $-14.3$ \ci{$-42.5$}{$+13.9$} & none & 1.000 \\
-Boosting, larger search & -- & $-11.8$ \ci{$-35.2$}{$+11.7$} & borderline loss & -- \\
-XGBoost & $-1.0$ \ci{$-6.0$}{$+3.9$} & $-8.2$ \ci{$-48.3$}{$+32.0$} & none & 1.000 \\
-Pooled (three algorithms) & -- & $-12.3$ \ci{$-32.7$}{$+8.1$} & none & -- \\
-\midrule
-\multicolumn{5}{@{}l}{\textit{DFT moment per cell, MAE (\muB{} per cell)}}\\
-Ridge / logistic & $+0.006$ \ci{$-0.016$}{$+0.028$} & $+0.055$ \ci{$-0.001$}{$+0.111$} & none & 0.373 \\
-Gradient boosting & $+0.005$ \ci{$-0.023$}{$+0.033$} & $+0.079$ \ci{$+0.030$}{$+0.127$} & stable gain & 0.046 \\
-XGBoost & $+0.011$ \ci{$-0.007$}{$+0.029$} & $+0.062$ \ci{$+0.023$}{$+0.101$} & stable gain & 0.046 \\
-Pooled (three algorithms) & -- & $+0.065$ \ci{$+0.038$}{$+0.092$} & stable gain & -- \\
-\midrule
-\multicolumn{5}{@{}l}{\textit{DFT moment per formula unit, MAE (\muB{} per formula unit)}}\\
-Ridge / logistic & $+0.018$ \ci{$+0.013$}{$+0.023$} & $+0.053$ \ci{$+0.035$}{$+0.070$} & stable gain & -- \\
-Gradient boosting & $+0.012$ \ci{$-0.009$}{$+0.032$} & $+0.031$ \ci{$+0.014$}{$+0.048$} & stable gain & -- \\
-XGBoost & $+0.009$ \ci{$-0.013$}{$+0.030$} & $+0.023$ \ci{$+0.010$}{$+0.036$} & stable gain & -- \\
-\botrule
-\end{tabular*}
-\footnotetext{Improvement = deeper tier minus Tier~1 performance; positive = better. Identical matched rows, splits, grids and metrics at every tier; ten prespecified formula-grouped splits. Brackets: Nadeau--Bengio corrected resampled-$t$ 95\% intervals (refit-aware). Stable = this interval and the pooled formula-bootstrap interval both exclude zero and at least 7 of 10 splits share the sign; borderline = only one of the two intervals excludes zero; none = no stable change. Holm $P$: adjusted over the primary family of nine Tier~1 $\to$ 3 contrasts (ordering, Curie temperature and moment per cell, three algorithms each). The Curie ridge member of that family is the unclipped contrast (adjusted $P$ = 1.000; unclipped ridge is numerically unstable, $-825$~K); using the clipped contrast gives 0.740 and leaves the other eight unchanged. Ridge for the Curie temperature uses inputs clipped to the 1st and 99th percentiles of the training fold. XGBoost: mean of eight thread/seed realizations for the Curie temperature and the moment per cell, one realization otherwise. Pooled = in each split the mean of the three algorithms' improvements (clipped ridge for the Curie temperature); secondary and unadjusted; its minimum detectable effect is 28.4~K for the Curie temperature, 0.037~\muB{} per cell for the moment and 0.046 macro-F1 for ordering. Larger search: 64 candidate settings for gradient boosting instead of 4, secondary and unadjusted (minimum detectable effect 32.6~K); the formula-bootstrap interval is $-21.9$ to $-0.04$~K, which is why the verdict is a borderline loss. The gradient-boosting Tier~1 $\to$ 2 change for ordering is a borderline loss (the bootstrap interval excludes zero). Moment per formula unit: 10,821 rows; the effect of Tier~3 beyond a site-count descriptor is in Fig.~\ref{fig:rq1}c,d and Supplementary Table~8.}
-\end{table}
-
-\begin{table}[p]
-\caption{\textbf{External experimental Curie benchmark by novelty subset.}}\label{tab:external}%
-\setlength{\tabcolsep}{3pt}%
-\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lrlllr@{}}
-\toprule
-Subset & $n$ (clusters) & MAE (K) & $R^2$ & Skill & Coverage \\
-\midrule
-All records & 2,395 (464) & \est{66.5}{57.2}{81.1} & \est{0.79}{0.69}{0.85} & \est{0.80}{0.70}{0.85} & 0.925 \\[1pt]
-Seen composition & 1,930 (440) & \est{57.7}{50.7}{70.4} & \est{0.80}{0.72}{0.86} & \est{0.83}{0.74}{0.87} & 0.933 \\[1pt]
-\quad seen, value not copied & 767 (208) & \est{84.5}{68.1}{110.2} & \est{0.70}{0.53}{0.80} & \est{0.71}{0.53}{0.81} & 0.890 \\[1pt]
-Blind & 465 (81) & \est{102.7}{75.1}{143.6} & \est{0.69}{0.43}{0.82} & \est{0.70}{0.41}{0.84} & 0.895 \\[1pt]
-\quad new paper & 293 (61) & \est{95.1}{73.1}{125.7} & \est{0.68}{0.43}{0.83} & \est{0.72}{0.50}{0.86} & 0.898 \\[1pt]
-\quad seen system & 396 (72) & \est{90.6}{71.8}{116.0} & \est{0.78}{0.67}{0.87} & \est{0.79}{0.66}{0.89} & 0.902 \\[1pt]
-\quad unseen system & 69 (18) & \est{171.9}{82.6}{293.7} & \est{$-0.17$}{$-1.02$}{0.64} & \est{$-0.17$}{$-0.77$}{0.56} & 0.855 \\[1pt]
-\quad new paper, unseen system & 37 (12) & \est{129.0}{61.8}{297.0} & \est{$-0.19$}{$-6.17$}{0.70} & \est{0.04}{$-1.03$}{0.69} & 0.757 \\
-\botrule
-\end{tabular*}
-\footnotetext{Primary benchmark after the audit (2,395 of 2,500 records). Seen or blind by composition identity; `new paper', no source DOI used in training; `unseen system', the set of elements never occurs in training. Only the blind rows are independent of the training repository. Clusters: source-paper components (records linked by any shared DOI), the resampling unit; 95\% BCa cluster-bootstrap intervals (10,000 resamples). Skill = 1 $-$ MSE/MSE of a constant prediction equal to the training mean (338~K), a fixed reference for all subsets. Coverage of the 90\% normalized conformal interval. Results under first-DOI and chemical-system clustering are in Supplementary Table~4.}
-\end{table}
-
-\begin{figure}[p]
-\centering
-\includegraphics[width=\textwidth]{fig1.pdf}
-\caption{\textbf{Computed and experimental labels describe magnetic order differently.} \textbf{a}, Share of the records of each primary target by source. \textbf{b}, Ordering classes among the labels from Materials Project and from the experimental compilations (FM, ferromagnetic; AFM, antiferromagnetic; FiM, ferrimagnetic; NM, non-magnetic); the unlabelled segments are AFM (2\%) and FiM (9\%) for Materials Project and FiM (10\%) for the experimental labels, which contain 5 NM labels. \textbf{c}, Modal labels of the 949 formulas labelled by both Materials Project (columns) and an experimental source (rows); numbers are formulas and the shading is the share of each row; the one formula with an experimental NM label is not shown. \textbf{d}, Cohen's $\kappa$ with 95\% formula-bootstrap intervals, and raw agreement with the number of formulas or compositions (right), for Materials Project against experimental labels (MP--exp.) on all shared formulas, on bulk records only, on formulas whose experimental space group (s.g.) equals that of a Materials Project entry of the same composition, and on the bulk, stoichiometric part of those; and for each source against labels derived from the collinear magnetic structures of MAGNDATA. Agreement between two sources does not by itself show which label is physically correct.}\label{fig:provenance}
-\end{figure}
-
-\begin{figure}[p]
-\centering
-\includegraphics[width=\textwidth]{fig2.pdf}
-\caption{\textbf{Structural and electronic DFT descriptors add little information beyond composition.} Change in test performance from Tier~1 (composition) to Tier~2 (oxidation states) and to Tier~3 (structural and electronic DFT descriptors) on identical matched materials; positive values are improvements. Points are means over ten prespecified formula-grouped splits and bars are 95\% intervals that account for refitting (Nadeau--Bengio). \textbf{a}, Macro-F1 for magnetic ordering. \textbf{b}, MAE for the Curie temperature; ridge regression uses clipped inputs. \textbf{c}, MAE for the DFT moment per cell. \textbf{d}, MAE for the DFT moment per formula unit. In \textbf{c} and \textbf{d}, grey points show the effect of Tier~3 beyond a model that adds a single descriptor, the number of sites in the DFT cell, to Tier~2: the size control. XGBoost values for Tier~2 and Tier~3 in \textbf{b} and \textbf{c} are means of eight realizations; all other XGBoost values come from one. A null difference with a wide interval is not evidence that a descriptor carries no information.}\label{fig:rq1}
-\end{figure}
-
-\begin{figure}[p]
-\centering
-\includegraphics[width=\textwidth]{fig3.pdf}
-\caption{\textbf{Marginal calibration conceals material-dependent failures.} \textbf{a},\textbf{b}, Coverage of 90\% prediction intervals for the Curie temperature (\textbf{a}) and the DFT moment per cell (\textbf{b}) under split, normalized and quantile (CQR) conformal prediction, for all test materials (blue), for the highest predictions (orange; top decile in \textbf{a}, top third in \textbf{b}) and for one further subgroup (aqua; text-mined labels in \textbf{a}, oxides in \textbf{b}). Below each method is the mean interval width for all test materials. Points are means over ten prespecified splits and bars are $\pm1$ s.d.\ across splits; in \textbf{b} most bars are smaller than the symbols. \textbf{c}, Mean coverage over the same splits of 90\% prediction sets for each ordering class, for marginal and class-conditional sets, with the mean set size in the legend. Dashed lines mark the nominal coverage. Subgroups are defined without reference to the difficulty score of any method; coverage is guaranteed only on average over exchangeable formula groups.}\label{fig:uq}
-\end{figure}
-
-\begin{figure}[p]
-\centering
-\includegraphics[width=\textwidth]{fig4.pdf}
-\caption{\textbf{Predictive reliability decays with chemical novelty.} External table of 2,500 experimental Curie temperatures. \textbf{a},\textbf{b}, MAE (\textbf{a}) and $R^2$ (\textbf{b}) for nested novelty subsets, before (blue) and after (orange) the audit; the number of records after the audit is in parentheses. `Blind', the composition never occurs in the training repository; `new paper', no source DOI was used in training; `unseen system', the set of elements never occurs in training. Arrows mark lower limits of $R^2$ below $-1.5$. \textbf{c},\textbf{d}, MAE (\textbf{c}) and coverage of the 90\% normalized conformal interval (\textbf{d}) with records binned by composition distance to the nearest training formula (bin 0, identical composition; Q1--Q4, quartiles of the non-zero distances from closest to farthest), for all records after the audit and for the 465 blind records, which have no bin 0; the numbers at the bottom of \textbf{d} are the mean interval widths of the blind records. Bars are 95\% percentile intervals from a bootstrap over clusters of source papers (10,000 resamples); the bias-corrected intervals quoted in the text are in Table~\ref{tab:external}. The unseen-system subsets hold only 69 and 37 records from 18 and 12 clusters, hence their wide intervals.}\label{fig:novelty}
-\end{figure}
-
-\begin{figure}[p]
-\centering
-\includegraphics[width=\textwidth]{fig5.pdf}
-\caption{\textbf{Selective prediction supports first-stage screening.} \textbf{a}, MAE of the records kept when the model abstains on the records farthest from the training chemistry (composition distance; blue) or on those with the widest 90\% normalized conformal intervals (orange), for the 465 blind external records. Lines use every cut-off and are descriptive; points are the prespecified cut-offs with 95\% paper-cluster bootstrap intervals (offset slightly for legibility). \textbf{b}, The same rules on the internal test sets of ten formula-grouped splits; points are means and bars $\pm1$ s.d.\ across splits. \textbf{c}, Screen for a Curie temperature above 300~K: accuracy of the point prediction, share of records decided when only intervals that lie wholly above or wholly below 300~K are acted on, and accuracy of those decisions, for the blind external records (95\% intervals) and the internal test sets (mean $\pm1$ s.d.). Abstention improves the reliability of what is kept at the cost of leaving the other candidates undecided.}\label{fig:screen}
-\end{figure}
-
-\begin{figure}[p]
-\centering
-\includegraphics[width=\textwidth]{fig6.pdf}
-\caption{\textbf{Summary: what was observed, what it means and what follows.} For each of the four findings (label provenance, added physics, calibration and chemical novelty), the observation (left), its interpretation (middle) and the practice it suggests for model builders and data providers (right). Text only; the numbers are those given in Results.}\label{fig:summary}
-\end{figure}
 
 \end{document}
