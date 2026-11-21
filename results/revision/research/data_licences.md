@@ -59,7 +59,7 @@ Compiled 2026-11-10 from primary sources (provider licence pages, repository rec
   > "LICENSE. The data included within the aflow.org repository is free for scientific, academic and non-commercial purposes. Any other use is prohibited."
 - AFLUX also gives its references: "Aflux Reference: https://doi.org/10.1016/j.commatsci.2017.04.036", "Aflow REST API: https://doi.org/10.1016/j.commatsci.2014.05.014".
 - The terms do not say whether redistribution is allowed. They do restrict use to non-commercial purposes, so values redistributed under CC BY (which allows commercial use) would go beyond the AFLOW terms.
-- In this project AFLOW supplies the Phase 3 thermal (AGL) and some elastic (AEL) `p3_*` columns, which are used in the Tier 3 predictors.
+- In this project AFLOW supplied Phase 3 thermal (AGL) columns. **Correction 2026-11-21:** none of them is among the Tier 3 predictors, and no AFLOW value enters any analysis or the package (the Tier 3 elastic columns come from Materials Project and JARVIS; checked against the Phase 3 property provenance).
 - **Deposit plan: ship identifiers + fetch script only** (AFLOW `auid`/`aurl` and the AFLUX query), or ship the AFLOW columns separately under a non-commercial notice. **Needs the authors' decision.** It also affects which licence the authors can put on the deposited Tier 3 feature table.
 
 ## 5. NEMAD

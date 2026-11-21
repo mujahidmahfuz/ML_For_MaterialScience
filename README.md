@@ -63,7 +63,7 @@ with `scripts/setup_workspace.py`, and every step names the result file to compa
 
 ## Verification
 
-- `scripts/verify_checksums.py`: all 452 data and result files match `CHECKSUMS.sha256`.
+- `scripts/verify_checksums.py`: all 453 data and result files match `CHECKSUMS.sha256`.
 - In a fresh workspace from `scripts/setup_workspace.py`, the analysis tests (62) and the external-benchmark audit tests (11) pass.
 - `manuscript/make_figures.py` redraws every figure from `results/`; the manuscript, Supplementary Information and review copy compile
   without overfull boxes or undefined references.
@@ -79,7 +79,7 @@ with `scripts/setup_workspace.py`, and every step names the result file to compa
 | NEMAD classification sets (Zenodo release) | CC BY 4.0 | derived values |
 | NEMAD literature tables (nemad.org) | research use, **no redistribution** | values included because this repository is private; redact with `--redact-nemad` before any public release ([details](data/README.md#nemad-literature-tables-private-repository)) |
 | MAGNDATA (Bilbao Crystallographic Server) | usage conditions of the server | derived labels with the requested citations; no structure files |
-| AFLOW | non-commercial use | derived Tier 3 columns |
+| AFLOW | non-commercial use | collected but not used; no AFLOW values in this repository |
 | External Curie benchmark (malaei/Magnetic_data) | no licence stated | the table itself is not included (`scripts/fetch_external_benchmark.py` downloads it, SHA-256 checked); three result files in `results/rq3_generalization/external_benchmark/` hold its compound names and values |
 
 The quoted terms of every source are in [`results/revision/research/data_licences.md`](results/revision/research/data_licences.md).

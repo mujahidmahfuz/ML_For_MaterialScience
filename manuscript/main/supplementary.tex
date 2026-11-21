@@ -309,7 +309,7 @@ OQMD (jarvis-tools mirror) & CC BY 4.0 & yes, with attribution & values \\
 JARVIS-DFT (Figshare) & CC BY 4.0 & yes, with attribution & values \\
 Kelly and Cole 2025 (Figshare) & CC BY 4.0 & yes, with attribution & values \\
 NEMAD (Zenodo release) & CC BY 4.0 & yes, with attribution & values \\
-AFLOW (AFLUX) & scientific, non-commercial use only & not addressed & identifiers and retrieval script \\
+AFLOW (AFLUX) & scientific, non-commercial use only & not addressed & collected, not used in any analysis \\
 MAGNDATA (Bilbao server) & no public licence; bulk download only for registered academic users who accept the usage conditions & no restriction on derived results in the conditions as read by the authors & derived labels; structure files not redistributed \\
 NEMAD website (two literature tables, the experimental compilations) & academic and research use; no redistribution or resale; no commercial use without permission; citation of the NEMAD and GPTArticleExtractor papers & no & identifiers only \\
 External benchmark table & no licence & no & retrieval script with SHA-256 check \\
@@ -333,6 +333,8 @@ Farthest distance decile & 232 & 86.6 & 88.2 & 89.7 \\
 Text-mined database & 544 & 78.2 & 86.0 & 79.3 \\
 Curated compilation (anisotropy) & 461 & 92.7 & 92.4 & 92.4 \\
 Curated compilation (magnetic materials) & 1,534 & 95.4 & 92.2 & 94.9 \\
+Records flagged experimental in the source & 1,948 & 89.3 & 90.5 & 89.4 \\
+Records flagged computational in the source & 219 & 90.4 & 86.6 & 90.6 \\
 \midrule
 \multicolumn{5}{@{}l}{\textit{Chemical family}}\\
 Actinide & 47 & 96.2 & 88.9 & 89.6 \\
@@ -346,7 +348,7 @@ Transition metal & 2,020 & 88.9 & 90.1 & 89.2 \\
 Hardest decile of the normalized method's own difficulty scale & 84 & 54.2 & 88.5 & 61.0 \\
 \botrule
 \end{tabular*}
-\footnotetext{Means over ten prespecified splits. The constant-width methods over-cover several families (rare earth, actinide, intermetallic) because their intervals are wide everywhere; normalized conformal stays within about 2 points of nominal except for text-mined labels and physics-complete materials.}
+\footnotetext{Means over ten prespecified splits. The constant-width methods over-cover several families (rare earth, actinide, intermetallic) because their intervals are wide everywhere; normalized conformal stays within about 2 points of nominal except for text-mined labels, records flagged computational and physics-complete materials. The subgroup of records with complete Tier~1 descriptors equals all test materials and is not repeated.}
 \end{table}
 
 %% ---------------------------------------------------------------------------------------------------------- Table 12
@@ -377,7 +379,7 @@ NM & 0 & 0 & 1 & 0 & 1 \\
 \cmidrule{3-5}
 Training $\to$ test labels, probabilities & Balanced accuracy & FM & AFM & FiM & Test rows \\
 \midrule
-MP $\to$ experimental, raw & 0.337 \ci{0.273}{0.396} & 0.59 & 0.07 & 0.35 & 2,772 \\
+MP $\to$ experimental, raw & 0.337 \ci{0.273}{0.396} & 0.59 & 0.07 & 0.34 & 2,772 \\
 MP $\to$ experimental, prior-corrected & 0.314 \ci{0.247}{0.381} & 0.67 & 0.05 & 0.22 & 2,772 \\
 Experimental $\to$ MP, raw & 0.384 \ci{0.366}{0.401} & 0.19 & 0.90 & 0.06 & 4,377 \\
 Experimental $\to$ MP, prior-corrected & 0.400 \ci{0.370}{0.430} & 0.60 & 0.57 & 0.04 & 4,377 \\
@@ -414,7 +416,7 @@ FiM & 5 & 4 & 17 & & 26 \\
 \multicolumn{5}{@{}l}{Sources disagree; neither matches the structure} & 5 \\
 \botrule
 \end{tabular*}
-\footnotetext{MP, Materials Project. \textbf{a}, Most frequent label of each provenance per formula; agreement 28\%, Cohen's $\kappa$ = 0.00 \ci{$-0.03$}{0.03}. \textbf{b}, 95\% intervals from a bootstrap over formulas; prior-corrected = probabilities corrected to the class prior of the training partition of the target domain. Null distribution from 20 refits on permuted training labels: median 0.342 and 97.5th percentile 0.374 (MP $\to$ experimental), 97.5th percentile 0.351 (experimental $\to$ MP). Median composition distance of the test formulas to the nearest training formula: 0.081 (MP $\to$ experimental), 0.169 (experimental $\to$ MP), 0.077 (within MP) and 0.033 (within experimental). Gradient boosting gives the same picture. \textbf{c}, MAGNDATA\cite{gallego2016magndata} structures from the Bilbao Crystallographic Server\cite{aroyo2011bcs,aroyo2006bcs1,aroyo2006bcs2}, labelled FM, AFM or FiM from their own moments (ordered, collinear entries; Methods of the main article, Structural reference for ordering labels); 840 compositions, of which 251 carry a Materials Project label and 442 an experimental label. Agreement with the structure: experimental 0.92 (95\% interval 0.90--0.95; $\kappa$ 0.72), Materials Project 0.22 (0.17--0.28; $\kappa$ 0.03).}
+\footnotetext{MP, Materials Project. \textbf{a}, Most frequent label of each provenance per formula; agreement 28\%, Cohen's $\kappa$ = 0.00 \ci{$-0.03$}{0.03}. \textbf{b}, 95\% intervals from a bootstrap over formulas; prior-corrected = probabilities corrected to the class prior of the training partition of the target domain. Null distribution from 20 refits on permuted training labels: median 0.342 and 97.5th percentile 0.374 (MP $\to$ experimental), 97.5th percentile 0.351 (experimental $\to$ MP). Median composition distance of the test formulas to the nearest training formula: 0.081 (MP $\to$ experimental), 0.169 (experimental $\to$ MP), 0.077 (within MP) and 0.033 (within experimental). Gradient boosting gives the same picture. \textbf{c}, MAGNDATA\cite{gallego2016magndata} structures from the Bilbao Crystallographic Server\cite{aroyo2011bcs,aroyo2006bcs1,aroyo2006bcs2}, labelled FM, AFM or FiM from their own moments (ordered, collinear entries; Methods of the main article, Structural reference for ordering labels); 840 compositions, of which 251 carry a Materials Project label and 442 an experimental label. Agreement with the structure: experimental 0.92 (95\% interval 0.90--0.95; $\kappa$ 0.72), Materials Project 0.22 (0.17--0.27; $\kappa$ 0.03).}
 \end{table}
 
 %% ---------------------------------------------------------------------------------------------------------- Table 13
@@ -818,14 +820,14 @@ Anisotropy compilation & 33,916 & 10,495 & 35\% & 2,733 \\
 \textbf{b} Comparison & Rows used & $n$ & Agreement & Cohen's $\kappa$ \\
 \midrule
 MP vs experimental & all & 949 & 28\% & 0.00 \ci{$-0.03$}{0.03} \\
-Experimental vs MAGNDATA & all & 442 & 92\% & 0.72 \ci{0.63}{0.80} \\
+Experimental vs MAGNDATA & all & 442 & 92\% & 0.72 \ci{0.62}{0.80} \\
 Always-AFM vs MAGNDATA & all & 442 & 86\% & -- \\
 MP vs experimental & flag true only & 815 & 26\% & $-0.01$ \ci{$-0.04$}{0.02} \\
 Experimental vs MAGNDATA & flag true only & 399 & 92\% & 0.73 \ci{0.63}{0.82} \\
 Always-AFM vs MAGNDATA & flag true only & 399 & 85\% & -- \\
 \botrule
 \end{tabular*}
-\footnotetext{\textbf{a}, The two experimental compilations (\texttt{magnetic\_materials.csv} and \texttt{magnetic\_anisotropy\_materials.csv}), the literature tables of magnetic and of anisotropy properties downloaded from the NEMAD website; the share of their compositions that also occur in the NEMAD classification sets is shown. `Flag false' counts the rows of the whole file whose \texttt{Experimental} field is false. \textbf{b}, Sensitivity of the label comparisons to the \texttt{Experimental} flag of the compilation rows (1,207 of 17,641 experimental ordering rows are flagged false), and the agreement of a labeller that always answers AFM with the MAGNDATA-derived labels, for reference. 95\% intervals from a bootstrap over formulas.}
+\footnotetext{\textbf{a}, The two experimental compilations (\texttt{magnetic\_materials.csv} and \texttt{magnetic\_anisotropy\_materials.csv}), the literature tables of magnetic and of anisotropy properties downloaded from the NEMAD website; the share of their compositions that also occur in the NEMAD classification sets is shown. `Flag false' counts the rows of the whole file whose \texttt{Experimental} field is false. \textbf{b}, Sensitivity of the label comparisons to the \texttt{Experimental} flag of the compilation rows (1,207 of 17,641 experimental ordering rows are flagged false), and the agreement of a labeller that always answers AFM with the MAGNDATA-derived labels, for reference. Rows `all' repeat the main analysis (Supplementary Table~12). 95\% intervals from a bootstrap over formulas.}
 \end{table}
 
 %% ---------------------------------------------------------------------------------------------------------- s29
@@ -836,9 +838,9 @@ Always-AFM vs MAGNDATA & flag true only & 399 & 85\% & -- \\
 \toprule
 Label provenance of the test row & \hd{Rows\\per split} & \hd{Model vs\\dataset label} & \hd{Model vs\\measured structure} & \hd{Dataset label vs\\measured structure} \\
 \midrule
-MP & 40 & 55\% (5) & 40\% (8) & 24\% \\
-experimental & 283 & 66\% (7) & 63\% (11) & 88\% \\
-all & 323 & 64\% (6) & 60\% (11) & 80\% \\
+MP & 40.5 & 55\% (5) & 40\% (8) & 24\% \\
+experimental & 282.8 & 66\% (7) & 63\% (11) & 88\% \\
+all & 323.3 & 64\% (6) & 60\% (11) & 80\% \\
 \botrule
 \end{tabular*}
 \footnotetext{Tier~1 XGBoost trained on the pooled ordering labels (full population, ten prespecified splits; saved test probabilities, argmax class). Test rows whose composition has a MAGNDATA-derived label (ordered, collinear structures). Accuracies are means over the splits (standard deviation across splits in percentage points); test sets of different splits overlap. Descriptive.}
@@ -849,7 +851,7 @@ all & 323 & 64\% (6) & 60\% (11) & 80\% \\
 \section{Reproducibility notes}
 
 \subsection{Package and checks}
-The reproducibility package contains the frozen datasets, splits, results, code, tests and the builders of the figures and of the manuscript. SHA-256 checksums cover all data and result files. Values taken from the two NEMAD literature tables are withheld, because the NEMAD terms of use do not allow redistribution; their rows keep the identifiers (record identifier, composition, source DOI and source file), so that each value can be traced to its source paper.
+The reproducibility package contains the frozen datasets, splits, results, code, tests and the builders of the figures and of the manuscript. SHA-256 checksums cover all data and result files. The NEMAD terms of use do not allow the values of its two literature tables to be redistributed, so any public release of the package withholds them and keeps the identifiers of their rows (record identifier, composition, source DOI and source file), so that each value can be traced to its source paper.
 
 \subsection{Later analyses}
 The analyses planned in writing after the first round of checks are in the package folders \texttt{scripts/pipeline/revision} and \texttt{results/revision}, with the analysis plan and its log of deviations in \texttt{results/revision/PLAN.md}. Six planned analyses were dropped for run time before any of their results were seen:
