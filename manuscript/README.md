@@ -1,6 +1,6 @@
 # Manuscript
 
-**Label provenance, physical descriptors and chemical novelty constrain machine-learning predictions of magnetic materials**
+**Reliable machine learning of magnetic materials needs more than accuracy**
 
 Prepared for *Nature Communications* in the Springer Nature LaTeX template (`sn-jnl.cls`, version 3.1, December 2024, option `sn-nature`).
 
@@ -44,7 +44,7 @@ python build.py               # manuscript.pdf, supplementary.pdf, manuscript_re
 
 | Rule | Limit | This manuscript |
 |---|---|---|
-| Title | ≤ 15 words | 13 |
+| Title | ≤ 15 words | 11 |
 | Abstract | ≤ 200 words, no references | 197 |
 | Main text | about 5,000 words | about 5,100 |
 | Display items | ≤ 10 | 9 (Tables 1–3, Figs 1–6) |

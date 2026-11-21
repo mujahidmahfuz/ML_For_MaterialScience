@@ -1,4 +1,4 @@
-# Label provenance, physical descriptors and chemical novelty constrain machine-learning predictions of magnetic materials
+# Reliable machine learning of magnetic materials needs more than accuracy
 
 Data, code, results and manuscript for the paper of the same title, prepared for *Nature Communications*.
 
