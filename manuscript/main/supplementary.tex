@@ -41,7 +41,7 @@
 \item Supplementary Tables 1--3: audit of the external Curie benchmark, comparisons between its subsets, and error by composition distance.
 \item Supplementary Table 4: the external benchmark under three resampling units and two interval types.
 \item Supplementary Table 5: residual label noise in the curated Curie target (unverified title-based screen).
-\item Supplementary Table 6: design effects and distance-aware conformal variants.
+\item Supplementary Table 6: why Curie interval coverage varies between splits, and distance-aware conformal variants.
 \item Supplementary Table 7: ordering performance with and without compounds that lack a magnetism-capable element.
 \item Supplementary Table 8: tier effects for the DFT moment per formula unit and per atom.
 \item Supplementary Table 9: prior machine-learning results for magnetic ordering and the Curie temperature.
@@ -62,7 +62,7 @@
 \item Supplementary Table 26: robustness of the descriptor comparison (concentration, formula weighting, noise ceiling, label provenance).
 \item Supplementary Table 27: cluster robustness of the external Curie-temperature results.
 \item Supplementary Table 28: provenance checks of the experimental compilations.
-\item Supplementary Table 29: a pooled ordering model scored against measured magnetic structures.
+\item Supplementary Table 29: a pooled ordering model scored against its own labels and against measured magnetic structures.
 \item Reproducibility notes.
 \end{itemize}
 
@@ -259,7 +259,7 @@ Gradient boosting & Tier 1 $\to$ Tier 2 & $+0.011$ \ci{$-0.009$}{$+0.032$} & 7/1
 Gradient boosting & Tier 1 $\to$ Tier 3 & $+0.031$ \ci{$+0.014$}{$+0.049$} & 10/10 & stable gain \\
 Gradient boosting & Tier 2 $\to$ Tier 3 & $+0.020$ \ci{$+0.003$}{$+0.037$} & 10/10 & stable gain \\
 Gradient boosting & Tier 1 $\to$ Tier 2 + site count & $+0.017$ \ci{$-0.003$}{$+0.038$} & 9/10 & borderline gain \\
-Gradient boosting & Tier 2 + site count $\to$ Tier 3 & $+0.014$ \ci{$-0.000$}{$+0.029$} & 9/10 & none \\
+Gradient boosting & Tier 2 + site count $\to$ Tier 3 & $+0.014$ \ci{$-0.0003$}{$+0.029$} & 9/10 & none \\
 XGBoost & Tier 1 $\to$ Tier 2 & $+0.009$ \ci{$-0.013$}{$+0.031$} & 7/10 & none \\
 XGBoost & Tier 1 $\to$ Tier 3 & $+0.024$ \ci{$+0.012$}{$+0.037$} & 10/10 & stable gain \\
 XGBoost & Tier 2 $\to$ Tier 3 & $+0.015$ \ci{$-0.013$}{$+0.043$} & 9/10 & none \\
@@ -290,7 +290,7 @@ Belot et al.\ 2023\cite{belot2023curie} & \Tc{}; 2,557 and 3,194 & random one th
 Itani et al.\ 2025 (NEMAD)\cite{itani2025nemad} & ordering 35,037; \Tc{} 15,577 & stratified random & accuracy 0.91, AFM F1 0.80; MAE 56 K, $R^2$ 0.87 & no \\[2pt]
 Orang et al.\ 2026\cite{abediorang2026curie} & \Tc{}; 2,500 curated & random 80/20 & $R^2$ 0.87--0.91 (0.66 uncurated) & no \\[2pt]
 Acosta et al.\ 2022\cite{acosta2022ordering2d} & 2D magnets; magnetic/non-magnetic and FM/AFM & out-of-bag; external set & accuracy 92.5\%; FM/AFM 87--90\% & external, 54 materials \\[2pt]
-This work & ordering 79,125; \Tc{} 29,740 & formula-, system- and provenance-grouped & macro-F1 0.73; \Tc{} MAE 76 K & yes (Table~3, Supplementary Table~21) \\
+This work & ordering 79,125; \Tc{} 29,740 & formula-, system- and provenance-grouped & macro-F1 0.73; \Tc{} MAE 76 K (frozen split; 99 K over ten splits) & yes (Table~3, Supplementary Table~21) \\
 \botrule
 \end{tabular}
 \footnotetext{Numbers as reported by each study, on its own data and splits; they are not directly comparable with each other or with ours. The studies of Nelson and Sanvito, Long et al., Belot et al., Itani et al., Orang et al.\ and Acosta et al.\ were read as arXiv versions. Court and Cole\cite{court2020phase} report family-specific N\'eel-temperature predictions and no dataset-wide metric.}
@@ -353,18 +353,18 @@ Hardest decile of the normalized method's own difficulty scale & 84 & 54.2 & 88.
 
 %% ---------------------------------------------------------------------------------------------------------- Table 12
 \begin{table}[!ht]
-\caption{\textbf{Ordering labels of Materials Project against experimental sources, and transfer between them.}}\label{tab:s12}%
+\caption{\textbf{Ordering labels of Materials Project against experimental sources, transfer between them, and both against MAGNDATA structures.}}\label{tab:s12}%
 \begin{tabular*}{\textwidth}{@{\extracolsep\fill}lrrrrr@{}}
 \toprule
 \multicolumn{6}{@{}l}{\textbf{a}\enspace Labels of the 949 formulas labelled by both sources}\\
 \midrule
 & \multicolumn{4}{c}{Materials Project label} & \\
 \cmidrule{2-5}
-Experimental label & AFM & FM & FiM & NM & Total \\
+Experimental label & FM & AFM & FiM & NM & Total \\
 \midrule
-AFM & 49 & 336 & 47 & 76 & 508 \\
-FM & 6 & 189 & 124 & 47 & 366 \\
-FiM & 2 & 41 & 27 & 4 & 74 \\
+FM & 189 & 6 & 124 & 47 & 366 \\
+AFM & 336 & 49 & 47 & 76 & 508 \\
+FiM & 41 & 2 & 27 & 4 & 74 \\
 NM & 0 & 0 & 1 & 0 & 1 \\
 \botrule
 \end{tabular*}
@@ -396,17 +396,17 @@ MP $\to$ MP, raw & 0.591 \ci{0.562}{0.618} & 0.91 & 0.31 & 0.56 & 4,377 \\
 \midrule
 & \multicolumn{4}{c}{Materials Project label} & \\
 \cmidrule{2-5}
-MAGNDATA label & AFM & FM & FiM & NM & Total \\
-AFM & 43 & 125 & 20 & 30 & 218 \\
-FM & 1 & 8 & 0 & 4 & 13 \\
-FiM & 1 & 12 & 4 & 3 & 20 \\
+MAGNDATA label & FM & AFM & FiM & NM & Total \\
+FM & 8 & 1 & 0 & 4 & 13 \\
+AFM & 125 & 43 & 20 & 30 & 218 \\
+FiM & 12 & 1 & 4 & 3 & 20 \\
 \midrule
 & \multicolumn{3}{c}{Experimental label} & & \\
 \cmidrule{2-4}
-MAGNDATA label & AFM & FM & FiM & & Total \\
-AFM & 360 & 17 & 4 & & 381 \\
-FM & 3 & 31 & 1 & & 35 \\
-FiM & 5 & 4 & 17 & & 26 \\
+MAGNDATA label & FM & AFM & FiM & & Total \\
+FM & 31 & 3 & 1 & & 35 \\
+AFM & 17 & 360 & 4 & & 381 \\
+FiM & 4 & 5 & 17 & & 26 \\
 \midrule
 \multicolumn{6}{@{}l}{\textit{Compositions labelled by Materials Project, an experimental source and MAGNDATA (150)}}\\
 \multicolumn{5}{@{}l}{Both sources agree and match the structure} & 30 \\
@@ -630,7 +630,7 @@ MP $\to$ experimental & -- & 0.769 & 0.337 & \ci{0.273}{0.396} & 0.374 \\
 Experimental $\to$ MP & -- & 0.591 & 0.384 & \ci{0.366}{0.401} & 0.351 \\
 \botrule
 \end{tabular*}
-\footnotetext{Leave chemical system out: the formula-grouped and system-grouped test sets differ, so each change combines novelty with test-set composition; change = unfamiliar minus familiar with a 95\% interval; last column, splits (of ten) in which the unfamiliar setting was worse. Label source (MP, Materials Project): `familiar' = a model trained and tested within the target label source, `unfamiliar' = trained on the other source; last column, 97.5th percentile of the null distribution; NM removed on both sides (the experimental labels contain 5 NM rows); training formulas present in the target test set removed; 95\% formula-bootstrap interval of the unfamiliar value; null = 20 refits on permuted training labels. Label agreement for the 949 formulas labelled by both sources: 28\%, Cohen's $\kappa$ = 0.00 \ci{$-0.03$}{0.03} (Supplementary Table~12).}
+\footnotetext{Leave chemical system out: the formula-grouped and system-grouped test sets differ, so each change combines novelty with test-set composition; change = unfamiliar minus familiar with a 95\% interval; last column, splits (of ten) in which the unfamiliar setting was worse. Label source (MP, Materials Project): `familiar' = a model trained and tested within the target label source, `unfamiliar' = trained on the other source; last column, 97.5th percentile of the null distribution; NM removed on both sides (the experimental labels contain five NM rows); training formulas present in the target test set removed; 95\% formula-bootstrap interval of the unfamiliar value; null = 20 refits on permuted training labels. Label agreement for the 949 formulas labelled by both sources: 28\%, Cohen's $\kappa$ = 0.00 \ci{$-0.03$}{0.03} (Supplementary Table~12).}
 \end{table}
 %% ---------------------------------------------------------------------------------------------------------- Table 22
 \begin{table}[!ht]
@@ -728,7 +728,7 @@ Matched minus mismatched & -- & $-0.03$ \ci{$-0.09$}{0.04} & -- & -- \\
 \toprule
 \textbf{b} Labels & MAGNDATA structure & Compositions & Agreement & Cohen's $\kappa$ \\
 \midrule
-MP & $\mathbf{k}=0$ (crystal cell) & 127 & 0.26 \ci{0.19}{0.34} & 0.06 \ci{$-0.00$}{0.12} \\
+MP & $\mathbf{k}=0$ (crystal cell) & 127 & 0.26 \ci{0.19}{0.34} & 0.06 \ci{$-0.002$}{0.12} \\
 MP & $\mathbf{k}\neq0$ (supercell) & 124 & 0.18 \ci{0.11}{0.25} & 0.01 \ci{0.00}{0.02} \\
 experimental & $\mathbf{k}=0$ (crystal cell) & 211 & 0.93 \ci{0.90}{0.97} & 0.84 \ci{0.76}{0.92} \\
 experimental & $\mathbf{k}\neq0$ (supercell) & 231 & 0.91 \ci{0.87}{0.95} & 0.11 \ci{$-0.03$}{0.29} \\
@@ -748,7 +748,7 @@ FiM & 0.62 & 0.24 & 0.14 & 0.01 \\
 NM & 0.37 & 0.60 & 0.03 & 0.00 \\
 \botrule
 \end{tabular*}
-\footnotetext{MP, Materials Project; 949 formulas labelled by both MP and an experimental source. Association over the modal labels: agreement 28\%, $\kappa$ 0.00, maximum attainable $\kappa$ given the marginals 0.34, PABAK 0.04, Cram\'er's $V$ 0.20 ($\chi^2$ $P<10^{-18}$); modal-label ties: 23 experimental, 0 MP. \textbf{a}, Strata use the representative MP entry of each formula (known ordering, lowest energy above the hull) with the number of magnetic sites and the site moments of the MP magnetism document; a cell with one magnetic site cannot hold collinear AFM order; the FiM recount keeps only sites with $|m|\ge0.5$~\muB{} (FiM labels before and after: 204 and 99). Phase-matched or mismatched: an experimental space group (parsed) equals, or equals no, MP entry of the composition; modal labels. \textbf{b}, MAGNDATA-derived labels by propagation vector of the structure ($\mathbf{k}=0$ fits the crystal cell). \textbf{c}, Share of the experimental labels given the MP label (rows sum to one before rounding). Formulas FM in experiment and FiM in MP (modal labels) by rare earth: light (La-Eu) 54, no rare earth 36, heavy (Gd-Lu) 33, light and heavy 1. 95\% intervals from a bootstrap over formulas (1,000 resamples). Whether an MP entry went through an antiferromagnetic enumeration is not recorded per entry in the database and could not be tested.}
+\footnotetext{MP, Materials Project; 949 formulas labelled by both MP and an experimental source. Association over the modal labels: agreement 28\%, $\kappa$ 0.00, maximum attainable $\kappa$ given the marginals 0.34, PABAK 0.04, Cram\'er's $V$ 0.20 ($\chi^2$ $P<10^{-18}$); modal-label ties: 23 experimental, 0 MP. \textbf{a}, Strata use the representative MP entry of each formula (known ordering, lowest energy above the hull) with the number of magnetic sites and the site moments of the MP magnetism document; a cell with one magnetic site cannot hold collinear AFM order; the FiM recount keeps only sites with $|m|\ge0.5$~\muB{} (FiM labels before and after: 204 and 99). Phase-matched or mismatched: an experimental space group (parsed) equals, or equals no, MP entry of the composition; modal labels. \textbf{b}, MAGNDATA-derived labels by propagation vector of the structure ($\mathbf{k}=0$ fits the crystal cell). \textbf{c}, Share of the experimental labels given the MP label (rows sum to one before rounding). Formulas FM in experiment and FiM in MP (modal labels) by rare earth: light (La--Eu) 54, no rare earth 36, heavy (Gd--Lu) 33, light and heavy 1. 95\% intervals from a bootstrap over formulas (1,000 resamples). Whether an MP entry went through an antiferromagnetic enumeration is not recorded per entry in the database and could not be tested.}
 \end{table}
 
 %% ---------------------------------------------------------------------------------------------------------- s26

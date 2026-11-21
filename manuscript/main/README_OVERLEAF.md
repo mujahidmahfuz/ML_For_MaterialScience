@@ -10,7 +10,7 @@ sources, built locally with `../build.py`); edit there and copy again, or edit h
 3. **Recompile.** Expected: 31 pages, no errors.
 
 To compile the other documents, change *Main document* to `supplementary.tex` (24 pages) or `manuscript_review.tex`
-(peer-review copy with double spacing and line numbers, 46 pages).
+(peer-review copy with double spacing and line numbers, 47 pages).
 
 ## Files
 
@@ -24,7 +24,7 @@ To compile the other documents, change *Main document* to `supplementary.tex` (2
 | `references.bib` | Bibliography source. The reference lists are already pasted into the `.tex` files, so Overleaf needs no BibTeX run |
 | `manuscript.pdf`, `supplementary.pdf`, `manuscript_review.pdf` | The PDFs built locally, for comparison |
 
-Checked on 2026-11-21: this folder compiles on its own (manuscript 31 pages, Supplementary Information 24, review copy 46), with no
+Checked on 2026-11-22: this folder compiles on its own (manuscript 31 pages, Supplementary Information 24, review copy 47), with no
 overfull boxes and no undefined references. The sources are plain ASCII and use the template's `pdflatex` option.
 
 If a citation is added or changed, edit `references.bib` in `../` and run `python ../inline_references.py`, then copy the `.tex`

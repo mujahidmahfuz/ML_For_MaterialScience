@@ -307,6 +307,7 @@ def fig3() -> None:
                f"Class-conditional ({sets.loc['class-conditional', 'set_size']:.2f})"],
               loc="lower left", frameon=False, handletextpad=0.3, borderaxespad=0.2)
     ax.set_xlabel("Ordering class", color=INK2)
+    ax.set_ylabel("Coverage of 90% prediction sets (%)", color=INK2)
     fig.tight_layout(w_pad=1.0)
     save(fig, "fig3")
 
@@ -492,7 +493,7 @@ SUMMARY_ROWS = (
      "A descriptor can be physically meaningful and still add little predictive information.",
      "Compare descriptor sets on identical rows, with a size control."),
     ("Calibration",
-     "Coverage was near 90% overall but 65.5% in the top Curie-temperature decile (constant-width intervals) and 54-57% for two ordering classes.",
+     "Coverage was near 90% overall but 65.5% in the top Curie-temperature decile (constant-width intervals) and 54–57% for two ordering classes.",
      "Average coverage hides failures in physically important subgroups.",
      "Report subgroup coverage; use normalized or class-conditional sets."),
     ("Chemical novelty",

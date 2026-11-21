@@ -8,7 +8,7 @@ Prepared for *Nature Communications* in the Springer Nature LaTeX template (`sn-
 |---|---|
 | [`manuscript.pdf`](manuscript.pdf) | Reading copy, 31 pages; each figure and table follows its first mention |
 | [`supplementary.pdf`](supplementary.pdf) | Supplementary Information: Supplementary Figure 1, Supplementary Tables 1–29 and reproducibility notes, 24 pages |
-| [`manuscript_review.pdf`](manuscript_review.pdf) | Peer-review copy (double-spaced, line numbers), 46 pages |
+| [`manuscript_review.pdf`](manuscript_review.pdf) | Peer-review copy (double-spaced, line numbers), 47 pages |
 | `manuscript.tex`, `supplementary.tex` | Sources: one file each, every table inline and the reference list pasted in, as the template requires |
 | `references.bib` | Bibliography; every entry checked against Crossref or the publisher's record |
 | `fig1.pdf` … `fig6.pdf`, `sfig1.pdf` | Figures, next to the sources (the template forbids image subfolders); PNG previews in `png/` |
@@ -44,9 +44,9 @@ python build.py               # manuscript.pdf, supplementary.pdf, manuscript_re
 
 | Rule | Limit | This manuscript |
 |---|---|---|
-| Title | ≤ 15 words | 11 |
-| Abstract | ≤ 200 words, no references | 197 |
-| Main text | about 5,000 words | about 5,100 |
+| Title | ≤ 15 words | 10 |
+| Abstract | ≤ 200 words, no references | 199 |
+| Main text | about 5,000 words | about 5,200 |
 | Display items | ≤ 10 | 9 (Tables 1–3, Figs 1–6) |
 | References | ≤ 70 | 61 |
 

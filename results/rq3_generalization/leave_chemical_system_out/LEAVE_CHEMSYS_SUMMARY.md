@@ -6,8 +6,8 @@ Code: `src/run_phase8_leave_chemsys.py`. For each of the 10 Phase 7 split seeds 
 
 | Target | Metric | Formula-grouped | System-grouped | Paired delta [95% t-interval] | Worse in | Stable degradation? |
 |---|---|---|---|---|---|---|
-| Ordering | macro-F1 | 0.712 | 0.684 | **−0.029 [−0.041, −0.017]** | 10/10 | **yes** |
-| Ordering | FiM recall | 0.528 | 0.467 | **−0.061 [−0.085, −0.036]** | 10/10 | **yes** |
+| Ordering | macro-F1 | 0.712 | 0.684 | **−0.028 [−0.041, −0.016]** | 10/10 | **yes** |
+| Ordering | FiM recall | 0.528 | 0.467 | **−0.060 [−0.085, −0.036]** | 10/10 | **yes** |
 | Ordering | FM recall | 0.777 | 0.758 | −0.019 [−0.034, −0.005] | 8/10 | yes |
 | Ordering | AFM recall | 0.598 | 0.569 | −0.029 [−0.067, +0.009] | 8/10 | no |
 | Ordering | NM recall | 0.912 | 0.912 | +0.000 | 4/10 | no |

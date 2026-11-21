@@ -10,8 +10,8 @@ Data, code, results and manuscript for the paper of the same title, prepared for
 ## In one paragraph
 
 Machine-learning models of magnetic materials are usually judged by their accuracy on held-out data from their own training sources.
-We asked whether their predictions remain meaningful once three conditions are examined: what the labels represent, what physical
-descriptors add, and how far a material lies from the training chemistry. On one curated dataset of magnetic ordering, Curie temperature
+We asked whether their predictions remain meaningful once four conditions are examined: what the labels represent, what physical
+descriptors add, whether uncertainty holds across subgroups, and how far a material lies from the training chemistry. On one curated dataset of magnetic ordering, Curie temperature
 and the computed magnetic moment, with matched descriptor comparisons, conformal uncertainty and an audited external benchmark, each
 condition turned out to limit what a reported accuracy means.
 
