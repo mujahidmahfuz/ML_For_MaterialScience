@@ -1,7 +1,0 @@
-Method / variant,Design effect,Effective size,Implied SD,Observed SD,Mean coverage,Farthest decile
-Split conformal,13.7,305,0.5 / 1.7,6.0,-,-
-Normalized conformal,12.4,337,0.5 / 1.6,2.5,-,-
-CQR,16.7,251,0.5 / 1.9,5.8,-,-
-"Normalized, plain",-,-,-,2.5,90.3,88.2
-"Normalized, calibrated per distance quartile",-,-,-,2.3,89.5,90.3
-"Normalized, weighted for covariate shift",-,-,-,2.4,90.3,88.2

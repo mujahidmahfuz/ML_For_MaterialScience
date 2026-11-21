@@ -1,1 +1,0 @@
-Title-based screen, not a full-text audit: stratified random sample of 200 retained records (source x Tc tercile, seed 20261110), each classified by the AI assistant from the Crossref title, the compound and the plausibility of the value; Wilson 95% intervals. Per-record labels for checking: results/revision/a7_curie_label_noise/title_audit_adjudicated.csv.

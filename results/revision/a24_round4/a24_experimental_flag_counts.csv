@@ -1,0 +1,5 @@
+_source,Experimental,rows
+magnetic_anisotropy_materials.csv,False,1206
+magnetic_anisotropy_materials.csv,True,16395
+magnetic_materials_reformatted.csv | magnetic_anisotropy_materials.csv | magnetic_materials.csv,False,1
+magnetic_materials_reformatted.csv | magnetic_anisotropy_materials.csv | magnetic_materials.csv,True,39

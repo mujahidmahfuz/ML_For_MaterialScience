@@ -1,6 +1,6 @@
 # Results
 
-Saved outputs of the analyses, organised by research question. Every number in the tables and figures is read from these files. They are covered by `../CHECKSUMS.sha256`; the script that produced each folder is listed in `../scripts/README.md`.
+Saved outputs of the analyses, organised by research question. Every number in the manuscript's tables and figures is read from these files. They are covered by `../CHECKSUMS.sha256`; the script that produced each folder is listed in `../scripts/README.md`.
 
 **Conventions:** 95% intervals unless stated otherwise. "Improvement" columns are signed so that positive = better. "Stable" means the 95% interval excludes zero and the direction holds in at least 70% of the repeated splits.
 
@@ -49,3 +49,24 @@ The third-party external table has no stated licence. `audit_flags.csv`, `simila
 | `material_families/` | Family-specific vs general models (transition metal, rare earth, oxide, intermetallic) |
 | `secondary_targets/` | Mass/volume magnetization and K1 (exploratory) |
 | `reproducibility_checks/` | Exact-reproduction checks of earlier runs and XGBoost thread-count effects |
+
+## `revision/`: analyses added during peer review
+Specified in writing before they were run; plan, claim rules and log of deviations in `PLAN.md`. Code: `../scripts/pipeline/revision/`.
+
+| Path | Content | Used in |
+|---|---|---|
+| `a1_tier_inference.csv` | Refit-aware (Nadeau-Bengio) intervals of the Tier 1 → 2 → 3 effects | Table 2, Fig. 2 |
+| `a2_provenance/` | Materials Project vs experimental ordering labels: agreement, confusion, cross-provenance transfer; aggregate source counts | Fig. 1 |
+| `a3_external_inference.csv` | Inference for the external benchmark subsets | Table 3, Fig. 4 |
+| `a4_uq/` | Coverage by subgroup, design effect, ordering calibration over splits | Fig. 3 |
+| `a5_moment_per_fu/` | Tier effects for the DFT moment per formula unit | Fig. 2 |
+| `a6_magnetic_physics/` | Magnetic-structure descriptors for the Curie temperature | Supplementary Information |
+| `a7_curie_label_noise/` | Within-formula spread and the title screen of Curie labels | Supplementary Information |
+| `a9_screening/`, `a15_internal_screening/` | Abstention curves and interval decisions, external and internal | Fig. 5 |
+| `a14_pooled_tier_inference/`, `a17_tuning/`, `a19_same_spacegroup/` | Robustness of the Curie descriptor result (pooled algorithms, tuning grid, same space group) | Supplementary Information |
+| `a16_magndata_anchor/` | Ordering labels derived from MAGNDATA magnetic structures (with `SOURCE_AND_CITATION.md`) | Fig. 1 |
+| `a18_sitecount/` | Cell size against moment and ordering labels | Supplementary Information |
+| `a22_worked_examples/` | Worked examples of the screening rules | Supplementary Information |
+| `a23_label_comparability/` | Phase-matched comparison of computed and experimental labels | Fig. 1, Supplementary Information |
+| `a24_round4/` | Provenance checks, decomposition of the label disagreement, descriptor-null robustness, cluster jackknife, re-scoring against measured structures (A24-A28) | Supplementary Information |
+| `research/` | `data_licences.md` (terms of every source, quoted) and `prior_results_table.md` (published results compared) | Supplementary Information |

@@ -1,7 +1,0 @@
-Target,Unit,Records,Formulas,Train / validation / test,Matched records
-Magnetic ordering (FM/AFM/FiM/NM),class,"79,125","70,293","55,249/11,974/11,902","6,061"
-Curie temperature,K,"29,740","14,145","20,508/4,691/4,541","4,602"
-"DFT total magnetic moment, per cell (m_cell)",μB/cell,"87,513","77,402","61,254/13,130/13,129","10,852"
-Mass magnetization (secondary),emu/g,"4,317","3,218","3,021/648/648",-
-Volume magnetization (secondary),A/m,779,454,535/124/120,-
-Anisotropy constant K1 (secondary),J/m³,"1,847","1,182","1,296/280/271",-

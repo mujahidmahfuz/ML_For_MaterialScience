@@ -1,0 +1,19 @@
+target,_source,label,n
+curie,chemdata_curie_neel.csv,,9101
+curie,magnetic_anisotropy_materials.csv,,5085
+curie,magnetic_materials_reformatted.csv | magnetic_anisotropy_materials.csv | magnetic_materials.csv,,31
+curie,magnetic_materials_reformatted.csv | magnetic_materials.csv,,15523
+moment_per_cell,jarvis_magnetic.csv,,15493
+moment_per_cell,magnetic_anisotropy_materials.csv,,10
+moment_per_cell,mp_reformatted.csv,,72010
+ordering,magnetic_anisotropy_materials.csv,AFM,5195
+ordering,magnetic_anisotropy_materials.csv,FM,10723
+ordering,magnetic_anisotropy_materials.csv,FiM,1678
+ordering,magnetic_anisotropy_materials.csv,NM,5
+ordering,magnetic_materials_reformatted.csv | magnetic_anisotropy_materials.csv | magnetic_materials.csv,AFM,2
+ordering,magnetic_materials_reformatted.csv | magnetic_anisotropy_materials.csv | magnetic_materials.csv,FM,37
+ordering,magnetic_materials_reformatted.csv | magnetic_anisotropy_materials.csv | magnetic_materials.csv,FiM,1
+ordering,mp_reformatted.csv,AFM,996
+ordering,mp_reformatted.csv,FM,23338
+ordering,mp_reformatted.csv,FiM,5482
+ordering,mp_reformatted.csv,NM,31668

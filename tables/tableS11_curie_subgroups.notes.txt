@@ -1,1 +1,0 @@
-Mean over 10 prespecified splits. Constant-width methods over-cover several families (rare earth, actinide, intermetallic) because their intervals are wide everywhere; normalized conformal stays within about 2 points of nominal except for text-mined labels and physics-complete materials.

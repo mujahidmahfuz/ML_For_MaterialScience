@@ -1,1 +1,0 @@
-Tier 1 XGBoost on the full ordering population, 10 prespecified splits; magnetism-capable element = curation rule C1 list.

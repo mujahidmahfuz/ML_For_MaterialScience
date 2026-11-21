@@ -1,1 +1,0 @@
-Mean over 10 prespecified splits (Tier 1 XGBoost, full ordering population); 15 equal-width bins. Sets at 90% nominal on prior-corrected, temperature-scaled probabilities, with the temperature fitted on half of the calibration formulas and the conformal thresholds on the other half (re-using one calibration set gives the same coverage to within 0.3 points). Coverage = mean (SD).

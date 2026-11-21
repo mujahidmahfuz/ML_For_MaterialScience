@@ -1,1 +1,0 @@
-Per formula unit: Nadeau-Bengio 95% intervals, all rows and non-zero moments only. Per atom (same 10,821 rows and splits, earlier analysis with the corrected same-calculation atom count): relative MAE gain with a descriptive across-split t interval.

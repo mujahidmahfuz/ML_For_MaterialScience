@@ -3,8 +3,6 @@
 ## Layout
 | Path | What it is |
 |---|---|
-| `make_tables.py` | Builds every table in `../tables/` (CSV + LaTeX) from `../data/` and `../results/`. Seconds. |
-| `make_figures.py` | Builds every figure in `../figures/` (PDF + PNG) from `../results/`. Seconds. |
 | `verify_checksums.py` | Checks all data and result files against `../CHECKSUMS.sha256`. |
 | `setup_workspace.py` | Creates a run workspace for the pipeline code (hard links, no extra disk space). |
 | `fetch_external_benchmark.py` | Downloads the third-party external Curie table into a workspace and verifies its SHA-256. |
@@ -16,13 +14,14 @@
 | `pipeline/tests/` | Unit tests of the analysis code (the audit tests are in `pipeline/external_benchmark/audit/`). |
 | `pipeline/PATCHES.md` | The only differences from the code that produced the results (absolute paths, API-key lookup). |
 
-## 1. Rebuild the tables and figures (minutes, no model fitting)
-From the package root:
+## 1. Rebuild the figures and the paper (minutes, no model fitting)
+From the repository root:
 ```
 pip install -r scripts/requirements.txt
 python scripts/verify_checksums.py
-python scripts/make_tables.py
-python scripts/make_figures.py
+cd manuscript
+python make_figures.py     # figures from ../results
+python build.py            # manuscript, supplementary and review PDFs (needs tectonic)
 ```
 
 ## 2. Re-run the analyses (hours)
@@ -36,6 +35,8 @@ python -m pytest ../tests -q
 **Leave `OMP_NUM_THREADS` unset.** XGBoost results depend on the thread count, which acts like a random seed (mean prediction change about 25% of the MAE). The published runs used 16 threads (`phase7_validation.XGB_N_JOBS`); Ridge and HistGradientBoosting do not depend on it. Conclusions in the paper are stated across splits and seeds.
 
 Unless a different folder is given, commands run from `<workspace>/EDA/src` with `python -X utf8`. Outputs go into the workspace; the right-hand column names the package copy to compare with. Hyperparameters are never re-tuned: every stage reads the selections frozen in `data/reference_inputs/`.
+
+**NEMAD values:** the values of the two NEMAD literature tables are withheld from `data/` (see `../data/README.md`). Model fits that use those rows need the tables, which the NEMAD authors distribute; all saved results in `../results/` are complete.
 
 ### Dataset (optional; the frozen versions are in `data/`)
 | Step | Command | Compare with |

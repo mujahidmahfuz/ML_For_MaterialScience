@@ -1,0 +1,3 @@
+file,rows,compositions,composition_share_in_nemad,tc_rows_compared_by_composition,tc_within_1K_share_by_composition,rows_with_doi_and_formula,doi_formula_pairs,pairs_in_nemad,pair_share_in_nemad,dois,doi_share_in_nemad,tc_pairs_compared,tc_within_1K_share,experimental_false_rows,verdict
+magnetic_materials.csv,33668,20182,0.9037260925577247,19137,0.001985682186340597,28161,27518,0,0.0,9853,0.0,0,,2962,lineage not established
+magnetic_anisotropy_materials.csv,33916,10495,0.3513101476893759,4604,0.004344048653344918,20010,19164,0,0.0,11684,0.0,0,,2733,lineage not established

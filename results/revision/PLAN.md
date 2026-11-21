@@ -156,7 +156,7 @@ top-k), computed per split and averaged. Output `outputs/a15_internal_screening/
 training chemistry (MAE 103 -> 43 K at 50% retained, coverage 0.92); abstaining on composition distance does not (closest 25%: 103 K); interval
 decisions settle 44% of records at 97.6% accuracy.
 
-**A22 (writing revision). Three worked examples of the screening rules. STATUS: RUN 2026-11-17.** `scripts/a22_worked_examples.py` reads the saved A4 per-record test predictions and reports, for SmCo5 (split 1), Gd5Si4 (split 4) and Ho (split 2), the median measured value, prediction, 90% normalized conformal interval, composition distance and the 300 K rule outcome (decided and correct / abstained although close / abstained far from the training chemistry). The compounds were CHOSEN AFTER LOOKING at the saved test sets to illustrate three outcomes; they are illustrations, not a sample (stated in Methods, Extended Data Table 9 and Supplementary Table 14). Only compounds of the project's own data are used; no value from the unlicensed external table.
+**A22 (writing revision). Three worked examples of the screening rules. STATUS: RUN 2026-11-17.** `scripts/a22_worked_examples.py` reads the saved A4 per-record test predictions and reports, for SmCo5 (split 1), Gd5Si4 (split 4) and Ho (split 2), the median measured value, prediction, 90% normalized conformal interval, composition distance and the 300 K rule outcome (decided and correct / abstained although close / abstained far from the training chemistry). The compounds were CHOSEN AFTER LOOKING at the saved test sets to illustrate three outcomes; they are illustrations, not a sample. (Correction 2026-11-20: by the authors' decision of 2026-11-17 this is NOT stated in the manuscript or SI; it is recorded here only. The earlier wording of this line claimed a disclosure that the paper does not contain. The examples now sit in Supplementary Table 24.) Only compounds of the project's own data are used; no value from the unlicensed external table.
 
 **A20 (R1-5). End-to-end graph-network check for the Curie temperature. STATUS: STOPPED 2026-11-17 BY THE USER, NOT COMPLETED, NOT ANALYSED, NOT IN THE PAPER.** Reason: optional; the manuscript already limits its null to formula-joined descriptors and a frozen embedding. About 26 of 90 planned runs finished (seed 0, splits 0-8 partly); the files in outputs/a20_gnn/preds are partial and were never scored against the claim rule, so they must not be quoted. a20_gnn_analysis.py was written but not run. (Specified 2026-11-16, before any model was trained.)
 Question: the null for Tier 3 concerns descriptors joined by formula and a frozen CHGNet embedding (A6c). Does a pretrained graph network that is fine-tuned
@@ -238,6 +238,32 @@ stoichiometric and bulk 314: 0.248, kappa 0.019 [-0.023, 0.064]. => by the rule:
 of the 29 phase-matched formulas labelled FM by experiment and FiM by MP, 18 contain a rare earth (a label-definition difference: compounds with
 antiparallel sublattices are often called ferromagnets in experimental sources); 103 of 949 formulas have MP polymorphs with different labels.
 
+## Added for the round-4 review (2026-11-20; `paper/manuscript/review/round4_natcomms_2026-11-20/editorial_decision.md`, required items R1-R5; specified here BEFORE the runs)
+Script: `scripts/a24_round4_checks.py` (subcommands below). No model is refitted; all analyses use saved predictions, saved labels or MP API metadata.
+**A24 (R1) Provenance of the experimental compilations.** (a) Lineage test: share of rows of `magnetic_materials.csv` and
+`magnetic_anisotropy_materials.csv` whose (normalised DOI, composition key) pair occurs in the NEMAD files we hold (`new_datasets/nemad_magnetic.csv`,
+`new_datasets/github_datasets_magnetic.csv`), and, for matched pairs with a Curie value in both, the share with |dTc| <= 1 K. Rule: >= 50% pair overlap and
+>= 80% value agreement => 'consistent with NEMAD lineage' (stated as evidence, not proof); otherwise 'lineage not established'. (b) The `Experimental` flag:
+counts of experimental-compilation ordering rows with Experimental = False, and the A23/A16 agreement and kappa recomputed without them.
+(c) Agreement with MP and MAGNDATA per source file of the experimental labels.
+**A25 (R2) Decomposition of the MP-experiment ordering disagreement** for the 949 shared formulas (A23 entries): MP magnetism documents (num_magnetic_sites,
+per-site magmoms) fetched from the API. Strata: (i) MP entries with one magnetic site (cannot host collinear AFM) vs >= 2; (ii) MP FiM labels recounted from
+the site moments with |m| >= 0.5 muB only (FiM -> FM if all large moments are parallel); (iii) rare-earth formulas split into light (La-Eu) and heavy
+(Gd-Lu); (iv) for formulas covered by MAGNDATA, the propagation vector of the structure (k = 0 vs k != 0, parsed from `_parent_propagation_vector.kxkykz`).
+Also: kappa_max given the marginals, PABAK, Cramer's V, P(exp | MP) by class, number of modal-label ties, and agreement for phase-mismatched formulas
+(experimental space group parsed but not equal to any MP entry) against phase-matched ones (formula bootstrap of the difference). Descriptive; no claim rule
+beyond reporting with intervals. Whether an MP entry went through AFM enumeration is not exposed per entry by the API (checked 2026-11-20) and is reported as such.
+**A26 (R3) Robustness of the Curie descriptor null** on the saved matched predictions (A1 inputs): number of formulas and record concentration; Tier 1 -> 3
+contrast with formula-macro MAE (each test formula weighted equally), refit-aware interval as in A1; within-formula noise ceiling (MAE of predicting each test
+record by the median of the other test records of the same formula, formulas with >= 2 test records); matched Tier 1 baselines (MAE, R2) for all three targets.
+Ordering: Tier 1 -> 3 macro-F1 change on the matched test rows split by label provenance (MP vs experimental), descriptive.
+**A27 (R4) Cluster robustness of the external novelty results:** leave-one-cluster-out (jackknife over the 18 clusters) MAE and R2 for the blind unseen-system
+subset and for the seen-system contrast; Spearman rho(distance, |error|) within clusters (ranks centred by cluster) and at cluster level; the material class of
+the largest unseen-system cluster. Rule: report the jackknife range; the wording 'much weaker, with wide uncertainty' stays unless every jackknife R2 > 0.5.
+**A28 (R5) Field-level consequence:** saved A4 ordering test probabilities (Tier 1 XGBoost, full population, 10 splits): for test formulas whose composition is
+covered by MAGNDATA-derived labels, accuracy of the model's argmax class against (a) the dataset label of the row and (b) the MAGNDATA label, split by label
+provenance of the row. Descriptive, with formula-bootstrap intervals.
+
 ## Deviations log
 - 2026-11-10 A6: the descriptor geometry was first checked on MnO and SrFeO3 and found to miss periodic-image M-X-M pairs. It was fixed
   (angles are now measured around each anion site) before any fit used it.
@@ -272,3 +298,9 @@ antiparallel sublattices are often called ferromagnets in experimental sources);
 - 2026-11-20 A23: the non-bulk pattern matched the substring 'layer' and so also the bulk structure description 'Layered' (2 experimental
   records). Fixed (only mono-/epi-/multilayer count as non-bulk) and re-run: the bulk subset went from 908 to 909 formulas (agreement 0.273,
   kappa 0.003); the phase-matched subsets and every other number are unchanged.
+- 2026-11-20 A24(a): the NEMAD copies we hold cannot support the planned lineage test. `nemad_magnetic.csv` has no names, DOIs or values (only flags);
+  `github_datasets_magnetic.csv` has one placeholder arXiv DOI for all rows and Curie values that are ~0 for 99.8% of rows. The DOI-pair test therefore gives 0
+  by construction and the value test is meaningless. Reported instead: composition overlap with the NEMAD classification sets (90% of the compositions of
+  magnetic_materials.csv, 35% of magnetic_anisotropy_materials.csv). Verdict by the rule: 'lineage not established'. Resolving it needs the authors (who
+  supplied the two files) or a full NEMAD export with DOIs.
+- 2026-11-21 A24(a) RESOLVED outside the test: Windows download marks (NTFS Zone.Identifier stream) on the two root files: `magnetic_materials.csv` HostUrl https://api.nemad.org/materials/download_magnetic, `magnetic_anisotropy_materials.csv` HostUrl https://api.nemad.org/materials/download_magnetic_anisotropy, ReferrerUrl https://nemad.org/ for both; saved 2026-06-16 01:12 and 01:14 JST (the NEMAD paper PDF, Nat. Commun. 16, 9415, was saved from nature.com the evening before, 2026-06-15 23:27). These download endpoints are no longer in the nemad.org web app (checked 2026-11-21). So both compilations are the NEMAD website's literature tables (GPTArticleExtractor, JMMM). The A24 output table keeps the prespecified verdict of the composition test; manuscript, SI Tables 10/14/28 now name the source. Terms: nemad.org Terms of Service (read from the site's JavaScript bundle on 2026-11-21): '4. Data Usage. Users may access and use the data available in the database for academic and research purposes. However, users must: Not redistribute or resell the data; Not use the data for commercial purposes without explicit permission; Properly cite the database in any publications or presentations.' '4.1 Citation Requirements ... you must cite': GPTArticleExtractor (Y. Zhang et al., JMMM 597, 172001, 2024); NEMAD (S. Itani, Y. Zhang & J. Zang, arXiv:2409.15675, now Nat. Commun. 16, 9415, 2025); 'Large Language Model-Driven Database for Thermoelectric Materials' (S. Itani, Y. Zhang & J. Zang, arXiv:2501.00564). '5. Intellectual Property. All content, data, and materials available in the database are protected by intellectual property rights.'
