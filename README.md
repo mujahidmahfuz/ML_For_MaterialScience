@@ -77,7 +77,7 @@ with `scripts/setup_workspace.py`, and every step names the result file to compa
 | Materials Project, OQMD, JARVIS-DFT | CC BY 4.0 | derived values |
 | ChemDataExtractor Curie/Néel database (Kelly & Cole 2025) | CC BY 4.0 | derived values |
 | NEMAD classification sets (Zenodo release) | CC BY 4.0 | derived values |
-| NEMAD literature tables (nemad.org) | research use, **no redistribution** | identifiers only; values withheld ([details](data/README.md#withheld-values-nemad-literature-tables)) |
+| NEMAD literature tables (nemad.org) | research use, **no redistribution** | values included because this repository is private; redact with `--redact-nemad` before any public release ([details](data/README.md#nemad-literature-tables-private-repository)) |
 | MAGNDATA (Bilbao Crystallographic Server) | usage conditions of the server | derived labels with the requested citations; no structure files |
 | AFLOW | non-commercial use | derived Tier 3 columns |
 | External Curie benchmark (malaei/Magnetic_data) | no licence stated | the table itself is not included (`scripts/fetch_external_benchmark.py` downloads it, SHA-256 checked); three result files in `results/rq3_generalization/external_benchmark/` hold its compound names and values |

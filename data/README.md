@@ -42,13 +42,11 @@ Steps 1–3 used raw downloads (several GB) that are not part of this package. T
 
 Rows join on `material_id`. Splits are grouped by `reduced_formula`; the split files list exactly the valid rows of each target.
 
-## Withheld values (NEMAD literature tables)
+## NEMAD literature tables (private repository)
 
-The two NEMAD literature tables were downloaded from [nemad.org](https://www.nemad.org), whose terms of use allow academic and research use but not redistribution. In every file of `data/` and `results/`, the rows that come from them (`_source` contains `magnetic_materials.csv` or `magnetic_anisotropy_materials.csv`) keep their identifiers (`material_id`, formula, `DOI`, `_source`, `Experimental`, validity flags) and our computed descriptors, but their measured values are blank: the raw property columns, `target_raw` / `value_raw` / `unit_raw`, the cleaned targets (`TC_K_clean`, `magnetic_ordering_clean`, `Ms_*_clean`, `K1_clean`), and `y_true` and error columns in prediction files. The redaction is done by `final/scripts/build_paper_package.py` (function `redact_nemad_values`); every other byte is unchanged.
-The SHA-256 values inside `MANIFEST_v1.3.json` and `MANIFEST_v1.4.json` describe the files before redaction; `../CHECKSUMS.sha256`
-describes the files published here.
+The two NEMAD literature tables were downloaded from [nemad.org](https://www.nemad.org), whose terms of use allow academic and research use but **not redistribution**. This repository is private and contains their values (rows whose `_source` contains `magnetic_materials.csv` or `magnetic_anisotropy_materials.csv`). **Before the repository or any copy of `data/` and `results/` is made public**, rebuild the package with `python final/scripts/build_paper_package.py --redact-nemad`: it blanks the measured values of those rows (raw property columns, `target_raw` / `value_raw` / `unit_raw`, `TC_K_clean`, `magnetic_ordering_clean`, `Ms_*_clean`, `K1_clean`, and `y_true` and error columns in prediction files) and keeps their identifiers (`material_id`, formula, `DOI`, `_source`, `Experimental`, validity flags) and our computed descriptors. Fig. 1 reads aggregate counts (`results/revision/a2_provenance/target_source_counts.csv`), so every figure is unaffected.
 
-Consequences: every summary result and figure of the paper is complete (Fig. 1 reads aggregate counts, `results/revision/a2_provenance/target_source_counts.csv`). Re-fitting the models from `data/` needs the NEMAD values; request the tables from the NEMAD authors and cite Itani, Zhang & Zang, *Nat. Commun.* **16**, 9415 (2025) and Zhang *et al.*, *J. Magn. Magn. Mater.* **597**, 172001 (2024), as the NEMAD terms require.
+Work that uses these values must cite Itani, Zhang & Zang, *Nat. Commun.* **16**, 9415 (2025) and Zhang *et al.*, *J. Magn. Magn. Mater.* **597**, 172001 (2024), as the NEMAD terms require.
 
 **Known limitation:** about 0.6% of Curie test rows and 1.3% of ordering test rows share their composition with a training row that is spelled differently (fractional vs integer formula string). Ms is unaffected.
 
@@ -69,4 +67,4 @@ Clear the licence before public deposit, or remove those columns.
 | `phase6/03_…09_*` | Phase 7 validation, Phase 8 scripts, `run_v14_secondary.py` | Frozen Phase 6 outputs: selected hyperparameters (Stage 2 and Stage 4 JSON), the frozen-split predictions that Phase 7 reproduces exactly, and earlier tables used for comparison |
 
 ## Licences
-Each provider has its own terms; they are quoted, with their URLs, in `../results/revision/research/data_licences.md` and summarised in Supplementary Table 10. Materials Project, OQMD, JARVIS-DFT, the ChemDataExtractor database and the NEMAD Zenodo release are CC BY 4.0. AFLOW-derived Tier 3 columns are for non-commercial use. MAGNDATA structure files are not redistributed (derived labels only, with the citations its conditions ask for). The NEMAD website tables are redacted as described above.
+Each provider has its own terms; they are quoted, with their URLs, in `../results/revision/research/data_licences.md` and summarised in Supplementary Table 10. Materials Project, OQMD, JARVIS-DFT, the ChemDataExtractor database and the NEMAD Zenodo release are CC BY 4.0. AFLOW-derived Tier 3 columns are for non-commercial use. MAGNDATA structure files are not redistributed (derived labels only, with the citations its conditions ask for). The NEMAD website tables may not be redistributed (see above).

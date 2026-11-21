@@ -36,7 +36,7 @@ python -m pytest ../tests -q
 
 Unless a different folder is given, commands run from `<workspace>/EDA/src` with `python -X utf8`. Outputs go into the workspace; the right-hand column names the package copy to compare with. Hyperparameters are never re-tuned: every stage reads the selections frozen in `data/reference_inputs/`.
 
-**NEMAD values:** the values of the two NEMAD literature tables are withheld from `data/` (see `../data/README.md`). Model fits that use those rows need the tables, which the NEMAD authors distribute; all saved results in `../results/` are complete.
+**NEMAD values:** this private repository includes the values of the two NEMAD literature tables, so every step can be re-run. They may not be redistributed; see `../data/README.md` before making anything public.
 
 ### Dataset (optional; the frozen versions are in `data/`)
 | Step | Command | Compare with |
