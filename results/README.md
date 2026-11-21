@@ -2,7 +2,7 @@
 
 Saved outputs of the analyses, organised by research question. Every number in the manuscript's tables and figures is read from these files. They are covered by `../CHECKSUMS.sha256`; the script that produced each folder is listed in `../scripts/README.md`.
 
-**Conventions:** 95% intervals unless stated otherwise. "Improvement" columns are signed so that positive = better. "Stable" means the 95% interval excludes zero and the direction holds in at least 70% of the repeated splits.
+**Conventions:** 95% intervals unless stated otherwise. "Improvement" columns are signed so that positive = better. "Stable" means that both 95% intervals (the refit-aware Nadeau-Bengio interval and the formula bootstrap) exclude zero and that at least 7 of the 10 repeated splits share the sign.
 
 ## `claims/`
 | File | Content |
@@ -36,7 +36,7 @@ Saved outputs of the analyses, organised by research question. Every number in t
 | `external_benchmark/PLAN.md` | Pre-registered audit / similarity / bootstrap plan with three dated amendments |
 | `external_benchmark/AUDIT_RESULTS.md` | Written results of the audit, chemical-similarity and grouped-bootstrap analyses |
 | `external_benchmark/audit_flags.csv`, `audit_counts.csv` | Per-record audit flags (A1-A8) and counts |
-| `external_benchmark/subset_metrics_bootstrap*.csv`, `subset_comparisons.csv` | Subset metrics and comparisons with paper-, first-DOI- and chemical-system-cluster bootstrap intervals |
+| `external_benchmark/subset_metrics_bootstrap*.csv`, `subset_comparisons.csv` | Subset metrics and comparisons with paper-, first-DOI- and chemical-system-cluster bootstrap intervals (Fig. 4a,b percentile bars; Supplementary Table 2) |
 | `external_benchmark/similarity_*.csv` | Composition and descriptor distances to the training set; Spearman correlations, distance bins, trends |
 | `external_benchmark/external_predictions.csv` | Blind predictions and 90% intervals for the 2,500 external records |
 
@@ -57,7 +57,7 @@ Specified in writing before they were run; plan, claim rules and log of deviatio
 |---|---|---|
 | `a1_tier_inference.csv` | Refit-aware (Nadeau-Bengio) intervals of the Tier 1 → 2 → 3 effects | Table 2, Fig. 2 |
 | `a2_provenance/` | Materials Project vs experimental ordering labels: agreement, confusion, cross-provenance transfer; aggregate source counts | Fig. 1 |
-| `a3_external_inference.csv` | Inference for the external benchmark subsets | Table 3, Fig. 4 |
+| `a3_external_inference.csv` | Inference for the external benchmark subsets (BCa and percentile intervals) | Table 3, Supplementary Table 4 |
 | `a4_uq/` | Coverage by subgroup, design effect, ordering calibration over splits | Fig. 3 |
 | `a5_moment_per_fu/` | Tier effects for the DFT moment per formula unit | Fig. 2 |
 | `a6_magnetic_physics/` | Magnetic-structure descriptors for the Curie temperature | Supplementary Information |

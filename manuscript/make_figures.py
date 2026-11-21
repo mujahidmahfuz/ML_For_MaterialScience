@@ -284,7 +284,7 @@ def fig3() -> None:
         ax.axhline(90, color=INK2, lw=0.7, ls="--")
         ax.set_xticks(x, [f"{lab}\n{w:.{nd}f} {unit}" for (_, lab), w in zip(methods, widths)])
         ax.set_xlim(-0.5, 2.5)
-        ax.set_ylim(40, 101)
+        ax.set_ylim(15, 101)   # the lowest -1 s.d. bar (split, top Curie decile) ends near 35%; leave room for the legend
         ax.set_title(title, loc="left")
         ax.legend([handle(c) for *_, c in groups], [lab for _, lab, _ in groups], loc="lower left", frameon=False,
                   handletextpad=0.3, borderaxespad=0.2)

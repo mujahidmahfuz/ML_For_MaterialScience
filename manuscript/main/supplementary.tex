@@ -156,7 +156,7 @@ Paper (first DOI) & 69 (26) & \est{$-0.17$}{$-0.89$}{0.66} & \est{$-0.17$}{$-0.9
 Chemical system & 69 (48) & \est{$-0.17$}{$-0.71$}{0.23} & \est{$-0.17$}{$-0.75$}{0.21} & \est{$-0.17$}{$-0.77$}{0.17} & skill only \\
 \botrule
 \end{tabular*}
-\footnotetext{Skill = 1 $-$ MSE/MSE of a constant prediction equal to the training mean (338~K). Last column: whether the upper 95\% limit of $R^2$ or of the skill is at most 0.2. Our prespecified wording rule applies this condition to $R^2$ before `no skill beyond the mean' may be stated. Under chemical-system resampling only the skill meets it (upper limit 0.17); the BCa upper limit of $R^2$ is 0.21 there.}
+\footnotetext{Skill = 1 $-$ MSE/MSE of a constant prediction equal to the training mean (338~K). Last column: whether the upper 95\% limit of $R^2$ or of the skill is at most 0.2. Our prespecified wording rule applies this condition to $R^2$ before `no skill beyond the mean' may be stated. Under chemical-system resampling only the skill meets it (upper limit 0.17); the BCa upper limit of $R^2$ is 0.21 there. The percentile bars of Fig.~4 come from a separate run of the same paper-cluster bootstrap (10,000 resamples) and differ from this table in the second decimal (blind, unseen system: $-0.93$ to 0.66).}
 \end{table}
 
 %% ---------------------------------------------------------------------------------------------------------- Table 5
@@ -325,30 +325,30 @@ External benchmark table & no licence & no & retrieval script with SHA-256 check
 \toprule
 Subgroup & \hd{Median\\formulas} & Split & Normalized & CQR \\
 \midrule
-All test materials & 2,103 & 89.3 & 90.3 & 89.4 \\
-Top decile of predicted value & 117 & 65.5 & 87.4 & 68.6 \\
-Farthest distance decile & 232 & 86.6 & 88.2 & 89.7 \\
+All test materials & 2,104 & 89.3 & 90.3 & 89.4 \\
+Top decile of predicted value & 118 & 65.5 & 87.4 & 68.6 \\
+Farthest distance decile & 233 & 86.6 & 88.2 & 89.7 \\
 \midrule
 \multicolumn{5}{@{}l}{\textit{Label source}}\\
-Text-mined database & 544 & 78.2 & 86.0 & 79.3 \\
+Text-mined database & 545 & 78.2 & 86.0 & 79.3 \\
 Curated compilation (anisotropy) & 461 & 92.7 & 92.4 & 92.4 \\
 Curated compilation (magnetic materials) & 1,534 & 95.4 & 92.2 & 94.9 \\
-Records flagged experimental in the source & 1,948 & 89.3 & 90.5 & 89.4 \\
+Records flagged experimental in the source & 1,949 & 89.3 & 90.5 & 89.4 \\
 Records flagged computational in the source & 219 & 90.4 & 86.6 & 90.6 \\
 \midrule
 \multicolumn{5}{@{}l}{\textit{Chemical family}}\\
-Actinide & 47 & 96.2 & 88.9 & 89.6 \\
+Actinide & 48 & 96.2 & 88.9 & 89.6 \\
 Intermetallic & 1,137 & 92.9 & 91.4 & 92.9 \\
-Oxide & 653 & 92.3 & 89.9 & 91.5 \\
+Oxide & 654 & 92.3 & 89.9 & 91.5 \\
 Physics-complete (full Tier~3 record) & 81 & 70.2 & 87.0 & 74.5 \\
 Rare earth & 1,117 & 97.0 & 91.8 & 95.5 \\
-Transition metal & 2,020 & 88.9 & 90.1 & 89.2 \\
+Transition metal & 2,021 & 88.9 & 90.1 & 89.2 \\
 \midrule
 \multicolumn{5}{@{}l}{\textit{Circular definition, for comparison only}}\\
 Hardest decile of the normalized method's own difficulty scale & 84 & 54.2 & 88.5 & 61.0 \\
 \botrule
 \end{tabular*}
-\footnotetext{Means over ten prespecified splits. The constant-width methods over-cover several families (rare earth, actinide, intermetallic) because their intervals are wide everywhere; normalized conformal stays within about 2 points of nominal except for text-mined labels, records flagged computational and physics-complete materials. The subgroup of records with complete Tier~1 descriptors equals all test materials and is not repeated.}
+\footnotetext{Means over ten prespecified splits. The constant-width methods over-cover several families (rare earth, actinide, intermetallic) because their intervals are wide everywhere; normalized conformal stays within about 2 points of nominal except for the top decile of predicted values, text-mined labels, records flagged computational and physics-complete materials. Median formulas are rounded half up. The subgroup of records with complete Tier~1 descriptors equals all test materials and is not repeated.}
 \end{table}
 
 %% ---------------------------------------------------------------------------------------------------------- Table 12
@@ -610,7 +610,7 @@ Marginal sets & -- & -- & 89.8 & 96.2 & 57.0 & 54.3 & 97.7 & 1.39 \\
 Class-conditional sets & -- & -- & 90.1 & 90.1 & 90.9 & 90.8 & 89.8 & 1.61 \\
 \botrule
 \end{tabular*}
-\footnotetext{Means over ten prespecified splits (Tier~1 XGBoost, full ordering population). ECE, expected calibration error with 15 equal-width bins. Sets are at 90\% nominal coverage on prior-corrected, temperature-scaled probabilities; the temperature was fitted on half of the calibration formulas and the conformal thresholds on the other half (re-using one calibration set changes coverage by less than 0.3 points). Standard deviation of overall coverage across splits: 0.9 (marginal) and 0.6 (class-conditional) points.}
+\footnotetext{Means over ten prespecified splits (Tier~1 XGBoost, full ordering population). ECE, expected calibration error with 15 equal-width bins. Sets are at 90\% nominal coverage on prior-corrected, temperature-scaled probabilities; the temperature was fitted on half of the calibration formulas and the conformal thresholds on the other half (re-using one calibration set changes the overall coverage by less than 0.3 points and the coverage of each class by less than 0.5 points). Standard deviation of overall coverage across splits: 0.9 (marginal) and 0.6 (class-conditional) points.}
 \end{table}
 %% ---------------------------------------------------------------------------------------------------------- Table 21
 \begin{table}[!ht]
@@ -686,7 +686,7 @@ Precision among the 25 highest predictions & & & 0.956 (0.126) \\
 \quad 100 highest & & & 0.921 (0.126) \\
 \botrule
 \end{tabular*}
-\footnotetext{Mean (standard deviation across splits) over the ten prespecified formula-grouped splits, about 4,460 test rows each; Tier~1 XGBoost and 90\% normalized conformal intervals from the uncertainty runs, whose ten splits and 80\% training share differ from the frozen split (MAE 76~K for the baseline in Results). The standard deviation is descriptive because the test sets of different splits overlap. Ties at a distance cut-off are kept, so the retained share can exceed the nominal 0.75, 0.50 and 0.25. Interval decisions: a record is decided only if its 90\% interval lies wholly above or wholly below 300 K. Rules and thresholds as for the external records (Supplementary Table~22).}
+\footnotetext{Mean (standard deviation across splits) over the ten prespecified formula-grouped splits, about 4,460 test rows each; Tier~1 XGBoost and 90\% normalized conformal intervals from the uncertainty runs, whose ten splits and 80\% training share differ from the frozen split (MAE 76~K for the baseline in Results). The standard deviation is descriptive because the test sets of different splits overlap. Ties at a cut-off of distance or interval width are kept (records of one formula share both), so the retained share can exceed the nominal 0.75, 0.50 and 0.25. Interval decisions: a record is decided only if its 90\% interval lies wholly above or wholly below 300 K. Rules and thresholds as for the external records (Supplementary Table~22).}
 \end{table}
 %% ---------------------------------------------------------------------------------------------------------- Table 24
 \begin{table}[!ht]
@@ -743,12 +743,12 @@ experimental & $\mathbf{k}\neq0$ (supercell) & 231 & 0.91 \ci{0.87}{0.95} & 0.11
  & FM & AFM & FiM & NM \\
 \midrule
 FM & 0.33 & 0.59 & 0.07 & 0.00 \\
-AFM & 0.10 & 0.86 & 0.04 & 0.00 \\
+AFM & 0.11 & 0.86 & 0.04 & 0.00 \\
 FiM & 0.62 & 0.24 & 0.14 & 0.01 \\
 NM & 0.37 & 0.60 & 0.03 & 0.00 \\
 \botrule
 \end{tabular*}
-\footnotetext{MP, Materials Project; 949 formulas labelled by both MP and an experimental source. Association over the modal labels: agreement 28\%, $\kappa$ 0.00, maximum attainable $\kappa$ given the marginals 0.34, PABAK 0.04, Cram\'er's $V$ 0.20 ($\chi^2$ $P<10^{-18}$); modal-label ties: 23 experimental, 0 MP. \textbf{a}, Strata use the representative MP entry of each formula (known ordering, lowest energy above the hull) with the number of magnetic sites and the site moments of the MP magnetism document; a cell with one magnetic site cannot hold collinear AFM order; the FiM recount keeps only sites with $|m|\ge0.5$~\muB{} (FiM labels before and after: 204 and 99). Phase-matched or mismatched: an experimental space group (parsed) equals, or equals no, MP entry of the composition; modal labels. \textbf{b}, MAGNDATA-derived labels by propagation vector of the structure ($\mathbf{k}=0$ fits the crystal cell). \textbf{c}, Share of the experimental labels given the MP label (rows sum to one). Formulas FM in experiment and FiM in MP (modal labels) by rare earth: light (La-Eu) 54, no rare earth 36, heavy (Gd-Lu) 33, light and heavy 1. 95\% intervals from a bootstrap over formulas (1,000 resamples). Whether an MP entry went through an antiferromagnetic enumeration is not recorded per entry in the database and could not be tested.}
+\footnotetext{MP, Materials Project; 949 formulas labelled by both MP and an experimental source. Association over the modal labels: agreement 28\%, $\kappa$ 0.00, maximum attainable $\kappa$ given the marginals 0.34, PABAK 0.04, Cram\'er's $V$ 0.20 ($\chi^2$ $P<10^{-18}$); modal-label ties: 23 experimental, 0 MP. \textbf{a}, Strata use the representative MP entry of each formula (known ordering, lowest energy above the hull) with the number of magnetic sites and the site moments of the MP magnetism document; a cell with one magnetic site cannot hold collinear AFM order; the FiM recount keeps only sites with $|m|\ge0.5$~\muB{} (FiM labels before and after: 204 and 99). Phase-matched or mismatched: an experimental space group (parsed) equals, or equals no, MP entry of the composition; modal labels. \textbf{b}, MAGNDATA-derived labels by propagation vector of the structure ($\mathbf{k}=0$ fits the crystal cell). \textbf{c}, Share of the experimental labels given the MP label (rows sum to one before rounding). Formulas FM in experiment and FiM in MP (modal labels) by rare earth: light (La-Eu) 54, no rare earth 36, heavy (Gd-Lu) 33, light and heavy 1. 95\% intervals from a bootstrap over formulas (1,000 resamples). Whether an MP entry went through an antiferromagnetic enumeration is not recorded per entry in the database and could not be tested.}
 \end{table}
 
 %% ---------------------------------------------------------------------------------------------------------- s26
