@@ -16,6 +16,7 @@ Prepared for *Nature Communications* in the Springer Nature LaTeX template (`sn-
 | `inline_references.py` | Runs BibTeX and pastes the reference list into the `.tex` files |
 | `build.py` | Compiles the three PDFs with tectonic and reports every layout warning |
 | `sn-jnl.cls`, `sn-nature.bst` | Template class and Nature Portfolio reference style, unchanged |
+| [`main/`](main) and `main_overleaf.zip` | Self-contained copy for Overleaf (upload the ZIP; steps in [`main/README_OVERLEAF.md`](main/README_OVERLEAF.md)) |
 
 ## Build
 
